@@ -12,3 +12,15 @@ table, td {
   border: 4px solid black;
   font-size: 30px;
 }
+
+a:link {
+  color: #009900;
+}
+
+a:visited {
+  color: #00cc99;
+}
+
+a:hover {
+  color: #99ff99;
+}

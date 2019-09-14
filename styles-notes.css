@@ -1,0 +1,40 @@
+body {
+  background-color: #d8eff4;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 200px;
+
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+html {
+  background-color: #00b386;
+}
+
+th, td {
+  border: 2px solid black;
+  text-align: center;
+}
+
+th {
+  text-decoration: underline;
+}
+
+a:link {
+  color: #009900;
+}
+
+a:visited {
+  color: #00b386;
+}
+
+a:hover {
+  color: #99ff99;
+}
+
+#note {
+  background-color: #afe9cd;
+}
