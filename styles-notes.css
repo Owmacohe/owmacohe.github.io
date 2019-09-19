@@ -1,10 +1,14 @@
+html {
+  background-color: #00b386;
+}
+
 body {
   background-color: #d8eff4;
 
   margin-top: 20px;
   margin-bottom: 0px;
   margin-right: 0px;
-  margin-left: 110px;
+  margin-left: 80px;
 
   padding-top: 10px;
   padding-bottom: 10px;
@@ -17,8 +21,9 @@ h1 {
   font-family: Tahoma, sans-serif;
 }
 
-html {
-  background-color: #00b386;
+h2 {
+  text-emphasis: 2px;
+  text-decoration: underline;
 }
 
 th, td {
@@ -43,13 +48,23 @@ a:hover {
 }
 
 img {
+  width: 650px;
   border-radius: 20px;
   border: 2px solid black;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr {
   border: 1.4px solid black;
   border-radius: 20px;
+  margin-right: 10px;
+}
+
+ol {
+  margin-right: 10px;
 }
 
 #note {
