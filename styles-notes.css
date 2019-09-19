@@ -9,6 +9,12 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  font-family: Tahoma, sans-serif;
 }
 
 html {
@@ -39,6 +45,11 @@ a:hover {
 img {
   border-radius: 20px;
   border: 2px solid black;
+}
+
+hr {
+  border: 1.4px solid black;
+  border-radius: 20px;
 }
 
 #note {
