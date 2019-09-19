@@ -29,6 +29,7 @@ h2 {
 th, td {
   border: 2px solid black;
   text-align: center;
+  border-radius: 1.5px;
 }
 
 th {
@@ -65,6 +66,7 @@ hr {
 
 ol {
   margin-right: 10px;
+  list-style-type: upper-roman;
 }
 
 #note {
