@@ -69,10 +69,6 @@ ol {
   list-style-type: upper-roman;
 }
 
-#note {
-  background-color: #afe9cd;
-}
-
-#header {
+.header {
   background-color: #00b386;
 }
