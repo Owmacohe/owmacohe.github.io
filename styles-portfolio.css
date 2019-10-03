@@ -49,7 +49,7 @@ a:hover {
 }
 
 img {
-  width: 650px;
+  width: 70%;
   border-radius: 20px;
   border: 2px solid black;
 
@@ -59,7 +59,7 @@ img {
 }
 
 video {
-  width: 1200px;
+  width: 70%;
   border-radius: 20px;
   border: 2px solid black;
 
