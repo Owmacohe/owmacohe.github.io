@@ -58,6 +58,16 @@ img {
   margin-right: auto;
 }
 
+video {
+  width: 1200px;
+  border-radius: 20px;
+  border: 2px solid black;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 hr {
   border: 1.5px solid black;
   border-radius: 20px;
