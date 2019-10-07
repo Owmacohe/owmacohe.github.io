@@ -26,6 +26,10 @@ h2 {
   text-decoration: underline;
 }
 
+table {
+  width: 85%;
+}
+
 th, td {
   border: 2px solid black;
   text-align: center;
