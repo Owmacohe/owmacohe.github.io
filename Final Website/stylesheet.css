@@ -14,5 +14,14 @@
   position: relative;
   top: -90px;
 
-  font-size: 3.5vw;
+  opacity: 0;
 }
+
+button {
+  font-size: 3vw;
+
+  border: 0px;
+  background-color: transparent;
+}
+
+#enterID {}
