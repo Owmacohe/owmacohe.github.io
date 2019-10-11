@@ -17,11 +17,14 @@
   opacity: 0;
 }
 
+body {
+  font-family: Arial Narrow, Arial, sans-serif;
+}
+
 button {
   font-size: 3vw;
+  font-family: Arial Narrow, Arial, sans-serif;
 
   border: 0px;
   background-color: transparent;
 }
-
-#enterID {}
