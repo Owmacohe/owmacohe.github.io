@@ -1,4 +1,4 @@
-.flexwelcome {
+.flex_welcome {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,7 @@
   font-size: 3vw;
 }
 
-.flexenter {
+.flex_enter {
   display: flex;
   align-items: center;
   justify-content: center;

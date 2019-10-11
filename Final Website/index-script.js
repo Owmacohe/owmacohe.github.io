@@ -17,13 +17,13 @@ function slider() {
     if (slideFrame <= slideMax)
     {
       slideFrame += (slideMax - slideFrame) / 20;
-      document.querySelector(".flexenter").style.top = slideFrame;
+      document.querySelector(".flex_enter").style.top = slideFrame;
     }
 
     if (opFrame <= opMax)
     {
       opFrame += opMax / 40;
-      document.querySelector(".flexenter").style.opacity = opFrame;
+      document.querySelector(".flex_enter").style.opacity = opFrame;
     }
   }
 }
