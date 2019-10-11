@@ -1,0 +1,8 @@
+.flex_window {
+  display: flex;
+}
+
+.flex_split {
+  background-color: blue;
+  margin: 5px;
+}
