@@ -53,7 +53,3 @@ function enterWait() {
     document.getElementById("enterID").innerHTML = "Enter...";
   }
 }
-
-function split() {
-  console.log("Split window");
-}

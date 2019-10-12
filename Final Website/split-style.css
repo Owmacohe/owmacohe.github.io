@@ -1,8 +1,16 @@
 .flex_window {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .flex_split {
-  background-color: blue;
-  margin: 5px;
+  background-color: grey;
+  margin: 3vw;
+
+  width: 40vw;
+  height: 40vw;
 }
