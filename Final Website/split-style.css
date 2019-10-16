@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
 }
 
 .flex_split {
+  border: 0px;
+
   background-color: grey;
   margin: 3vw;
 
