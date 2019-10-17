@@ -1,7 +1,12 @@
+body {
+  background-color: black;
+}
+
 .flex_window {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
 }
@@ -10,8 +15,8 @@
   border: 0px;
 
   background-color: grey;
-  margin: 3vw;
+  margin: 3vh;
 
-  width: 40vw;
-  height: 40vw;
+  width: 40vh;
+  height: 40vh;
 }
