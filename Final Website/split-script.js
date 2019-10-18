@@ -1,26 +1,38 @@
 var buttNum = 0;
 var dissNum = 0;
 
-var buttonSize = 60;
+var buttonSize = 90;
 var marginSize = 6;
+var startingShrink = 2;
 
 function split() {
-  if (buttNum == 0)
-  {
-    createDiv(4);
+  if (buttNum == 0) {
+    createButt(1);
   }
-  else if (buttNum > 0)
+  else if (buttNum == 1)
   {
-    createDiv(buttNum * 3);
+    dissNum++;
+
+    createButt(3);
     document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
   }
+  else if (buttNum >= 4) {
+    dissNum++;
 
-  dissNum++;
+    createButt(4);
+    document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+  }
 }
 
-function createDiv(instances) {
-  buttonSize = buttonSize / 2;
-  marginSize = marginSize / 2;
+function shrinkFactor() {
+  var shrinkAmount = -Math.pow(2, -(0.56 * (startingShrink + dissNum))) + 1;
+  console.log((startingShrink + dissNum) + " " + shrinkAmount);
+  return shrinkAmount;
+}
+
+function createButt(instances) {
+  buttonSize = buttonSize * shrinkFactor();
+  marginSize = marginSize * shrinkFactor();
 
   var i;
   for (i = 0; i < instances; i++)
@@ -42,12 +54,10 @@ function createDiv(instances) {
       categories[j].style.width = buttonSize + "vh";
       categories[j].style.height = buttonSize + "vh";
       categories[j].style.margin = marginSize + "vh";
-
-      //categories[j].style.width = (parseInt(categories[j].style.width) / 2) + "vw";
-      //categories[j].style.height = (parseInt(categories[j].style.height) / 2) + "vw";
     }
 
-    console.log("# of buttons: " + buttNum);
+    //console.log("# of buttons: " + buttNum + ", button size: " + buttonSize);
+    //console.log(dissNum + " " + buttonSize);
   }
 }
 
@@ -65,9 +75,19 @@ function randColor() {
 }
 */
 
+//Exponential creation
 /*
-var wid = document.getElementsByClassName("flex_split").style.width;
-var hei = document.getElementsByClassName("flex_split").style.height;
-wid = (wid / 2) + "vw";
-hei = (hei / 2) + "vw";
+function split() {
+  if (buttNum == 0)
+  {
+    createButt(4);
+  }
+  else if (buttNum > 0)
+  {
+    createButt(buttNum * 3);
+    document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+  }
+
+  dissNum++;
+}
 */

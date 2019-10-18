@@ -4,19 +4,22 @@ body {
 
 .flex_window {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .flex_split {
   border: 0px;
-
-  background-color: grey;
   margin: 3vh;
-
-  width: 40vh;
-  height: 40vh;
 }
