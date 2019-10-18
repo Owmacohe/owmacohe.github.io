@@ -2,7 +2,8 @@ var buttNum = 0;
 var dissNum = 0;
 
 var buttonSize = 90;
-var marginSize = 6;
+var marginSize = 8;
+var textSize = 30;
 var startingShrink = 2;
 
 function split() {
@@ -22,17 +23,29 @@ function split() {
     createButt(4);
     document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
   }
+
+  var categories = document.getElementsByClassName("flex_split");
+  for (j = 0; j < categories.length; j++)
+  {
+    switch (dissNum) {
+      case 0:
+        break;
+      case 1:
+        break;
+    }
+  }
 }
 
 function shrinkFactor() {
   var shrinkAmount = -Math.pow(2, -(0.56 * (startingShrink + dissNum))) + 1;
-  console.log((startingShrink + dissNum) + " " + shrinkAmount);
+  //console.log((startingShrink + dissNum) + " " + shrinkAmount);
   return shrinkAmount;
 }
 
 function createButt(instances) {
   buttonSize = buttonSize * shrinkFactor();
   marginSize = marginSize * shrinkFactor();
+  textSize = textSize * shrinkFactor();
 
   var i;
   for (i = 0; i < instances; i++)
@@ -54,13 +67,14 @@ function createButt(instances) {
       categories[j].style.width = buttonSize + "vh";
       categories[j].style.height = buttonSize + "vh";
       categories[j].style.margin = marginSize + "vh";
+      categories[j].style.fontSize = textSize + "vh";
     }
 
-    //console.log("# of buttons: " + buttNum + ", button size: " + buttonSize);
-    //console.log(dissNum + " " + buttonSize);
+    console.log("# of buttons: " + buttNum);
   }
 }
 
+//Random colour method
 /*
 function randColor() {
   var letters = "0123456789ABCDEF";
@@ -80,14 +94,21 @@ function randColor() {
 function split() {
   if (buttNum == 0)
   {
-    createButt(4);
+    createButt(1);
   }
   else if (buttNum > 0)
   {
-    createButt(buttNum * 3);
+    createButt(buttNum);
     document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
   }
 
   dissNum++;
 }
+*/
+
+//Possible JavaScript file reading/writing
+/*
+file = fopen("/Final Website/categories.txt",0);
+str = fread(file, flength(file));
+console.log(str);
 */
