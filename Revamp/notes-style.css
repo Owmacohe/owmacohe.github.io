@@ -1,0 +1,56 @@
+body {
+  background-color: #5ad89d;
+
+  font-family: Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: 2vw;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+a {
+  color: #22913e;
+}
+
+a:hover {
+  color: #5ad89d;
+}
+
+.flex_nav {
+  background-color: #5ad89d;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5vw;
+  margin-left: 10vw;
+  margin-right: 0vw;
+
+  width: 33vw;
+}
+
+.flex_row {
+  display: flex;
+}
+
+.flex_item {
+  background-color: #9ce8c4;
+  font-size: 1.5vw;
+
+  margin: 1vw;
+
+  width: 6vw;
+  height: 6vw;
+}
+
+#textArea {
+  background-color: #9ce8c4;
+  margin-left: 4vw;
+  margin-top: 4vw;
+}
