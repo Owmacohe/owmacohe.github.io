@@ -1,10 +1,10 @@
 body {
   background-color: black;
+  font-family: Arial Narrow, Arial, sans-serif;
 }
 
 h1 {
   color: white;
-  font-family: Arial Narrow, Arial, sans-serif;
   font-size: 50px;
   text-decoration: underline;
 }
@@ -33,6 +33,4 @@ h1 {
 .flex_split {
   border: 0px;
   margin: 3vh;
-
-  font-family: Arial Narrow, Arial, sans-serif;
 }
