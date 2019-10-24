@@ -52,8 +52,8 @@ a:hover {
   color: #99ff99;
 }
 
-img {
-  width: 70%;
+img, video {
+  width: 60vw;
   border-radius: 20px;
   border: 2px solid black;
 
