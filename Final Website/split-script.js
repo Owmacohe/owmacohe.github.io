@@ -5,7 +5,7 @@ var dissNum = 0;
 
 var chaosRange = 30;
 
-//All button length/width, margin, and text sizes
+//Button length/width, margin, and text sizes
 var buttonSize = 90;
 var marginSize = 8;
 var textSize = 30;
@@ -14,7 +14,7 @@ var startingShrink = 2;
 
 //Function that is called when the user selects a category
 function split() {
-  //Custom gradual button creation
+  //Gradual button creation
   if (buttNum == 0) {
     createButt(1);
   }
@@ -62,40 +62,46 @@ function createButt(instances) {
     //Upps the hue/colour for all, and sets all their colours (hsl)
     //Chance to assign random colour
     //Sets the size, margin, and text size for all
+    //Chance to assign random size, margin, and text size
     var categories = document.getElementsByClassName("flex_split");
     for (j = 0; j < categories.length; j++)
     {
+      categories[j].style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+      categories[j].style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+      categories[j].style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
+      categories[j].style.fontSize = chaosChance(chaosReduction(textSize), textSize + "vh");
+
       var hue = 60 + (dissNum * 40);
-      var chaosFactor;
+      categories[j].style.backgroundColor = chaosChance(randColor(), "hsl("+hue+", 100%, 70%)");
 
-      chaosFactor = chaosCreator();
+      var chaosFactor = Math.floor(Math.random() * ((80 * chaosRange) + 1));
       if (chaosFactor < dissNum && chaosFactor > 0) {
-        categories[j].style.backgroundColor = randColor();
+        categories[j].style.position = "absolute";
+        categories[j].style.top = randPercent();
+        categories[j].style.left = randPercent();
       }
       else {
-        categories[j].style.backgroundColor = "hsl("+hue+", 100%, 70%)";
       }
 
-      chaosFactor = chaosCreator();
-      if (chaosFactor < dissNum && chaosFactor > 0) {
-        categories[j].style.width = (buttonSize - (buttonSize * (0.1 * Math.floor(Math.random() * 6)))) + "vh";
-        categories[j].style.height = (buttonSize - (buttonSize * (0.1 * Math.floor(Math.random() * 6)))) + "vh";
-        categories[j].style.margin = (marginSize - (marginSize * (0.1 * Math.floor(Math.random() * 6)))) + "vh";
-        categories[j].style.fontSize = (textSize - (textSize * (0.1 * Math.floor(Math.random() * 6)))) + "vh";
-      }
-      else {
-        categories[j].style.width = buttonSize + "vh";
-        categories[j].style.height = buttonSize + "vh";
-        categories[j].style.margin = marginSize + "vh";
-        categories[j].style.fontSize = textSize + "vh";
-      }
+      console.log("Width: " + categories[j].style.width + " Height: " + categories[j].style.height + " Margin: " + categories[j].style.margin + " Font Size: " + categories[j].style.fontSize + " Colour: " + categories[j].style.backgroundColor);
     }
   }
 }
 
-function chaosCreator() {
-  var chaos = Math.floor(Math.random() * (chaosRange + 1));
-  return chaos;
+//Generates the amount that the button would shrink by
+function chaosReduction(size) {
+  return (size - (size * (0.1 * Math.floor(Math.random() * 6)))) + "vh";
+}
+
+//Function for determining whether a button "breaks" or not
+function chaosChance(rand, def) {
+  var chaosFactor = Math.floor(Math.random() * (chaosRange + 1));
+  if (chaosFactor < dissNum && chaosFactor > 0) {
+    return rand;
+  }
+  else {
+    return def;
+  }
 }
 
 //Random colour generator (hex)
@@ -109,6 +115,10 @@ function randColor() {
   }
 
   return color;
+}
+
+function randPercent() {
+  return Math.floor(Math.random() * 101) + "%";
 }
 
 //For adding text to buttons as they are created
