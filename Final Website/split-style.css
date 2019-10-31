@@ -3,12 +3,6 @@ body {
   font-family: Arial Narrow, Arial, sans-serif;
 }
 
-h1 {
-  color: white;
-  font-size: 50px;
-  text-decoration: underline;
-}
-
 .flex_window {
   display: flex;
   flex-wrap: wrap;
@@ -25,4 +19,36 @@ h1 {
 
   //Don't use this, but it makes the squares look cool
   //position: absolute;
+}
+
+.flex_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_nav_title {
+  color: white;
+  font-size: 50px;
+  text-decoration: underline;
+
+  position: absolute;
+}
+
+.flex_nav_add {
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+
+  position: absolute;
+  left: 3vw;
+}
+
+.flex_nav_path {
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+
+  position: absolute;
+  right: 3vw;
 }

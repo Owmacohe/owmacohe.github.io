@@ -83,7 +83,7 @@ function createButt(instances) {
       else {
       }
 
-      console.log("Width: " + categories[j].style.width + " Height: " + categories[j].style.height + " Margin: " + categories[j].style.margin + " Font Size: " + categories[j].style.fontSize + " Colour: " + categories[j].style.backgroundColor);
+      //console.log("Width: " + categories[j].style.width + " Height: " + categories[j].style.height + " Margin: " + categories[j].style.margin + " Font Size: " + categories[j].style.fontSize + " Colour: " + categories[j].style.backgroundColor);
     }
   }
 }
@@ -167,11 +167,4 @@ function split() {
 
   dissNum++;
 }
-*/
-
-//Possible JavaScript file reading/writing?
-/*
-file = fopen("/Final Website/categories.txt",0);
-str = fread(file, flength(file));
-console.log(str);
 */
