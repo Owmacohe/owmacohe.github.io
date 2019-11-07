@@ -87,8 +87,6 @@ function createButt(instances) {
         categories[j].style.top = randPercent();
         categories[j].style.left = randPercent();
       }
-      else {
-      }
 
       //console.log("Width: " + categories[j].style.width + " Height: " + categories[j].style.height + " Margin: " + categories[j].style.margin + " Font Size: " + categories[j].style.fontSize + " Colour: " + categories[j].style.backgroundColor);
     }
@@ -128,6 +126,40 @@ function randPercent() {
   return Math.floor(Math.random() * 101) + "%";
 }
 
+function addCheck(event) {
+  if (event.keyCode == 13) {
+    document.getElementById("input").value = "";
+    addNewCategory();
+  }
+}
+
+function addNewCategory() {
+  buttNum++;
+
+  var splitButt = document.createElement("BUTTON");
+  document.getElementById("divs").appendChild(splitButt);
+
+  splitButt.setAttribute("onclick", "split()");
+  splitButt.className = "flex_split";
+
+  document.querySelector(".flex_split").style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+  document.querySelector(".flex_split").style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+  document.querySelector(".flex_split").style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
+  document.querySelector(".flex_split").style.fontSize = chaosChance(chaosReduction(textSize), textSize + "vh");
+
+  var hue = 60 + (dissNum * 40);
+  document.querySelector(".flex_split").style.backgroundColor = chaosChance(randColor(), "hsl("+hue+", 100%, 70%)");
+
+  var chaosFactor = Math.floor(Math.random() * ((80 * chaosRange) + 1));
+  if (chaosFactor < dissNum && chaosFactor > 0) {
+    document.querySelector(".flex_split").style.position = "absolute";
+    document.querySelector(".flex_split").style.top = randPercent();
+    document.querySelector(".flex_split").style.left = randPercent();
+  }
+
+  console.log("Width: " + document.querySelector(".flex_split").style.width + " Height: " + document.querySelector(".flex_split").style.height + " Margin: " + document.querySelector(".flex_split").style.margin + " Font Size: " + document.querySelector(".flex_split").style.fontSize + " Colour: " + document.querySelector(".flex_split").style.backgroundColor);
+}
+
 //Fading in nav items
 /*
 var pathCount = setInterval(pathFadeIn(), 10);
@@ -155,7 +187,7 @@ for (j = 0; j < categories.length; j++)
 
 //Simplified random effects method and called function
 /*
-chaosCreator(categories[j].style.backgroundColor, randColor(), "hsl("+hue+", 100%, 70%)");
+chaosCreator(document.querySelector(".flex_split").style.backgroundColor, randColor(), "hsl("+hue+", 100%, 70%)");
 
 function chaosCreator(sty, rand, def) {
   var chaosFactor = Math.floor(Math.random() * (chaosRange + 1));
