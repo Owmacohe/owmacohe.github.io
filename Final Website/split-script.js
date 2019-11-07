@@ -31,6 +31,13 @@ function split() {
     createButt(4);
     document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
   }
+
+  if (dissNum == 1) {
+    document.getElementById("navPath").style.opacity = 1;
+  }
+  else if (dissNum == 4) {
+    document.getElementById("navAdd").style.opacity = 1;
+  }
 }
 
 //Function that creates the amount that the size, margin, and text are shrunk by
@@ -120,6 +127,17 @@ function randColor() {
 function randPercent() {
   return Math.floor(Math.random() * 101) + "%";
 }
+
+//Fading in nav items
+/*
+var pathCount = setInterval(pathFadeIn(), 10);
+
+function pathFadeIn() {
+  if (document.getElementById("navPath").style.opacity < 1 && dissNum >= 1) {
+    document.getElementById("navPath").style.opacity += 0.2;
+  }
+}
+*/
 
 //For adding text to buttons as they are created
 /*
