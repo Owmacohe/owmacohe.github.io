@@ -12,6 +12,29 @@ var textSize = 30;
 //Starting variable that helps determine the size of the first square
 var startingShrink = 2;
 
+/*
+var fadeCheck = setInterval(fadeIn, 10);
+var pathFade = false;
+var addFade = false;
+
+function fadeIn() {
+  if (pathFade == true) {
+    fadeIncrease(document.getElementById("navPath"));
+  }
+
+  if (addFade == true) {
+    fadeIncrease(document.getElementById("navAdd"));
+  }
+}
+
+function fadeIncrease(elem) {
+  if (elem.style.opacity < 1) {
+    elem.style.opacity += 0.2;
+    console.log(elem.style.opacity);
+  }
+}
+*/
+
 //Function that is called when the user selects a category
 function split(category) {
   //Gradual button creation
@@ -33,9 +56,11 @@ function split(category) {
   }
 
   if (dissNum == 1) {
+    //pathFade = true;
     document.getElementById("navPath").style.opacity = 1;
   }
   else if (dissNum >= 2) {
+    //addFade = true;
     document.getElementById("navAdd").style.opacity = 1;
     document.getElementById("navAdd").style.pointerEvents = "auto";
   }
@@ -206,23 +231,6 @@ for (j = 0; j < categories.length; j++)
     case 1:
       break;
   }
-}
-*/
-
-//Simplified random effects method and called function
-/*
-chaosCreator(document.querySelector(".flex_split").style.backgroundColor, randColor(), "hsl("+hue+", 100%, 70%)");
-
-function chaosCreator(sty, rand, def) {
-  var chaosFactor = Math.floor(Math.random() * (chaosRange + 1));
-  if (chaosFactor < dissNum && chaosFactor > 0) {
-    sty = rand;
-  }
-  else {
-    sty = def;
-  }
-
-  console.log("Style: " + sty + " Random: " + rand + " Default: " + def);
 }
 */
 
