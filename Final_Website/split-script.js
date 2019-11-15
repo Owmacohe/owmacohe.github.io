@@ -12,55 +12,39 @@ var textSize = 30;
 //Starting variable that helps determine the size of the first square
 var startingShrink = 2;
 
-/*
-var fadeCheck = setInterval(fadeIn, 10);
-var pathFade = false;
-var addFade = false;
-
-function fadeIn() {
-  if (pathFade == true) {
-    fadeIncrease(document.getElementById("navPath"));
-  }
-
-  if (addFade == true) {
-    fadeIncrease(document.getElementById("navAdd"));
-  }
-}
-
-function fadeIncrease(elem) {
-  if (elem.style.opacity < 1) {
-    elem.style.opacity += 0.2;
-    console.log(elem.style.opacity);
-  }
-}
-*/
+var categoryNames = [
+  ["Life"],
+  ["Education", "Hobbies", "Work", "Food"]
+];
 
 //Function that is called when the user selects a category
 function split(category) {
-  //Gradual button creation
+  var categories = document.getElementsByClassName("flex_split");
+
   if (buttNum == 0) {
     createButt(1);
   }
-  else if (buttNum == 1)
-  {
+  else if (buttNum > 0) {
     dissNum++;
 
-    createButt(3);
-    document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
-  }
-  else if (buttNum >= 4) {
-    dissNum++;
+    const parent = document.getElementById("divs");
+    while (parent.firstChild) {
+      parent.firstChild.remove();
+    }
 
-    createButt(4);
+    if (categoryNames[dissNum] == null) {
+      categoryNames[dissNum] = [];
+    }
+
+    createButt(categoryNames[dissNum].length);
+
     document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
   }
 
   if (dissNum == 1) {
-    //pathFade = true;
     document.getElementById("navPath").style.opacity = 1;
   }
   else if (dissNum >= 2) {
-    //addFade = true;
     document.getElementById("navAdd").style.opacity = 1;
     document.getElementById("navAdd").style.pointerEvents = "auto";
   }
@@ -76,6 +60,15 @@ function split(category) {
     document.getElementById("navPath").appendChild(pathSeparator);
     pathSeparator.innerHTML = ">";
     pathSeparator.style.textDecoration = "none";
+  }
+
+  for (k = 0; k < categoryNames[dissNum].length; k++) {
+    categories[k].innerHTML = "";
+    categories[k].innerHTML = categoryNames[dissNum][k];
+
+    if (categories[k].innerHTML.length >= 6) {
+      categories[k].style.fontSize = (textSize * 0.6) + "vh";
+    }
   }
 }
 
@@ -94,8 +87,7 @@ function createButt(instances) {
 
   //Creating a new button
   var i;
-  for (i = 0; i < instances; i++)
-  {
+  for (i = 0; i < instances; i++) {
     buttNum++;
 
     var splitButt = document.createElement("BUTTON");
@@ -110,18 +102,7 @@ function createButt(instances) {
     //Sets the size, margin, and text size for all
     //Chance to assign random size, margin, and text size
     var categories = document.getElementsByClassName("flex_split");
-    for (j = 0; j < categories.length; j++)
-    {
-      categories[j].innerHTML = "";
-
-      if (dissNum == 0) {
-        categories[j].innerHTML = "Life";
-      }
-      else if (dissNum == 1) {
-        var firstCategories = ["Education", "Hobbies", "Work", "Food"];
-        categories[j].innerHTML = firstCategories[j];
-      }
-
+    for (j = 0; j < categories.length; j++) {
       categories[j].style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
       categories[j].style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
       categories[j].style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
@@ -197,6 +178,9 @@ function addNewCategory(name) {
   splitButt.className = "flex_split";
   splitButt.innerHTML = name;
 
+  categoryNames[dissNum].push(name);
+  console.log(categoryNames);
+
   splitButt.style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
   splitButt.style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
   splitButt.style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
@@ -219,34 +203,3 @@ function addNewCategory(name) {
 
   //console.log("Width: " + splitButt.style.width + " Height: " + splitButt.style.height + " Margin: " + splitButt.style.margin + " Font Size: " + splitButt.style.fontSize + " Colour: " + splitButt.style.backgroundColor);
 }
-
-//For adding text to buttons as they are created
-/*
-var categories = document.getElementsByClassName("flex_split");
-for (j = 0; j < categories.length; j++)
-{
-  switch (dissNum) {
-    case 0:
-      break;
-    case 1:
-      break;
-  }
-}
-*/
-
-//Exponential creation
-/*
-function split() {
-  if (buttNum == 0)
-  {
-    createButt(1);
-  }
-  else if (buttNum > 0)
-  {
-    createButt(buttNum);
-    document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
-  }
-
-  dissNum++;
-}
-*/
