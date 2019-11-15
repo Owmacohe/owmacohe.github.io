@@ -52,8 +52,10 @@ function split(category) {
   if (dissNum >= 1) {
     var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
-    //pathElement.setAttribute("onclick", "");
     pathElement.className = "pElements";
+    var targetBranch = dissNum - 2;
+    pathElement.setAttribute("id", targetBranch);
+    pathElement.setAttribute("onclick", "loadBranch("+targetBranch+")");
     pathElement.innerHTML = category;
 
     var pathSeparator = document.createElement("STRONG");
@@ -202,4 +204,10 @@ function addNewCategory(name) {
   }
 
   //console.log("Width: " + splitButt.style.width + " Height: " + splitButt.style.height + " Margin: " + splitButt.style.margin + " Font Size: " + splitButt.style.fontSize + " Colour: " + splitButt.style.backgroundColor);
+}
+
+function loadBranch(branchNum) {
+  dissNum = branchNum;
+  console.log(dissNum);
+  split();
 }
