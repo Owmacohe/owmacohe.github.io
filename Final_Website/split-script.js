@@ -27,7 +27,7 @@ function split(category) {
   else if (buttNum > 0) {
     dissNum++;
 
-    const parent = document.getElementById("divs");
+    var parent = document.getElementById("divs");
     while (parent.firstChild) {
       parent.firstChild.remove();
     }
@@ -53,7 +53,7 @@ function split(category) {
     var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.className = "pElements";
-    var targetBranch = dissNum - 2;
+    var targetBranch = dissNum - 1;
     pathElement.setAttribute("id", targetBranch);
     pathElement.setAttribute("onclick", "loadBranch("+targetBranch+")");
     pathElement.innerHTML = category;
@@ -165,49 +165,73 @@ function randPercent() {
 
 function addCheck(event) {
   if (event.keyCode == 13) {
-    addNewCategory(document.getElementById("input").value);
+    addNewCategory(1, document.getElementById("input").value);
     document.getElementById("input").value = "";
   }
 }
 
-function addNewCategory(name) {
-  buttNum++;
+function addNewCategory(additions, name) {
+  for (i = 0; i < additions; i ++) {
+    buttNum++;
 
-  var splitButt = document.createElement("BUTTON");
-  document.getElementById("divs").appendChild(splitButt);
+    var splitButt = document.createElement("BUTTON");
+    document.getElementById("divs").appendChild(splitButt);
 
-  splitButt.setAttribute("onclick", "split(this.innerHTML)");
-  splitButt.className = "flex_split";
-  splitButt.innerHTML = name;
+    splitButt.setAttribute("onclick", "split(this.innerHTML)");
+    splitButt.className = "flex_split";
+    splitButt.innerHTML = name;
 
-  categoryNames[dissNum].push(name);
-  console.log(categoryNames);
+    categoryNames[dissNum].push(name);
+    //console.log(categoryNames);
 
-  splitButt.style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
-  splitButt.style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
-  splitButt.style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
-  splitButt.style.fontSize = chaosChance(chaosReduction(textSize), textSize + "vh");
+    splitButt.style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+    splitButt.style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+    splitButt.style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
+    splitButt.style.fontSize = chaosChance(chaosReduction(textSize), textSize + "vh");
 
-  var hue = 60 + (dissNum * 40);
-  splitButt.style.backgroundColor = chaosChance(randColor(), "hsl("+hue+", 100%, 70%)");
-  splitButt.style.color = chaosChance(randColor(), "black");
+    var hue = 60 + (dissNum * 40);
+    splitButt.style.backgroundColor = chaosChance(randColor(), "hsl("+hue+", 100%, 70%)");
+    splitButt.style.color = chaosChance(randColor(), "black");
 
-  var chaosFactor = Math.floor(Math.random() * ((80 * chaosRange) + 1));
-  if (chaosFactor < dissNum && chaosFactor > 0) {
-    splitButt.style.position = "absolute";
-    splitButt.style.top = randPercent();
-    splitButt.style.left = randPercent();
+    var chaosFactor = Math.floor(Math.random() * ((80 * chaosRange) + 1));
+    if (chaosFactor < dissNum && chaosFactor > 0) {
+      splitButt.style.position = "absolute";
+      splitButt.style.top = randPercent();
+      splitButt.style.left = randPercent();
+    }
+
+    if (splitButt.innerHTML.length >= 6) {
+      splitButt.style.fontSize = (textSize * 0.6) + "vh";
+    }
+
+    //console.log("Width: " + splitButt.style.width + " Height: " + splitButt.style.height + " Margin: " + splitButt.style.margin + " Font Size: " + splitButt.style.fontSize + " Colour: " + splitButt.style.backgroundColor);
   }
-
-  if (splitButt.innerHTML.length >= 6) {
-    splitButt.style.fontSize = (textSize * 0.6) + "vh";
-  }
-
-  //console.log("Width: " + splitButt.style.width + " Height: " + splitButt.style.height + " Margin: " + splitButt.style.margin + " Font Size: " + splitButt.style.fontSize + " Colour: " + splitButt.style.backgroundColor);
 }
 
 function loadBranch(branchNum) {
   dissNum = branchNum;
-  console.log(dissNum);
-  split();
+
+  var parent = document.getElementById("divs");
+  while (parent.firstChild) {
+    parent.firstChild.remove();
+  }
+
+  if (categoryNames[dissNum] == null) {
+    categoryNames[dissNum] = [];
+  }
+
+  addNewCategory(categoryNames[dissNum].length, "");
+
+  var categories = document.getElementsByClassName("flex_split");
+
+  for (k = 0; k < categoryNames[dissNum].length; k++) {
+    categories[k].innerHTML = "";
+    categories[k].innerHTML = categoryNames[dissNum][k];
+
+    if (categories[k].innerHTML.length >= 6) {
+      categories[k].style.fontSize = (textSize * 0.6) + "vh";
+    }
+  }
+
+  document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
 }
