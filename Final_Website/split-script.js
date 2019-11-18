@@ -23,7 +23,7 @@ function split(categoryName) {
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
     pathElement.setAttribute("id", dissNum);
-    pathElement.setAttribute("onclick", "loadBranch("+this.id+"), false");
+    //pathElement.setAttribute("onclick", "loadBranch("+this.id+", false)");
     pathElement.innerHTML = categoryName;
 
     var pathSeparator = document.createElement("STRONG");
@@ -48,6 +48,10 @@ function split(categoryName) {
   //Loading the level, then upping it for next time
   loadBranch(dissNum, true);
 
+  /*######
+  ERROR STOPS BEFORE DISSNUM IS UPPED
+  ######*/
+
   dissNum++;
   //
 }
@@ -66,6 +70,7 @@ function loadBranch(branchNum, shrink) {
   var parent = document.getElementById("divs");
   while (parent.firstChild) {
     parent.firstChild.remove();
+    console.log("REMOVED A CATEGORY");
   }
 
   if (categoryNames[dissNum] == null) {
@@ -75,7 +80,7 @@ function loadBranch(branchNum, shrink) {
   addNewCategory(categoryNames[dissNum].length, false, "");
   //
 
-  //Naming the newly added categories
+  //Naming the newly added categories, and shortening them if necessary
   var categories = parent.children;
 
   for (k = 0; k < categoryNames[dissNum].length; k++) {
@@ -87,7 +92,9 @@ function loadBranch(branchNum, shrink) {
   }
   //
 
-  document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+  if (dissNum >= 1) {
+    document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+  }
 }
 
 //Function that creates the amount that the size, margin, and text are shrunk by
@@ -97,12 +104,15 @@ function shrinkFactor() {
   return shrinkAmount;
 }
 
+/*######
+ERROR: Something is stopping the addNewCategory function from looping the correct number of times
+######*/
+
 function addNewCategory(iterations, newAddition, newName) {
   for (i = 0; i < iterations; i++) {
-    //Creates the button, and adds the necessary attributes
+    //Creates the button, and sets/adds the necessary attributes
     var splitButt = document.createElement("BUTTON");
     document.getElementById("divs").appendChild(splitButt);
-    console.log("added");
 
     splitButt.setAttribute("onclick", "split(this.innerHTML)");
     splitButt.setAttribute("class", "flex_split");
@@ -133,10 +143,7 @@ function addNewCategory(iterations, newAddition, newName) {
       categoryNames[dissNum].push(newName);
     }
 
-    //If it's a big name, shorten it
-    if (splitButt.innerHTML.length >= 6) {
-      splitButt.style.fontSize = (textSize * 0.6) + "vh";
-    }
+    console.log("ADDED A CATEGORY");
   }
 }
 
