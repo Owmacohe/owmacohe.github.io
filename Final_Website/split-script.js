@@ -76,9 +76,7 @@ function loadBranch(branchNum, shrink) {
   //
 
   //Naming the newly added categories
-  //var categories = document.getElementsByClassName("flex_split");
   var categories = parent.children;
-  console.log(categories);
 
   for (k = 0; k < categoryNames[dissNum].length; k++) {
     categories[k].innerHTML = categoryNames[dissNum][k];
@@ -104,6 +102,7 @@ function addNewCategory(iterations, newAddition, newName) {
     //Creates the button, and adds the necessary attributes
     var splitButt = document.createElement("BUTTON");
     document.getElementById("divs").appendChild(splitButt);
+    console.log("added");
 
     splitButt.setAttribute("onclick", "split(this.innerHTML)");
     splitButt.setAttribute("class", "flex_split");
@@ -127,18 +126,17 @@ function addNewCategory(iterations, newAddition, newName) {
     }
     //
 
-    //If it's a big name, shorten it
-    if (splitButt.innerHTML.length >= 6) {
-      splitButt.style.fontSize = (textSize * 0.6) + "vh";
-    }
-
+    //If the function is being called to add a new category, give it the proper name
     if (newAddition == true) {
       splitButt.innerHTML = newName;
 
       categoryNames[dissNum].push(newName);
     }
 
-    console.log("added category");
+    //If it's a big name, shorten it
+    if (splitButt.innerHTML.length >= 6) {
+      splitButt.style.fontSize = (textSize * 0.6) + "vh";
+    }
   }
 }
 
