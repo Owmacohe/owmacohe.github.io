@@ -16,13 +16,13 @@ var categoryNames = [
   ["Education", "Hobbies", "Work", "Food"]
 ];
 
-function split(categoryName) {
+function split(pathName) {
   //Creating the path as categories are selected
   if (dissNum >= 1) {
     var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
-    pathElement.innerHTML = categoryName;
+    pathElement.innerHTML = pathName;
 
     var pathSeparator = document.createElement("STRONG");
     document.getElementById("navPath").appendChild(pathSeparator);
@@ -44,7 +44,7 @@ function split(categoryName) {
   //
 
   //Loading the level, then upping it for next time
-  loadBranch(dissNum, true);
+  loadBranch(dissNum);
 
   dissNum++;
   //
@@ -69,7 +69,9 @@ function loadBranch(branchNum) {
     categoryNames[dissNum] = [];
   }
 
-  addNewCategory(categoryNames[dissNum].length, false, "");
+  for (l = 0; l < categoryNames[dissNum].length; l++) {
+    addNewCategory();
+  }
   //
 
   //Naming the newly added categories, and shortening them if necessary
@@ -96,45 +98,40 @@ function shrinkFactor() {
   return shrinkAmount;
 }
 
-function addNewCategory(iterations, newAddition, newName) {
-  //console.log(iterations + " " + newAddition + " " + newName);
+function addNewCategory(newName) {
+  //Creates the button, and sets/adds the necessary attributes
+  var newCategory = document.createElement("BUTTON");
+  document.getElementById("divs").appendChild(newCategory);
 
-  for (i = 0; i < iterations; i++) {
-    //Creates the button, and sets/adds the necessary attributes
-    var splitButt = document.createElement("BUTTON");
-    document.getElementById("divs").appendChild(splitButt);
+  newCategory.setAttribute("onclick", "split(this.innerHTML)");
+  newCategory.setAttribute("class", "flex_split");
+  //
 
-    splitButt.setAttribute("onclick", "split(this.innerHTML)");
-    splitButt.setAttribute("class", "flex_split");
-    //
+  //Chance to randomly affect the width, height, margin size, text size, background colour, text colour, and alignment
+  newCategory.style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+  newCategory.style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
+  newCategory.style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
+  newCategory.style.fontSize = chaosChance(chaosReduction(textSize), textSize + "vh");
 
-    //Chance to randomly affect the width, height, margin size, text size, background colour, text colour, and alignment
-    splitButt.style.width = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
-    splitButt.style.height = chaosChance(chaosReduction(buttonSize), buttonSize + "vh");
-    splitButt.style.margin = chaosChance(chaosReduction(marginSize), marginSize + "vh");
-    splitButt.style.fontSize = chaosChance(chaosReduction(textSize), textSize + "vh");
+  var hue = 60 + (dissNum * 40);
+  newCategory.style.backgroundColor = chaosChance(randColor(), "hsl("+hue+", 100%, 70%)");
+  newCategory.style.color = chaosChance(randColor(), "black");
 
-    var hue = 60 + (dissNum * 40);
-    splitButt.style.backgroundColor = chaosChance(randColor(), "hsl("+hue+", 100%, 70%)");
-    splitButt.style.color = chaosChance(randColor(), "black");
-
-    var chaosFactor = Math.floor(Math.random() * ((80 * chaosRange) + 1));
-    if (chaosFactor < dissNum && chaosFactor > 0) {
-      splitButt.style.position = "absolute";
-      splitButt.style.top = randPercent();
-      splitButt.style.left = randPercent();
-    }
-    //
-
-    //If the function is being called to add a new category, give it the proper name
-    if (newAddition == true) {
-      splitButt.innerHTML = newName;
-
-      categoryNames[dissNum].push(newName);
-    }
-
-    console.log("ADDED A CATEGORY");
+  var chaosFactor = Math.floor(Math.random() * ((80 * chaosRange) + 1));
+  if (chaosFactor < dissNum && chaosFactor > 0) {
+    newCategory.style.position = "absolute";
+    newCategory.style.top = randPercent();
+    newCategory.style.left = randPercent();
   }
+  //
+
+  //If the function is being called to add a new category, give it the proper name
+  if (newName != null) {
+    newCategory.innerHTML = newName;
+    //categoryNames[dissNum].push(newName);
+  }
+
+  console.log("ADDED A CATEGORY");
 }
 
 //Function for determining whether a button "breaks" or not
@@ -174,7 +171,7 @@ function randPercent() {
 //When the user preses enter after filling out the field, a new category is added to both the screen and the corresponding level
 function addCheck(event) {
   if (event.keyCode == 13) {
-    addNewCategory(1, true, document.getElementById("input").value);
+    addNewCategory(document.getElementById("input").value);
     document.getElementById("input").value = "";
   }
 }
