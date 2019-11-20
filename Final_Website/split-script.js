@@ -22,13 +22,10 @@ function split(categoryName) {
     var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
-    pathElement.setAttribute("id", dissNum);
-    pathElement.setAttribute("onclick", "loadBranch("+pathElement.id+", false)");
     pathElement.innerHTML = categoryName;
 
     var pathSeparator = document.createElement("STRONG");
     document.getElementById("navPath").appendChild(pathSeparator);
-    pathElement.setAttribute("id", dissNum);
     pathSeparator.innerHTML = ">";
     pathSeparator.style.textDecoration = "none";
 
@@ -49,32 +46,14 @@ function split(categoryName) {
   //Loading the level, then upping it for next time
   loadBranch(dissNum, true);
 
-  /*######
-  ERROR STOPS BEFORE DISSNUM IS UPPED
-  ######*/
-
   dissNum++;
   //
 }
 
-function loadBranch(branchNum, shrink) {
-  if (shrink == true) {
-    buttonSize = buttonSize * shrinkFactor();
-    marginSize = marginSize * shrinkFactor();
-    textSize = textSize * shrinkFactor();
-  }
-  else if (shrink == false) {
-    var navParent = document.getElementById("navPath");
-
-    for (i = 0; i < navParent.children.length - 1; i++) {
-      console.log("test");
-
-      if (navParent.children[i].id > branchNum) {
-        navParent.children[i].remove();
-        console.log("REMOVED A NAV ELEMENT");
-      }
-    }
-  }
+function loadBranch(branchNum) {
+  buttonSize = buttonSize * shrinkFactor();
+  marginSize = marginSize * shrinkFactor();
+  textSize = textSize * shrinkFactor();
 
   //Setting the level to the target level
   dissNum = branchNum;
@@ -116,12 +95,6 @@ function shrinkFactor() {
   var shrinkAmount = -Math.pow(1.9, -(0.56 * (startingShrink + dissNum))) + 1;
   return shrinkAmount;
 }
-
-/*######
-ERROR: Something is stopping the addNewCategory function from looping the correct number of times
-
-I've checked, and none of the paramaters being inputted are the issue
-######*/
 
 function addNewCategory(iterations, newAddition, newName) {
   //console.log(iterations + " " + newAddition + " " + newName);
