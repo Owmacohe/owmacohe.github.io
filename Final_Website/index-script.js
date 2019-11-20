@@ -1,29 +1,42 @@
-var slideFrame = -50;
-var slideMax = 0;
+var slideFrame = 0;
+var slideMax = 5;
 
-var opFrame = 0;
-var opMax = 1;
+var opInfoFrame = 0;
+var opInfoMax  = 1;
 
-var frameWait = 0;
-var waitMax = 2;
+var opEnterFrame = 0;
+var opEnterMax = 1;
+
+var waitFrame = 0;
+var waitInfo = 5;
+var waitEnter = 20;
 var slideCounter = setInterval(slider, 10);
 
 function slider() {
-  if (frameWait <= waitMax)
+  if (waitFrame <= waitEnter)
   {
-    frameWait += 0.05;
+    waitFrame += 0.05;
   }
-  else {
-    if (slideFrame <= slideMax)
+
+  if (waitFrame >= waitInfo) {
+    if (opInfoFrame < opInfoMax)
+    {
+      opInfoFrame += opInfoMax / 100;
+      document.querySelector(".flex_info").style.opacity = opInfoFrame;
+    }
+  }
+
+  if (waitFrame >= waitEnter) {
+    if (slideFrame < slideMax)
     {
       slideFrame += (slideMax - slideFrame) / 20;
-      document.querySelector(".flex_enter").style.top = slideFrame;
+      document.querySelector(".flex_enter").style.top = slideFrame + "vw";
     }
 
-    if (opFrame <= opMax)
+    if (opEnterFrame <= opEnterMax)
     {
-      opFrame += opMax / 40;
-      document.querySelector(".flex_enter").style.opacity = opFrame;
+      opEnterFrame += opEnterMax / 40;
+      document.querySelector(".flex_enter").style.opacity = opEnterFrame;
     }
   }
 }

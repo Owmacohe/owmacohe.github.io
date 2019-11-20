@@ -23,11 +23,12 @@ function split(categoryName) {
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
     pathElement.setAttribute("id", dissNum);
-    //pathElement.setAttribute("onclick", "loadBranch("+this.id+", false)");
+    pathElement.setAttribute("onclick", "loadBranch("+pathElement.id+", false)");
     pathElement.innerHTML = categoryName;
 
     var pathSeparator = document.createElement("STRONG");
     document.getElementById("navPath").appendChild(pathSeparator);
+    pathElement.setAttribute("id", dissNum);
     pathSeparator.innerHTML = ">";
     pathSeparator.style.textDecoration = "none";
 
@@ -62,14 +63,26 @@ function loadBranch(branchNum, shrink) {
     marginSize = marginSize * shrinkFactor();
     textSize = textSize * shrinkFactor();
   }
+  else if (shrink == false) {
+    var navParent = document.getElementById("navPath");
+
+    for (i = 0; i < navParent.children.length - 1; i++) {
+      console.log("test");
+
+      if (navParent.children[i].id > branchNum) {
+        navParent.children[i].remove();
+        console.log("REMOVED A NAV ELEMENT");
+      }
+    }
+  }
 
   //Setting the level to the target level
   dissNum = branchNum;
 
   //Removing all the current categories, adding a new array for a new level if necessary, and then adding the categories based on the level
-  var parent = document.getElementById("divs");
-  while (parent.firstChild) {
-    parent.firstChild.remove();
+  var categoryParent = document.getElementById("divs");
+  while (categoryParent.firstChild) {
+    categoryParent.firstChild.remove();
     console.log("REMOVED A CATEGORY");
   }
 
@@ -81,7 +94,7 @@ function loadBranch(branchNum, shrink) {
   //
 
   //Naming the newly added categories, and shortening them if necessary
-  var categories = parent.children;
+  var categories = categoryParent.children;
 
   for (k = 0; k < categoryNames[dissNum].length; k++) {
     categories[k].innerHTML = categoryNames[dissNum][k];
@@ -106,9 +119,13 @@ function shrinkFactor() {
 
 /*######
 ERROR: Something is stopping the addNewCategory function from looping the correct number of times
+
+I've checked, and none of the paramaters being inputted are the issue
 ######*/
 
 function addNewCategory(iterations, newAddition, newName) {
+  //console.log(iterations + " " + newAddition + " " + newName);
+
   for (i = 0; i < iterations; i++) {
     //Creates the button, and sets/adds the necessary attributes
     var splitButt = document.createElement("BUTTON");
