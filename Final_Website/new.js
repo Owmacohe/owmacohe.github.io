@@ -29,6 +29,7 @@ var categoryNames = [
 function split(pathName, targetName) {
   //Creating the path as categories are selected
   if (dissNum >= 1) {
+    var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
     pathElement.innerHTML = pathName;
