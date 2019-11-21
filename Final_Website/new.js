@@ -19,22 +19,16 @@ var categoryNames = [
 */
 
 var categoryNames = [
-  [0, "Default", "Life"],
-  [1, "Life", "Education", "Hobbies", "Work", "Food"],
-  [2, "Education"],
-  [2, "Hobbies"],
-  [2, "Work"],
-  [2, "Food"]
+  [0, "Life", "Education", "Hobbies", "Work", "Food"],
+  [1, "Education"],
+  [1, "Hobbies"],
+  [1, "Work"],
+  [1, "Food"]
 ]
 
-var currentBranchName;
-
-function split(pathName) {
-  currentBranchName = pathName;
-
+function split(pathName, targetName) {
   //Creating the path as categories are selected
   if (dissNum >= 1) {
-    var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
     pathElement.innerHTML = pathName;
@@ -63,7 +57,7 @@ function split(pathName) {
   //
 
   //Loading the level, then upping it for next time
-  loadBranch(dissNum, pathName);
+  loadBranch(dissNum, targetName);
 
   dissNum++;
   //
@@ -81,15 +75,23 @@ function loadBranch(branchNum, targetName) {
   var categoryParent = document.getElementById("divs");
   while (categoryParent.firstChild) {
     categoryParent.firstChild.remove();
+    console.log("REMOVED A CATEGORY");
   }
 
-  if (targetName == null) {
-    targetName = "Default";
+  /*
+  if (categoryNames[dissNum] == null) {
+    categoryNames[dissNum] = [];
   }
 
-  for (i = 0; i < categoryNames.length; i++) {
-    if (categoryNames[i][0] == dissNum && categoryNames[i][1] == targetName) {
-      for (j = 2; j < categoryNames[i].length; j++) {
+  for (l = 0; l < categoryNames[dissNum].length; l++) {
+    addNewCategory();
+  }
+  */
+
+  for (l = 0; l < categoryNames.length; l++) {
+    console.log(dissNum + " " + targetName);
+    if (categoryNames[l][0] == dissNum && categoryNames[l][1] == targetName) {
+      for (m = 2; m < categoryNames[l].length; m++) {
         addNewCategory();
       }
     }
@@ -99,18 +101,31 @@ function loadBranch(branchNum, targetName) {
   //Naming the newly added categories, and shortening them if necessary
   var categories = categoryParent.children;
 
+  /*
+  for (k = 0; k < categoryNames[dissNum].length; k++) {
+    categories[k].innerHTML = categoryNames[dissNum][k];
+
+    if (categories[k].innerHTML.length >= 5 && categories[k].innerHTML.length < 10) {
+      reduceSize(categories[k], 0.6);
+    }
+    else if (categories[k].innerHTML.length >= 10) {
+      reduceSize(categories[k], 0.4);
+    }
+  }
+  */
+
   for (k = 0; k < categoryNames.length; k++) {
     if (categoryNames[k][0] == dissNum && categoryNames[k][1] == targetName) {
-      for (l = 2, m = 0; l < categoryNames[k].length; l++, m++) {
-        categories[m].innerHTML = categoryNames[k][l];
-
-        if (categories[m].innerHTML.length >= 5 && categories[m].innerHTML.length < 10) {
-          reduceSize(categories[m], 0.6);
-        }
-        else if (categories[m].innerHTML.length >= 10) {
-          reduceSize(categories[m], 0.4);
-        }
+      for (m = 2; m < categoryNames[l].length; m++) {
+        categories[k].innerHTML = categoryNames[k][m];
       }
+    }
+
+    if (categories[k].innerHTML.length >= 5 && categories[k].innerHTML.length < 10) {
+      reduceSize(categories[k], 0.6);
+    }
+    else if (categories[k].innerHTML.length >= 10) {
+      reduceSize(categories[k], 0.4);
     }
   }
   //
@@ -124,7 +139,14 @@ function reduceSize(categ, shrink) {
   categ.style.fontSize = (textSize * shrink) + "vh";
 }
 
-function addNewCategory(newName, targetName) {
+//Function that creates the amount that the size, margin, and text are shrunk by
+//Set up so that the initial button has a size of about 0.5
+function shrinkFactor() {
+  var shrinkAmount = -Math.pow(1.9, -(3 * (startingShrink + dissNum))) + 1;
+  return shrinkAmount;
+}
+
+function addNewCategory(newName) {
   //Creates the button, and sets/adds the necessary attributes
   var newCategory = document.createElement("BUTTON");
   document.getElementById("divs").appendChild(newCategory);
@@ -154,18 +176,7 @@ function addNewCategory(newName, targetName) {
   //If the function is being called to add a new category, give it the proper name
   if (newName != null) {
     newCategory.innerHTML = newName;
-
-    for (n = 0; n < categoryNames.length; n++) {
-      console.log(categoryNames[n][1] + " " + targetName);
-      console.log(categoryNames[n][0] + " " + dissNum);
-      /*
-      if (categoryNames[n][0] == dissNum && categoryNames[n][1] == targetName) {
-        console.log("test2");
-        categoryNames[n].splice(newName);
-        console.log(categoryNames);
-      }
-      */
-    }
+    //categoryNames[dissNum].push(newName);
 
     if (newCategory.innerHTML.length >= 5 && newCategory.innerHTML.length < 10) {
       reduceSize(newCategory, 0.6);
@@ -174,13 +185,8 @@ function addNewCategory(newName, targetName) {
       reduceSize(newCategory, 0.4);
     }
   }
-}
 
-//Function that creates the amount that the size, margin, and text are shrunk by
-//Set up so that the initial button has a size of about 0.5
-function shrinkFactor() {
-  var shrinkAmount = -Math.pow(1.9, -(3 * (startingShrink + dissNum))) + 1;
-  return shrinkAmount;
+  console.log("ADDED A CATEGORY");
 }
 
 //Function for determining whether a button "breaks" or not
@@ -204,7 +210,7 @@ function randColor() {
   var letters = "0123456789ABCDEF";
   var color = "#";
 
-  for (o = 0; o < 6; o++)
+  for (i = 0; i < 6; i++)
   {
     color += letters[Math.floor(Math.random() * 16)];
   }
@@ -220,7 +226,7 @@ function randPercent() {
 //When the user preses enter after filling out the field, a new category is added to both the screen and the corresponding level
 function addCheck(event) {
   if (event.keyCode == 13 && document.getElementById("input").value != "") {
-    addNewCategory(document.getElementById("input").value, currentBranchName);
+    addNewCategory(document.getElementById("input").value);
     document.getElementById("input").value = "";
   }
 }
