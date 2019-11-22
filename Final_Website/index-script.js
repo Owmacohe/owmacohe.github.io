@@ -8,8 +8,8 @@ var opEnterFrame = 0;
 var opEnterMax = 1;
 
 var waitFrame = 0;
-var waitInfo = 5;
-var waitEnter = 20;
+var waitInfo = 4;
+var waitEnter = 10;
 var slideCounter = setInterval(slider, 10);
 
 function slider() {

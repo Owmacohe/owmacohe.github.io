@@ -73,6 +73,10 @@ body {
   font-size: 1.5vw;
 }
 
+.pElements:hover {
+  text-decoration: underline;
+}
+
 /*
 #final {
   color: white;

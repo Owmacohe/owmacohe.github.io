@@ -5,19 +5,12 @@ var dissNum = 0;
 var chaosRange = 20;
 
 //General starting info for the buttons
-var buttonSize = 90;
-var marginSize = 8;
-var textSize = 30;
-var startingShrink = 0.3;
+var buttonSize;
+var marginSize;
+var textSize;
+//var startingShrink = 0.5;
 
 //2D array of category names that is added to and called from when switching between levels
-/*
-var categoryNames = [
-  ["Life"],
-  ["Education", "Hobbies", "Work", "Food"]
-]
-*/
-
 var categoryNames = [
   [0, "Default", "Life"],
   [1, "Life", "Education", "Hobbies", "Work", "Food"],
@@ -37,6 +30,8 @@ function split(pathName) {
     var pathElement = document.createElement("BUTTON");
     document.getElementById("navPath").appendChild(pathElement);
     pathElement.setAttribute("class", "pElements");
+    pathElement.setAttribute("id", dissNum);
+    pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
     pathElement.innerHTML = pathName;
 
     var pathSeparator = document.createElement("STRONG");
@@ -55,11 +50,6 @@ function split(pathName) {
     document.getElementById("navAdd").style.opacity = 1;
     document.getElementById("navAdd").style.pointerEvents = "auto";
   }
-  /*
-  else if (dissNum >= 5) {
-    document.getElementById("final").style.opacity = 1;
-  }
-  */
   //
 
   //Loading the level, then upping it for next time
@@ -70,12 +60,15 @@ function split(pathName) {
 }
 
 function loadBranch(branchNum, targetName) {
-  buttonSize = buttonSize * shrinkFactor();
-  marginSize = marginSize * shrinkFactor();
-  textSize = textSize * shrinkFactor();
-
   //Setting the level to the target level
   dissNum = branchNum;
+
+  buttonSize = 40;
+  buttonSize = shrinkFactor(buttonSize);
+  marginSize = 2;
+  marginSize = shrinkFactor(marginSize);
+  textSize = 15;
+  textSize = shrinkFactor(textSize);
 
   //Removing all the current categories, adding a new array for a new level if necessary, and then adding the categories based on the level
   var categoryParent = document.getElementById("divs");
@@ -151,20 +144,17 @@ function addNewCategory(newName, targetName) {
   }
   //
 
-  //If the function is being called to add a new category, give it the proper name
+  //If the function is being called to add a new category, name it properly and add it to its correct level
   if (newName != null) {
     newCategory.innerHTML = newName;
 
     for (n = 0; n < categoryNames.length; n++) {
-      console.log(categoryNames[n][1] + " " + targetName);
-      console.log(categoryNames[n][0] + " " + dissNum);
-      /*
-      if (categoryNames[n][0] == dissNum && categoryNames[n][1] == targetName) {
-        console.log("test2");
-        categoryNames[n].splice(newName);
+      if (categoryNames[n][0] == dissNum - 1 && categoryNames[n][1] == targetName) {
+        categoryNames[n][categoryNames[n].length] = newName;
+        categoryNames[categoryNames.length] = [dissNum, newName];
+
         console.log(categoryNames);
       }
-      */
     }
 
     if (newCategory.innerHTML.length >= 5 && newCategory.innerHTML.length < 10) {
@@ -174,13 +164,18 @@ function addNewCategory(newName, targetName) {
       reduceSize(newCategory, 0.4);
     }
   }
+  //
 }
 
 //Function that creates the amount that the size, margin, and text are shrunk by
 //Set up so that the initial button has a size of about 0.5
-function shrinkFactor() {
-  var shrinkAmount = -Math.pow(1.9, -(3 * (startingShrink + dissNum))) + 1;
-  return shrinkAmount;
+function shrinkFactor(property) {
+  for (o = 0; o < dissNum; o++) {
+    //var shrinkAmount = -Math.pow(1.9, -(3 * (dissNum + startingShrink))) + 1;
+    property = property * (Math.pow(1.9, -(3 * (dissNum))) + 1);
+  }
+
+  return property;
 }
 
 //Function for determining whether a button "breaks" or not
@@ -204,7 +199,7 @@ function randColor() {
   var letters = "0123456789ABCDEF";
   var color = "#";
 
-  for (o = 0; o < 6; o++)
+  for (p = 0; p < 6; p++)
   {
     color += letters[Math.floor(Math.random() * 16)];
   }
