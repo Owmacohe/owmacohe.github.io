@@ -149,11 +149,13 @@ function addNewCategory(newName, targetName) {
     newCategory.innerHTML = newName;
 
     for (n = 0; n < categoryNames.length; n++) {
+      console.log("A: " + categoryNames[n][0] + " " + (dissNum - 1));
+      console.log("B: " + categoryNames[n][1] + " " + targetName);
+
       if (categoryNames[n][0] == dissNum - 1 && categoryNames[n][1] == targetName) {
         categoryNames[n][categoryNames[n].length] = newName;
         categoryNames[categoryNames.length] = [dissNum, newName];
-
-        console.log(categoryNames);
+        console.log("ADDED TO ARRAY SPOT " + dissNum);
       }
     }
 
@@ -172,7 +174,7 @@ function addNewCategory(newName, targetName) {
 function shrinkFactor(property) {
   for (o = 0; o < dissNum; o++) {
     //var shrinkAmount = -Math.pow(1.9, -(3 * (dissNum + startingShrink))) + 1;
-    property = property * (Math.pow(1.9, -(3 * (dissNum))) + 1);
+    property = property * (Math.pow(1.9, -(2.6 * (dissNum))) + 0.8);
   }
 
   return property;
