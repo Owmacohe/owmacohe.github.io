@@ -14,33 +14,52 @@ var textSize;
 var categoryNames = [
   [0, "Default", "Life"],
   [1, "Life", "Education", "Hobbies", "Work", "Food"],
-  [2, "Education"],
-  [2, "Hobbies"],
-  [2, "Work"],
-  [2, "Food"]
+    [2, "Education", "Kindergarden", "Elementary", "Middle School", "High School", "Cegep", "College", "University", "Graduate Work"],
+      [3, "Kindergarden"], [3, "Elementary"], [3, "Middle School"], [3, "High School"], [3, "Cegep"], [3, "College"], [3, "University"], [3, "Graduate Work"],
+    [2, "Hobbies", "Sports", "Writing", "Biking", "Games", "Swimming", "Arts"],
+      [3, "Sports"], [3, "Writing"], [3, "Biking"], [3, "Games"], [3, "Swimming"], [3, "Arts"],
+    [2, "Work", "Teaching", "Architecture and Construction", "Arts and Culture", "Law and Police", "Governmental", "Business", "Communications", "Health", "Science", "Engineering and Computer Science", "Culinary"],
+      [3, "Teaching"], [3, "Architecture and Construction"], [3, "Arts and Culture"], [3, "Law and Police"], [3, "Governmental"], [3, "Business"], [3, "Communications"], [3, "Health"], [3, "Science"], [3, "Engineering and Computer Science"], [3, "Culinary"],
+    [2, "Food", "Fruits and Vegetables", "Baked Goods", "Dairy", "Meat and Other Animal By-products", "Cultural Foods", "Food Indistry"],
+      [3, "Fruits and Vegetables"], [3, "Baked Goods"], [3, "Dairy"], [3, "Meat and Other Animal By-products"], [3, "Cultural Foods"], [3, "Food Industry"]
 ]
 
 var currentBranchName;
 
+var pathItems = [];
+
 function split(pathName) {
   currentBranchName = pathName;
 
-  //Creating the path as categories are selected
-  if (dissNum >= 1) {
-    var pathElement = document.createElement("BUTTON");
-    document.getElementById("navPath").appendChild(pathElement);
-    pathElement.setAttribute("class", "pElements");
-    pathElement.setAttribute("id", dissNum);
-    pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
-    pathElement.innerHTML = pathName;
+  pathItems[dissNum - 1] = pathName;
 
-    var pathSeparator = document.createElement("STRONG");
-    document.getElementById("navPath").appendChild(pathSeparator);
-    pathSeparator.innerHTML = ">";
-
-    document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+  var pathParent = document.getElementById("navPath");
+  while (pathParent.firstChild) {
+    pathParent.firstChild.remove();
   }
-  //
+
+  var pathStart = document.createElement("STRONG");
+  document.getElementById("navPath").appendChild(pathStart);
+  pathStart.innerHTML = "Path: ";
+
+  for (q = 0; q < pathItems.length; q++) {
+    //Creating the path as categories are selected
+    if (dissNum >= 1) {
+      var pathElement = document.createElement("BUTTON");
+      document.getElementById("navPath").appendChild(pathElement);
+      pathElement.setAttribute("class", "pElements");
+      pathElement.setAttribute("id", dissNum);
+      pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
+      pathElement.innerHTML = pathItems[q];
+
+      var pathSeparator = document.createElement("STRONG");
+      document.getElementById("navPath").appendChild(pathSeparator);
+      pathSeparator.innerHTML = ">";
+
+      document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+    }
+    //
+  }
 
   //Showing the nav incrimentally as the level increases
   if (dissNum == 1) {
@@ -149,13 +168,14 @@ function addNewCategory(newName, targetName) {
     newCategory.innerHTML = newName;
 
     for (n = 0; n < categoryNames.length; n++) {
-      console.log("A: " + categoryNames[n][0] + " " + (dissNum - 1));
-      console.log("B: " + categoryNames[n][1] + " " + targetName);
+      //console.log("A: " + categoryNames[n][0] + " " + (dissNum - 1));
+      //console.log("B: " + categoryNames[n][1] + " " + targetName);
 
       if (categoryNames[n][0] == dissNum - 1 && categoryNames[n][1] == targetName) {
         categoryNames[n][categoryNames[n].length] = newName;
         categoryNames[categoryNames.length] = [dissNum, newName];
-        console.log("ADDED TO ARRAY SPOT " + dissNum);
+        console.log("ADDED TO ARRAY WITH: " + dissNum + " and " + newName);
+        console.log(categoryNames);
       }
     }
 
