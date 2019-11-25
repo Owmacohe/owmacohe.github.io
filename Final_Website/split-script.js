@@ -48,7 +48,7 @@ function split(pathName) {
       var pathElement = document.createElement("BUTTON");
       document.getElementById("navPath").appendChild(pathElement);
       pathElement.setAttribute("class", "pElements");
-      pathElement.setAttribute("id", dissNum);
+      pathElement.setAttribute("id", q);
       pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
       pathElement.innerHTML = pathItems[q];
 
@@ -79,6 +79,8 @@ function split(pathName) {
 }
 
 function loadBranch(branchNum, targetName) {
+  //console.log(branchNum + " " + targetName);
+
   //Setting the level to the target level
   dissNum = branchNum;
 
@@ -100,7 +102,10 @@ function loadBranch(branchNum, targetName) {
   }
 
   for (i = 0; i < categoryNames.length; i++) {
-    if (categoryNames[i][0] == dissNum && categoryNames[i][1] == targetName) {
+    //console.log("Number: " + categoryNames[i][0] + " " + dissNum + " Name: " + categoryNames[i][1] + " " + targetName);
+
+    if (categoryNames[i][1] == targetName) {
+      console.log("#####SUCCESS##### " + dissNum);
       for (j = 2; j < categoryNames[i].length; j++) {
         addNewCategory();
       }
@@ -174,8 +179,8 @@ function addNewCategory(newName, targetName) {
       if (categoryNames[n][0] == dissNum - 1 && categoryNames[n][1] == targetName) {
         categoryNames[n][categoryNames[n].length] = newName;
         categoryNames[categoryNames.length] = [dissNum, newName];
-        console.log("ADDED TO ARRAY WITH: " + dissNum + " and " + newName);
-        console.log(categoryNames);
+        //console.log("ADDED TO ARRAY WITH: " + dissNum + " and " + newName);
+        //console.log(categoryNames);
       }
     }
 
