@@ -31,35 +31,7 @@ var pathItems = [];
 function split(pathName) {
   currentBranchName = pathName;
 
-  pathItems[dissNum - 1] = pathName;
-
-  var pathParent = document.getElementById("navPath");
-  while (pathParent.firstChild) {
-    pathParent.firstChild.remove();
-  }
-
-  var pathStart = document.createElement("STRONG");
-  document.getElementById("navPath").appendChild(pathStart);
-  pathStart.innerHTML = "Path: ";
-
-  for (q = 0; q < pathItems.length; q++) {
-    //Creating the path as categories are selected
-    if (dissNum >= 1) {
-      var pathElement = document.createElement("BUTTON");
-      document.getElementById("navPath").appendChild(pathElement);
-      pathElement.setAttribute("class", "pElements");
-      pathElement.setAttribute("id", q);
-      pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
-      pathElement.innerHTML = pathItems[q];
-
-      var pathSeparator = document.createElement("STRONG");
-      document.getElementById("navPath").appendChild(pathSeparator);
-      pathSeparator.innerHTML = ">";
-
-      document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
-    }
-    //
-  }
+  pathItems[dissNum] = pathName;
 
   //Showing the nav incrimentally as the level increases
   if (dissNum == 1) {
@@ -79,10 +51,47 @@ function split(pathName) {
 }
 
 function loadBranch(branchNum, targetName) {
-  //console.log(branchNum + " " + targetName);
-
   //Setting the level to the target level
   dissNum = branchNum;
+
+  for (r = 0; r < pathItems.length; r++) {
+    if (pathItems[r] == null) {
+      pathItems.splice(r, 1);
+    }
+
+    if (r >= dissNum) {
+      pathItems.splice(r, pathItems.length - r);
+    }
+  }
+  console.log(pathItems);
+
+  var pathParent = document.getElementById("navPath");
+  while (pathParent.firstChild) {
+    pathParent.firstChild.remove();
+  }
+
+  var pathStart = document.createElement("STRONG");
+  document.getElementById("navPath").appendChild(pathStart);
+  pathStart.innerHTML = "Path: ";
+
+  for (q = 0; q < pathItems.length; q++) {
+    //Creating the path as categories are selected
+    if (dissNum >= 1) {
+      var pathElement = document.createElement("BUTTON");
+      document.getElementById("navPath").appendChild(pathElement);
+      pathElement.setAttribute("class", "pElements");
+      pathElement.setAttribute("id", q + 1);
+      pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
+      pathElement.innerHTML = pathItems[q];
+
+      var pathSeparator = document.createElement("STRONG");
+      document.getElementById("navPath").appendChild(pathSeparator);
+      pathSeparator.innerHTML = ">";
+
+      document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
+    }
+    //
+  }
 
   buttonSize = 40;
   buttonSize = shrinkFactor(buttonSize);
@@ -102,10 +111,8 @@ function loadBranch(branchNum, targetName) {
   }
 
   for (i = 0; i < categoryNames.length; i++) {
-    //console.log("Number: " + categoryNames[i][0] + " " + dissNum + " Name: " + categoryNames[i][1] + " " + targetName);
-
     if (categoryNames[i][1] == targetName) {
-      console.log("#####SUCCESS##### " + dissNum);
+      //console.log("#####SUCCESS##### " + dissNum);
       for (j = 2; j < categoryNames[i].length; j++) {
         addNewCategory();
       }
@@ -117,7 +124,7 @@ function loadBranch(branchNum, targetName) {
   var categories = categoryParent.children;
 
   for (k = 0; k < categoryNames.length; k++) {
-    if (categoryNames[k][0] == dissNum && categoryNames[k][1] == targetName) {
+    if (categoryNames[k][1] == targetName) {
       for (l = 2, m = 0; l < categoryNames[k].length; l++, m++) {
         categories[m].innerHTML = categoryNames[k][l];
 
@@ -173,14 +180,10 @@ function addNewCategory(newName, targetName) {
     newCategory.innerHTML = newName;
 
     for (n = 0; n < categoryNames.length; n++) {
-      //console.log("A: " + categoryNames[n][0] + " " + (dissNum - 1));
-      //console.log("B: " + categoryNames[n][1] + " " + targetName);
 
       if (categoryNames[n][0] == dissNum - 1 && categoryNames[n][1] == targetName) {
         categoryNames[n][categoryNames[n].length] = newName;
         categoryNames[categoryNames.length] = [dissNum, newName];
-        //console.log("ADDED TO ARRAY WITH: " + dissNum + " and " + newName);
-        //console.log(categoryNames);
       }
     }
 
