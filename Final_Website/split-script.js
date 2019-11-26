@@ -44,13 +44,13 @@ function split(pathName) {
   //
 
   //Loading the level, then upping it for next time
-  loadBranch(dissNum, pathName);
+  loadBranch(dissNum, pathName, false);
 
   dissNum++;
   //
 }
 
-function loadBranch(branchNum, targetName) {
+function loadBranch(branchNum, targetName, navSelection) {
   //Setting the level to the target level
   dissNum = branchNum;
 
@@ -59,11 +59,10 @@ function loadBranch(branchNum, targetName) {
       pathItems.splice(r, 1);
     }
 
-    if (r >= dissNum) {
+    if (r >= dissNum && navSelection == true) {
       pathItems.splice(r, pathItems.length - r);
     }
   }
-  console.log(pathItems);
 
   var pathParent = document.getElementById("navPath");
   while (pathParent.firstChild) {
@@ -81,7 +80,7 @@ function loadBranch(branchNum, targetName) {
       document.getElementById("navPath").appendChild(pathElement);
       pathElement.setAttribute("class", "pElements");
       pathElement.setAttribute("id", q + 1);
-      pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML)");
+      pathElement.setAttribute("onclick", "loadBranch(this.id, this.innerHTML, true)");
       pathElement.innerHTML = pathItems[q];
 
       var pathSeparator = document.createElement("STRONG");
@@ -110,9 +109,12 @@ function loadBranch(branchNum, targetName) {
     targetName = "Default";
   }
 
+  if (navSelection == true) {
+    //dissNum++;
+  }
+
   for (i = 0; i < categoryNames.length; i++) {
     if (categoryNames[i][1] == targetName) {
-      //console.log("#####SUCCESS##### " + dissNum);
       for (j = 2; j < categoryNames[i].length; j++) {
         addNewCategory();
       }
@@ -171,7 +173,7 @@ function addNewCategory(newName, targetName) {
   if (chaosFactor < dissNum && chaosFactor > 0) {
     newCategory.style.position = "absolute";
     newCategory.style.top = randPercent();
-    newCategory.style.left = randPercent();
+    newCategory.style.right = randPercent();
   }
   //
 
@@ -180,10 +182,11 @@ function addNewCategory(newName, targetName) {
     newCategory.innerHTML = newName;
 
     for (n = 0; n < categoryNames.length; n++) {
-
-      if (categoryNames[n][0] == dissNum - 1 && categoryNames[n][1] == targetName) {
+      if (categoryNames[n][1] == targetName) {
         categoryNames[n][categoryNames[n].length] = newName;
         categoryNames[categoryNames.length] = [dissNum, newName];
+
+        console.log("added " + newName + " to array");
       }
     }
 
@@ -244,7 +247,7 @@ function randPercent() {
 
 //When the user preses enter after filling out the field, a new category is added to both the screen and the corresponding level
 function addCheck(event) {
-  if (event.keyCode == 13 && document.getElementById("input").value != "") {
+  if (event.keyCode == 13) {
     addNewCategory(document.getElementById("input").value, currentBranchName);
     document.getElementById("input").value = "";
   }
