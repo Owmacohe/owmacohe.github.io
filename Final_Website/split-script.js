@@ -24,14 +24,18 @@ var categoryNames = [
       [3, "Fruits and Vegetables"], [3, "Baked Goods"], [3, "Dairy"], [3, "Meat and Other Animal By-products"], [3, "Cultural Foods"], [3, "Food Industry"]
 ]
 
+//Helps with finding the correct branch
 var currentBranchName;
 
+//Array for loading the map in the nav
 var pathItems = [];
 
 function split(pathName) {
+  //Setting the navigation variables properly
   currentBranchName = pathName;
 
   pathItems[dissNum] = pathName;
+  //
 
   //Showing the nav incrimentally as the level increases
   if (dissNum == 1) {
@@ -64,6 +68,7 @@ function loadBranch(branchNum, targetName, navSelection) {
     }
   }
 
+  //Each time the branch is reloaded, so is the map
   var pathParent = document.getElementById("navPath");
   while (pathParent.firstChild) {
     pathParent.firstChild.remove();
@@ -74,7 +79,6 @@ function loadBranch(branchNum, targetName, navSelection) {
   pathStart.innerHTML = "Path: ";
 
   for (q = 0; q < pathItems.length; q++) {
-    //Creating the path as categories are selected
     if (dissNum >= 1) {
       var pathElement = document.createElement("BUTTON");
       document.getElementById("navPath").appendChild(pathElement);
@@ -89,15 +93,17 @@ function loadBranch(branchNum, targetName, navSelection) {
 
       document.getElementById("title").innerHTML = "Levels of dissolution: " + dissNum;
     }
-    //
   }
+  //
 
+  //Making sure that the size changes based on the dissNum, not just simply getting smaller and smaller
   buttonSize = 40;
   buttonSize = shrinkFactor(buttonSize);
   marginSize = 2;
   marginSize = shrinkFactor(marginSize);
   textSize = 15;
   textSize = shrinkFactor(textSize);
+  //
 
   //Removing all the current categories, adding a new array for a new level if necessary, and then adding the categories based on the level
   var categoryParent = document.getElementById("divs");
@@ -110,7 +116,8 @@ function loadBranch(branchNum, targetName, navSelection) {
   }
 
   if (navSelection == true) {
-    //dissNum++;
+    dissNum = parseInt(dissNum);
+    //console.log(dissNum + " " + (dissNum + 1));
   }
 
   for (i = 0; i < categoryNames.length; i++) {
@@ -185,8 +192,6 @@ function addNewCategory(newName, targetName) {
       if (categoryNames[n][1] == targetName) {
         categoryNames[n][categoryNames[n].length] = newName;
         categoryNames[categoryNames.length] = [dissNum, newName];
-
-        console.log("added " + newName + " to array");
       }
     }
 
@@ -205,7 +210,7 @@ function addNewCategory(newName, targetName) {
 function shrinkFactor(property) {
   for (o = 0; o < dissNum; o++) {
     //var shrinkAmount = -Math.pow(1.9, -(3 * (dissNum + startingShrink))) + 1;
-    property = property * (Math.pow(1.9, -(2.6 * (dissNum))) + 0.8);
+    property = property * (Math.pow(1.9, -(2.8 * (dissNum))) + 0.8);
   }
 
   return property;
@@ -248,7 +253,17 @@ function randPercent() {
 //When the user preses enter after filling out the field, a new category is added to both the screen and the corresponding level
 function addCheck(event) {
   if (event.keyCode == 13) {
-    addNewCategory(document.getElementById("input").value, currentBranchName);
-    document.getElementById("input").value = "";
+    var alreadyAdded = false;
+    for (s = 0; s < categoryNames.length; s++) {
+      if (document.getElementById("input").value == categoryNames[s][1]) {
+        alreadyAdded = true;
+      }
+    }
+
+    var result = document.getElementById("input").value;
+    if (result[0] != " " && result[result.length - 1] != " " && result != "" && alreadyAdded == false) {
+      addNewCategory(document.getElementById("input").value, currentBranchName);
+      document.getElementById("input").value = "";
+    }
   }
 }
