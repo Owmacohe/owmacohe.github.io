@@ -119,7 +119,6 @@ function loadBranch(branchNum, targetName, navSelection) {
 
   if (navSelection == true) {
     dissNum = parseInt(dissNum);
-    //console.log(dissNum + " " + (dissNum + 1));
   }
 
   for (i = 0; i < categoryNames.length; i++) {
