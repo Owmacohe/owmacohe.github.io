@@ -22,7 +22,7 @@ var categoryNames = [
       [3, "Teaching"], [3, "Architecture and Construction"], [3, "Arts and Culture"], [3, "Law and Police"], [3, "Governmental"], [3, "Business"], [3, "Communications"], [3, "Health"], [3, "Science"], [3, "Engineering and Computer Science"], [3, "Culinary"],
     [2, "Food", "Fruits and Vegetables", "Baked Goods", "Dairy", "Meat and Other Animal By-products", "Cultural Foods", "Food Indistry"],
       [3, "Fruits and Vegetables"], [3, "Baked Goods"], [3, "Dairy"], [3, "Meat and Other Animal By-products"], [3, "Cultural Foods"], [3, "Food Industry"]
-]
+];
 
 //Helps with finding the correct branch
 var currentBranchName;
