@@ -55,6 +55,8 @@ function split(pathName) {
 }
 
 function loadBranch(branchNum, targetName, navSelection) {
+  currentBranchName = targetName;
+
   //Setting the level to the target level
   dissNum = branchNum;
 
