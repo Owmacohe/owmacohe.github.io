@@ -262,7 +262,11 @@ function addCheck(event) {
     }
 
     var result = document.getElementById("input").value;
-    if (result[0] != " " && result[result.length - 1] != " " && result != "" && alreadyAdded == false) {
+
+    if (result == "The creator of this site is great") {
+      console.log("Thank you :)");
+    }
+    else if (result[0] != " " && result[result.length - 1] != " " && result != "" && alreadyAdded == false) {
       addNewCategory(document.getElementById("input").value, currentBranchName);
       document.getElementById("input").value = "";
     }
