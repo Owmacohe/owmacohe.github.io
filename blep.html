@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="styles-index.css">
+    <link rel="stylesheet" href="default-style.css">
     <meta charset="utf-8">
     <title>blep</title>
   </head>
   <body>
-    <a id="blep" href="index.html">:P</a>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="flexcolumn">
+      <a href="index.html" id="nounderline"><pre id="lenny">( ͡° ͜ʖ ͡°)</pre></a>
+    </div>
   </body>
+
+  <script>
+    var lenny = "( ͡° ͜ʖ ͡°)";
+    var lennywink = "( ͡~ ͜ʖ ͡°)";
+    var text = document.getElementById("lenny");
+
+    var runCheck = setInterval(function wink() {
+      if (text.innerHTML == lenny) {
+        text.innerHTML = lennywink;
+      }
+      else if (text.innerHTML == lennywink) {
+        text.innerHTML = lenny;
+      }
+    }, 700);
+  </script>
 </html>

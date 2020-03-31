@@ -4,10 +4,12 @@ body {
   font-family: "Trebuchet MS", sans-serif;
 }
 
-img {
-  width: 20vw;
+h1 {
+  font-size: 3vw;
+}
 
-  border-radius: 50%;
+h2 {
+  font-size: 2vw;
 }
 
 a {
@@ -18,12 +20,19 @@ a:hover {
   color: #99ff99;
 }
 
-#name {
-  font-size: 2.5vw;
+p {
+  font-size: 1.5vw;
+}
+
+img {
+  border-radius: 5%;
+
+  width: 60%;
 }
 
 .flexcolumn {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-flow: column;
 }
@@ -46,13 +55,20 @@ a:hover {
   text-align: center;
 }
 
+#titleimage {
+  width: 20vw;
+
+  border-radius: 50%;
+}
+
 #footer {
   font-size: 1vw;
   text-decoration: none;
 
-  margin-top: 25vh;
+  margin-bottom: 1vw;
 }
 
+/*
 #blep {
   text-decoration: none;
   font-size: 3vw;
@@ -62,4 +78,21 @@ a:hover {
   bottom: 50%;
   right: 50%;
   left: 50%;
+}
+*/
+
+#nounderline {
+  text-decoration: none;
+
+  font-size: 3vw;
+}
+
+#live {
+  color: red;
+}
+
+#ascii-art {
+  font-size: 2vw;
+  font-family: monospace;
+  white-space: pre;
 }
