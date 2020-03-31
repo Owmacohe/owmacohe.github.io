@@ -19,7 +19,7 @@ a:hover {
 }
 
 #name {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 .flexcolumn {
@@ -33,8 +33,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-flow: row;
-
-  margin-top: 10vh;
 }
 
 .flexitem {
@@ -44,7 +42,7 @@ a:hover {
 }
 
 .tildeitem {
-  font-size: 2vw;
+  font-size: 2.5vw;
   text-align: center;
 }
 
@@ -52,8 +50,7 @@ a:hover {
   font-size: 1vw;
   text-decoration: none;
 
-  position: absolute;
-  bottom: 0px;
+  margin-top: 25vh;
 }
 
 #blep {
