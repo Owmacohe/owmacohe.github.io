@@ -10,9 +10,7 @@
       <a id="footer" href="blep.html"><strong>'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,____,.-'</strong></a>
 
       <div class="flexrow">
-        <div class="flexitem">
-          -+*%$%*+-
-        </div>
+        <div class="flexanim"></div>
         <div class="flexcolumn">
           <div class="flexitem">
             <img src="logo.png" alt="[A pixel art logo I made]" id="titleimage">
@@ -21,9 +19,7 @@
             <h1>~~~~~ Owen Hellum ~~~~~</h1>
           </div>
         </div>
-        <div class="flexitem">
-          -+*%$%*+-
-        </div>
+        <div class="flexanim"></div>
       </div>
 
       <!--Portfolio-->
@@ -113,4 +109,32 @@
 
     </div>
   </body>
+
+  <script>
+    var pattern = "-+*%$%*+-";
+    var chars = pattern.split("");
+    var text = document.getElementsByClassName("flexanim");
+
+    var runCheck = setInterval(function change() {
+      var i;
+      for (i = chars.length; i > 0; i--) {
+        chars[i] = chars[i - 1];
+      }
+
+      chars[0] = chars[chars.length - 1];
+      chars.splice(chars.length - 1, 1);
+
+      var j;
+      for (j = 0; j < text.length; j++) {
+        var newPattern = "";
+
+        var k;
+        for (k = 0; k < chars.length; k++) {
+          newPattern = newPattern + chars[k];
+        }
+
+        text[j].innerHTML = newPattern;
+      }
+    }, 100);
+  </script>
 </html>

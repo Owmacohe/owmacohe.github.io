@@ -1,7 +1,8 @@
 body {
   background-color: #d8eff4;
-
   font-family: "Trebuchet MS", sans-serif;
+
+  margin-bottom: 10vh;
 }
 
 h1 {
@@ -53,6 +54,12 @@ img {
 .tildeitem {
   font-size: 2.5vw;
   text-align: center;
+}
+
+.flexanim {
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 1.5vw;
 }
 
 #titleimage {
