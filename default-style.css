@@ -102,4 +102,10 @@ img {
   font-size: 2vw;
   font-family: monospace;
   white-space: pre;
+
+  margin-right: 8vw;
+}
+
+#side {
+  text-align: left;
 }

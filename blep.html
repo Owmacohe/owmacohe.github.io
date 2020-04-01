@@ -11,6 +11,9 @@
     <br><br><br><br><br><br><br><br><br>
     <div class="flexcolumn">
       <a href="index.html" id="nounderline"><pre id="lenny">( ͡° ͜ʖ ͡°)</pre></a>
+      <div class="flexitem" id="counter">
+        Wink count: 0
+      </div>
     </div>
   </body>
 
@@ -18,10 +21,15 @@
     var lenny = "( ͡° ͜ʖ ͡°)";
     var lennywink = "( ͡~ ͜ʖ ͡°)";
     var text = document.getElementById("lenny");
+    var winkCount = 0;
+    counter = document.getElementById("counter");
 
     var runCheck = setInterval(function wink() {
       if (text.innerHTML == lenny) {
         text.innerHTML = lennywink;
+
+        winkCount++;
+        counter.innerHTML = "Wink count: " + winkCount;
       }
       else if (text.innerHTML == lennywink) {
         text.innerHTML = lenny;
