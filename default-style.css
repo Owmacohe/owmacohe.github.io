@@ -31,6 +31,12 @@ img {
   width: 60%;
 }
 
+video {
+  border-radius: 5%;
+
+  width: 60%;
+}
+
 .flexcolumn {
   display: flex;
   justify-content: center;
@@ -51,6 +57,10 @@ img {
   margin: 1.5vw;
 }
 
+.smallimage {
+  width: 30vw;
+}
+
 .tildeitem {
   font-size: 2.5vw;
   text-align: center;
@@ -59,7 +69,6 @@ img {
 .flexanim {
   font-size: 2.5vw;
   text-align: center;
-  margin: 1.5vw;
 }
 
 #titleimage {
@@ -75,27 +84,10 @@ img {
   margin-bottom: 1vw;
 }
 
-/*
-#blep {
-  text-decoration: none;
-  font-size: 3vw;
-
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  right: 50%;
-  left: 50%;
-}
-*/
-
 #nounderline {
   text-decoration: none;
 
   font-size: 3vw;
-}
-
-#live {
-  color: red;
 }
 
 #ascii-art {
@@ -104,8 +96,4 @@ img {
   white-space: pre;
 
   margin-right: 8vw;
-}
-
-#side {
-  text-align: left;
 }
