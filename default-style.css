@@ -71,6 +71,13 @@ video {
   text-align: center;
 }
 
+.flexascii {
+  font-size: 2vw;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+}
+
 #titleimage {
   width: 20vw;
 
@@ -90,10 +97,14 @@ video {
   font-size: 3vw;
 }
 
-#ascii-art {
+#saw {
   font-size: 2vw;
   font-family: monospace;
   white-space: pre;
 
   margin-right: 8vw;
+}
+
+#invisible {
+  color: #d8eff4;
 }
