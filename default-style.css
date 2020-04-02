@@ -37,6 +37,10 @@ video {
   width: 60%;
 }
 
+.smallimage {
+  width: 30vw;
+}
+
 .flexcolumn {
   display: flex;
   justify-content: center;
@@ -55,10 +59,6 @@ video {
   font-size: 2.5vw;
   text-align: center;
   margin: 1.5vw;
-}
-
-.smallimage {
-  width: 30vw;
 }
 
 .tildeitem {
@@ -84,17 +84,11 @@ video {
   border-radius: 50%;
 }
 
-#footer {
-  font-size: 1vw;
+#header {
+  font-size: 1.1vw;
   text-decoration: none;
 
   margin-bottom: 1vw;
-}
-
-#nounderline {
-  text-decoration: none;
-
-  font-size: 3vw;
 }
 
 #saw {
@@ -103,6 +97,12 @@ video {
   white-space: pre;
 
   margin-right: 8vw;
+}
+
+#nounderline {
+  text-decoration: none;
+
+  font-size: 3vw;
 }
 
 #invisible {
