@@ -55,6 +55,14 @@ video {
   flex-flow: row;
 }
 
+.flexrow_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
 .flexitem {
   font-size: 2.5vw;
   text-align: center;
