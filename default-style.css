@@ -55,6 +55,15 @@ video {
   flex-flow: row;
 }
 
+.flexrow_red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+
+  color: red;
+}
+
 .flexrow_wrap {
   display: flex;
   justify-content: center;
