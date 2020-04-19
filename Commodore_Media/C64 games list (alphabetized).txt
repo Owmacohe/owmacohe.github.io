@@ -1,0 +1,383 @@
+$100,000 Pyramid
+Ahdiddums
+Arkanoid II
+Astromancer
+BMX Simulations
+Backgammon
+Bag It Man
+Beamrider
+Best of Pac Man
+Black Hawk
+Black Hawk
+Blue Print
+Boot Hawk
+Born in U.S.A.
+Boulder Dash
+Boulder Dash III
+Breakthru
+Buck.Boot
+Bungling Bay / Bungling Boot
+California Games (parts 1 and 2)
+Castle Jasoom
+Cest La Vie
+Championship Lode Runner
+Chomperman
+Circus Games
+Cobra
+Congo Bongo Boot
+Crazy Conveyors
+Crossfire
+Crossword Puzzle Maker
+Dael
+Deadringer
+Definition
+Dig Dug
+Dinky Doo
+Disk House
+Doctor Who
+Donald Duck
+Donkey Boot <Donkey Kong>
+Dot Gob.Boot
+Dragon's Den
+Dragons Den
+Duck Shoot
+Eagle's Nest
+Faceboot
+Fast Eddie
+Flintstones <Yabba Dabba Doo>
+Fort Apocalypse
+Frantic Freddie
+Galivan
+Game Creator
+Games at Home
+Gamestar Tennis
+Ghost Chaser
+Gridrunner
+Grog's Revenge
+Gryphon
+Gyruss
+Harrier Atack
+Hideous Bill
+House of Usher
+Hyperpirate CSI
+IBM Music 23/TEK
+In the Chips
+Jawbreaker
+Jim's Job descr. File 10 Pg. 10
+Jinn Genie
+Jola Bruce Lee
+Joy Koala Boot
+Judge Dredd
+Jump Jr
+Jumpin Jack
+Jumping Jack + Jumpin' Jack
+Jumpman
+Jupiter Lander
+Just Imagine
+K - Ring TANR/WHO
+Kickman
+Kickman
+Kid Grid
+Kik Start
+Kikstart II
+Kitara Taivas
+Knight Games
+Knockout
+Krakout / MMX<SK9>
+Krystal of Zong
+Lady Tut
+Laurel + Hardy
+Leaderboard Golf
+Lemans Boot
+Lode Runner
+Lucifers REV.
+Magic Desk
+Matchboxes
+Matchmaker
+Material Girl
+Maze Man
+Midnight Magic <PIN BLL>
+Miss Boot
+Mister Robot
+Mix It
+Moebius (Book of Moebius, The Mystic Runes, Earth, Water, Air, Fire)
+Monopole
+Montezuma
+Montizuma's Revenge
+Moon Patrol
+Motor Boot
+Motor Mania Boot
+Mr Robot
+Mr Wimpy
+Mr. TNT
+Muchy
+Mystery of the Nile
+Nam Mission 87
+Necromancer
+New Alien
+Night Drive Racer
+Nosferatu/RSI
+Oil Boot
+Oink! (1001)
+Omega Race
+Onfield Football
+Orange Squash
+Over the Rainbow
+Pac Man
+Pac Man
+Pakacuda
+Paper Boy
+Past Finder
+Pegasus Boot
+Pengo
+Perfect Typist
+Pinball
+Pitfall
+Pitfall 3
+Pitfall II
+Pitstop II
+Pole Position
+PooYan Boot
+Pyramid Pete
+Quartet
+Quest for Tires
+Racer Boot <Horns and Halo's>
+Resume - Donna - Pg. 1&2
+Roger Rabbit
+Rogue Troop
+Rollin
+Sammy Boot #1
+Satans Hollows
+Sea Wolf
+Shao-Kin's Road
+Sherill + Shannons Saved Game
+Short Circ./SK-9
+Shostamamor (?)
+Sir Lancelot
+Siren City
+Sl(?)a(?)uls
+Slapshot
+Space Invader
+Spelunker
+Squish'Em Boot
+Star Battles
+Star Fox
+Stealth
+Stealth
+Story Writer
+Street Basketball
+Suicide Strike
+Super Dog Fight
+Super Snackman
+Tennis
+Test Drive
+The Evil Dead
+The Prince <SK-9/
+Three Stooges
+Time Runner
+Toy Bizzare
+Treasure Wheel
+Turbodisk
+Ultimate Wizard
+Ultimate Wizard (64 levels)
+Ultimate Wizard (99 levels)
+Warrior of Zypa
+Where in the World is Carmen San Diego
+Willow (1, 2, 3, and 4)
+Wizard
+Wizard of War
+Word Match
+World Games
+Zaxxon
+
+1. $100,000 Pyramid
+2. Ahdiddums
+3. Arkanoid II
+4. Astromancer
+5. BMX Simulations
+6. Backgammon
+7. Bag It Man
+8. Beamrider
+9. Best of Pac Man
+10. Black Hawk
+11. Black Hawk
+12. Blue Print
+13. Boot Hawk
+14. Born in U.S.A.
+15. Boulder Dash
+16. Boulder Dash III
+17. Breakthru
+18. Buck.Boot
+19. Bungling Bay / Bungling Boot
+20. California Games (parts 1 and 2)
+21. Castle Jasoom
+22. Cest La Vie
+23. Championship Lode Runner
+24. Chomperman
+25. Circus Games
+26. Cobra
+27. Congo Bongo Boot
+28. Crazy Conveyors
+29. Crossfire
+30. Crossword Puzzle Maker
+31. Dael
+32. Deadringer
+33. Definition
+34. Dig Dug
+35. Dinky Doo
+36. Disk House
+37. Doctor Who
+38. Donald Duck
+39. Donkey Boot <Donkey Kong>
+40. Dot Gob.Boot
+41. Dragon's Den
+42. Dragons Den
+43. Duck Shoot
+44. Eagle's Nest
+45. Faceboot
+46. Fast Eddie
+47. Flintstones <Yabba Dabba Doo>
+48. Fort Apocalypse
+49. Frantic Freddie
+50. Galivan
+51. Game Creator
+52. Games at Home
+53. Gamestar Tennis
+54. Ghost Chaser
+55. Gridrunner
+56. Grog's Revenge
+57. Gryphon
+58. Gyruss
+59. Harrier Atack
+60. Hideous Bill
+61. House of Usher
+62. Hyperpirate CSI
+63. IBM Music 23/TEK
+64. In the Chips
+65. Jawbreaker
+66. Jim's Job descr. File 10 Pg. 10
+67. Jinn Genie
+68. Jola Bruce Lee
+69. Joy Koala Boot
+70. Judge Dredd
+71. Jump Jr
+72. Jumpin Jack
+73. Jumping Jack + Jumpin' Jack
+74. Jumpman
+75. Jupiter Lander
+76. Just Imagine
+77. K - Ring TANR/WHO
+78. Kickman
+79. Kickman
+80. Kid Grid
+81. Kik Start
+82. Kikstart II
+83. Kitara Taivas
+84. Knight Games
+85. Knockout
+86. Krakout / MMX<SK9>
+87. Krystal of Zong
+88. Lady Tut
+89. Laurel + Hardy
+90. Leaderboard Golf
+91. Lemans Boot
+92. Lode Runner
+93. Lucifers REV.
+94. Magic Desk
+95. Matchboxes
+96. Matchmaker
+97. Material Girl
+98. Maze Man
+99. Midnight Magic <PIN BLL>
+100. Miss Boot
+101. Mister Robot
+102. Mix It
+103. Moebius (Book of Moebius, The Mystic Runes, Earth, Water, Air, Fire)
+104. Monopole
+105. Montezuma
+106. Montizuma's Revenge
+107. Moon Patrol
+108. Motor Boot
+109. Motor Mania Boot
+110. Mr Robot
+111. Mr Wimpy
+112. Mr. TNT
+113. Muchy
+114. Mystery of the Nile
+115. Nam Mission 87
+116. Necromancer
+117. New Alien
+118. Night Drive Racer
+119. Nosferatu/RSI
+120. Oil Boot
+121. Oink! (1001)
+122. Omega Race
+123. Onfield Football
+124. Orange Squash
+125. Over the Rainbow
+126. Pac Man
+127. Pac Man
+128. Pakacuda
+129. Paper Boy
+130. Past Finder
+131. Pegasus Boot
+132. Pengo
+133. Perfect Typist
+134. Pinball
+135. Pitfall
+136. Pitfall 3
+137. Pitfall II
+138. Pitstop II
+139. Pole Position
+140. PooYan Boot
+141. Pyramid Pete
+142. Quartet
+143. Quest for Tires
+144. Racer Boot <Horns and Halo's>
+145. Resume - Donna - Pg. 1&2
+146. Roger Rabbit
+147. Rogue Troop
+148. Rollin
+149. Sammy Boot #1
+150. Satans Hollows
+151. Sea Wolf
+152. Shao-Kin's Road
+153. Sherill + Shannons Saved Game
+154. Short Circ./SK-9
+155. Shostamamor (?)
+156. Sir Lancelot
+157. Siren City
+158. Sl(?)a(?)uls
+159. Slapshot
+160. Space Invader
+161. Spelunker
+162. Squish'Em Boot
+163. Star Battles
+164. Star Fox
+165. Stealth
+166. Stealth
+167. Story Writer
+168. Street Basketball
+169. Suicide Strike
+170. Super Dog Fight
+171. Super Snackman
+172. Tennis
+173. Test Drive
+174. The Evil Dead
+175. The Prince <SK-9/
+176. Three Stooges
+177. Time Runner
+178. Toy Bizzare
+179. Treasure Wheel
+180. Turbodisk
+181. Ultimate Wizard
+182. Ultimate Wizard (64 levels)
+183. Ultimate Wizard (99 levels)
+184. Warrior of Zypa
+185. Where in the World is Carmen San Diego
+186. Willow (1, 2, 3, and 4)
+187. Wizard
+188. Wizard of War
+189. Word Match
+190. World Games
+191. Zaxxon
