@@ -103,6 +103,9 @@ video {
 .tildeitem {
   font-size: 2.5vw;
   text-align: center;
+
+  margin-left: 0.8vw;
+  margin-right: 0.8vw;
 }
 
 .flexanim {
