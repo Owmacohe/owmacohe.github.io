@@ -48,6 +48,15 @@ video {
   flex-flow: column;
 }
 
+.flexcolumn_left {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: 2vw;
+
+  /*background-color: red;*/
+}
+
 .flexrow {
   display: flex;
   justify-content: center;
@@ -55,13 +64,14 @@ video {
   flex-flow: row;
 }
 
-.flexrow_red {
+.flexrow_left {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row;
+  flex-wrap: wrap;
 
-  color: red;
+  /*background-color: blue;*/
 }
 
 .flexrow_wrap {
@@ -70,6 +80,18 @@ video {
   align-items: center;
   flex-flow: row;
   flex-wrap: wrap;
+
+  /*background-color: red;*/
+}
+
+.flexrow_wrap_red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+
+  color: red;
 }
 
 .flexitem {
@@ -93,6 +115,12 @@ video {
   text-align: center;
   font-family: monospace;
   white-space: pre;
+}
+
+.img_small {
+  border-radius: 5%;
+  width: 23vw;
+  padding: 1vw;
 }
 
 #titleimage {
