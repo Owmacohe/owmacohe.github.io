@@ -120,6 +120,12 @@ video {
   white-space: pre;
 }
 
+.flexrainbow {
+  font-size: 4vw;
+  text-align: center;
+  margin: 3vw;
+}
+
 .img_small {
   border-radius: 5%;
   width: 23vw;
