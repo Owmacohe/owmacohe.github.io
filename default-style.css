@@ -2,7 +2,7 @@ body {
   background-color: #d8eff4;
   font-family: "Trebuchet MS", sans-serif;
 
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 
 h1 {
@@ -161,4 +161,8 @@ video {
 
 #invisible {
   color: #d8eff4;
+}
+
+#footer {
+  margin-top: 10vh;
 }
