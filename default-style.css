@@ -64,6 +64,13 @@ video {
   flex-flow: row;
 }
 
+.newColour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+
 .flexrow_left {
   display: flex;
   justify-content: center;
@@ -82,16 +89,6 @@ video {
   flex-wrap: wrap;
 
   /*background-color: red;*/
-}
-
-.flexrow_wrap_red {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row;
-  flex-wrap: wrap;
-
-  color: red;
 }
 
 .flexitem {
@@ -130,6 +127,10 @@ video {
   border-radius: 5%;
   width: 23vw;
   padding: 1vw;
+}
+
+.gameboy {
+  text-decoration: none;
 }
 
 #titleimage {

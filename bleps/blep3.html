@@ -6,7 +6,7 @@
     <title>Sneaky, sneaky...</title>
   </head>
 
-  <body>
+  <body onload="setColours()">
     <div class="flexcolumn">
       <h2><a href="\">Return to the main menu</a></h2>
 
@@ -26,7 +26,7 @@
           No one (;´༎ຶД༎ຶ`)
         </div>
         -->
-        <div class="flexrow_wrap_red">
+        <div class="newColour">
           <div class="flexitem">
             •|龴◡龴|•
           </div>
@@ -39,4 +39,31 @@
 
     </div>
   </body>
+
+  <script>
+    var names = document.getElementsByClassName("newColour");
+
+    function setColours() {
+      console.log(names.length);
+
+      var i;
+      for (i = 0; i < names.length; i++) {
+        console.log("set");
+        names[i].style.color = randColour();
+      }
+    }
+
+    //Random colour generator (hex)
+    function randColour() {
+      var letters = "0123456789ABCDEF";
+      var colour = "#";
+
+      for (p = 0; p < 6; p++)
+      {
+        colour += letters[Math.floor(Math.random() * 16)];
+      }
+
+      return colour;
+    }
+  </script>
 </html>
