@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="\default-style.css">
+    <link rel="stylesheet" href="/bleps/blep-style.css">
     <meta charset="utf-8">
     <title>Sneaky, sneaky...</title>
   </head>
@@ -43,15 +43,12 @@
   <script>
     var names = document.getElementsByClassName("newColour");
 
-    function setColours() {
-      console.log(names.length);
-
+    var setColours = setInterval(function set() {
       var i;
       for (i = 0; i < names.length; i++) {
-        console.log("set");
         names[i].style.color = randColour();
       }
-    }
+    }, 1000);
 
     //Random colour generator (hex)
     function randColour() {

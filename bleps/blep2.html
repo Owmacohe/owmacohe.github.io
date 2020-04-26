@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="\default-style.css">
+    <link rel="stylesheet" href="/bleps/blep-style.css">
     <meta charset="utf-8">
     <title>Oh, hello there</title>
   </head>
@@ -26,7 +26,7 @@
         <div class="flexascii">
    .--. .-------.
          |=.|-|.-----.|------
-        /|--| ||<a href="blep3.html" class="gameboy">omch</a> ||    //
+        /|--| ||<a href="blep3.html" class="nounderline">omch</a> ||    //
       / |  | |'-----'|   //
      /  |__|~')_____('  //|
     [==================]/||
@@ -42,7 +42,7 @@
       <div class="flexrow">
         <div class="flexascii">
 ___
-|<a href="blep4.html" class="gameboy" style="color: black;">[_]</a>|
+|<a href="blep4.html" class="nounderline" style="color: black;">[_]</a>|
 |+ :|
 '---'
 _______
@@ -63,7 +63,7 @@ __________
    |_|:_____|_|/'  _||_
      '        '    /____\
         </div>
-        <a href="\" class="flexascii" id="nounderline" style="margin-left: 80px;">
+        <a href="\" class="flexascii" style="margin-left: 80px; text-decoration: none; font-size: 2.5vw;">
 [exit]
 ________
 | __  __ |
@@ -81,7 +81,7 @@ ________
   </body>
 
   <script>
-    secrets = document.getElementsByClassName("gameboy");
+    secrets = document.getElementsByClassName("nounderline");
 
     var runClue = setInterval(function clue() {
       var i;
@@ -91,22 +91,9 @@ ________
         var clueNum = Math.floor(Math.random() * 7);
 
         if (clueNum == 1) {
-          secrets[i].style.color = randColour();
+          secrets[i].style.color = "#00cc99";
         }
       }
     }, 1000);
-
-    //Random colour generator (hex)
-    function randColour() {
-      var letters = "0123456789ABCDEF";
-      var colour = "#";
-
-      for (p = 0; p < 6; p++)
-      {
-        colour += letters[Math.floor(Math.random() * 16)];
-      }
-
-      return colour;
-    }
   </script>
 </html>

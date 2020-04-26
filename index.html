@@ -7,7 +7,7 @@
     <title>Welcome, weary traveler!</title>
   </head>
 
-  <body>
+  <body onload="splitPattern()">
     <div class="flexcolumn">
       <a href="/bleps/blep.html" id="header">'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_,.-'~'-.,__,.-'~'-.,____,.-'</a>
       <!--Checking my code are you? Make sure to click in the text banner above-->
@@ -19,7 +19,7 @@
             <img src="logo.png" alt="[A pixel art logo I made]" id="titleimage">
           </div>
           <div class="flexitem">
-            <h1>~~~~~ Owen Hellum ~~~~~</h1>
+            <h1 id="rainbow" onmouseover="toggleRainbow()">~~~~~ Owen Hellum ~~~~~</h1>
           </div>
         </div>
         <div class="flexanim"></div>
@@ -27,7 +27,10 @@
 
       <!--About ʕ⊙ ل͜ ⚆ʔ-->
       <div class="flexitem" style="width: 70%;">
-        Hello! Welcome to my domain (name)! As of right now, this is a place for me to put stuff I've worked on back in the past, right now in the present, and hopefully in the future. Take a gander, and see if you can find any secret pages!
+        Hello! Welcome to my domain (name)!
+        I'm a Canadian guy currently in Computer Science / Computation Arts at Concordia University in Montréal.
+        Here are some projects I've made and am working on.
+        Take a gander, and see if you can find any secret pages!
       </div>
 
       <h1>~~~~~~~</h1>
@@ -135,9 +138,20 @@
   </body>
 
   <script>
-    var pattern = "-+*%$%*+-";
-    var chars = pattern.split("");
+    var patterns = [
+      "-+*%$%*+-+*%$%*+-",
+      "-•=/0/=•-•=/0/=•-",
+      "-+<{?}>+-+<{?}>+-",
+      "-z[(&)]z-z[(&)]z-"
+    ];
+    var chars = "";
     var text = document.getElementsByClassName("flexanim");
+
+    function splitPattern() {
+      var chosenPattern = Math.floor(Math.random() * patterns.length);
+
+      chars = patterns[chosenPattern].split("");
+    }
 
     var runCheck = setInterval(function change() {
       var i;
@@ -160,5 +174,36 @@
         text[j].innerHTML = newPattern;
       }
     }, 100);
+
+    var rainbowOn = false;
+
+    function toggleRainbow() {
+      if (rainbowOn == false) {
+        rainbowOn = true;
+      }
+    }
+
+    var colourNum = 0;
+    var countNum = 0;
+
+    var rainbowCheck = setInterval(function goRainbow() {
+      if (rainbowOn == true) {
+        colourNum += 15;
+
+        if (colourNum > 345) {
+          colourNum = 0;
+        }
+
+        document.getElementById("rainbow").style.color = "hsl("+colourNum+", 100%, 50%)";
+
+        countNum++;
+
+        if (countNum >= 50) {
+          rainbowOn = false;
+          countNum = 0;
+          document.getElementById("rainbow").style.color = "black";
+        }
+      }
+    }, 50);
   </script>
 </html>
