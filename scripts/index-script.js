@@ -1,8 +1,10 @@
 var patterns = [
   "-+*%$%*+-+*%$%*+-",
   "-•=/0/=•-•=/0/=•-",
+  "'-.,__,.-'-.,__,.-",
   "-+<{?}>+-+<{?}>+-",
-  "-z[(&)]z-z[(&)]z-"
+  "-z[(&)]z-z[(&)]z-",
+  "-odO0Obo-odO0Obo-"
 ];
 var chars = "";
 var text = document.getElementsByClassName("flexanim");
