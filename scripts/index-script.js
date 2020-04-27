@@ -15,6 +15,22 @@ function splitPattern() {
   chars = patterns[chosenPattern].split("");
 }
 
+var pixNum = 0;
+var isIncreasing = true;
+
+/*
+var rainbowOn = false;
+
+function toggleRainbow() {
+  if (rainbowOn == false) {
+    rainbowOn = true;
+  }
+}
+
+var colourNum = 0;
+var countNum = 0;
+*/
+
 var runCheck = setInterval(function change() {
   var i;
   for (i = chars.length; i > 0; i--) {
@@ -35,20 +51,24 @@ var runCheck = setInterval(function change() {
 
     text[j].innerHTML = newPattern;
   }
-}, 100);
 
-var rainbowOn = false;
-
-function toggleRainbow() {
-  if (rainbowOn == false) {
-    rainbowOn = true;
+  if (pixNum > 3) {
+    isIncreasing = false;
   }
-}
+  else if (pixNum < 2) {
+    isIncreasing = true;
+  }
 
-var colourNum = 0;
-var countNum = 0;
+  if (isIncreasing == true) {
+    pixNum++;
+  }
+  else if (isIncreasing == false) {
+    pixNum--;
+  }
 
-var rainbowCheck = setInterval(function goRainbow() {
+  document.getElementById("titleimage").setAttribute("src", "/Index_Media/Me"+pixNum+".png");
+
+  /*
   if (rainbowOn == true) {
     colourNum += 15;
 
@@ -66,4 +86,5 @@ var rainbowCheck = setInterval(function goRainbow() {
       document.getElementById("rainbow").style.color = "black";
     }
   }
-}, 50);
+  */
+}, 100);
