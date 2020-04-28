@@ -15,7 +15,7 @@ function splitPattern() {
   chars = patterns[chosenPattern].split("");
 }
 
-var pixNum = 0;
+var pixNum = -1;
 var isIncreasing = true;
 
 /*
@@ -55,7 +55,7 @@ var runCheck = setInterval(function change() {
   if (pixNum > 3) {
     isIncreasing = false;
   }
-  else if (pixNum < 2) {
+  else if (pixNum < 1) {
     isIncreasing = true;
   }
 
