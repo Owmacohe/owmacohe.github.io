@@ -86,7 +86,13 @@ video {
   margin: 1.5vw;
 }
 
-.flexitem_small {
+.flexitem_small_font {
+  font-size: 0.8vw;
+  text-align: center;
+  margin: 1.5vw;
+}
+
+.flexitem_small_margin {
   font-size: 2.5vw;
   text-align: center;
   margin: 0.2vw;
@@ -140,4 +146,11 @@ video {
   white-space: pre;
 
   margin-right: 8vw;
+}
+
+#player {
+  border-radius: 0px;
+  width: 5vw;
+  position: absolute;
+  padding: 2vw;
 }
