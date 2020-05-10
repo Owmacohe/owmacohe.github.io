@@ -66,7 +66,7 @@ var runCheck = setInterval(function change() {
     pixNum--;
   }
 
-  document.getElementById("titleimage").setAttribute("src", "/Index_Media/Me"+pixNum+".png");
+  document.getElementById("titleimage").setAttribute("src", "Media/Index_Media/Me"+pixNum+".png");
 
   /*
   if (rainbowOn == true) {
