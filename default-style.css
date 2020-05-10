@@ -123,6 +123,12 @@ video {
   text-decoration: none;
 }
 
+.gameElement {
+  border-radius: 0px;
+  width: 5vw;
+  position: absolute;
+}
+
 #titleimage {
   width: 20vw;
 
@@ -146,11 +152,4 @@ video {
   white-space: pre;
 
   margin-right: 8vw;
-}
-
-#player {
-  border-radius: 0px;
-  width: 5vw;
-  position: absolute;
-  padding: 2vw;
 }

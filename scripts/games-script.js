@@ -1,12 +1,23 @@
 var margins = [0, 0];
-var speed = 1;
+var speed = 3;
+
+var player;
+var present;
+var instruct;
+var game;
 
 function startGame() {
-  var player = document.createElement("IMG");
-  document.getElementById("minigame").appendChild(player);
-  player.setAttribute("src", "/Game_Media/Player.png");
+  present = document.createElement("IMG");
+  present.setAttribute("src", "/Media/Game_Media/Present.png");
+  present.setAttribute("alt", "[PRESENT]");
+  present.setAttribute("class", "gameElement");
+  present.setAttribute("style", "right: 2vw");
+
+  player = document.createElement("IMG");
+  player.setAttribute("src", "/Media/Game_Media/Player.png");
   player.setAttribute("alt", "[PLAYER]");
-  player.setAttribute("id", "player");
+  player.setAttribute("class", "gameElement");
+  player.setAttribute("style", "left: 2vw");
 
   document.getElementById("body").addEventListener("keydown", function(event) {
     //Up
@@ -29,7 +40,42 @@ function startGame() {
       margins[1] = margins[1] - speed;
       player.style.marginLeft = margins[1] + "vw";
     }
-
-    console.log(margins);
   });
+
+  instruct = document.getElementById("instructions");
+  instruct.innerHTML = "Use the W, A, S, and D keys to move the player around. Go pick up that present!";
+  instruct.style.fontSize = "2vw";
+
+  game = document.getElementById("minigame");
+  game.appendChild(player);
+  game.appendChild(present);
+  game.style.marginBottom = "20vh";
+}
+
+var hitCheck = setInterval(function() {
+  if ((player != null) && (present != null) && (game != null)) {
+    if (isCollide(player, present) == true) {
+      instruct.innerHTML = "You did it! Congrats.";
+
+      removeElement(game);
+    }
+  }
+}, 50);
+
+function isCollide(a, b) {
+    var aRect = a.getBoundingClientRect();
+    var bRect = b.getBoundingClientRect();
+
+    return !(
+        ((aRect.top + aRect.height) < (bRect.top)) ||
+        (aRect.top > (bRect.top + bRect.height)) ||
+        ((aRect.left + aRect.width) < bRect.left) ||
+        (aRect.left > (bRect.left + bRect.width))
+    );
+}
+
+function removeElement(elem) {
+  if (elem.parentNode != null) {
+    elem.parentNode.removeChild(elem);
+  }
 }
