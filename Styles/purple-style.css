@@ -1,7 +1,5 @@
-/* Elements */
-
 body {
-  background-color: #d8eff4;
+  background-color: #c299ff;
   font-family: "Trebuchet MS", sans-serif;
 
   margin-bottom: 5vh;
@@ -15,16 +13,12 @@ h2 {
   font-size: 2vw;
 }
 
-h3 {
-  font-size: 1.5vw;
-}
-
 a {
-  color: #00cc99;
+  color: #6600ff;
 }
 
 a:hover {
-  color: #99ff99;
+  color: #e0ccff;
 }
 
 p {
@@ -42,8 +36,6 @@ video {
 
   width: 60%;
 }
-
-/* Flex classes */
 
 .flexcolumn {
   display: flex;
@@ -114,19 +106,6 @@ video {
   margin-right: 0.8vw;
 }
 
-/* General Classes */
-
-/*
-.dropdown-content {
-  display: none;
-  position: absolute;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-*/
-
 .flexanim {
   font-size: 2.5vw;
   text-align: center;
@@ -149,8 +128,6 @@ video {
   width: 5vw;
   position: absolute;
 }
-
-/* IDs */
 
 #titleimage {
   width: 20vw;

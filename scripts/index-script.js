@@ -1,3 +1,5 @@
+var animationOn = true;
+
 var patterns = [
   "-+*%$%*+-+*%$%*+-",
   "-•=/0/=•-•=/0/=•-",
@@ -6,6 +8,7 @@ var patterns = [
   "-z[(&)]z-z[(&)]z-",
   "-odO0Obo-odO0Obo-"
 ];
+
 var chars = "";
 var text = document.getElementsByClassName("flexanim");
 
@@ -31,60 +34,73 @@ var colourNum = 0;
 var countNum = 0;
 */
 
+function animToggle() {
+  switch (animationOn) {
+    case true:
+      animationOn = false;
+      break;
+    case false:
+      animationOn = true;
+      break;
+  }
+}
+
 var runCheck = setInterval(function change() {
-  var i;
-  for (i = chars.length; i > 0; i--) {
-    chars[i] = chars[i - 1];
-  }
-
-  chars[0] = chars[chars.length - 1];
-  chars.splice(chars.length - 1, 1);
-
-  var j;
-  for (j = 0; j < text.length; j++) {
-    var newPattern = "";
-
-    var k;
-    for (k = 0; k < chars.length; k++) {
-      newPattern = newPattern + chars[k];
+  if (animationOn == true) {
+    var i;
+    for (i = chars.length; i > 0; i--) {
+      chars[i] = chars[i - 1];
     }
 
-    text[j].innerHTML = newPattern;
-  }
+    chars[0] = chars[chars.length - 1];
+    chars.splice(chars.length - 1, 1);
 
-  if (pixNum > 3) {
-    isIncreasing = false;
-  }
-  else if (pixNum < 1) {
-    isIncreasing = true;
-  }
+    var j;
+    for (j = 0; j < text.length; j++) {
+      var newPattern = "";
 
-  if (isIncreasing == true) {
-    pixNum++;
-  }
-  else if (isIncreasing == false) {
-    pixNum--;
-  }
+      var k;
+      for (k = 0; k < chars.length; k++) {
+        newPattern = newPattern + chars[k];
+      }
 
-  document.getElementById("titleimage").setAttribute("src", "Media/Index_Media/Me"+pixNum+".png");
-
-  /*
-  if (rainbowOn == true) {
-    colourNum += 15;
-
-    if (colourNum > 345) {
-      colourNum = 0;
+      text[j].innerHTML = newPattern;
     }
 
-    document.getElementById("rainbow").style.color = "hsl("+colourNum+", 100%, 50%)";
-
-    countNum++;
-
-    if (countNum >= 50) {
-      rainbowOn = false;
-      countNum = 0;
-      document.getElementById("rainbow").style.color = "black";
+    if (pixNum > 3) {
+      isIncreasing = false;
     }
+    else if (pixNum < 1) {
+      isIncreasing = true;
+    }
+
+    if (isIncreasing == true) {
+      pixNum++;
+    }
+    else if (isIncreasing == false) {
+      pixNum--;
+    }
+
+    document.getElementById("titleimage").setAttribute("src", "Media/Index_Media/Me"+pixNum+".png");
+
+    /*
+    if (rainbowOn == true) {
+      colourNum += 15;
+
+      if (colourNum > 345) {
+        colourNum = 0;
+      }
+
+      document.getElementById("rainbow").style.color = "hsl("+colourNum+", 100%, 50%)";
+
+      countNum++;
+
+      if (countNum >= 50) {
+        rainbowOn = false;
+        countNum = 0;
+        document.getElementById("rainbow").style.color = "black";
+      }
+    }
+    */
   }
-  */
 }, 100);
