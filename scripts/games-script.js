@@ -49,7 +49,8 @@ function startGame() {
   game = document.getElementById("minigame");
   game.appendChild(player);
   game.appendChild(present);
-  game.style.marginBottom = "20vh";
+  game.style.marginBottom = "30vh";
+  game.style.marginTop = "5vh";
 }
 
 var hitCheck = setInterval(function() {
