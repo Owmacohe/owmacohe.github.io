@@ -103,4 +103,7 @@ var runCheck = setInterval(function change() {
     }
     */
   }
+  else {
+    return;
+  }
 }, 100);
