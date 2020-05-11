@@ -52,6 +52,17 @@ video {
   flex-flow: column;
 }
 
+.flexcolumn_work {
+  background-color: #b0e9dd;
+  margin: 1vw;
+  padding: 0.5vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
 .flexcolumn_left {
   display: flex;
   justify-content: center;
