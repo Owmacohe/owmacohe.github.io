@@ -43,6 +43,16 @@ video {
   width: 60%;
 }
 
+input {
+  font-size: 2vw;
+  font-family: "Trebuchet MS", sans-serif;
+
+  border-radius: 0.7vw;
+  border: none;
+
+  background-color: #b0e9dd;
+}
+
 /* Flex classes */
 
 .flexcolumn {
@@ -68,8 +78,6 @@ video {
   justify-content: center;
   flex-flow: column;
   margin: 2vw;
-
-  /*background-color: red;*/
 }
 
 .flexrow {
@@ -85,8 +93,6 @@ video {
   align-items: center;
   flex-flow: row;
   flex-wrap: wrap;
-
-  /*background-color: blue;*/
 }
 
 .flexrow_wrap {
@@ -95,8 +101,6 @@ video {
   align-items: center;
   flex-flow: row;
   flex-wrap: wrap;
-
-  /*background-color: red;*/
 }
 
 .flexitem {
@@ -126,17 +130,6 @@ video {
 }
 
 /* General Classes */
-
-/*
-.dropdown-content {
-  display: none;
-  position: absolute;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-*/
 
 .flexanim {
   font-size: 2.5vw;
@@ -186,4 +179,17 @@ video {
   white-space: pre;
 
   margin-right: 8vw;
+}
+
+#flexcolumn_absolute {
+  background-color: #b0e9dd;
+  margin: 1vw;
+  padding: 0.5vw;
+  width: 20vw;
+
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }

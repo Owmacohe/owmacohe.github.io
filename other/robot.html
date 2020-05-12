@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\styles/default-style.css">
+    <link rel="icon" href="OH.png">
+    <script src="\scripts/robot-script.js" charset="utf-8"></script>
+    <title>Talk to a friend</title>
+  </head>
+
+  <body>
+
+    <div id="flexcolumn_absolute">
+      <h2>Log</h2>
+      <h3 id="log"></h3>
+    </div>
+
+    <div class="flexitem">
+      <h2><a href="\">Return to the main menu</a></h2>
+      <h1>A communication bot</h1>
+      <h2>Try a greeting! (always in development)</h2>
+    </div>
+
+    <div class="flexcolumn">
+
+      <div class="flexrow">
+        <div class="flexitem">
+          <h2>Input:</h2>
+        </div>
+        <input id="input" onkeydown="talk(event)">
+      </div>
+      <div class="flexrow">
+        <div class="flexitem">
+          <h2>Output:</h2>
+        </div>
+        <h1 id="output">...</h1>
+      </div>
+      
+    </div>
+
+  </body>
+</html>
