@@ -32,6 +32,7 @@ function input(event) {
 
     //If the input isn't empty, output a response
     if (inputField.value != "") {
+      oldTime = timeGet;
       console.log("INPUT: " + inputField.value);
 
       output(formatString(inputField.value));
@@ -47,7 +48,7 @@ function output(phrase) {
   var components = phrase.split(" ");
   responseFormulated = false;
 
-  if (inputField.value.length < 26) {
+  if (inputField.value.length < 101) {
     formulateResponse(components);
   }
 
