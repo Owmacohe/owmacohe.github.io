@@ -1,14 +1,5 @@
 var botName = "BOT";
-
-/* Word collections */
-
-var greetings = [
-  "hello",
-  "hey",
-  "hi",
-  "heyo",
-  "yo"
-];
+var responseFormulated;
 
 /* Fields */
 
@@ -16,8 +7,8 @@ var inputField;
 var outputField;
 var logField;
 
-//Input
-function talk(event) {
+//User communicates
+function input(event) {
   if (event.keyCode == 13) {
     inputField = document.getElementById("input");
 
@@ -34,7 +25,7 @@ function talk(event) {
     }
 
     if (badCount == inputField.value.length) {
-      inputField.value = "";
+      clearInput();
     }
 
     /* End empty checking */
@@ -43,39 +34,31 @@ function talk(event) {
     if (inputField.value != "") {
       console.log("INPUT: " + inputField.value);
 
-      respond(inputField.value);
+      output(formatString(inputField.value));
     }
   }
 }
 
-//Output
-function respond(phrase) {
+//Bot responds
+function output(phrase) {
   outputField = document.getElementById("output");
   inputField = document.getElementById("input");
 
   var components = phrase.split(" ");
-  var responseDelivered = false;
+  responseFormulated = false;
 
   if (inputField.value.length < 26) {
-    //If the input is a greeting, output in kind
-    var i;
-    for (i = 0; i < greetings.length; i++) {
-      if (formatString(components[0]) == greetings[i] || formatString(components[components.length - 1]) == greetings[i]) {
-        addLog("YOU", inputField.value);
-        addLog(botName, randWord(greetings));
-        responseDelivered = true;
-      }
-    }
+    formulateResponse(components);
   }
 
   //If the input is invalid, output error message
-  if (responseDelivered == false) {
+  if (responseFormulated == false) {
     addLog(botName, "Sorry, invalid input.");
   }
 
   console.log("OUTPUT: " + outputField.innerHTML);
 
-  inputField.value = "";
+  clearInput();
 }
 
 //Adds the input/output to the log
@@ -102,6 +85,12 @@ function randWord(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
+//Formats any given string by setting it to lower case and removing punctiation
 function formatString(string) {
   return string.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+}
+
+function clearInput() {
+  inputField = document.getElementById("input");
+  inputField.value = "";
 }
