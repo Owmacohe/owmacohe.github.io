@@ -32,7 +32,6 @@ function input(event) {
 
     //If the input isn't empty, output a response
     if (inputField.value != "") {
-      oldTime = timeGet;
       console.log("INPUT: " + inputField.value);
 
       output(formatString(inputField.value));
