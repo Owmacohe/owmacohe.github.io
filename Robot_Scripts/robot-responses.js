@@ -1,3 +1,5 @@
+//owen jumped and lindsey decided
+
 /* Sentence structures
 
 ~~~ Basic ~~~
@@ -14,130 +16,110 @@ Exclamatory sentence: Shut up!
 
 */
 
+var response;
+var responseTemp;
+var senType;
+var simpleFragments = [];
+var responseFormulated;
+
 function sentenceType(words) {
-  var sentences = ["simple", "compound", "complex", "compound_complex", "declarative", "interrogative", "imperative", "exclamatory"];
-  var sentenceValues = [false, false, false, false, false, false, false, false];
+  response = null;
+  responseTemp = null;
+  senType = "none";
+  simpleFragments = [];
 
-  var l;
-  for (l = 0; l < words.length; l++) {
-    var m;
-    for (m = 0; m < determiners.length; m++) {
-      var k;
-      for (k = 0; k < names.length; k++) {
-        var j;
-        for (j = 0; j < verbs.length; j++) {
-          var i;
-          for (i = 0; i < nouns.length; i++) {
+  //Greeting checking
+  if (doesContain(greetings, words[0]) == true) {
+    senType = "greeting";
 
-            //Simple checking
-            if (words[l] == names[k] && words[l+1] == verbs[j].past) {
-              sentenceValues[0] = true;
+    response = randWord(greetings);
+    responseFormulated = true;
+  }
 
-              response = "What did " + words[l] + " " + verbs[j].present + "?";
-              responseFormulated = true;
+  //Simple checking
+  simpleCheck(words);
 
-              break;
-            }
-            else if (words[l] == names[k] && ((words[l+1] == "didn't" && words[l+2] == verbs[j].present) || (words[l+1] == "did" && words[l+2] == "not" && words[l+3] == verbs[j].present))) {
-              sentenceValues[0] = true;
+  //Compound checking
+  compoundCheck(words);
 
-              response = "What didn't " + words[l] + " " + verbs[j].present + "?";
-              responseFormulated = true;
+  if (senType == "simple") {
+    response = capitalized(punctuated(responseTemp, "?"));
+    responseFormulated = true;
+  }
 
-              break;
-            }
-            else if (words[l] == determiners[m] && words[l+1] == nouns[i] && words[l+2] == verbs[j].past) {
-              sentenceValues[0] = true;
-
-              response = "What did " + words[l] + " " + words[l+1] + " " + verbs[j].present + "?";
-              responseFormulated = true;
-
-              break;
-            }
-            else if (words[l] == determiners[m] && words[l+1] == nouns[i] && ((words[l+2] == "didn't" && words[l+3] == verbs[j].present) || (words[l+2] == "did" && words[l+3] == "not" && words[l+4] == verbs[j].present))) {
-              sentenceValues[0] = true;
-
-              response = "What didn't " + words[l] + " " + words[l+1] + " " + verbs[j].present + "?";
-              responseFormulated = true;
-
-              break;
-            }
-          }
-        }
+  if (senType == "compound") {
+    var i;
+    for (i = 0; i < simpleFragments.length; i++) {
+      if (response == null) {
+        response = simpleFragments[i];
+      }
+      else {
+        response = capitalized(response + " and " + simpleFragments[i]);
       }
     }
+
+    response = punctuated(response, "?");
+    responseFormulated = true;
   }
 
   /*
-  var i = 0;
-  var j = 0;
-  var k = 0;
-  var l = 0;
-
-  var loopNum;
-  for (loopNum = 0; loopNum < (words.length+names.length+verbs.length+nouns.length); loopNum++) {
-
-    console.log(words[i] + " " + names[j]);
-    //Simple checking
-    if (words[i] == names[j] && words[i+1] == verbs[k].past) {
-      sentenceValues[0] = true;
-
-      response = "What did " + words[i] + " " + verbs[k].present + "?";
+  switch (senType) {
+    case "simple":
+      response = responseTemp;
       responseFormulated = true;
-    }
-    else if (words[i] == names[j] && ((words[i+1] == "didn't" && words[i+2] == verbs[k].present) || (words[i+1] == "did" && words[i+2] == "not" && words[i+3] == verbs[k].present))) {
-      sentenceValues[0] = true;
-
-      response = "What didn't " + words[i] + " " + verbs[k].present + "?";
+      break;
+    case "compound":
+      response = response + " and " + responseTemp;
       responseFormulated = true;
-    }
-
-    //Elses
-    else if (words[i] < names[j] || words[i] < verbs[k] || words[i] < nouns[l]) {
-      i++;
-    }
-    else if (names[j] < verbs[k] || names[j] < nouns[l] || names[j] < verbs[k]) {
-      j++;
-    }
-    else if (verbs[k] < nouns[l] || verbs[k] < words[i] || words[i] < names[j]) {
-      k++;
-    }
-    else if (nouns[l] < words[i] || nouns[l] < names[j] || nouns[l] < verbs[k]) {
-      l++;
-    }
+      break;
   }
   */
 
-  //Spits out sentence type
-  var z;
-  for (z = 0; z < 8; z++) {
-    if (sentenceValues[z] == true) {
-      console.log(sentences[z].toUpperCase());
+  if (senType != "none") {
+    console.log("***** " + senType.toUpperCase() + " *****");
+  }
+}
+
+function simpleCheck(words) {
+  var i;
+  for (i = 0; i < words.length; i++) {
+    var j;
+    for (j = 0; j < verbs.length; j++) {
+      if (doesContain(names, words[i]) == true && words[i+1] == verbs[j].past) {
+        senType = "simple";
+        responseTemp = "what did " + words[i] + " " + verbs[j].present;
+        simpleFragments[simpleFragments.length] = responseTemp;
+      }
+      else if (doesContain(names, words[i]) == true && ((words[i+1] == "didn't" && words[i+2] == verbs[j].present) || (words[i+1] == "did" && words[i+2] == "not" && words[i+3] == verbs[j].present))) {
+        senType = "simple";
+        responseTemp = "what didn't " + words[i] + " " + verbs[j].present;
+        simpleFragments[simpleFragments.length] = responseTemp;
+      }
+      else if (doesContain(determiners, words[i]) && doesContain(nouns, words[i+1]) && words[i+2] == verbs[j].past) {
+        senType = "simple";
+        responseTemp = "what did " + words[i] + " " + words[i+1] + " " + verbs[j].present;
+        simpleFragments[simpleFragments.length] = responseTemp;
+      }
+      else if (doesContain(determiners, words[i]) && doesContain(nouns, words[i+1]) && ((words[i+2] == "didn't" && words[i+3] == verbs[j].present) || (words[i+2] == "did" && words[i+3] == "not" && words[i+4] == verbs[j].present))) {
+        senType = "simple";
+        responseTemp = "what didn't " + words[i] + " " + words[i+1] + " " + verbs[j].present;
+        simpleFragments[simpleFragments.length] = responseTemp;
+      }
     }
   }
 }
 
-var response;
+function compoundCheck(words) {
+  if (simpleFragments.length > 1) {
+    senType = "compound";
+  }
+}
 
 function formulateResponse(phraseWords) {
-
-  //Greetings
-  var i;
-  for (i = 0; i < greetings.length; i++) {
-    if (formatString(phraseWords[0]) == greetings[i] || formatString(phraseWords[phraseWords.length - 1]) == greetings[i]) {
-      response = randWord(greetings);
-      responseFormulated = true;
-    }
-  }
-
   sentenceType(phraseWords);
 
   if (responseFormulated == true) {
-    respond();
+    addLog(userName, inputField.value);
+    addLog(botName, response);
   }
-}
-
-function respond() {
-  addLog("YOU", inputField.value);
-  addLog(botName, response);
 }

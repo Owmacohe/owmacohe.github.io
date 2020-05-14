@@ -1,5 +1,5 @@
 var botName = "BOT";
-var responseFormulated;
+var userName = "YOU";
 
 /* Fields */
 
@@ -32,7 +32,7 @@ function input(event) {
 
     //If the input isn't empty, output a response
     if (inputField.value != "") {
-      console.log("INPUT: " + inputField.value);
+      //console.log("INPUT: " + inputField.value);
 
       output(formatString(inputField.value));
     }
@@ -47,7 +47,7 @@ function output(phrase) {
   var components = phrase.split(" ");
   responseFormulated = false;
 
-  if (inputField.value.length < 101) {
+  if (inputField.value.length < 201) {
     formulateResponse(components);
   }
 
@@ -56,7 +56,12 @@ function output(phrase) {
     addLog(botName, "Sorry, invalid input.");
   }
 
-  console.log("OUTPUT: " + outputField.innerHTML);
+  //If the input is too long, output error message
+  if (inputField.value.length > 200) {
+    addLog(botName, "Sorry, try a shorter message.");
+  }
+
+  //console.log("OUTPUT: " + outputField.innerHTML);
 
   clearInput();
 }
@@ -66,7 +71,7 @@ function addLog(logName, phrase) {
   outputField = document.getElementById("output");
   outputField.innerHTML = phrase;
 
-  if (phrase != "Sorry, invalid input.") {
+  if (phrase != "Sorry, invalid input." && phrase != "Sorry, try a shorter message.") {
     logField = document.getElementById("log");
 
     //If the log is empty, don't add new lines
@@ -90,7 +95,65 @@ function formatString(string) {
   return string.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
 }
 
+//This is pretty obvious...
 function clearInput() {
   inputField = document.getElementById("input");
   inputField.value = "";
+}
+
+//Checks if the given array contains a certain entry
+function doesContain(array, entry) {
+  var result = false;
+
+  var i;
+  for (i = 0; i < array.length; i++) {
+    if (array[i] == entry) {
+      result = true;
+    }
+  }
+
+  if (result == true) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+//Capitalizes a given string
+function capitalized(string) {
+  var letters = string.split("");
+  string = "";
+
+  var i;
+  for (i = 1; i < letters.length; i++) {
+    if (string == "") {
+      string = letters[0].toUpperCase();
+    }
+
+    string = string + letters[i];
+  }
+
+  return string;
+}
+
+//Turns a string into a question
+function punctuated(string, punc) {
+  return string + punc;
+}
+
+//Turns a string into a simple word
+function unPunctuated(string) {
+  if (string[string.length - 1] == "?" || string[string.length - 1] == "!") {
+    var letters = string.split("");
+    letters.splice(letters.length - 1, 1);
+    string = "";
+
+    var i;
+    for (i = 0; i < letters.length; i++) {
+      string = string + letters[i];
+    }
+
+    return string;
+  }
 }
