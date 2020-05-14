@@ -32,7 +32,7 @@ function sentenceType(words) {
   if (doesContain(greetings, words[0]) == true) {
     senType = "greeting";
 
-    response = randWord(greetings);
+    response = punctuated(capitalized(randWord(greetings)), "!");
     responseFormulated = true;
   }
 
