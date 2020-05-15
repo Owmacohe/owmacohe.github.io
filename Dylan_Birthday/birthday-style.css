@@ -1,0 +1,78 @@
+body {
+  font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+  background-color: black;
+  color: white;
+
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
+h1 {
+  font-size: 6vw;
+}
+
+h2 {
+  font-size: 4vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+img {
+  width: 8vw;
+
+  position: absolute;
+  margin: 3vw;
+}
+
+.flexcolumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flexitem {
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 1.5vw;
+}
+
+#cass {
+  top: 0px;
+  right: 0px;
+}
+
+#guit {
+  bottom: 0px;
+  left: 0px;
+}
+
+#kuro {
+  top: 40%;
+  left: 0px;
+}
+
+#mcr {
+  top: 40%;
+  right: 0px;
+}
+
+#opos {
+  bottom: 0px;
+  right: 0px;
+}
+
+#rabb {
+  top: 0px;
+  left: 0px;
+}
