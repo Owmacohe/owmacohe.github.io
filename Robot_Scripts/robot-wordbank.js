@@ -3,7 +3,10 @@ var greetings = [
   "hey",
   "hi",
   "heyo",
-  "yo"
+  "yo",
+  "hewwo",
+  "sup",
+  "hiya"
 ];
 
 var determiners = [
@@ -11,9 +14,41 @@ var determiners = [
   "an",
   "the",
   "this",
+  "these",
   "those",
   "every",
-  "many"
+  "many",
+  "my",
+  "your",
+  "his",
+  "her",
+  "its",
+  "our",
+  "their",
+  "one",
+  "all",
+  "either",
+  "neither",
+  "each",
+  "every",
+  "another"
+];
+
+var conjuctions = [
+  "after",
+  "although",
+  "as",
+  "because",
+  "before",
+  "once",
+  "since",
+  "unless",
+  "until",
+  "when",
+  "whenever",
+  "where",
+  "wherever",
+  "while"
 ];
 
 var nouns = [
