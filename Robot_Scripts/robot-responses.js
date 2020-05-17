@@ -1,14 +1,12 @@
 function formulateResponse(phraseWords) {
   sentenceType(phraseWords);
+  sentenceParts(phraseWords);
 
   if (responseFormulated == true) {
     addLog(userName, inputField.value);
     addLog(botName, response);
   }
 }
-
-//owen jumped and lindsey decided
-//owen jumped when lindsey decided
 
 /* Sentence structures
 
@@ -25,6 +23,67 @@ Imperative sentence: Please be quiet.
 Exclamatory sentence: Shut up!
 
 */
+
+//owen jumped and lindsey decided
+//owen jumped when lindsey decided
+
+var wordTypes;
+
+function sentenceParts(words) {
+  wordTypes = [];
+  var description = "";
+
+  var i;
+  for (i = 0; i < words.length; i++) {
+    if (doesContain(greetings, words[i]) == true) {
+      wordTypes[i] = "{GREETING}";
+    }
+    else if (doesContain(determiners, words[i]) == true) {
+      wordTypes[i] = "{DETERMINER}";
+    }
+    else if (doesContain(conjuctions, words[i]) == true) {
+      wordTypes[i] = "(CONJUNCTION)";
+    }
+    else if (doesContain(nouns, words[i]) == true) {
+      wordTypes[i] = "{NOUN}";
+    }
+    else if (doesContain(verbs, words[i]) == true) {
+      wordTypes[i] = "{VERB}";
+    }
+    else if (doesContain(names, words[i]) == true) {
+      wordTypes[i] = "{NAME}";
+    }
+    else if (words[i] == "and") {
+      wordTypes[i] = "(AND)";
+    }
+    else {
+      wordTypes[i] = "{OTHER}";
+    }
+
+    if (doesContain(verbs, words[i]) == true && doesContain(names, words[i-1]) == true) {
+      wordTypes[i] = "[SIMPLE SENTENCE]";
+      wordTypes.splice(i-1, 1);
+    }
+    else if (doesContain(verbs, words[i]) == true && doesContain(nouns, words[i-1]) == true && doesContain(determiners, words[i-2]) == true) {
+      wordTypes[i] = "[SIMPLE SENTENCE]";
+      wordTypes.splice(i-1, 1);
+      wordTypes.splice(i-2, 1);
+    }
+  }
+
+  var z;
+  for (z = 0; z < wordTypes.length; z++) {
+    if (wordTypes[z] != null) {
+      description = description + wordTypes[z];
+
+      if (z != wordTypes.length - 1) {
+        description = description + "-";
+      }
+    }
+  }
+
+  console.log(description);
+}
 
 var response;
 var senType;

@@ -107,8 +107,15 @@ function doesContain(array, entry) {
 
   var i;
   for (i = 0; i < array.length; i++) {
-    if (array[i] == entry) {
-      result = true;
+    if (array == verbs) {
+      if (array[i].present == entry || array[i].past == entry) {
+        result = true;
+      }
+    }
+    else {
+      if (array[i] == entry) {
+        result = true;
+      }
     }
   }
 

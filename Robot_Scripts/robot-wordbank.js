@@ -48,7 +48,8 @@ var conjuctions = [
   "whenever",
   "where",
   "wherever",
-  "while"
+  "while",
+  "but"
 ];
 
 var nouns = [
