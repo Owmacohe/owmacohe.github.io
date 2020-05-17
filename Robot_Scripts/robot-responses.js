@@ -3,8 +3,7 @@ function formulateResponse(phraseWords) {
   sentenceParts(phraseWords);
 
   if (responseFormulated == true) {
-    addLog(userName, inputField.value);
-    addLog(botName, response);
+    addLog(inputField.value, response);
   }
 }
 
@@ -64,10 +63,23 @@ function sentenceParts(words) {
       wordTypes[i] = "[SIMPLE SENTENCE]";
       wordTypes.splice(i-1, 1);
     }
-    else if (doesContain(verbs, words[i]) == true && doesContain(nouns, words[i-1]) == true && doesContain(determiners, words[i-2]) == true) {
+    else if ((doesContain(verbs, words[i]) == true && doesContain(nouns, words[i-1]) == true && doesContain(determiners, words[i-2]) == true) || (doesContain(verbs, words[i]) == true && words[i-1] == "didn't" && doesContain(names, words[i-2]) == true)) {
       wordTypes[i] = "[SIMPLE SENTENCE]";
       wordTypes.splice(i-1, 1);
       wordTypes.splice(i-2, 1);
+    }
+    else if ((doesContain(verbs, words[i]) == true && words[i-1] == "not" && words[i-2] == "did" && doesContain(names, words[i-3]) == true) || (doesContain(verbs, words[i]) == true && words[i-1] == "didn't" && doesContain(nouns, words[i-2]) == true && doesContain(determiners, words[i-3]) == true)) {
+      wordTypes[i] = "[SIMPLE SENTENCE]";
+      wordTypes.splice(i-1, 1);
+      wordTypes.splice(i-2, 1);
+      wordTypes.splice(i-3, 1);
+    }
+    else if (doesContain(verbs, words[i]) == true && words[i-1] == "not" && words[i-2] == "did" && doesContain(nouns, words[i-3]) == true && doesContain(determiners, words[i-4]) == true) {
+      wordTypes[i] = "[SIMPLE SENTENCE]";
+      wordTypes.splice(i-1, 1);
+      wordTypes.splice(i-2, 1);
+      wordTypes.splice(i-3, 1);
+      wordTypes.splice(i-4, 1);
     }
   }
 

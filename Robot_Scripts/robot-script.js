@@ -5,7 +5,6 @@ var userName = "YOU";
 
 var inputField;
 var outputField;
-var logField;
 
 //User communicates
 function input(event) {
@@ -53,12 +52,14 @@ function output(phrase) {
 
   //If the input is invalid, output error message
   if (responseFormulated == false) {
-    addLog(botName, "Sorry, invalid input.");
+    outputField = document.getElementById("output");
+    outputField.innerHTML = "Sorry, invalid input.";
   }
 
   //If the input is too long, output error message
   if (inputField.value.length > 200) {
-    addLog(botName, "Sorry, try a shorter message.");
+    outputField = document.getElementById("output");
+    outputField.innerHTML = "Sorry, try a shorter message.";
   }
 
   //console.log("OUTPUT: " + outputField.innerHTML);
@@ -67,21 +68,39 @@ function output(phrase) {
 }
 
 //Adds the input/output to the log
-function addLog(logName, phrase) {
+function addLog(userInput, botOutput) {
   outputField = document.getElementById("output");
-  outputField.innerHTML = phrase;
+  outputField.innerHTML = botOutput;
 
-  if (phrase != "Sorry, invalid input." && phrase != "Sorry, try a shorter message.") {
-    logField = document.getElementById("log");
+  if (outputField.innerHTML != "Sorry, invalid input." && outputField.innerHTML != "Sorry, try a shorter message.") {
+    var logField = document.getElementById("log");
 
-    //If the log is empty, don't add new lines
-    if (logField.innerHTML == "") {
-      logField.innerHTML = logField.innerHTML + logName + ": " + phrase;
-    }
-    //If it isn't, do add new lines
-    else {
-      logField.innerHTML = logField.innerHTML + "<br><br>" + logName + ": " + phrase;
-    }
+    var logPair = document.createElement("DIV");
+    logPair.setAttribute("class", "pairSpacing");
+    logField.appendChild(logPair);
+
+    var userRow = document.createElement("DIV");
+    userRow.setAttribute("class", "logStyle");
+    logPair.appendChild(userRow);
+    var botRow = document.createElement("DIV");
+    botRow.setAttribute("class", "logStyle");
+    logPair.appendChild(botRow);
+
+    var userBold = document.createElement("B");
+    userBold.setAttribute("style", "color: blue;");
+    userBold.innerHTML = userName + ":";
+    userRow.appendChild(userBold);
+    var botBold = document.createElement("B");
+    botBold.setAttribute("style", "color: red;");
+    botBold.innerHTML = botName + ":";
+    botRow.appendChild(botBold);
+
+    var userPhrase = document.createElement("DIV");
+    userPhrase.innerHTML = userInput;
+    userRow.appendChild(userPhrase);
+    var botPhrase = document.createElement("DIV");
+    botPhrase.innerHTML = botOutput;
+    botRow.appendChild(botPhrase);
   }
 }
 

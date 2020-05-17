@@ -80,6 +80,19 @@ input {
   margin: 2vw;
 }
 
+.flexcolumn_absolute {
+  background-color: #b0e9dd;
+  margin: 1vw;
+  padding: 0.5vw;
+  width: 20vw;
+
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .flexrow {
   display: flex;
   justify-content: center;
@@ -154,6 +167,18 @@ input {
   position: absolute;
 }
 
+.logStyle {
+  font-size: 2vw;
+
+  display: flex;
+  flex-flow: row;
+  padding: 0.3vw;
+}
+
+.pairSpacing {
+  margin-bottom: 2vh;
+}
+
 /* IDs */
 
 #titleimage {
@@ -179,17 +204,4 @@ input {
   white-space: pre;
 
   margin-right: 8vw;
-}
-
-#flexcolumn_absolute {
-  background-color: #b0e9dd;
-  margin: 1vw;
-  padding: 0.5vw;
-  width: 20vw;
-
-  position: absolute;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
 }
