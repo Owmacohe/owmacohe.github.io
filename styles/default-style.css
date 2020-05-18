@@ -67,7 +67,7 @@ textarea {
 .flexcolumn_green {
   background-color: #b0e9dd;
   margin: 1vw;
-  padding: 0.5vw;
+  padding: 1vw;
 
   display: flex;
   justify-content: center;
@@ -136,6 +136,13 @@ textarea {
   margin: 0.2vw;
 }
 
+.flexanim {
+  font-size: 2.5vw;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+}
+
 .tildeitem {
   font-size: 2.5vw;
   text-align: center;
@@ -146,17 +153,15 @@ textarea {
 
 /* General Classes */
 
-.flexanim {
-  font-size: 2.5vw;
-  text-align: center;
-  font-family: monospace;
-  white-space: pre;
-}
-
 .img_small {
   border-radius: 2vw;
   width: 23vw;
   padding: 1vw;
+}
+
+.socialMediaLogo {
+  border-radius: 50%;
+  width: 4vw;
 }
 
 .nounderline {
