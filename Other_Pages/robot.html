@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="\styles/default-style.css">
     <link rel="icon" href="OH.png">
+    <!--My scripts-->
     <script src="\Robot_Scripts/robot-script.js" charset="utf-8"></script>
     <script src="\Robot_Scripts/robot-responses.js" charset="utf-8"></script>
     <script src="\Robot_Scripts/robot-wordbank.js" charset="utf-8"></script>
+    <!--Libraries-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <title>Talk to a friend</title>
   </head>
 
@@ -32,7 +35,7 @@
         <div class="flexitem">
           <h2>Input:</h2>
         </div>
-        <input id="input" onkeydown="input(event)">
+        <textarea id="input"></textarea>
       </div>
       <div class="flexrow">
         <div class="flexitem">
@@ -45,3 +48,12 @@
 
   </body>
 </html>
+
+<script>
+$("textarea").keypress(function(event) {
+  if (event.keyCode == 13) {
+    event.preventDefault();
+    input(event);
+  }
+});
+</script>

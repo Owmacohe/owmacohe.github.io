@@ -43,13 +43,15 @@ video {
   width: 60%;
 }
 
-input {
+textarea {
   font-size: 2vw;
   font-family: "Trebuchet MS", sans-serif;
 
+  height: 10vw;
   border-radius: 0.7vw;
-  border: none;
+  resize: none;
 
+  border: none;
   background-color: #b0e9dd;
 }
 

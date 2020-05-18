@@ -26,7 +26,7 @@ Exclamatory sentence: Shut up!
 //owen jumped and lindsey decided
 //owen jumped when lindsey decided
 
-var wordTypes;
+var wordLog;
 
 function sentenceParts(words) {
   wordTypes = [];
@@ -122,7 +122,6 @@ function sentenceType(words) {
   andDetected = false;
   conjDetected = null;
 
-
   //Greeting checking
   if (doesContain(greetings, words[0]) == true) {
     senType = "greeting";
@@ -177,21 +176,10 @@ function sentenceType(words) {
   }
 
   /*
-  switch (senType) {
-    case "simple":
-      response = compoundTemp;
-      responseFormulated = true;
-      break;
-    case "compound":
-      response = response + " and " + compoundTemp;
-      responseFormulated = true;
-      break;
-  }
-  */
-
   if (senType != "none") {
     console.log("***** " + senType.toUpperCase() + " *****");
   }
+  */
 }
 
 function simpleCheck(words) {

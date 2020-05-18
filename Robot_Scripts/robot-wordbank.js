@@ -6,8 +6,22 @@ var greetings = [
   "yo",
   "hewwo",
   "sup",
-  "hiya"
+  "hiya",
+  "wassup"
 ];
+
+/*
+var presets = [
+  {
+    "input": "execute order 66",
+    "output": "Roger Roger!"
+  },
+  {
+    "input": "whats the answer to life the universe and everything",
+    "output": "42"
+  }
+];
+*/
 
 var determiners = [
   "a",
@@ -50,6 +64,49 @@ var conjuctions = [
   "wherever",
   "while",
   "but"
+];
+
+/*
+var interrogators = [
+  {
+    "default": "who",
+    "synonyms": "whom"
+  },
+  {
+    "default": "what",
+    "synonyms": null
+  },
+  {
+    "default": "where",
+    "synonyms": null
+  },
+  {
+    "default": "why",
+    "synonyms": null
+  },
+  {
+    "default": "when",
+    "synonyms": null
+  },
+  {
+    "default": "which",
+    "synonyms": null
+  },
+  {
+    "default": "how",
+    "synonyms": null
+  },
+];
+*/
+
+var interrogators = [
+  "who",
+  "what",
+  "where",
+  "why",
+  "when",
+  "which",
+  "how"
 ];
 
 var nouns = [
