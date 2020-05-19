@@ -35,7 +35,10 @@ function sentenceParts(words) {
   var i;
   for (i = 0; i < words.length; i++) {
     if (doesContain(greetings, words[i]) == true) {
-      wordTypes[i] = "{GREETING}";
+      wordTypes[i] = "{GREETING WORD}";
+    }
+    else if (doesContain(interrogators, words[i]) == true) {
+      wordTypes[i] = "{QUESTION WORD}";
     }
     else if (doesContain(determiners, words[i]) == true) {
       wordTypes[i] = "{DETERMINER}";
@@ -43,7 +46,7 @@ function sentenceParts(words) {
     else if (doesContain(conjuctions, words[i]) == true) {
       wordTypes[i] = "(CONJUNCTION)";
     }
-    else if (doesContain(nouns, words[i]) == true) {
+    else if (doesContain(nouns, unPluralized(words[i])) == true) {
       wordTypes[i] = "{NOUN}";
     }
     else if (doesContain(verbs, words[i]) == true) {
@@ -124,9 +127,13 @@ function sentenceType(words) {
 
   //Greeting checking
   if (doesContain(greetings, words[0]) == true) {
+    /*
     senType = "greeting";
 
     response = punctuated(capitalized(randWord(greetings)), "!");
+    */
+
+    response = "You have made a greeting.";
     responseFormulated = true;
   }
 
@@ -139,13 +146,18 @@ function sentenceType(words) {
   //Complex checking
   complexCheck(words);
 
+  //Question checking
+  questionCheck(words);
 
   if (senType == "simple") {
-    response = capitalized(punctuated(compoundTemp, "?"));
+    //response = capitalized(punctuated(compoundTemp, "?"));
+
+    response = "You have said a simple senence.";
     responseFormulated = true;
   }
 
   if (senType == "compound") {
+    /*
     var i;
     for (i = 0; i < compoundFragments.length; i++) {
       if (response == null) {
@@ -157,10 +169,14 @@ function sentenceType(words) {
     }
 
     response = punctuated(response, "?");
+    */
+
+    response = "You have said a compound senence.";
     responseFormulated = true;
   }
 
   if (senType == "complex") {
+    /*
     var i;
     for (i = 0; i < complexFragments.length; i++) {
       if (response == null) {
@@ -172,14 +188,20 @@ function sentenceType(words) {
     }
 
     response = punctuated(response, "?");
+    */
+
+    response = "You have said a complex senence.";
     responseFormulated = true;
   }
 
-  /*
+  if (senType == "interrogatory") {
+    response = "You have posed a question.";
+    responseFormulated = true;
+  }
+
   if (senType != "none") {
     console.log("***** " + senType.toUpperCase() + " *****");
   }
-  */
 }
 
 function simpleCheck(words) {
@@ -268,5 +290,23 @@ function compoundCheck(words) {
 function complexCheck(words) {
   if (compoundFragments.length > 1 && conjDetected != null) {
     senType = "complex";
+  }
+}
+
+function questionCheck(words) {
+  var i;
+  for (i = 0; i < words.length; i++) {
+    if (doesContain(interrogators, words[i]) && words[i+1] == "are" && words[i+2] == "you") {
+      senType = "interrogatory";
+      //Responsd "I am ..."
+    }
+    else if (doesContain(interrogators, words[i]) && (words[i+1] == "are" || words[i+1] == "is") && doesContain(determiners, words[i+2]) && doesContain(nouns, unPluralized(words[i+3]))) {
+      senType = "interrogatory";
+      //Respond "... are/is ..."
+    }
+    else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] == "s" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2]))) {
+      senType = "interrogatory";
+      //Respond "... are/is ..."
+    }
   }
 }

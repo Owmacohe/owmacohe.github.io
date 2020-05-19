@@ -39,13 +39,15 @@ var determiners = [
   "its",
   "our",
   "their",
+  "that",
   "one",
   "all",
   "either",
   "neither",
   "each",
   "every",
-  "another"
+  "another",
+  "your"
 ];
 
 var conjuctions = [
@@ -60,7 +62,6 @@ var conjuctions = [
   "until",
   "when",
   "whenever",
-  "where",
   "wherever",
   "while",
   "but"
@@ -100,13 +101,13 @@ var interrogators = [
 */
 
 var interrogators = [
-  "who",
-  "what",
-  "where",
-  "why",
-  "when",
+  "who", "whos",
+  "what", "whats",
+  "where", "wheres",
+  "why", "whys",
+  "when", "whens",
   "which",
-  "how"
+  "how", "hows"
 ];
 
 var nouns = [
@@ -728,6 +729,7 @@ var nouns = [
   "musician",
   "mutation",
   "mythology",
+  "name",
   "narration",
   "narrator",
   "nationality",

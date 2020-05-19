@@ -174,23 +174,50 @@ function capitalized(string) {
   return string;
 }
 
-//Turns a string into a question
+//Adds any punctuation to the end of a string
 function punctuated(string, punc) {
   return string + punc;
 }
 
-//Turns a string into a simple word
-function unPunctuated(string) {
-  if (string[string.length - 1] == "?" || string[string.length - 1] == "!") {
-    var letters = string.split("");
-    letters.splice(letters.length - 1, 1);
+//Pluralizes a string
+function pluralized(string) {
+  if (string[string.length - 1] != "y") {
+    string = string + "s";
+  }
+  else if (string[string.length - 1] == "y") {
+    stringArray = string.split("");
     string = "";
 
+    stringArray.splice(stringArray.length - 1, 1);
+
     var i;
-    for (i = 0; i < letters.length; i++) {
-      string = string + letters[i];
+    for (i = 0; i < stringArray.length; i++) {
+      string = string + stringArray[i];
     }
 
-    return string;
+    string = string + "ies";
   }
+
+  return string;
+}
+
+//Makes a word not pluralized anymore
+function unPluralized(string) {
+  if (string[string.length - 1] == "s") {
+    stringArray = string.split("");
+    string = "";
+    stringArray.splice(stringArray.length - 1, 1);
+
+    if (stringArray[stringArray.length - 1] == "e" && stringArray[stringArray.length - 2] == "i") {
+      stringArray.splice(stringArray.length - 1, 1);
+      stringArray[stringArray.length - 1] = "y";
+    }
+
+    var i;
+    for (i = 0; i < stringArray.length; i++) {
+      string = string + stringArray[i];
+    }
+  }
+
+  return string;
 }
