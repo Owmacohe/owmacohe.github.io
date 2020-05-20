@@ -36,7 +36,6 @@ var determiners = [
   "your",
   "his",
   "her",
-  "its",
   "our",
   "their",
   "that",

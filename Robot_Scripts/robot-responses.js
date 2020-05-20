@@ -34,25 +34,25 @@ function sentenceParts(words) {
 
   var i;
   for (i = 0; i < words.length; i++) {
-    if (doesContain(greetings, words[i]) == true) {
+    if (doesContain(greetings, words[i])) {
       wordTypes[i] = "{GREETING WORD}";
     }
-    else if (doesContain(interrogators, words[i]) == true) {
+    else if (doesContain(interrogators, words[i])) {
       wordTypes[i] = "{QUESTION WORD}";
     }
-    else if (doesContain(determiners, words[i]) == true) {
+    else if (doesContain(determiners, words[i])) {
       wordTypes[i] = "{DETERMINER}";
     }
-    else if (doesContain(conjuctions, words[i]) == true) {
+    else if (doesContain(conjuctions, words[i])) {
       wordTypes[i] = "(CONJUNCTION)";
     }
-    else if (doesContain(nouns, unPluralized(words[i])) == true) {
+    else if (doesContain(nouns, unPluralized(words[i]))) {
       wordTypes[i] = "{NOUN}";
     }
-    else if (doesContain(verbs, words[i]) == true) {
+    else if (doesContain(verbs, words[i])) {
       wordTypes[i] = "{VERB}";
     }
-    else if (doesContain(names, words[i]) == true) {
+    else if (doesContain(names, words[i])) {
       wordTypes[i] = "{NAME}";
     }
     else if (words[i] == "and") {
@@ -62,22 +62,22 @@ function sentenceParts(words) {
       wordTypes[i] = "{OTHER}";
     }
 
-    if (doesContain(verbs, words[i]) == true && doesContain(names, words[i-1]) == true) {
+    if (doesContain(verbs, words[i]) && doesContain(names, words[i-1])) {
       wordTypes[i] = "[SIMPLE SENTENCE]";
       wordTypes.splice(i-1, 1);
     }
-    else if ((doesContain(verbs, words[i]) == true && doesContain(nouns, words[i-1]) == true && doesContain(determiners, words[i-2]) == true) || (doesContain(verbs, words[i]) == true && words[i-1] == "didn't" && doesContain(names, words[i-2]) == true)) {
+    else if ((doesContain(verbs, words[i]) && doesContain(nouns, words[i-1]) && doesContain(determiners, words[i-2])) || (doesContain(verbs, words[i]) && words[i-1] == "didn't" && doesContain(names, words[i-2]))) {
       wordTypes[i] = "[SIMPLE SENTENCE]";
       wordTypes.splice(i-1, 1);
       wordTypes.splice(i-2, 1);
     }
-    else if ((doesContain(verbs, words[i]) == true && words[i-1] == "not" && words[i-2] == "did" && doesContain(names, words[i-3]) == true) || (doesContain(verbs, words[i]) == true && words[i-1] == "didn't" && doesContain(nouns, words[i-2]) == true && doesContain(determiners, words[i-3]) == true)) {
+    else if ((doesContain(verbs, words[i]) && words[i-1] == "not" && words[i-2] == "did" && doesContain(names, words[i-3])) || (doesContain(verbs, words[i]) && words[i-1] == "didn't" && doesContain(nouns, words[i-2]) && doesContain(determiners, words[i-3]))) {
       wordTypes[i] = "[SIMPLE SENTENCE]";
       wordTypes.splice(i-1, 1);
       wordTypes.splice(i-2, 1);
       wordTypes.splice(i-3, 1);
     }
-    else if (doesContain(verbs, words[i]) == true && words[i-1] == "not" && words[i-2] == "did" && doesContain(nouns, words[i-3]) == true && doesContain(determiners, words[i-4]) == true) {
+    else if (doesContain(verbs, words[i]) && words[i-1] == "not" && words[i-2] == "did" && doesContain(nouns, words[i-3]) && doesContain(determiners, words[i-4])) {
       wordTypes[i] = "[SIMPLE SENTENCE]";
       wordTypes.splice(i-1, 1);
       wordTypes.splice(i-2, 1);
@@ -126,7 +126,7 @@ function sentenceType(words) {
   conjDetected = null;
 
   //Greeting checking
-  if (doesContain(greetings, words[0]) == true) {
+  if (doesContain(greetings, words[0])) {
     /*
     senType = "greeting";
 
@@ -209,7 +209,7 @@ function simpleCheck(words) {
   for (i = 0; i < words.length; i++) {
     var j;
     for (j = 0; j < verbs.length; j++) {
-      if (doesContain(names, words[i]) == true && words[i+1] == verbs[j].past) {
+      if (doesContain(names, words[i]) && words[i+1] == verbs[j].past) {
         senType = "simple";
 
         compoundTemp = "what did " + capitalized(words[i]) + " " + verbs[j].present;
@@ -224,7 +224,7 @@ function simpleCheck(words) {
           complexFragments[complexFragments.length] = complexTemp;
         }
       }
-      else if (doesContain(names, words[i]) == true && ((words[i+1] == "didn't" && words[i+2] == verbs[j].present) || (words[i+1] == "did" && words[i+2] == "not" && words[i+3] == verbs[j].present))) {
+      else if (doesContain(names, words[i]) && ((words[i+1] == "didn't" && words[i+2] == verbs[j].present) || (words[i+1] == "did" && words[i+2] == "not" && words[i+3] == verbs[j].present))) {
         senType = "simple";
 
         compoundTemp = "what didn't " + capitalized(words[i]) + " " + verbs[j].present;
@@ -239,7 +239,7 @@ function simpleCheck(words) {
           complexFragments[complexFragments.length] = complexTemp;
         }
       }
-      else if (doesContain(determiners, words[i]) == true && doesContain(nouns, words[i+1]) && words[i+2] == verbs[j].past) {
+      else if (doesContain(determiners, words[i]) && doesContain(nouns, words[i+1]) && words[i+2] == verbs[j].past) {
         senType = "simple";
 
         compoundTemp = "what did " + words[i] + " " + words[i+1] + " " + verbs[j].present;
@@ -254,7 +254,7 @@ function simpleCheck(words) {
           complexFragments[complexFragments.length] = complexTemp;
         }
       }
-      else if (doesContain(determiners, words[i]) == true && doesContain(nouns, words[i+1]) && ((words[i+2] == "didn't" && words[i+3] == verbs[j].present) || (words[i+2] == "did" && words[i+3] == "not" && words[i+4] == verbs[j].present))) {
+      else if (doesContain(determiners, words[i]) && doesContain(nouns, words[i+1]) && ((words[i+2] == "didn't" && words[i+3] == verbs[j].present) || (words[i+2] == "did" && words[i+3] == "not" && words[i+4] == verbs[j].present))) {
         senType = "simple";
 
         compoundTemp = "what didn't " + words[i] + " " + words[i+1] + " " + verbs[j].present;
@@ -274,7 +274,7 @@ function simpleCheck(words) {
         andDetected = true;
       }
 
-      if (compoundFragments.length >= 1 && doesContain(conjuctions, words[i]) == true) {
+      if (compoundFragments.length >= 1 && doesContain(conjuctions, words[i])) {
         conjDetected = words[i];
       }
     }
