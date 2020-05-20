@@ -1,5 +1,16 @@
+/* Colours */
+
+:root {
+  --background: #d8eff4;
+  --boxes: #b0e9dd;
+  --links: #00cc99;
+  --hover: #99ff99;
+}
+
+/* Elements */
+
 body {
-  background-color: #c299ff;
+  background-color: var(--background);
   font-family: "Trebuchet MS", sans-serif;
 
   margin-bottom: 5vh;
@@ -13,12 +24,16 @@ h2 {
   font-size: 2vw;
 }
 
+h3 {
+  font-size: 1.5vw;
+}
+
 a {
-  color: #6600ff;
+  color: var(--links);
 }
 
 a:hover {
-  color: #e0ccff;
+  color: var(--hover);
 }
 
 p {
@@ -37,7 +52,32 @@ video {
   width: 60%;
 }
 
+textarea {
+  font-size: 2vw;
+  font-family: "Trebuchet MS", sans-serif;
+
+  height: 10vw;
+  border-radius: 0.7vw;
+  resize: none;
+
+  border: none;
+  background-color: var(--boxes);
+}
+
+/* Flex classes */
+
 .flexcolumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.flexcolumn_green {
+  background-color: var(--boxes);
+  margin: 0.5vw;
+  padding: 1vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +89,19 @@ video {
   justify-content: center;
   flex-flow: column;
   margin: 2vw;
+}
 
-  /*background-color: red;*/
+.flexcolumn_absolute {
+  background-color: var(--boxes);
+  margin: 1vw;
+  padding: 0.5vw;
+  width: 20vw;
+
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flexrow {
@@ -66,8 +117,6 @@ video {
   align-items: center;
   flex-flow: row;
   flex-wrap: wrap;
-
-  /*background-color: blue;*/
 }
 
 .flexrow_wrap {
@@ -76,8 +125,6 @@ video {
   align-items: center;
   flex-flow: row;
   flex-wrap: wrap;
-
-  /*background-color: red;*/
 }
 
 .flexitem {
@@ -98,6 +145,20 @@ video {
   margin: 0.2vw;
 }
 
+.flexanim {
+  font-size: 2.5vw;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.flexascii {
+  font-size: 2vw;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+}
+
 .tildeitem {
   font-size: 2.5vw;
   text-align: center;
@@ -106,17 +167,17 @@ video {
   margin-right: 0.8vw;
 }
 
-.flexanim {
-  font-size: 2.5vw;
-  text-align: center;
-  font-family: monospace;
-  white-space: pre;
-}
+/* General Classes */
 
 .img_small {
   border-radius: 2vw;
   width: 23vw;
   padding: 1vw;
+}
+
+.socialMediaLogo {
+  border-radius: 50%;
+  width: 5vw;
 }
 
 .nounderline {
@@ -128,6 +189,20 @@ video {
   width: 5vw;
   position: absolute;
 }
+
+.logStyle {
+  font-size: 2vw;
+
+  display: flex;
+  flex-flow: row;
+  padding: 0.3vw;
+}
+
+.pairSpacing {
+  margin-bottom: 2vh;
+}
+
+/* IDs */
 
 #titleimage {
   width: 20vw;
