@@ -1,27 +1,45 @@
+var botQualities = {
+  "name": null,
+  "definition": "a JavaScript algorithm (aka a bot)",
+  "location": "on this website",
+  "purpose": "a conversational test bot",
+  "birthday": "May 12th 2020 AD",
+  "mood": "good"
+};
+
 var greetings = [
   "hello",
   "hey",
   "hi",
   "heyo",
+  "heya",
   "yo",
-  "hewwo",
+  /*"hewwo",*/
+  "wassup",
   "sup",
-  "hiya",
-  "wassup"
+  "hiya"
 ];
 
-/*
-var presets = [
-  {
-    "input": "execute order 66",
-    "output": "Roger Roger!"
-  },
-  {
-    "input": "whats the answer to life the universe and everything",
-    "output": "42"
-  }
+var admissions = [
+  "yes",
+  "yeah",
+  "yah",
+  "yea",
+  "yup",
+  "affirmative",
+  "fine",
+  "okay",
+  "certainly",
+  "definitely"
 ];
-*/
+
+var negations = [
+  "no",
+  "nope",
+  "nay",
+  "negatory",
+  "nah"
+];
 
 var determiners = [
   "a",
@@ -32,8 +50,8 @@ var determiners = [
   "those",
   "every",
   "many",
-  "my",
-  "your",
+  /*"my",*/
+  /*"your",*/
   "his",
   "her",
   "our",
@@ -66,47 +84,14 @@ var conjuctions = [
   "but"
 ];
 
-/*
 var interrogators = [
-  {
-    "default": "who",
-    "synonyms": "whom"
-  },
-  {
-    "default": "what",
-    "synonyms": null
-  },
-  {
-    "default": "where",
-    "synonyms": null
-  },
-  {
-    "default": "why",
-    "synonyms": null
-  },
-  {
-    "default": "when",
-    "synonyms": null
-  },
-  {
-    "default": "which",
-    "synonyms": null
-  },
-  {
-    "default": "how",
-    "synonyms": null
-  },
-];
-*/
-
-var interrogators = [
-  "who", "whos",
-  "what", "whats",
-  "where", "wheres",
-  "why", "whys",
-  "when", "whens",
+  "who", "whos", "whore",
+  "what", "whats", "whatre",
+  "where", "wheres", "wherere",
+  "why", "whys", "whyre",
+  "when", "whens", "whenre",
   "which",
-  "how", "hows"
+  "how", "hows", "howre"
 ];
 
 var nouns = [

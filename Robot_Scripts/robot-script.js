@@ -32,8 +32,6 @@ function input(event) {
 
   //If the input isn't empty, output a response
   if (inputField.value != "") {
-    //console.log("INPUT: " + inputField.value);
-
     output(formatString(inputField.value));
   }
 }
@@ -50,17 +48,6 @@ function output(phrase) {
     formulateResponse(components);
   }
 
-  /*
-  //Checks to see if I've made a preset response for a certain phrase
-  var i;
-  for (i = 0; i < presets.length; i++) {
-    if (phrase == presets[i].input) {
-      addLog(inputField.value, presets[i].output);
-      responseFormulated = true;
-    }
-  }
-  */
-
   //If the input is invalid, output error message
   if (responseFormulated == false) {
     outputField = document.getElementById("output");
@@ -73,17 +60,41 @@ function output(phrase) {
     outputField.innerHTML = "Sorry, try a shorter message.";
   }
 
-  //console.log("OUTPUT: " + outputField.innerHTML);
+  audioResponse = new SpeechSynthesisUtterance;
+  audioResponse.text = outputField.innerHTML;
+  audioResponse.voice = speechSynthesis.getVoices()[0];
+  audioResponse.volume = 0.5;
+  speechSynthesis.speak(audioResponse);
 
   clearInput();
 }
 
 //Adds the input/output to the log
 function addLog(userInput, botOutput) {
+  //Checks to see if the output is punctuated
+  if (botOutput[botOutput.length - 1] != ("." || "!" || "?")) {
+    botOutput = punctuated(botOutput, ".");
+  }
+
+  //Checks to see if the output is capitalized
+  if (botOutput[0] != botOutput[0].toUpperCase()) {
+    var letters = botOutput.split("");
+    botOutput = "";
+
+    for (i in letters) {
+      if (botOutput == "") {
+        botOutput = letters[i].toUpperCase();
+      }
+      else {
+        botOutput = botOutput + letters[i];
+      }
+    }
+  }
+
   outputField = document.getElementById("output");
   outputField.innerHTML = botOutput;
 
-  if (outputField.innerHTML != "Sorry, invalid input." && outputField.innerHTML != "Sorry, try a shorter message.") {
+  if (botOutput != ("Sorry, invalid input." || "Sorry, try a shorter message.")) {
     var logField = document.getElementById("log");
 
     var logPair = document.createElement("DIV");
@@ -98,11 +109,11 @@ function addLog(userInput, botOutput) {
     logPair.appendChild(botRow);
 
     var userBold = document.createElement("B");
-    userBold.setAttribute("style", "color: blue;");
+    userBold.setAttribute("style", "color: blue; margin-right: 1vw;");
     userBold.innerHTML = userName + ":";
     userRow.appendChild(userBold);
     var botBold = document.createElement("B");
-    botBold.setAttribute("style", "color: red;");
+    botBold.setAttribute("style", "color: red; margin-right: 1vw;");
     botBold.innerHTML = botName + ":";
     botRow.appendChild(botBold);
 
@@ -212,6 +223,17 @@ function unPluralized(string) {
       stringArray.splice(stringArray.length - 1, 1);
       stringArray[stringArray.length - 1] = "y";
     }
+
+    var i;
+    for (i = 0; i < stringArray.length; i++) {
+      string = string + stringArray[i];
+    }
+  }
+  else if (string[string.length - 1] == "e") {
+    stringArray = string.split("");
+    string = "";
+    stringArray.splice(stringArray.length - 1, 1);
+    stringArray.splice(stringArray.length - 1, 1);
 
     var i;
     for (i = 0; i < stringArray.length; i++) {

@@ -115,7 +115,7 @@ var responseFormulated;
 
 function sentenceType(words) {
   response = null;
-  senType = "none";
+  senType = null;
 
   compoundTemp = null;
   compoundFragments = [];
@@ -133,7 +133,8 @@ function sentenceType(words) {
     response = punctuated(capitalized(randWord(greetings)), "!");
     */
 
-    response = "You have made a greeting.";
+    response = randWord(greetings);
+    senType = "greeting";
     responseFormulated = true;
   }
 
@@ -195,12 +196,49 @@ function sentenceType(words) {
   }
 
   if (senType == "interrogatory") {
-    response = "You have posed a question.";
-    responseFormulated = true;
-  }
-
-  if (senType != "none") {
-    console.log("***** " + senType.toUpperCase() + " *****");
+    var i;
+    for (i = 0; i < words.length; i++) {
+      if (doesContain(interrogators, words[i]) && words[i+1] == "are" && words[i+2] == "you") {
+        switch (words[i]) {
+          case "who":
+            if (botQualities.name == null) {
+              response = "I don't have a name yet";
+            }
+            else {
+              response = "I am " + botQualities.name;
+            }
+            break;
+          case "what":
+            response = "I am " + botQualities.definition;
+            break;
+          case "where":
+            response = "I am " + botQualities.location;
+            break;
+          case "why":
+            response = "I am " + botQualities.purpose;
+            break;
+          case "when":
+            response = "My first GitHub commit was on " + botQualities.birthday;
+            break;
+          case "how":
+            response = "I am " + botQualities.mood;
+            break;
+        }
+        responseFormulated = true;
+      }
+      else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] != "s" && ((words[i+1] == "are" || words[i+1] == "is") && doesContain(determiners, words[i+2]) && doesContain(nouns, unPluralized(words[i+3])) || words[i][words[i].length - 1] == "s" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2])))) {
+        response = "I don't know " + words[i] + " " + words[i+2] + " " + words[i+3] + " " + words[i+1];
+        responseFormulated = true;
+      }
+      else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] == "s" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2]))) {
+        response = "I don't know " + unPluralized(words[i]) + " " + words[i+1] + " " + words[i+2] + " is";
+        responseFormulated = true;
+      }
+      else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] == "e" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2]))) {
+        response = "I don't know " + unPluralized(words[i]) + " " + words[i+1] + " " + words[i+2] + " are";
+        responseFormulated = true;
+      }
+    }
   }
 }
 
@@ -296,17 +334,8 @@ function complexCheck(words) {
 function questionCheck(words) {
   var i;
   for (i = 0; i < words.length; i++) {
-    if (doesContain(interrogators, words[i]) && words[i+1] == "are" && words[i+2] == "you") {
+    if (doesContain(interrogators, words[i])) {
       senType = "interrogatory";
-      //Responsd "I am ..."
-    }
-    else if (doesContain(interrogators, words[i]) && (words[i+1] == "are" || words[i+1] == "is") && doesContain(determiners, words[i+2]) && doesContain(nouns, unPluralized(words[i+3]))) {
-      senType = "interrogatory";
-      //Respond "... are/is ..."
-    }
-    else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] == "s" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2]))) {
-      senType = "interrogatory";
-      //Respond "... are/is ..."
     }
   }
 }
