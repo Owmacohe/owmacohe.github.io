@@ -35248,7 +35248,6 @@ nouns = [
   "girth",
   "gitana",
   "gitano",
-  "give",
   "giveaway",
   "given",
   "givenness",

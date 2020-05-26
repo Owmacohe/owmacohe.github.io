@@ -1,8 +1,6 @@
 var botName = "BOT";
 var userName = "YOU";
 
-/* Fields */
-
 var inputField;
 var outputField;
 
@@ -131,11 +129,6 @@ function randWord(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-//Formats any given string by setting it to lower case and removing punctiation
-function formatString(string) {
-  return string.toLowerCase().replace(/[.,\/#!?$%\^&\*;:{}=\-_`'~()]/g, "");
-}
-
 //This is pretty obvious...
 function clearInput() {
   inputField = document.getElementById("input");
@@ -148,15 +141,9 @@ function doesContain(array, entry) {
 
   var i;
   for (i = 0; i < array.length; i++) {
-    if (array == verbs) {
-      if (array[i].present == entry || array[i].past == entry) {
-        result = true;
-      }
-    }
-    else {
-      if (array[i] == entry) {
-        result = true;
-      }
+    if (formatString(array[i]) == entry) {
+      result = true;
+      break;
     }
   }
 
@@ -166,80 +153,4 @@ function doesContain(array, entry) {
   else {
     return false;
   }
-}
-
-//Capitalizes a given string
-function capitalized(string) {
-  var letters = string.split("");
-  string = "";
-
-  var i;
-  for (i = 1; i < letters.length; i++) {
-    if (string == "") {
-      string = letters[0].toUpperCase();
-    }
-
-    string = string + letters[i];
-  }
-
-  return string;
-}
-
-//Adds any punctuation to the end of a string
-function punctuated(string, punc) {
-  return string + punc;
-}
-
-//Pluralizes a string
-function pluralized(string) {
-  if (string[string.length - 1] != "y") {
-    string = string + "s";
-  }
-  else if (string[string.length - 1] == "y") {
-    stringArray = string.split("");
-    string = "";
-
-    stringArray.splice(stringArray.length - 1, 1);
-
-    var i;
-    for (i = 0; i < stringArray.length; i++) {
-      string = string + stringArray[i];
-    }
-
-    string = string + "ies";
-  }
-
-  return string;
-}
-
-//Makes a word not pluralized anymore
-function unPluralized(string) {
-  if (string[string.length - 1] == "s") {
-    stringArray = string.split("");
-    string = "";
-    stringArray.splice(stringArray.length - 1, 1);
-
-    if (stringArray[stringArray.length - 1] == "e" && stringArray[stringArray.length - 2] == "i") {
-      stringArray.splice(stringArray.length - 1, 1);
-      stringArray[stringArray.length - 1] = "y";
-    }
-
-    var i;
-    for (i = 0; i < stringArray.length; i++) {
-      string = string + stringArray[i];
-    }
-  }
-  else if (string[string.length - 1] == "e") {
-    stringArray = string.split("");
-    string = "";
-    stringArray.splice(stringArray.length - 1, 1);
-    stringArray.splice(stringArray.length - 1, 1);
-
-    var i;
-    for (i = 0; i < stringArray.length; i++) {
-      string = string + stringArray[i];
-    }
-  }
-
-  return string;
 }
