@@ -127,12 +127,6 @@ function sentenceType(words) {
 
   //Greeting checking
   if (doesContain(greetings, words[0])) {
-    /*
-    senType = "greeting";
-
-    response = punctuated(capitalized(randWord(greetings)), "!");
-    */
-
     response = randWord(greetings);
     senType = "greeting";
     responseFormulated = true;
@@ -198,6 +192,7 @@ function sentenceType(words) {
   if (senType == "interrogatory") {
     var i;
     for (i = 0; i < words.length; i++) {
+      //Questions pertaining to the bot
       if (doesContain(interrogators, words[i]) && words[i+1] == "are" && words[i+2] == "you") {
         switch (words[i]) {
           case "who":
