@@ -15,15 +15,85 @@ Exclamatory sentence: Shut up!
 
 
 var response; //Final result to be outputted
-var fomulated; //Bool to tell if response has been accepted and created
+var formulated; //Bool to tell if response has been accepted and created
 var wordTypes; //Array of classified words
+var senTypes = []; //Helps sentenceFiltering to keep track of which type of senetence has been detected, and where
 
 //Final function before pushing back to the main script
 function formulateResponse(phraseWords) {
+  sentenceFiltering(phraseWords);
   sentenceParts(phraseWords);
 
-  if (fomulated == true) {
+  if (formulated == true) {
     addLog(inputField.value, response);
+  }
+}
+
+function sentenceFiltering(words) {
+  /* ~~~ Start sentence checking ~~~ */
+
+  //Greeting
+  for (var i in words) {
+    if (doesContain(greetings, words[i])) {
+      response = randWord(greetings);
+      senTypes[senTypes.length] = "greeting";
+      senTypes[senTypes.length] = i;
+      formulated = true;
+    }
+  }
+
+  //Interrogatory
+  questionCheck(words);
+
+  /* ~~~ End sentence checking ~~~ */
+
+
+
+  /* ~~~ Start type responses ~~~ */
+  if (doesContain(senTypes, "interrogatory")) {
+    var j;
+    for (j = 0; j < words.length; j++) {
+      if (doesContain(interrogators, words[j]) && words[j+1] == "are" && words[j+2] == "you") {
+        switch (words[j]) {
+          case "who":
+            if (botQualities.who == null) {
+              response = "I don't have a name yet";
+            }
+            else {
+              response = "I am " + botQualities.who;
+            }
+            break;
+          case "what":
+            response = "I am " + botQualities.what;
+            break;
+          case "where":
+            response = "I am " + botQualities.where;
+            break;
+          case "why":
+            response = "I am " + botQualities.why;
+            break;
+          case "when":
+            response = "My first GitHub commit was on " + botQualities.when;
+            break;
+          case "how":
+            response = "I am " + botQualities.how;
+            break;
+        }
+        formulated = true;
+      }
+    }
+  }
+
+  /* ~~~ End type responses ~~~ */
+}
+
+//Determines if its interrogatory
+function questionCheck(words) {
+  for (var i in words) {
+    if (doesContain(interrogators, words[i])) {
+      senTypes[senTypes.length] = "interrogatory";
+      senTypes[senTypes.length] = i;
+    }
   }
 }
 
@@ -32,13 +102,15 @@ function sentenceParts(words) {
   wordTypes = [];
   var description = "";
 
-  var i;
-  for (i = 0; i < words.length; i++) {
-    if (doesContain(greetings, words[i])) {
+  for (var i in words) {
+    if (doesContain(names, words[i])) {
+      wordTypes[i] = "{NAME}";
+    }
+    else if (doesContain(greetings, words[i])) {
       wordTypes[i] = "{GREETING WORD}";
     }
     else if (doesContain(interrogators, words[i])) {
-      wordTypes[i] = "{QUESTION WORD}";
+      wordTypes[i] = "{INTERROGATOR}";
     }
     else if (doesContain(determiners, words[i])) {
       wordTypes[i] = "{DETERMINER}";
@@ -64,8 +136,7 @@ function sentenceParts(words) {
   }
 
   //Spits out all the classifications together
-  var j;
-  for (j = 0; j < wordTypes.length; j++) {
+  for (var j in wordTypes) {
     if (wordTypes[j] != null) {
       description = description + wordTypes[j];
 

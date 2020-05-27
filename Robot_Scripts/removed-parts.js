@@ -3532,412 +3532,10 @@ var verbs = [
   }
 ];
 
-var names = [
-  "aaliyah",
-  "aaron",
-  "abby",
-  "abigail",
-  "abraham",
-  "adam",
-  "addison",
-  "adrian",
-  "adriana",
-  "adrianna",
-  "aidan",
-  "aiden",
-  "alan",
-  "alana",
-  "alejandro",
-  "alex",
-  "alexa",
-  "alexander",
-  "alexandra",
-  "alexandria",
-  "alexia",
-  "alexis",
-  "alicia",
-  "allison",
-  "alondra",
-  "alyssa",
-  "amanda",
-  "amber",
-  "amelia",
-  "amy",
-  "ana",
-  "andrea",
-  "andres",
-  "andrew",
-  "angel",
-  "angela",
-  "angelica",
-  "angelina",
-  "anna",
-  "anthony",
-  "antonio",
-  "ariana",
-  "arianna",
-  "ashley",
-  "ashlyn",
-  "ashton",
-  "aubrey",
-  "audrey",
-  "austin",
-  "autumn",
-  "ava",
-  "avery",
-  "ayden",
-  "bailey",
-  "benjamin",
-  "bianca",
-  "blake",
-  "braden",
-  "bradley",
-  "brady",
-  "brandon",
-  "brayden",
-  "breanna",
-  "brendan",
-  "brian",
-  "briana",
-  "brianna",
-  "brittany",
-  "brody",
-  "brooke",
-  "brooklyn",
-  "bryan",
-  "bryce",
-  "bryson",
-  "caden",
-  "caitlin",
-  "caitlyn",
-  "caleb",
-  "cameron",
-  "camila",
-  "carlos",
-  "caroline",
-  "carson",
-  "carter",
-  "cassandra",
-  "cassidy",
-  "catherine",
-  "cesar",
-  "charles",
-  "charlotte",
-  "chase",
-  "chelsea",
-  "cheyenne",
-  "chloe",
-  "christian",
-  "christina",
-  "christopher",
-  "claire",
-  "cody",
-  "colby",
-  "cole",
-  "colin",
-  "collin",
-  "colton",
-  "conner",
-  "connor",
-  "cooper",
-  "courtney",
-  "cristian",
-  "crystal",
-  "daisy",
-  "dakota",
-  "dalton",
-  "damian",
-  "daniel",
-  "daniela",
-  "danielle",
-  "david",
-  "delaney",
-  "derek",
-  "destiny",
-  "devin",
-  "devon",
-  "diana",
-  "diego",
-  "dominic",
-  "donovan",
-  "dylan",
-  "edgar",
-  "eduardo",
-  "edward",
-  "edwin",
-  "eli",
-  "elias",
-  "elijah",
-  "elizabeth",
-  "ella",
-  "ellie",
-  "emily",
-  "emma",
-  "emmanuel",
-  "eric",
-  "erica",
-  "erick",
-  "erik",
-  "erin",
-  "ethan",
-  "eva",
-  "evan",
-  "evelyn",
-  "faith",
-  "fernando",
-  "francisco",
-  "gabriel",
-  "gabriela",
-  "gabriella",
-  "gabrielle",
-  "gage",
-  "garrett",
-  "gavin",
-  "genesis",
-  "george",
-  "gianna",
-  "giovanni",
-  "giselle",
-  "grace",
-  "gracie",
-  "grant",
-  "gregory",
-  "hailey",
-  "haley",
-  "hannah",
-  "hayden",
-  "hector",
-  "henry",
-  "hope",
-  "hunter",
-  "ian",
-  "isaac",
-  "isabel",
-  "isabella",
-  "isabelle",
-  "isaiah",
-  "ivan",
-  "jack",
-  "jackson",
-  "jacob",
-  "jacqueline",
-  "jada",
-  "jade",
-  "jaden",
-  "jake",
-  "jalen",
-  "james",
-  "jared",
-  "jasmin",
-  "jasmine",
-  "jason",
-  "javier",
-  "jayden",
-  "jayla",
-  "jazmin",
-  "jeffrey",
-  "jenna",
-  "jennifer",
-  "jeremiah",
-  "jeremy",
-  "jesse",
-  "jessica",
-  "jesus",
-  "jillian",
-  "jocelyn",
-  "joel",
-  "john",
-  "johnathan",
-  "jonah",
-  "jonathan",
-  "jordan",
-  "jordyn",
-  "jorge",
-  "jose",
-  "joseph",
-  "joshua",
-  "josiah",
-  "juan",
-  "julia",
-  "julian",
-  "juliana",
-  "justin",
-  "kaden",
-  "kaitlyn",
-  "kaleb",
-  "karen",
-  "karina",
-  "kate",
-  "katelyn",
-  "katherine",
-  "kathryn",
-  "katie",
-  "kayla",
-  "kaylee",
-  "kelly",
-  "kelsey",
-  "kendall",
-  "kennedy",
-  "kenneth",
-  "kevin",
-  "kiara",
-  "kimberly",
-  "kyle",
-  "kylee",
-  "kylie",
-  "landon",
-  "laura",
-  "lauren",
-  "layla",
-  "leah",
-  "leonardo",
-  "leslie",
-  "levi",
-  "liam",
-  "liliana",
-  "lillian",
-  "lilly",
-  "lily",
-  "lindsey",
-  "logan",
-  "lucas",
-  "lucy",
-  "luis",
-  "luke",
-  "lydia",
-  "mackenzie",
-  "madeline",
-  "madelyn",
-  "madison",
-  "makayla",
-  "makenzie",
-  "malachi",
-  "manuel",
-  "marco",
-  "marcus",
-  "margaret",
-  "maria",
-  "mariah",
-  "mario",
-  "marissa",
-  "mark",
-  "martin",
-  "mary",
-  "mason",
-  "matthew",
-  "max",
-  "maxwell",
-  "maya",
-  "mckenzie",
-  "megan",
-  "melanie",
-  "melissa",
-  "mia",
-  "micah",
-  "michael",
-  "michelle",
-  "miguel",
-  "mikayla",
-  "miranda",
-  "molly",
-  "morgan",
-  "mya",
-  "naomi",
-  "natalia",
-  "natalie",
-  "nathan",
-  "nathaniel",
-  "nevaeh",
-  "nicholas",
-  "nicolas",
-  "nicole",
-  "noah",
-  "nolan",
-  "oliver",
-  "olivia",
-  "omar",
-  "oscar",
-  "owen",
-  "paige",
-  "parker",
-  "patrick",
-  "paul",
-  "payton",
-  "peter",
-  "peyton",
-  "preston",
-  "rachel",
-  "raymond",
-  "reagan",
-  "rebecca",
-  "ricardo",
-  "richard",
-  "riley",
-  "robert",
-  "ruby",
-  "ryan",
-  "rylee",
-  "sabrina",
-  "sadie",
-  "samantha",
-  "samuel",
-  "sara",
-  "sarah",
-  "savannah",
-  "sean",
-  "sebastian",
-  "serenity",
-  "sergio",
-  "seth",
-  "shane",
-  "shawn",
-  "shelby",
-  "sierra",
-  "skylar",
-  "sofia",
-  "sophia",
-  "sophie",
-  "spencer",
-  "stephanie",
-  "stephen",
-  "steven",
-  "summer",
-  "sydney",
-  "tanner",
-  "taylor",
-  "thomas",
-  "tiffany",
-  "timothy",
-  "travis",
-  "trenton",
-  "trevor",
-  "trinity",
-  "tristan",
-  "tyler",
-  "valeria",
-  "valerie",
-  "vanessa",
-  "veronica",
-  "victor",
-  "victoria",
-  "vincent",
-  "wesley",
-  "william",
-  "wyatt",
-  "xavier",
-  "zachary",
-  "zoe",
-  "zoey"
-];
-
 
 
 /* ~~~ robot-responses.js ~~~ */
 
-//goes in sentenceParts
-else if (doesContain(names, words[i])) {
-  wordTypes[i] = "{NAME}";
-}
 
 //goes in sentenceParts
 if (doesContain(verbs, words[i]) && doesContain(nouns, words[i-1])) {
@@ -3967,8 +3565,6 @@ else if (doesContain(verbs, words[i]) && words[i-1] == "not" && words[i-2] == "d
 sentenceType(phraseWords);
 
 //sentenceType variables
-var senType;
-
 var compoundTemp;
 var compoundFragments;
 var complexTemp;
@@ -3995,7 +3591,7 @@ function sentenceType(words) {
   if (doesContain(greetings, words[0])) {
     response = randWord(greetings);
     senType = "greeting";
-    fomulated = true;
+    formulated = true;
   }
 
   //Simple checking
@@ -4014,7 +3610,7 @@ function sentenceType(words) {
     //response = capitalized(punctuated(compoundTemp, "?"));
 
     response = "You have said a simple senence.";
-    fomulated = true;
+    formulated = true;
   }
 
   if (senType == "compound") {
@@ -4033,7 +3629,7 @@ function sentenceType(words) {
     */
 
     response = "You have said a compound senence.";
-    fomulated = true;
+    formulated = true;
   }
 
   if (senType == "complex") {
@@ -4052,7 +3648,7 @@ function sentenceType(words) {
     */
 
     response = "You have said a complex senence.";
-    fomulated = true;
+    formulated = true;
   }
 
   if (senType == "interrogatory") {
@@ -4085,19 +3681,19 @@ function sentenceType(words) {
             response = "I am " + botQualities.mood;
             break;
         }
-        fomulated = true;
+        formulated = true;
       }
       else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] != "s" && ((words[i+1] == "are" || words[i+1] == "is") && doesContain(determiners, words[i+2]) && doesContain(nouns, unPluralized(words[i+3])) || words[i][words[i].length - 1] == "s" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2])))) {
         response = "I don't know " + words[i] + " " + words[i+2] + " " + words[i+3] + " " + words[i+1];
-        fomulated = true;
+        formulated = true;
       }
       else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] == "s" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2]))) {
         response = "I don't know " + unPluralized(words[i]) + " " + words[i+1] + " " + words[i+2] + " is";
-        fomulated = true;
+        formulated = true;
       }
       else if (doesContain(interrogators, words[i]) && words[i][words[i].length - 1] == "e" && doesContain(determiners, words[i+1]) && doesContain(nouns, unPluralized(words[i+2]))) {
         response = "I don't know " + unPluralized(words[i]) + " " + words[i+1] + " " + words[i+2] + " are";
-        fomulated = true;
+        formulated = true;
       }
     }
   }
@@ -4192,15 +3788,5 @@ function compoundCheck(words) {
 function complexCheck(words) {
   if (compoundFragments.length > 1 && conjDetected != null) {
     senType = "complex";
-  }
-}
-
-//Determines if its interrogatory
-function questionCheck(words) {
-  var i;
-  for (i = 0; i < words.length; i++) {
-    if (doesContain(interrogators, words[i])) {
-      senType = "interrogatory";
-    }
   }
 }

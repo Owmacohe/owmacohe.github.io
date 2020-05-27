@@ -8,8 +8,7 @@ function capitalized(string) {
   var letters = string.split("");
   string = "";
 
-  var i;
-  for (i = 1; i < letters.length; i++) {
+  for (i in letters) {
     if (string == "") {
       string = letters[0].toUpperCase();
     }
@@ -38,8 +37,7 @@ function pluralized(string) {
 
     splitString.splice(splitString.length - 1, 1);
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
 
@@ -63,8 +61,7 @@ function unPluralized(string) {
       splitString[splitString.length - 1] = "y";
     }
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
   }
@@ -74,8 +71,7 @@ function unPluralized(string) {
     splitString.splice(splitString.length - 1, 1);
     splitString.splice(splitString.length - 1, 1);
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
   }
@@ -94,8 +90,7 @@ function pastTensed(string) {
     splitString.splice(splitString.length - 1, 1);
     splitString[splitString.length] = "ied";
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
   }
@@ -118,8 +113,7 @@ function presentTensed(string, removedLetters) {
     splitString.splice(splitString.length - 1, 1);
     splitString[splitString.length] = "y";
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
   }
@@ -128,8 +122,7 @@ function presentTensed(string, removedLetters) {
     string = "";
     splitString.splice(splitString.length - 1, 1);
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
   }
@@ -139,8 +132,7 @@ function presentTensed(string, removedLetters) {
     splitString.splice(splitString.length - 1, 1);
     splitString.splice(splitString.length - 1, 1);
 
-    var i;
-    for (i = 0; i < splitString.length; i++) {
+    for (i in splitString) {
       string = string + splitString[i];
     }
   }

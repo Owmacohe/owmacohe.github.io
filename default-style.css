@@ -64,6 +64,23 @@ textarea {
   background-color: var(--boxes);
 }
 
+button {
+  background-color: var(--boxes);
+  border: none;
+  border-radius: 0.5vw;
+
+  width: 20vw;
+  height: 5vw;
+  margin: 2vw;
+
+  font-size: 1.5vw;
+}
+
+button:hover {
+  background-color: var(--links);
+  color: var(--boxes);
+}
+
 /* Flex classes */
 
 .flexcolumn {

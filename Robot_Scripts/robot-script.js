@@ -1,8 +1,19 @@
 var botName = "BOT";
 var userName = "YOU";
 
+var botQualities = {
+  "who": null,
+  "what": "a JavaScript algorithm (aka a bot)",
+  "where": "on this website",
+  "why": "a conversational test bot",
+  "when": "May 12th 2020 AD",
+  "how": "good"
+};
+
 var inputField;
 var outputField;
+
+var audioEnabled = false;
 
 //User communicates
 function input(event) {
@@ -10,13 +21,12 @@ function input(event) {
 
   inputField = document.getElementById("input");
 
-  /* Start empty checking */
+  /* ~~~ Start empty checking ~~~ */
 
   var splitInput = inputField.value.split("");
   var badCount = 0;
 
-  var i;
-  for (i = 0; i < inputField.value.length; i++) {
+  for (var i in inputField.value) {
     if (splitInput[i] == " ") {
       badCount++;
     }
@@ -26,7 +36,7 @@ function input(event) {
     clearInput();
   }
 
-  /* End empty checking */
+  /*  ~~~ End empty checking ~~~ */
 
   //If the input isn't empty, output a response
   if (inputField.value != "") {
@@ -40,14 +50,14 @@ function output(phrase) {
   inputField = document.getElementById("input");
 
   var components = phrase.split(" ");
-  responseFormulated = false;
+  formulated = false;
 
   if (inputField.value.length < 201) {
     formulateResponse(components);
   }
 
   //If the input is invalid, output error message
-  if (responseFormulated == false) {
+  if (formulated == false) {
     outputField = document.getElementById("output");
     outputField.innerHTML = "Sorry, invalid input.";
   }
@@ -58,23 +68,25 @@ function output(phrase) {
     outputField.innerHTML = "Sorry, try a shorter message.";
   }
 
-  audioResponse = new SpeechSynthesisUtterance;
-  audioResponse.text = outputField.innerHTML;
-  audioResponse.voice = speechSynthesis.getVoices()[0];
-  audioResponse.volume = 0.5;
-  speechSynthesis.speak(audioResponse);
+  if (audioEnabled == true) {
+    audioResponse = new SpeechSynthesisUtterance;
+    audioResponse.text = outputField.innerHTML;
+    audioResponse.voice = speechSynthesis.getVoices()[0];
+    audioResponse.volume = 0.5;
+    speechSynthesis.speak(audioResponse);
+  }
 
   clearInput();
 }
 
 //Adds the input/output to the log
 function addLog(userInput, botOutput) {
-  //Checks to see if the output is punctuated
+  //Checks to see if the output is punctuated, and if it isn't it punctuates it
   if (botOutput[botOutput.length - 1] != ("." || "!" || "?")) {
     botOutput = punctuated(botOutput, ".");
   }
 
-  //Checks to see if the output is capitalized
+  //Checks to see if the output is capitalized, and if it isn't it capitalizes it
   if (botOutput[0] != botOutput[0].toUpperCase()) {
     var letters = botOutput.split("");
     botOutput = "";
@@ -137,11 +149,10 @@ function clearInput() {
 
 //Checks if the given array contains a certain entry
 function doesContain(array, entry) {
-  var result = false;
+  var result;
 
-  var i;
-  for (i = 0; i < array.length; i++) {
-    if (formatString(array[i]) == entry) {
+  for (var i in array) {
+    if (typeof array[i] == "string" && formatString(array[i]) == entry) {
       result = true;
       break;
     }
@@ -152,5 +163,15 @@ function doesContain(array, entry) {
   }
   else {
     return false;
+  }
+}
+
+//Enables or disables the text to speech of the bot
+function audioToggle() {
+  if (audioEnabled == false) {
+    audioEnabled = true;
+  }
+  else {
+    audioEnabled = false;
   }
 }
