@@ -21,8 +21,14 @@ var senTypes = []; //Helps sentenceFiltering to keep track of which type of sene
 
 //Final function before pushing back to the main script
 function formulateResponse(phraseWords) {
+  if (awaitingAnswer == true && currentChainSpot <= answerChainLength) {
+    giveAnswer();
+  }
+
   sentenceFiltering(phraseWords);
   sentenceParts(phraseWords);
+
+  //console.log(response);
 
   if (formulated == true) {
     addLog(inputField.value, response);
@@ -56,8 +62,9 @@ function sentenceFiltering(words) {
       if (doesContain(interrogators, words[j]) && words[j+1] == "are" && words[j+2] == "you") {
         switch (words[j]) {
           case "who":
-            if (botQualities.who == null) {
-              response = "I don't have a name yet";
+            if (botQualities.who == "BOT") {
+              setAnswerVariables(["I don't have a name yet. What shall my name be?", "Sounds good! What's your name?", "Nice to meet you."], ["string", "string", "string"], 2);
+              targetVars = [botQualities.who, userQualities.who];
             }
             else {
               response = "I am " + botQualities.who;
@@ -147,4 +154,40 @@ function sentenceParts(words) {
   }
 
   console.log(description);
+}
+
+var awaitingAnswer = false;
+var answer;
+
+var answerQuestions = [];
+var answerTypes = [];
+var targetVars;
+var answerChainLength;
+var currentChainSpot;
+
+function setAnswerVariables(aQ, aT, aCL) {
+  currentChainSpot = 0;
+  answerQuestions = aQ;
+  response = answerQuestions[currentChainSpot];
+
+  awaitingAnswer = true;
+  answerTypes = aT;
+  answerChainLength = aCL;
+}
+
+function giveAnswer() {
+  answer = inputField.value;
+
+  if (typeof answer == answerTypes[currentChainSpot]) {
+    targetVars[currentChainSpot][0] = inputField.value;
+
+    response = answerQuestions[currentChainSpot + 1];
+
+    formulated = true;
+    currentChainSpot++;
+  }
+
+  if (currentChainSpot >= answerChainLength) {
+    awaitingAnswer = false;
+  }
 }

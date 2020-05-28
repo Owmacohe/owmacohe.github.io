@@ -11,7 +11,7 @@
 
 body {
   background-color: var(--background);
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS";
 
   margin-bottom: 5vh;
 }
@@ -53,32 +53,33 @@ video {
 }
 
 textarea {
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: "Trebuchet MS", sans-serif;
 
   height: 10vw;
   border-radius: 0.7vw;
-  resize: none;
-
   border: none;
+
+  resize: none;
+  padding: 1vw;
   background-color: var(--boxes);
 }
 
 button {
-  background-color: var(--boxes);
+  background-color: var(--links);
   border: none;
   border-radius: 0.5vw;
 
-  width: 20vw;
-  height: 5vw;
-  margin: 2vw;
+  width: auto;
+  height: auto;
+  padding: 1vw;
 
   font-size: 1.5vw;
+  font-family: "Trebuchet MS";
 }
 
 button:hover {
-  background-color: var(--links);
-  color: var(--boxes);
+  color: var(--hover);
 }
 
 /* Flex classes */

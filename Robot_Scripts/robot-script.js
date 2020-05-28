@@ -1,8 +1,14 @@
-var botName = "BOT";
-var userName = "YOU";
+var userQualities = {
+  "who": ["YOU"],
+  "what": null,
+  "where": null,
+  "why": null,
+  "when": null,
+  "how": null
+};
 
 var botQualities = {
-  "who": null,
+  "who": ["BOT"],
   "what": "a JavaScript algorithm (aka a bot)",
   "where": "on this website",
   "why": "a conversational test bot",
@@ -82,7 +88,7 @@ function output(phrase) {
 //Adds the input/output to the log
 function addLog(userInput, botOutput) {
   //Checks to see if the output is punctuated, and if it isn't it punctuates it
-  if (botOutput[botOutput.length - 1] != ("." || "!" || "?")) {
+  if (botOutput[botOutput.length - 1] != "." && botOutput[botOutput.length - 1] != "!" && botOutput[botOutput.length - 1] != "?") {
     botOutput = punctuated(botOutput, ".");
   }
 
@@ -120,11 +126,11 @@ function addLog(userInput, botOutput) {
 
     var userBold = document.createElement("B");
     userBold.setAttribute("style", "color: blue; margin-right: 1vw;");
-    userBold.innerHTML = userName + ":";
+    userBold.innerHTML = userQualities.who + ":";
     userRow.appendChild(userBold);
     var botBold = document.createElement("B");
     botBold.setAttribute("style", "color: red; margin-right: 1vw;");
-    botBold.innerHTML = botName + ":";
+    botBold.innerHTML = botQualities.who + ":";
     botRow.appendChild(botBold);
 
     var userPhrase = document.createElement("DIV");
