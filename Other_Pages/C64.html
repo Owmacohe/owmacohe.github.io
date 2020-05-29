@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="\default-style.css">
     <link rel="icon" href="OH.png">
+    <script src="\Media/Commodore_Media/gamesSort.js" charset="utf-8"></script>
     <title>A blog-style anthology of Commodore 64 games</title>
   </head>
 
-  <body>
+  <body onload="createElements()">
     <div class="flexcolumn_left">
 
       <div class="flexcolumn">
@@ -19,6 +20,7 @@
       <div class="flexcolumn_green">
         <h2 style="color: red">The games came in 4 boxes: <a href="\Media/Commodore_Media/Box1.txt">Box #1</a>,  <a href="\Media/Commodore_Media/Box2.txt">Box #2</a>, <a href="\Media/Commodore_Media/Box3.txt">Box #3</a>, <a href="\Media/Commodore_Media/Box4.txt">Box #4</a>, and <a href="\Media/Commodore_Media/AllGames.txt">all combined</a>. There were also a few <a href="\Media/Commodore_Media/Utilities.txt">utilities</a>.</h2>
         <div class="flexrow_wrap">
+          <div class="flexitem_small_margin"><a href="##">#</a></div><div class="flexitem_small_margin">•</div>
           <div class="flexitem_small_margin"><a href="#A">A</a></div><div class="flexitem_small_margin">•</div>
           <div class="flexitem_small_margin"><a href="#B">B</a></div><div class="flexitem_small_margin">•</div>
           <div class="flexitem_small_margin"><a href="#C">C</a></div><div class="flexitem_small_margin">•</div>
@@ -64,34 +66,7 @@
         </div>
       </div>
 
-      <div class="flexcolumn_left">
-
-        <h1 id="A">A</h1>
-        <h1 id="B">B</h1>
-        <h1 id="C">C</h1>
-        <h1 id="D">D</h1>
-        <h1 id="E">E</h1>
-        <h1 id="F">F</h1>
-        <h1 id="G">G</h1>
-        <h1 id="H">H</h1>
-        <h1 id="I">I</h1>
-        <h1 id="J">J</h1>
-        <h1 id="K">K</h1>
-        <h1 id="L">L</h1>
-        <h1 id="M">M</h1>
-        <h1 id="N">N</h1>
-        <h1 id="O">O</h1>
-        <h1 id="P">P</h1>
-        <h1 id="Q">Q</h1>
-        <h1 id="R">R</h1>
-        <h1 id="S">S</h1>
-        <h1 id="T">T</h1>
-        <h1 id="U">U</h1>
-        <h1 id="V">V</h1>
-        <h1 id="W">W</h1>
-        <h1 id="X">X</h1>
-        <h1 id="Y">Y</h1>
-        <h1 id="Z">Z</h1>
+      <div class="flexcolumn_left" id="gamesDiv">
 
         <!--
         <div class="flexrow_left" style="text-align: left; margin-bottom: 5vh;">

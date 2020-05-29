@@ -169,7 +169,7 @@ button:hover {
 }
 
 .flexitem_small_margin {
-  font-size: 2.3vw;
+  font-size: 2.2vw;
   text-align: center;
   margin: 0.2vw;
 }
@@ -229,6 +229,15 @@ button:hover {
 
 .pairSpacing {
   margin-bottom: 2vh;
+}
+
+.c64game {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+
+  font-size: 2vw;
+  margin: 1vw;
 }
 
 /* IDs */
