@@ -1,33 +1,46 @@
-function createElements() {
+function loadTitles() {
   var gamesDiv = document.getElementById("gamesDiv");
 
   for (var i in alphabet) {
     letterTag = document.createElement("H1");
-    letterTag.setAttribute("id", alphabet[i]);
-    letterTag.innerHTML = alphabet[i];
-    gamesDiv.appendChild(letterTag);
+    addElements(letterTag, "id", alphabet[i], alphabet[i], gamesDiv);
 
     for (var j in recognizedGames) {
-      if (alphabet[i] == "#") {
-        for (var k in numbers) {
-          if (recognizedGames[j][0] == numbers[k]) {
-            gameTag = document.createElement("DIV");
-            gameTag.setAttribute("class", "c64game");
-            gameTag.innerHTML = recognizedGames[j];
-            letterTag.appendChild(gameTag);
-          }
-        }
-      }
-      else if (recognizedGames[j][0] == alphabet[i]) {
+      if (alphabet[i] == "#" && doesContain(numbers, recognizedGames[j][0])) {
         gameTag = document.createElement("DIV");
-        gameTag.setAttribute("class", "c64game");
-        gameTag.innerHTML = recognizedGames[j];
-        letterTag.appendChild(gameTag);
+        addElements(gameTag, "class", "c64game", recognizedGames[j], letterTag);
+      }
+      else if (alphabet[i] == recognizedGames[j][0] && doesContain(alphabet, recognizedGames[j][0])) {
+        gameTag = document.createElement("DIV");
+        addElements(gameTag, "class", "c64game", recognizedGames[j], letterTag);
       }
     }
   }
+}
 
-  //total += "<div class='c64game'>" + recognizedGames[i] + "</div>\n";
+function addElements(elem, attribute, attributeValue, text, parent) {
+  elem.setAttribute(attribute, attributeValue);
+  elem.innerHTML = text;
+  parent.appendChild(elem);
+}
+
+//Checks if the given array contains a certain entry
+function doesContain(array, entry) {
+  var result;
+
+  for (var i in array) {
+    if (typeof array[i] == "string" && array[i] == entry) {
+      result = true;
+      break;
+    }
+  }
+
+  if (result == true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 var alphabet = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -243,8 +256,7 @@ var recognizedGames = [
   "Kickman (x2 copies)",
   "Kid Grid (x2 copies)",
   "Kikstart",
-  "Kikstart 2",
-  "Kikstart II",
+  "Kikstart II (x2 copies)",
   "Killer Ring (x2 copies)",
   "Killerwatt",
   "King's Bounty",
