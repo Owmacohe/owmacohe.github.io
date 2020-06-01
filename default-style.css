@@ -49,7 +49,7 @@ img {
 video {
   border-radius: 1vw;
 
-  width: 60%;
+  width: 60vw;
 }
 
 textarea {
@@ -249,7 +249,7 @@ button:hover {
 }
 
 #header {
-  font-size: 1.2vw;
+  font-size: 1.25vw;
   text-decoration: none;
 
   margin-bottom: 1vw;

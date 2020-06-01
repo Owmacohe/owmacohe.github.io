@@ -13,7 +13,7 @@ var botQualities = {
   "where": "on this website",
   "why": "a conversational test bot",
   "when": "May 12th 2020 AD",
-  "how": "good"
+  "how": "well"
 };
 
 var inputField;
