@@ -1,19 +1,19 @@
 var userQualities = {
   "who": ["YOU"],
-  "what": null,
-  "where": null,
-  "why": null,
-  "when": null,
-  "how": null
+  "what": [null],
+  "where": [null],
+  "why": [null],
+  "when": [null],
+  "how": [null]
 };
 
 var botQualities = {
   "who": ["BOT"],
-  "what": "a JavaScript algorithm (aka a bot)",
-  "where": "on this website",
-  "why": "a conversational test bot",
-  "when": "May 12th 2020 AD",
-  "how": "well"
+  "what": ["a JavaScript algorithm (aka a bot)"],
+  "where": ["on this website"],
+  "why": ["a conversational test bot"],
+  "when": ["May 12th 2020 AD"],
+  "how": ["well"]
 };
 
 var inputField;

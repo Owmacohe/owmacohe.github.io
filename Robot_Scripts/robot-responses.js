@@ -60,6 +60,25 @@ function sentenceFiltering(words) {
     var j;
     for (j = 0; j < words.length; j++) {
       if (doesContain(interrogators, words[j]) && words[j+1] == "are" && words[j+2] == "you") {
+        /*
+        if (words[j] == "who") {
+          if (botQualities.who == "BOT") {
+            setAnswerVariables(["I don't have a name yet. What shall my name be?", "Sounds good! What's your name?", "Nice to meet you."], ["string", "string", "string"], 2);
+            targetVars = [botQualities.who, userQualities.who];
+          }
+          else {
+            response = "I am " + botQualities.who;
+          }
+        }
+        else if (words[j] != "who") {
+          var quality = words[j];
+          console.log(quality);
+          console.log(botQualities);
+          setAnswerVariables(["I am " + botQualities.quality + ". " + capitalized(quality) + " are you?", "Good to know."], ["string", "string"], 1);
+          targetVars = [userQualities.quality];
+        }
+        */
+
         switch (words[j]) {
           case "who":
             if (botQualities.who == "BOT") {
@@ -71,24 +90,35 @@ function sentenceFiltering(words) {
             }
             break;
           case "what":
-            response = "I am " + botQualities.what;
+            setAnswerVariables(["I am " + botQualities.what + ". What are you?", "Good to know."], ["string", "string"], 1);
+            targetVars = [userQualities.what];
             break;
           case "where":
             response = "I am " + botQualities.where;
+            setAnswerVariables(["I am " + botQualities.where + ". Where are you?", "Good to know."], ["string", "string"], 1);
+            targetVars = [userQualities.where];
             break;
           case "why":
-            response = "I am " + botQualities.why;
+            setAnswerVariables(["I am " + botQualities.why + ". Why are you?", "Good to know."], ["string", "string"], 1);
+            targetVars = [userQualities.why];
             break;
           case "when":
-            response = "My first GitHub commit was on " + botQualities.when;
+            setAnswerVariables(["My first GitHub commit was on " + botQualities.when + ". When are you?", "Good to know."], ["string", "string"], 1);
+            targetVars = [userQualities.when];
             break;
           case "how":
-            response = "I am " + botQualities.how;
+            setAnswerVariables(["I am " + botQualities.how + ". How are you?", "Good to know."], ["string", "string"], 1);
+            targetVars = [userQualities.how];
             break;
         }
         formulated = true;
       }
     }
+
+    /*
+    console.log(botQualities);
+    console.log(userQualities);
+    */
   }
 
   /* ~~~ End type responses ~~~ */
