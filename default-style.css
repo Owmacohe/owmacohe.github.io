@@ -13,7 +13,11 @@ body {
   background-color: var(--background);
   font-family: "Trebuchet MS";
 
-  margin-bottom: 5vh;
+  margin-bottom: 5vw;
+}
+
+.h0 {
+  font-size: 8vw;
 }
 
 h1 {
@@ -228,7 +232,7 @@ button:hover {
 }
 
 .pairSpacing {
-  margin-bottom: 2vh;
+  margin-bottom: 2vw;
 }
 
 .c64game {
@@ -256,7 +260,7 @@ button:hover {
 }
 
 #footer {
-  margin-top: 10vh;
+  margin-top: 10vw;
 }
 
 #saw {
@@ -265,4 +269,14 @@ button:hover {
   white-space: pre;
 
   margin-right: 8vw;
+}
+#blm {
+  background-color: white;
+  font-family: "Impact";
+  font-size: 8vw;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 1vw;
 }
