@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "West England";
+  src: url("https://owmacohe.github.io/styles/west-england.ttf");
+}
+
+body {
+  background-color: black;
+
+  color: #0aff0a;
+  font-family: "West England";
+}
