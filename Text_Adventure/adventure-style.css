@@ -98,13 +98,15 @@ p {
   margin-left: 0.5vw;
 }
 
-.sceneitem {
-  width: 32%;
-  height: 18.3vw;
+.screen {
+  width: 31%;
+  height: 16.5vw;
 
   border-style: solid;
   border-color: #0aff0a;
   border-width: 0.1vw;
+
+  padding: 1vw;
 }
 
 /* IDs and other classes */
@@ -119,4 +121,18 @@ p {
   top: 0px;
 
   background-color: rgba(10, 255, 10, 0.25);
+}
+
+#s1, #s7 {
+  text-align: right;
+  border: none;
+}
+
+#s2, #s4, #s5, #s6, #s8 {
+  background-color: rgba(10, 255, 10, 0.25);
+}
+
+#s3, #s9 {
+  text-align: left;
+  border: none;
 }
