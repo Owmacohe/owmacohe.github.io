@@ -6,6 +6,7 @@ body {
 
   font-family: "CaveStoryRegular";
   text-align: center;
+  font-size: 2vw;
 }
 
 a {
@@ -39,7 +40,6 @@ h2 {
 }
 
 h3 {
-  font-size: 2vw;
   font-family: "CourneufRegular";
   margin: 1vw;
 }
@@ -96,6 +96,15 @@ p {
 
   margin-right: 0.5vw;
   margin-left: 0.5vw;
+}
+
+.sceneitem {
+  width: 32%;
+  height: 18.3vw;
+
+  border-style: solid;
+  border-color: #0aff0a;
+  border-width: 0.1vw;
 }
 
 /* IDs and other classes */

@@ -1,0 +1,43 @@
+/*
+var example = [
+  //screen1
+  "",
+  //screen2
+  "",
+  //screen3
+  "",
+  //screen4
+  "",
+  //screen5
+  "",
+  //screen6
+  "",
+  //screen7
+  "",
+  //screen8
+  "",
+  //screen9
+  ""
+];
+*/
+
+var scene01 = [
+  //screen1
+  "",
+  //screen2
+  "",
+  //screen3
+  "",
+  //screen4
+  "",
+  //screen5
+  "hello",
+  //screen6
+  "",
+  //screen7
+  "",
+  //screen8
+  "",
+  //screen9
+  ""
+];
