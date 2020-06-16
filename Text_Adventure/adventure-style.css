@@ -1,0 +1,113 @@
+/* Elements */
+
+body {
+  background-color: black;
+  color: #0aff0a;
+
+  font-family: "CaveStoryRegular";
+  text-align: center;
+}
+
+a {
+  border-color: #0aff0a;
+  border-style: solid;
+  margin: 1vw;
+  padding: 0.5vw;
+
+  font-size: 3.5vw;
+  font-family: "CourneufRegular";
+  text-decoration: none;
+
+  color: #0aff0a;
+  background-color: rgba(10, 255, 10, 0.25);
+}
+
+a:hover {
+  background-color: rgba(10, 255, 10, 0.75);
+}
+
+h1 {
+  font-size: 5vw;
+  font-family: "CourneufRegular";
+  margin: 3vw;
+}
+
+h2 {
+  font-size: 2.5vw;
+  font-family: "CourneufRegular";
+  margin: 1vw;
+}
+
+h3 {
+  font-size: 2vw;
+  font-family: "CourneufRegular";
+  margin: 1vw;
+}
+
+p {
+  font-size: 2vw;
+}
+
+/* Flex classes */
+
+.flexcolumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.flexcolumn_green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+  background-color: rgba(10, 255, 10, 0.25);
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+
+.flexrow_green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+
+  background-color: rgba(10, 255, 10, 0.25);
+}
+
+.flexrow_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flexitem {
+  font-size: 2.5vw;
+  text-align: center;
+
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+
+/* IDs and other classes */
+
+#header {
+  font-family: "CourneufRegular";
+  font-size: 2vw;
+  padding: 0.5vw;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  background-color: rgba(10, 255, 10, 0.25);
+}
