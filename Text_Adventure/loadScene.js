@@ -1,41 +1,85 @@
 var currentScene = [];
-var screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9;
+var scenePath = "1";
+//var screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9;
 
-function load(screens) {
+function sceneConfig(screens, pathAddition) {
   clearScene();
 
-  if (screens == null) {
-    setScene(scene01);
+  if (screens == null && pathAddition == null) {
+    setScene(scene1);
+  }
+  else {
+    setScene(screens);
+
+    if (scenePath == "1") {
+      var newHeader = document.createElement("DIV");
+      newHeader.setAttribute("id", "header");
+      document.getElementById("body").appendChild(newHeader);
+
+      document.getElementById("header").innerHTML = "";
+      setPath("Path: ");
+    }
+
+    scenePath = scenePath + "_" + pathAddition;
+
+    switch (pathAddition) {
+      case 1:
+        setPath("UP =>");
+        break;
+      case 2:
+        setPath("LEFT =>");
+        break;
+      case 3:
+        setPath("RIGHT =>");
+        break;
+      case 4:
+        setPath("DOWN =>");
+        break;
+    }
   }
 
   getScene();
+  console.log("CURRENT PATH: " + scenePath);
+}
+
+function setPath(direction) {
+  document.getElementById("header").innerHTML = document.getElementById("header").innerHTML + direction + " ";
 }
 
 function setScene(inputScene) {
   for (var i = 0; i < 9; i++) {
     document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
+    var newChoice = document.createElement("A");
 
     switch (i+1) {
       case 1:
         document.getElementById("s1").innerHTML = randomFill("down");
         break;
       case 2:
-        document.getElementById("s2").innerHTML = document.getElementById("s2").innerHTML + "<br><br><br><a>UP</a>";
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, 1)");
+        newChoice.innerHTML = "UP";
+        document.getElementById("s2").appendChild(newChoice);
         break;
       case 3:
         document.getElementById("s3").innerHTML = randomFill("down");
         break;
       case 4:
-        document.getElementById("s4").innerHTML = document.getElementById("s4").innerHTML + "<br><br><br><a>LEFT</a>";
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
+        newChoice.innerHTML = "LEFT";
+        document.getElementById("s4").appendChild(newChoice);
         break;
       case 6:
-        document.getElementById("s6").innerHTML = document.getElementById("s6").innerHTML + "<br><br><br><a>RIGHT</a>";
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, 3)");
+        newChoice.innerHTML = "RIGHT";
+        document.getElementById("s6").appendChild(newChoice);
         break;
       case 7:
         document.getElementById("s7").innerHTML = randomFill("up");
         break;
       case 8:
-        document.getElementById("s8").innerHTML = document.getElementById("s8").innerHTML + "<br><br><br><a>DOWN</a>";
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_4, 4)");
+        newChoice.innerHTML = "DOWN";
+        document.getElementById("s8").appendChild(newChoice);
         break;
       case 9:
         document.getElementById("s9").innerHTML = randomFill("up");
@@ -82,8 +126,8 @@ function randomFill(direction) {
 }
 
 function getRandomCharacter(iterations) {
-  var characters = "abcdefghijklmnopqrstuvwxyz0123456789";
   var randOutput = "";
+  var characters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
 
   for (var i = 0; i < iterations; i++) {
     randOutput += characters[Math.floor(Math.random() * characters.length)];

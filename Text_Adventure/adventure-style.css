@@ -4,7 +4,7 @@ body {
   background-color: black;
   color: #0aff0a;
 
-  font-family: "CaveStoryRegular";
+  font-family: "disposabledroid";
   text-align: center;
   font-size: 2vw;
 }
@@ -16,7 +16,7 @@ a {
   padding: 0.5vw;
 
   font-size: 3.5vw;
-  font-family: "CourneufRegular";
+  font-family: "dpcomic";
   text-decoration: none;
 
   color: #0aff0a;
@@ -29,24 +29,26 @@ a:hover {
 
 h1 {
   font-size: 5vw;
-  font-family: "CourneufRegular";
-  margin: 3vw;
+  font-family: "dpcomic";
+  margin: 2.5vw;
 }
 
 h2 {
   font-size: 2.5vw;
-  font-family: "CourneufRegular";
+  font-family: "dpcomic";
   margin: 1vw;
 }
 
 h3 {
-  font-family: "CourneufRegular";
+  font-family: "dpcomic";
   margin: 1vw;
 }
 
 p {
   font-size: 2vw;
 }
+
+
 
 /* Flex classes */
 
@@ -109,10 +111,12 @@ p {
   padding: 1vw;
 }
 
+
+
 /* IDs and other classes */
 
 #header {
-  font-family: "CourneufRegular";
+  font-family: "dpcomic";
   font-size: 2vw;
   padding: 0.5vw;
 
@@ -128,11 +132,62 @@ p {
   border: none;
 }
 
-#s2, #s4, #s5, #s6, #s8 {
+#s2, #s4, #s6, #s8 {
   background-color: rgba(10, 255, 10, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+#s5 {
+  background-color: rgba(10, 255, 10, 0.25);
+  font-size: 1.8vw;
 }
 
 #s3, #s9 {
   text-align: left;
   border: none;
+}
+
+
+
+/* Font Faces */
+
+@font-face { /* Special - Regular */
+    font-family: "dpcomic";
+    src: url("fonts/dpcomic-webfont.woff2") format("woff2"),
+         url("fonts/dpcomic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* Normal - Regular */
+    font-family: "disposabledroid";
+    src: url("fonts/disposabledroidbb-webfont.woff2") format("woff2"),
+         url("fonts/disposabledroidbb-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* Normal - Bold */
+    font-family: "disposabledroid";
+    src: url("fonts/disposabledroidbb_bld-webfont.woff2") format("woff2"),
+         url("fonts/disposabledroidbb_bld-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face { /* Normal - Italic */
+    font-family: "disposabledroid";
+    src: url("fonts/disposabledroidbb_ital-webfont.woff2") format("woff2"),
+         url("fonts/disposabledroidbb_ital-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face { /* Normal - BoldItalic */
+    font-family: "disposabledroid";
+    src: url("fonts/disposabledroidbb_bldital-webfont.woff2") format("woff2"),
+         url("fonts/disposabledroidbb_bldital-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
 }
