@@ -1,16 +1,14 @@
-var currentScene = [];
+//var currentScene = [];
 var scenePath = "1";
 //var screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9;
 
 function sceneConfig(screens, pathAddition) {
-  clearScene();
+  //clearScene();
 
   if (screens == null && pathAddition == null) {
     setScene(scene1);
   }
   else {
-    setScene(screens);
-
     if (scenePath == "1") {
       var newHeader = document.createElement("DIV");
       newHeader.setAttribute("id", "header");
@@ -21,6 +19,7 @@ function sceneConfig(screens, pathAddition) {
     }
 
     scenePath = scenePath + "_" + pathAddition;
+    setScene(screens);
 
     switch (pathAddition) {
       case 1:
@@ -38,7 +37,7 @@ function sceneConfig(screens, pathAddition) {
     }
   }
 
-  getScene();
+  //getScene();
   console.log("CURRENT PATH: " + scenePath);
 }
 
@@ -47,9 +46,11 @@ function setPath(direction) {
 }
 
 function setScene(inputScene) {
+
+
   for (var i = 0; i < 9; i++) {
     document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
-    var newChoice = document.createElement("A");
+    var newChoice = document.createElement("BUTTON");
 
     switch (i+1) {
       case 1:
@@ -77,7 +78,7 @@ function setScene(inputScene) {
         document.getElementById("s7").innerHTML = randomFill("up");
         break;
       case 8:
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_4, 4)");
+        newChoice.setAttribute("onclick", "window.location.href = 'release.html'");
         newChoice.innerHTML = "DOWN";
         document.getElementById("s8").appendChild(newChoice);
         break;
@@ -88,17 +89,21 @@ function setScene(inputScene) {
   }
 }
 
+/*
 function getScene() {
   for (var i = 0; i < 9; i++) {
     currentScene[i] = document.getElementById("s" + (i+1)).innerHTML;
   }
 }
+*/
 
+/*
 function clearScene() {
   for (var i = 0; i < 9; i++) {
     document.getElementById("s" + (i+1)).innerHTML = "";
   }
 }
+*/
 
 function randomFill(direction) {
   var output = "";
@@ -127,7 +132,7 @@ function randomFill(direction) {
 
 function getRandomCharacter(iterations) {
   var randOutput = "";
-  var characters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
+  var characters = "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
 
   for (var i = 0; i < iterations; i++) {
     randOutput += characters[Math.floor(Math.random() * characters.length)];

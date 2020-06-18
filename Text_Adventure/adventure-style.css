@@ -9,7 +9,7 @@ body {
   font-size: 2vw;
 }
 
-a {
+a, button {
   border-color: #0aff0a;
   border-style: solid;
   margin: 1vw;
@@ -23,7 +23,7 @@ a {
   background-color: rgba(10, 255, 10, 0.25);
 }
 
-a:hover {
+a:hover, button:hover {
   background-color: rgba(10, 255, 10, 0.75);
 }
 
@@ -66,6 +66,8 @@ p {
   flex-flow: column;
 
   background-color: rgba(10, 255, 10, 0.25);
+  width: 75vw;
+  padding: 0.5vw;
 }
 
 .flexrow {
@@ -130,6 +132,7 @@ p {
 #s1, #s7 {
   text-align: right;
   border: none;
+  font-family: "dpcomic";
 }
 
 #s2, #s4, #s6, #s8 {
@@ -146,6 +149,18 @@ p {
 #s3, #s9 {
   text-align: left;
   border: none;
+  font-family: "dpcomic";
+}
+
+.speech {
+  font-family: "dpcomic";
+  color: #ff0aff;
+
+  background-color: rgba(255, 10, 255, 0.25);
+  border-style: solid;
+  border-color: #ff0aff;
+
+  margin-top: 1.5vw;
 }
 
 
