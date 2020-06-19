@@ -10,6 +10,16 @@
 
   <body onload="sceneConfig()" id="body">
 
+    <div class="dropdown">
+      <button class="drop">Jump to:</button>
+      <div class="dropdown-content">
+        <a onclick="sceneConfig(scene1_1, '1_1', true)">UP</a>
+        <a onclick="sceneConfig(scene1_2, '1_2', true)">LEFT</a>
+        <a onclick="sceneConfig(scene1_3, '1_3', true)">RIGHT</a>
+        <a onclick="sceneConfig(scene1_1_1, '1_1_1', true)">UP => UP</a>
+      </div>
+    </div>
+
     <div class="flexrow_wrap">
       <div class="screen" id="s1">S1</div>
       <div class="screen" id="s2">S2</div>

@@ -1,5 +1,5 @@
 /*
-var scene1_1_1_1 = [
+var scene0_0_0_0 = [
   "",
   "MOVEA",
   "",
@@ -14,22 +14,22 @@ var scene1_1_1_1 = [
 
 var scene1 = [
   "",
-  "Continue softy forward, weaving between husks of long-deserted arbor?",
+  "Continue softy forward, weaving between husks of long-deserted arbor?", //done
   "",
-  "Approach an ashen stag, and commune with this extension of her hand?",
+  "Approach an ashen stag, and commune with this extension of her hand?", //done
   "Musty elegance and fading moss lie about you. This world, while living, has long been deserted. Your skin can feel the small voles and other soft rodents churning the soil deep beneath your feet. Deer and sand-covered sprites parallel your march. The silence of this world waits, and forgets.",
-  "Reach for a strong and pallid branch, hoping to ascend to the canopy?",
+  "Reach for a strong and pallid branch, hoping to ascend to the canopy?", //done
   "",
-  "Release your grip on this sunken world, for it has no true bearing to you?",
+  "Release your grip on this sunken world, for it has no true bearing to you?", //done
   ""
 ];
 
 var scene1_1 = [
   "",
-  "Pursue silent passage further and deeper between these arboreal tombs?",
+  "Pursue silent passage further and deeper between these arboreal tombs?", //done
   "",
   "Spend a time in repose, and whisper with old voices long hoarse?",
-  "Dry needles and acorn dusk float down almost like snow from the verdant plumage high above. The trees lining your way sit nearly all abandoned. Their bark was long ago peeled away for the final departing ships, and with it went the forest. Old and hearty spirits linger here still though.",
+  "Dry needles float down almost like snow from the verdant plumage high above. The trees lining your way sit nearly all abandoned. Their bark was long ago peeled away for the final departing ships, and with it went the forest. Old and hearty spirits linger here still though.",
   "Dig solemnly into the crumbling earth, and follow small keratinous bones?",
   "",
   "Breathe deep of the aged pine, and dissolve your meaning into the welcoming world?",
@@ -57,5 +57,17 @@ var scene1_3 = [
   "Steel your scattered resolve, and burst into the bleached sunlight above?",
   "",
   "In anticipation of soft earth below, release, and seek vertiginous finality?",
+  ""
+];
+
+var scene1_1_1 = [
+  "",
+  "Follow blue and broken stairs down and wide to their wrought-rusty throne?",
+  "",
+  "Fix upon fast council, and break forth your judgement to broken earings?",
+  "Day is nightfall, and winter manifests all her colours. Plant life is sparce and cold, yet still particles float between all spaces. A soot hall, provenance of a destitute monarchy now lies grey and mixed in the spire-like wood. Silence here is hard as granite, save for amphibious warnings.",
+  "Break for the near catylistic stone bearing, in scripture, all names yet to be written?",
+  "",
+  "Allow sleep to come switfly now, for it is used to this place, and well practiced here?",
   ""
 ];

@@ -1,4 +1,4 @@
-/* Elements */
+/* ### Elements ### */
 
 body {
   background-color: black;
@@ -7,6 +7,19 @@ body {
   font-family: "disposabledroid";
   text-align: center;
   font-size: 2vw;
+}
+
+input {
+  border-color: #0aff0a;
+  border-style: solid;
+  padding: 0.5vw;
+  width: 7vw;
+
+  font-size: 2vw;
+  font-family: "disposabledroid";
+
+  color: #0aff0a;
+  background-color: rgba(10, 255, 10, 0.25);
 }
 
 a, button {
@@ -50,7 +63,7 @@ p {
 
 
 
-/* Flex classes */
+/* ### Flex classes ### */
 
 .flexcolumn {
   display: flex;
@@ -102,22 +115,11 @@ p {
   margin-left: 0.5vw;
 }
 
-.screen {
-  width: 31%;
-  height: 16.5vw;
-
-  border-style: solid;
-  border-color: #0aff0a;
-  border-width: 0.1vw;
-
-  padding: 1vw;
-}
 
 
+/* ### IDs and other classes ### */
 
-/* IDs and other classes */
-
-#header {
+#header_left {
   font-family: "dpcomic";
   font-size: 2vw;
   padding: 0.5vw;
@@ -127,6 +129,17 @@ p {
   top: 0px;
 
   background-color: rgba(10, 255, 10, 0.25);
+}
+
+.screen {
+  width: 31%;
+  height: 16.5vw;
+
+  border-style: solid;
+  border-color: #0aff0a;
+  border-width: 0.1vw;
+
+  padding: 1vw;
 }
 
 #s1, #s7 {
@@ -165,9 +178,67 @@ p {
 
 
 
-/* Font Faces */
+/* ### Dropdowns ### */
 
-@font-face { /* Special - Regular */
+/* Main DIV */
+.dropdown {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  background-color: rgba(10, 255, 10, 0.25);
+  width: 10.85vw;
+}
+
+/* Title */
+.drop {
+  border-color: #0aff0a;
+  border-style: solid;
+  margin: 1vw;
+  padding: 0.5vw;
+
+  font-size: 2vw;
+  font-family: "dpcomic";
+  text-decoration: none;
+
+  color: #0aff0a;
+  background-color: rgba(10, 255, 10, 0.25);
+}
+
+.drop:hover {
+  background-color: rgba(10, 255, 10, 0.25);
+}
+
+/* Hidden Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: 2vw;
+  font-family: "disposabledroid";
+}
+
+.dropdown-content a:hover {background-color: rgba(10, 255, 10, 0.75);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-flow: column;
+
+  border-color: #0aff0a;
+  border-style: solid;
+  background-color: #003d00;
+}
+
+
+
+/* ### Font Faces ### */
+
+@font-face { /* dpcomic (special) - Regular */
     font-family: "dpcomic";
     src: url("fonts/dpcomic-webfont.woff2") format("woff2"),
          url("fonts/dpcomic-webfont.woff") format("woff");
@@ -175,7 +246,7 @@ p {
     font-style: normal;
 }
 
-@font-face { /* Normal - Regular */
+@font-face { /* disposabledroid (default) - Regular */
     font-family: "disposabledroid";
     src: url("fonts/disposabledroidbb-webfont.woff2") format("woff2"),
          url("fonts/disposabledroidbb-webfont.woff") format("woff");
@@ -183,7 +254,7 @@ p {
     font-style: normal;
 }
 
-@font-face { /* Normal - Bold */
+@font-face { /* disposabledroid (default) - Bold */
     font-family: "disposabledroid";
     src: url("fonts/disposabledroidbb_bld-webfont.woff2") format("woff2"),
          url("fonts/disposabledroidbb_bld-webfont.woff") format("woff");
@@ -191,7 +262,7 @@ p {
     font-style: normal;
 }
 
-@font-face { /* Normal - Italic */
+@font-face { /* disposabledroid (default) - Italic */
     font-family: "disposabledroid";
     src: url("fonts/disposabledroidbb_ital-webfont.woff2") format("woff2"),
          url("fonts/disposabledroidbb_ital-webfont.woff") format("woff");
@@ -199,7 +270,7 @@ p {
     font-style: italic;
 }
 
-@font-face { /* Normal - BoldItalic */
+@font-face { /* disposabledroid (default) - BoldItalic */
     font-family: "disposabledroid";
     src: url("fonts/disposabledroidbb_bldital-webfont.woff2") format("woff2"),
          url("fonts/disposabledroidbb_bldital-webfont.woff") format("woff");

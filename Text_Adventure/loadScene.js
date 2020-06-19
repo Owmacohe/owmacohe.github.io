@@ -2,7 +2,7 @@
 var scenePath = "1";
 //var screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9;
 
-function sceneConfig(screens, pathAddition) {
+function sceneConfig(screens, pathAddition, jump) {
   //clearScene();
 
   if (screens == null && pathAddition == null) {
@@ -11,43 +11,48 @@ function sceneConfig(screens, pathAddition) {
   else {
     if (scenePath == "1") {
       var newHeader = document.createElement("DIV");
-      newHeader.setAttribute("id", "header");
+      newHeader.setAttribute("id", "header_left");
       document.getElementById("body").appendChild(newHeader);
-
-      document.getElementById("header").innerHTML = "";
-      setPath("Path: ");
     }
 
-    scenePath = scenePath + "_" + pathAddition;
+    if (jump == true) {
+      scenePath = pathAddition;
+      setPath();
+    }
+    else {
+      scenePath = scenePath + "_" + pathAddition;
+      setPath();
+    }
+
     setScene(screens);
-
-    switch (pathAddition) {
-      case 1:
-        setPath("UP =>");
-        break;
-      case 2:
-        setPath("LEFT =>");
-        break;
-      case 3:
-        setPath("RIGHT =>");
-        break;
-      case 4:
-        setPath("DOWN =>");
-        break;
-    }
   }
 
   //getScene();
   console.log("CURRENT PATH: " + scenePath);
 }
 
-function setPath(direction) {
-  document.getElementById("header").innerHTML = document.getElementById("header").innerHTML + direction + " ";
+function setPath() {
+  splitPath = scenePath.split("_");
+  var result = "";
+
+  for (var i = 1; i < splitPath.length; i++) {
+    switch (splitPath[i]) {
+      case "1":
+        result += "UP => ";
+        break;
+      case "2":
+        result += "LEFT => ";
+        break;
+      case "3":
+        result += "RIGHT => ";
+        break;
+    }
+  }
+
+  document.getElementById("header_left").innerHTML = "Path: " + result;
 }
 
 function setScene(inputScene) {
-
-
   for (var i = 0; i < 9; i++) {
     document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
     var newChoice = document.createElement("BUTTON");
