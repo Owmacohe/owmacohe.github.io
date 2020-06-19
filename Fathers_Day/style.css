@@ -1,0 +1,54 @@
+body {
+  background-color: cornflowerblue;
+  color: #092049;
+  font-family: "Futura";
+
+  padding: 2vw;
+}
+
+h1 { font-size: 6vw; text-decoration: underline; }
+
+h2 { font-size: 4vw; }
+
+h3 { font-size: 2vw; }
+
+h4 { font-size: 1vw; }
+
+img {
+  position: absolute;
+  width: 10vw;
+}
+
+#top_left {
+  top: 0px;
+  left: 0px;
+}
+
+#top_right {
+  top: 0px;
+  right: 0px;
+
+  transform: rotate(90deg);
+}
+
+#bottom_left {
+  bottom: 0px;
+  left: 0px;
+
+  transform: rotate(-90deg);
+}
+
+#bottom_right {
+  bottom: 0px;
+  right: 0px;
+
+  transform: rotate(180deg);
+}
+
+.flexcolumn {
+  display: flex;
+  flex-flow: column;
+
+  justify-content: center;
+  text-align: center;
+}
