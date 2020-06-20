@@ -204,7 +204,19 @@ button:hover {
 
 .img_small {
   border-radius: 2vw;
-  width: 23vw;
+  width: 13vw;
+  padding: 1vw;
+}
+
+.img_med {
+  border-radius: 2vw;
+  width: 25vw;
+  padding: 1vw;
+}
+
+.img_big {
+  border-radius: 2vw;
+  width: 70vw;
   padding: 1vw;
 }
 
@@ -215,6 +227,11 @@ button:hover {
 
 .nounderline {
   text-decoration: none;
+}
+
+.dark_box {
+  background-color: var(--links);
+  padding: 1vw;
 }
 
 .gameElement {
