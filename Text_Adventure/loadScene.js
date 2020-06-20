@@ -1,15 +1,15 @@
 //var currentScene = [];
-var scenePath = "1";
+var scenePath = "0";
 //var screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9;
 
 function sceneConfig(screens, pathAddition, jump) {
   //clearScene();
 
   if (screens == null && pathAddition == null) {
-    setScene(scene1);
+    setScene(scene0);
   }
   else {
-    if (scenePath == "1") {
+    if (scenePath == "0" && document.getElementById("header_left") == null) {
       var newHeader = document.createElement("DIV");
       newHeader.setAttribute("id", "header_left");
       document.getElementById("body").appendChild(newHeader);

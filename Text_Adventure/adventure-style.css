@@ -25,6 +25,8 @@ input {
 a, button {
   border-color: #0aff0a;
   border-style: solid;
+  border-width: 0.5vw;
+
   margin: 1vw;
   padding: 0.5vw;
 
@@ -187,22 +189,7 @@ p {
   top: 0px;
 
   background-color: rgba(10, 255, 10, 0.25);
-  width: 10.85vw;
-}
-
-/* Title */
-.drop {
-  border-color: #0aff0a;
-  border-style: solid;
-  margin: 1vw;
-  padding: 0.5vw;
-
-  font-size: 2vw;
-  font-family: "dpcomic";
-  text-decoration: none;
-
-  color: #0aff0a;
-  background-color: rgba(10, 255, 10, 0.25);
+  width: 13.8vw;
 }
 
 .drop:hover {
@@ -217,7 +204,7 @@ p {
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content button {
   font-size: 2vw;
   font-family: "disposabledroid";
 }
@@ -231,6 +218,8 @@ p {
 
   border-color: #0aff0a;
   border-style: solid;
+  border-width: 0.5vw;
+
   background-color: #003d00;
 }
 
