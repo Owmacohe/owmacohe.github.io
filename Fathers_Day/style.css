@@ -16,12 +16,13 @@ h4 { font-size: 1vw; }
 
 img {
   position: absolute;
-  width: 10vw;
 }
 
 #top_left {
   top: 0px;
   left: 0px;
+
+  width: 10vw;
 }
 
 #top_right {
@@ -29,6 +30,7 @@ img {
   right: 0px;
 
   transform: rotate(90deg);
+  width: 10vw;
 }
 
 #bottom_left {
@@ -36,6 +38,7 @@ img {
   left: 0px;
 
   transform: rotate(-90deg);
+  width: 10vw;
 }
 
 #bottom_right {
@@ -43,6 +46,7 @@ img {
   right: 0px;
 
   transform: rotate(180deg);
+  width: 10vw;
 }
 
 .flexcolumn {
