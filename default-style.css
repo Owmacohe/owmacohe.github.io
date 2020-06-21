@@ -7,6 +7,8 @@
   --hover: #99ff99;
 }
 
+
+
 /* Elements */
 
 body {
@@ -85,6 +87,8 @@ button {
 button:hover {
   color: var(--hover);
 }
+
+
 
 /* Flex classes */
 
@@ -200,6 +204,8 @@ button:hover {
   margin-right: 0.8vw;
 }
 
+
+
 /* General Classes */
 
 .img_small {
@@ -261,6 +267,8 @@ button:hover {
   margin: 1vw;
 }
 
+
+
 /* IDs */
 
 #titleimage {
@@ -289,7 +297,7 @@ button:hover {
 }
 #blm {
   background-color: white;
-  font-family: "Impact";
+  font-family: "Tahoma";
   font-size: 8vw;
 
   display: flex;

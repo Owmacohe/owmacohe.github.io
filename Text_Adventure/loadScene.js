@@ -13,6 +13,8 @@ function sceneConfig(screens, pathAddition, jump) {
       var newHeader = document.createElement("DIV");
       newHeader.setAttribute("id", "header_left");
       document.getElementById("body").appendChild(newHeader);
+
+      document.getElementById("drop").style.visibility = "visible";
     }
 
     if (jump == true) {
