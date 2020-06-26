@@ -30,7 +30,7 @@ var scene0_1 = [
   "",
   "Spend a time in repose, and whisper with old voices long gritty and hoarse?", //done
   "Dry needles float down almost like snow from the verdant plumage high above. The trees lining your way sit nearly all abandoned. Their bark was long ago peeled away for the final departing ships, and with it went the forest. Old and hearty spirits linger here still though.",
-  "Dig solemnly into the crumbling earth, and follow small keratinous bones?",
+  "Dig solemnly into the crumbling earth, and follow small keratinous bones?", //done
   "",
   "Breathe deep of the aged pine, and dissolve your meaning into the welcoming world?",
   ""
@@ -81,5 +81,17 @@ var scene0_1_2 = [
   "Let horror descend, and pass swiftly on in respect for days of old?",
   "",
   "Marvel and falter at terrible majesty, suffocated under the unyielding weight of time?",
+  ""
+];
+
+var scene0_1_3 = [
+  "",
+  "Passively and knowingly observe the destruction you have caused, and delve deeper?",
+  "",
+  "Pocket one tremmoring head-cask in a soft, pine laden pouch next to your heart?",
+  "The chittering and burrowing of onyxian beetles heralds your descent. Skulls of birds, beasts, and those beings long forgotten rustle quietly.<div class='speech'>!!~~~ Welcome ~~~!!<br>Well-come, to you. Hello and goodbye.</div>Their voices simmer into silence.",
+  "Excavate the heterogeneous earth diagonally towards a rythmic and trembling drum?",
+  "",
+  "Rest your own bones soundlessly in black soil, and begin another meander more peacefully?",
   ""
 ];

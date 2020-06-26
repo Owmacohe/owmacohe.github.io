@@ -1,8 +1,18 @@
+/* ### Colours ### */
+
+:root {
+  --green: #0aff0a;
+  --transparent: rgba(10, 255, 10, 0.25);
+  
+  --purple: #ff0aff;
+  --green_dark: #004200;
+}
+
 /* ### Elements ### */
 
 body {
   background-color: black;
-  color: #0aff0a;
+  color: var(--green);
 
   font-family: "disposabledroid";
   text-align: center;
@@ -10,7 +20,7 @@ body {
 }
 
 input {
-  border-color: #0aff0a;
+  border-color: var(--green);
   border-style: solid;
   padding: 0.5vw;
   width: 7vw;
@@ -18,12 +28,12 @@ input {
   font-size: 2vw;
   font-family: "disposabledroid";
 
-  color: #0aff0a;
-  background-color: rgba(10, 255, 10, 0.25);
+  color: var(--green);
+  background-color: var(--transparent);
 }
 
 a, button {
-  border-color: #0aff0a;
+  border-color: var(--green);
   border-style: solid;
   border-width: 0.5vw;
 
@@ -34,12 +44,12 @@ a, button {
   font-family: "dpcomic";
   text-decoration: none;
 
-  color: #0aff0a;
-  background-color: rgba(10, 255, 10, 0.25);
+  color: var(--green);
+  background-color: var(--transparent);
 }
 
 a:hover, button:hover {
-  background-color: rgba(10, 255, 10, 0.75);
+  background-color: var(--green);
 }
 
 h1 {
@@ -80,7 +90,7 @@ p {
   align-items: center;
   flex-flow: column;
 
-  background-color: rgba(10, 255, 10, 0.25);
+  background-color: var(--transparent);
   width: 75vw;
   padding: 0.5vw;
 }
@@ -98,7 +108,7 @@ p {
   align-items: center;
   flex-flow: row;
 
-  background-color: rgba(10, 255, 10, 0.25);
+  background-color: var(--transparent);
 }
 
 .flexrow_wrap {
@@ -130,7 +140,7 @@ p {
   left: 0px;
   top: 0px;
 
-  background-color: rgba(10, 255, 10, 0.25);
+  background-color: var(--transparent);
 }
 
 .screen {
@@ -138,7 +148,7 @@ p {
   height: 16.5vw;
 
   border-style: solid;
-  border-color: #0aff0a;
+  border-color: var(--green);
   border-width: 0.1vw;
 
   padding: 1vw;
@@ -151,13 +161,13 @@ p {
 }
 
 #s2, #s4, #s6, #s8 {
-  background-color: rgba(10, 255, 10, 0.25);
+  background-color: var(--transparent);
   display: flex;
   flex-direction: column;
 }
 
 #s5 {
-  background-color: rgba(10, 255, 10, 0.25);
+  background-color: var(--transparent);
   font-size: 1.8vw;
 }
 
@@ -169,13 +179,14 @@ p {
 
 .speech {
   font-family: "dpcomic";
-  color: #ff0aff;
+  color: var(--purple);
 
   background-color: rgba(255, 10, 255, 0.25);
   border-style: solid;
-  border-color: #ff0aff;
+  border-color: var(--purple);
 
-  margin-top: 1.5vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
 }
 
 
@@ -184,18 +195,16 @@ p {
 
 /* Main DIV */
 .dropdown {
+  /*
   visibility: hidden;
+  */
 
   position: absolute;
   right: 0px;
   top: 0px;
 
-  background-color: rgba(10, 255, 10, 0.25);
-  width: 13.8vw;
-}
-
-.drop:hover {
-  background-color: rgba(10, 255, 10, 0.25);
+  background-color: var(--green_dark);
+  width: 14.3vw;
 }
 
 /* Hidden Dropdown */
@@ -211,18 +220,16 @@ p {
   font-family: "disposabledroid";
 }
 
-.dropdown-content a:hover {background-color: rgba(10, 255, 10, 0.75);}
-
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: flex;
   flex-flow: column;
 
-  border-color: #0aff0a;
+  border-color:var(--green);
   border-style: solid;
   border-width: 0.5vw;
 
-  background-color: #003d00;
+  background-color: var(--green_dark);
 }
 
 
