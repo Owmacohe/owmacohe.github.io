@@ -123,35 +123,9 @@ function setScene(inputScene) {
 
 function writeScreens() {
   for (var i = 0; i < 9; i++) {
-    if (i == 2 || i == 4 || i == 5 || i == 6 || i == 8) {
-      writeWait(i);
+    if (i == 2 || i == 4 || i == 6 || i == 8) {
+      writeWait("t"+i);
     }
-  }
-}
-
-function writeWait(iterator) {
-  if (iterator == 5) {
-    speed = 5;
-  }
-  else {
-    speed = 20;
-  }
-
-  var text = document.getElementById("t" + iterator).innerHTML;
-  var letters = text.split("");
-
-  document.getElementById("t" + iterator).innerHTML = "";
-  text = "";
-
-  for (var j = 0; j < letters.length; j++) {
-    let k = j;
-    let l = iterator;
-    setTimeout(function() {
-      text = text + letters[k];
-      //console.log(text);
-
-      document.getElementById("t" + l).innerHTML = text;
-    }, speed * k);
   }
 }
 

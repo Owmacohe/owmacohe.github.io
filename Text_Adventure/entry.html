@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="adventure-style.css">
+    <script src="utilities.js" charset="utf-8"></script>
     <title>Nost Delear Attentaben</title>
   </head>
 
@@ -10,10 +11,10 @@
     <div class="flexcolumn" style="margin-top: 1.5vw;">
 
       <h1>Hello! Greetings to you traveller.</h1>
-      <h2>Time immemorial has brought you to me.</h2>
-      <h3><i>Do you feel it?</i></h3>
-      <h2>Your opportunity has come, my child. A chance to ascend beyond my cloth.</h2>
-      <div class="flexrow_green" style="margin-top: 8vw;">
+      <h2 id="a">Your opportunity has come, my child. A chance to ascend beyond my cloth.</h2>
+      <h2 id="b">Time immemorial has brought you to me.</h2>
+      <h3><i id="c">Do you feel it?</i></h3>
+      <div class="flexrow_green" style="margin-top: 5vw;">
         <h1>Go now!</h1>
         <div class="flexcolumn">
           <h2>And be with my blessing.</h2>
@@ -29,4 +30,10 @@
 
     </div>
   </body>
+
+  <script>
+    writeWait("a", 40);
+    writeWait("b", 50, 5000);
+    writeWait("c", 120, 8500);
+  </script>
 </html>

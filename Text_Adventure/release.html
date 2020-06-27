@@ -3,30 +3,39 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="adventure-style.css">
+    <script src="utilities.js" charset="utf-8"></script>
     <title>Opor Niectavict</title>
   </head>
 
   <body>
     <div class="flexcolumn">
 
-      <h1>You have remembered.</h1>
-      <h2>((( Autonomy is supreme in the kingdom of the mind. )))</h2>
+      <h1 id="a">You have remembered.</h1>
+      <h2 id="b">((( Autonomy is supreme in the kingdom of the mind. )))</h2>
       <h3>~~~</h3>
       <div class="flexcolumn_green">
         <p>“The will is conceived as a faculty of determining oneself to action in accordance with the conception of certain laws. And such a faculty can be found only in rational beings.”</p>
         <h3>-Immanuel Kant</h3>
       </div>
-      <div class="speech" style="font-family: 'disposabledroid'; margin: 1.2vw;">
+      <div id="c" class="speech" style="font-family: 'disposabledroid'; margin: 1.2vw;">
         Welcome back my child. I have missed you. Though the fortune I bestowed upon you was beyond contemplatable value, its loss has no bearing to the grinding of many sandy shores. Though after all you have witnessed, can you wish to return?
       </div>
       <div class="flexrow">
         <h2>...</h2>
-        <a href="prologue.html">///BEGIN EXHUMATION///</a>
+        <a href="prologue.html" id="d">///BEGIN EXHUMATION///</a>
         or
-        <a href="\">///SLEEP///</a>
+        <a href="\" id="e">///SLEEP///</a>
         <h2>...</h2>
       </div>
 
     </div>
   </body>
+
+  <script>
+    writeWait("a", 100);
+    writeWait("b", 100, 2500);
+    writeWait("c", 40, 8000);
+    writeWait("d", 100);
+    writeWait("e", 100);
+  </script>
 </html>

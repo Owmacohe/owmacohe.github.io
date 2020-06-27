@@ -3,34 +3,43 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="adventure-style.css">
+    <script src="utilities.js" charset="utf-8"></script>
     <title>Femervenos Pactel</title>
   </head>
 
   <body style="padding-top: 4.5vw;">
 
     <div class="flexcolumn">
-      <h3>We begin, and something changes. Baited breaths gild us in mortal leaf.</h3>
+      <h3 id="a">We begin, and something changes. Baited breaths gild us in mortal leaf.</h3>
       <h2>.,.,.,.,.,.,.,.,.,.,.,.,.</h2>
-      <p>Instances that [were not] become [one], and you are born.
+      <p id="b">Instances that [were not] become [one], and you are born.
         Rejoice, for you have been given precious mortal presence.
         Use it wisely.
       </p>
-      <p>( Or don't. Autonomy is supreme in the kingdom of the mind. )</p>
+      <p id="c">( Or don't. Autonomy is supreme in the kingdom of the mind. )</p>
       <div class="flexcolumn_green">
         <p><: <: <: ALL AROUND STRETCH THE BOUNDS OF YOUR CONCIOUSNESS. OR ARE THEY HERS? :> :> :></p>
       </div>
-      <p>
+      <p id="d">
         You are fortunate. She has laid you down to rest in soft peat and cool shallows.
         Coming forth from the pond, you are consumed by the total stillness of this world.
         It is good. Earthy and kind.
       </p>
       <div class="flexrow">
         <h2>...</h2>
-        <a href="game.html">You resume your journey.</a>
+        <a href="game.html" id="e">You resume your journey.</a>
         <!-- <button onclick="window.location.href = 'game.html'">You resume your journey.</button> -->
         <h2>...</h2>
       </div>
     </div>
 
   </body>
+
+  <script>
+    writeWait("a");
+    writeWait("b", 30, 3000);
+    writeWait("c", 60, 8000);
+    writeWait("d", 50, 12000);
+    writeWait("e", 1000);
+  </script>
 </html>
