@@ -3,7 +3,7 @@
 :root {
   --green: #0aff0a;
   --transparent: rgba(10, 255, 10, 0.25);
-  
+
   --purple: #ff0aff;
   --green_dark: #004200;
 }
@@ -143,9 +143,27 @@ p {
   background-color: var(--transparent);
 }
 
-.screen {
+.textScreen {
   width: 31%;
   height: 16.5vw;
+  position: relative;
+
+  border-style: solid;
+  border-color: var(--green);
+  background-color: var(--transparent);
+  border-width: 0.1vw;
+
+  padding: 1vw;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.artScreen {
+  width: 31%;
+  height: 16.5vw;
+  position: relative;
 
   border-style: solid;
   border-color: var(--green);
@@ -154,21 +172,22 @@ p {
   padding: 1vw;
 }
 
+.moveOptions {
+  position: absolute;
+  bottom: 1.5vw;
+
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+#t5 {
+  font-size: 1.75vw;
+}
+
 #s1, #s7 {
   text-align: right;
   border: none;
   font-family: "dpcomic";
-}
-
-#s2, #s4, #s6, #s8 {
-  background-color: var(--transparent);
-  display: flex;
-  flex-direction: column;
-}
-
-#s5 {
-  background-color: var(--transparent);
-  font-size: 1.8vw;
 }
 
 #s3, #s9 {

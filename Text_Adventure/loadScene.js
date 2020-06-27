@@ -7,6 +7,7 @@ function sceneConfig(screens, pathAddition, jump) {
 
   if (screens == null && pathAddition == null) {
     setScene(scene0);
+    writeScreens();
   }
   else {
     if (scenePath == "0" && document.getElementById("header_left") == null) {
@@ -27,6 +28,7 @@ function sceneConfig(screens, pathAddition, jump) {
     }
 
     setScene(screens);
+    writeScreens();
   }
 
   //getScene();
@@ -56,43 +58,100 @@ function setPath() {
 
 function setScene(inputScene) {
   for (var i = 0; i < 9; i++) {
-    document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
-    var newChoice = document.createElement("BUTTON");
-
     switch (i+1) {
       case 1:
+        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s1").innerHTML = randomFill("down");
         break;
-      case 2:
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, 1)");
-        newChoice.innerHTML = "UP";
-        document.getElementById("s2").appendChild(newChoice);
-        break;
       case 3:
+        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s3").innerHTML = randomFill("down");
         break;
-      case 4:
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
-        newChoice.innerHTML = "LEFT";
-        document.getElementById("s4").appendChild(newChoice);
-        break;
-      case 6:
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, 3)");
-        newChoice.innerHTML = "RIGHT";
-        document.getElementById("s6").appendChild(newChoice);
-        break;
       case 7:
+        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s7").innerHTML = randomFill("up");
         break;
-      case 8:
-        newChoice.setAttribute("onclick", "window.location.href = 'release.html'");
-        newChoice.innerHTML = "DOWN";
-        document.getElementById("s8").appendChild(newChoice);
-        break;
       case 9:
+        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s9").innerHTML = randomFill("up");
         break;
     }
+  }
+
+  for (var i = 0; i < 9; i++) {
+    var newChoice = document.createElement("BUTTON");
+
+    switch (i+1) {
+      case 2:
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, 1)");
+        newChoice.setAttribute("class", "moveOptions");
+        newChoice.innerHTML = "UP";
+        document.getElementById("s2").appendChild(newChoice);
+        break;
+      case 4:
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
+        newChoice.setAttribute("class", "moveOptions");
+        newChoice.innerHTML = "LEFT";
+        document.getElementById("s4").appendChild(newChoice);
+        break;
+      case 5:
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+        break;
+      case 6:
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, 3)");
+        newChoice.setAttribute("class", "moveOptions");
+        newChoice.innerHTML = "RIGHT";
+        document.getElementById("s6").appendChild(newChoice);
+        break;
+      case 8:
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+
+        newChoice.setAttribute("onclick", "window.location.href = 'release.html'");
+        newChoice.setAttribute("class", "moveOptions");
+        newChoice.innerHTML = "DOWN";
+        document.getElementById("s8").appendChild(newChoice);
+        break;
+    }
+  }
+}
+
+function writeScreens() {
+  for (var i = 0; i < 9; i++) {
+    if (i == 2 || i == 4 || i == 5 || i == 6 || i == 8) {
+      writeWait(i);
+    }
+  }
+}
+
+function writeWait(iterator) {
+  if (iterator == 5) {
+    speed = 5;
+  }
+  else {
+    speed = 20;
+  }
+
+  var text = document.getElementById("t" + iterator).innerHTML;
+  var letters = text.split("");
+
+  document.getElementById("t" + iterator).innerHTML = "";
+  text = "";
+
+  for (var j = 0; j < letters.length; j++) {
+    let k = j;
+    let l = iterator;
+    setTimeout(function() {
+      text = text + letters[k];
+      //console.log(text);
+
+      document.getElementById("t" + l).innerHTML = text;
+    }, speed * k);
   }
 }
 
