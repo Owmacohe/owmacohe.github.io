@@ -42,7 +42,7 @@ var scene0_1 = [
 
 var scene0_2 = [
   "",
-  "Turn aside and make your way to lighter pastures, where hushed voices cannot follow?",
+  "Turn aside and make your way to lighter pastures, where hushed voices cannot follow?", //done
   "",
   "Remind cold flesh of their multitudinous histories, and awaken its still bones?",
   "Deep-seated sockets placed over its eyes conceal the beast's gaze. Antlers adorned with sun-bleached moss and a withered hide speak out toward you:<div class='speech'>Seek you to elevate us? I am old and putrid, and would make a fine pilgrim. Release me, please.</div>",
@@ -97,5 +97,17 @@ var scene0_1_3 = [
   "Excavate the heterogeneous earth diagonally towards a rythmic and trembling drum?",
   "",
   "Rest your own bones soundlessly in black soil, and begin another meander more peacefully?",
+  ""
+];
+
+var scene0_2_1 = [
+  "",
+  "Seek peace in the shade of great baobabs springing forth like footsteps?",
+  "",
+  "Breathe deep of the dry air, and allow your mycellum to seek purchase and find nourishment?",
+  "A bleached sun, peppered with rust and salt welcomes you into its still and dark sands. Horizons become temples, which in turn form the very fingertips of this world, far and distant. It is both twilight and early noon across these washing dunes, and the harvesters are fast at work scouring for seeds.",
+  "Take your first step on great glass stairs and walk upwards toward the sun?",
+  "",
+  "Carefully become that which the small workers seek, different to no other seed?",
   ""
 ];

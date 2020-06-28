@@ -1,6 +1,4 @@
-//var currentScene = [];
 var scenePath = "0";
-//var screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9;
 
 function sceneConfig(screens, pathAddition, jump) {
   //clearScene();
@@ -14,8 +12,6 @@ function sceneConfig(screens, pathAddition, jump) {
       var newHeader = document.createElement("DIV");
       newHeader.setAttribute("id", "header_left");
       document.getElementById("body").appendChild(newHeader);
-
-      document.getElementById("drop").style.visibility = "visible";
     }
 
     if (jump == true) {
@@ -85,16 +81,20 @@ function setScene(inputScene) {
       case 2:
         document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
 
+        removeElement("b1");
         newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, 1)");
         newChoice.setAttribute("class", "moveOptions");
+        newChoice.setAttribute("id", "b1");
         newChoice.innerHTML = "UP";
         document.getElementById("s2").appendChild(newChoice);
         break;
       case 4:
         document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
 
+        removeElement("b2");
         newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
         newChoice.setAttribute("class", "moveOptions");
+        newChoice.setAttribute("id", "b2");
         newChoice.innerHTML = "LEFT";
         document.getElementById("s4").appendChild(newChoice);
         break;
@@ -104,16 +104,20 @@ function setScene(inputScene) {
       case 6:
         document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
 
+        removeElement("b3");
         newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, 3)");
         newChoice.setAttribute("class", "moveOptions");
+        newChoice.setAttribute("id", "b3");
         newChoice.innerHTML = "RIGHT";
         document.getElementById("s6").appendChild(newChoice);
         break;
       case 8:
         document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
 
+        removeElement("b4");
         newChoice.setAttribute("onclick", "window.location.href = 'release.html'");
         newChoice.setAttribute("class", "moveOptions");
+        newChoice.setAttribute("id", "b4");
         newChoice.innerHTML = "DOWN";
         document.getElementById("s8").appendChild(newChoice);
         break;
@@ -127,56 +131,4 @@ function writeScreens() {
       writeWait("t"+i);
     }
   }
-}
-
-/*
-function getScene() {
-  for (var i = 0; i < 9; i++) {
-    currentScene[i] = document.getElementById("s" + (i+1)).innerHTML;
-  }
-}
-*/
-
-/*
-function clearScene() {
-  for (var i = 0; i < 9; i++) {
-    document.getElementById("s" + (i+1)).innerHTML = "";
-  }
-}
-*/
-
-function randomFill(direction) {
-  var output = "";
-
-  if (direction == "down") {
-    /* line 1 */ output += getRandomCharacter(1);
-    /* line 2 */ output += getRandomCharacter(3);
-    /* line 3 */ output += getRandomCharacter(7);
-    /* line 4 */ output += getRandomCharacter(12);
-    /* line 5 */ output += getRandomCharacter(16);
-    /* line 6 */ output += getRandomCharacter(23);
-    /* line 7 */ output += getRandomCharacter(30);
-  }
-  else if (direction == "up") {
-    /* line 1 */ output += getRandomCharacter(30);
-    /* line 2 */ output += getRandomCharacter(23);
-    /* line 3 */ output += getRandomCharacter(16);
-    /* line 4 */ output += getRandomCharacter(12);
-    /* line 5 */ output += getRandomCharacter(7);
-    /* line 6 */ output += getRandomCharacter(3);
-    /* line 7 */ output += getRandomCharacter(1);
-  }
-
-  return output;
-}
-
-function getRandomCharacter(iterations) {
-  var randOutput = "";
-  var characters = "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
-
-  for (var i = 0; i < iterations; i++) {
-    randOutput += characters[Math.floor(Math.random() * characters.length)];
-  }
-
-  return randOutput + "<br>";
 }
