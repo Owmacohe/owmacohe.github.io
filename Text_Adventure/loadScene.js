@@ -1,6 +1,16 @@
 var scenePath = "0";
+var inventory = [];
 
-function sceneConfig(screens, pathAddition, jump) {
+function sceneConfig(screens, pathAddition, jump, invItem) {
+  if (invItem != null) {
+    if (document.getElementById("inventory") == null) {
+      addInventory(invItem, true);
+    }
+    else {
+      addInventory(invItem, false);
+    }
+  }
+
   //clearScene();
 
   if (screens == null && pathAddition == null) {
@@ -8,10 +18,10 @@ function sceneConfig(screens, pathAddition, jump) {
     writeScreens();
   }
   else {
-    if (scenePath == "0" && document.getElementById("header_left") == null) {
-      var newHeader = document.createElement("DIV");
-      newHeader.setAttribute("id", "header_left");
-      document.getElementById("body").appendChild(newHeader);
+    if (scenePath == "0" && document.getElementById("path") == null) {
+      var newPath = document.createElement("DIV");
+      newPath.setAttribute("id", "path");
+      document.getElementById("body").appendChild(newPath);
     }
 
     if (jump == true) {
@@ -49,7 +59,7 @@ function setPath() {
     }
   }
 
-  document.getElementById("header_left").innerHTML = "Path: " + result;
+  document.getElementById("path").innerHTML = "Path: " + result;
 }
 
 function setScene(inputScene) {
@@ -92,7 +102,21 @@ function setScene(inputScene) {
         document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
 
         removeElement("b2");
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
+
+        switch (scenePath) {
+          case "0_3":
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2, false, 'leaf')");
+            break;
+          case "0_1_3":
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2, false, 'skull')");
+            break;
+          case "0_2_1":
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2, false, 'minerals')");
+            break;
+          default:
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
+        }
+
         newChoice.setAttribute("class", "moveOptions");
         newChoice.setAttribute("id", "b2");
         newChoice.innerHTML = "LEFT";
@@ -130,5 +154,44 @@ function writeScreens() {
     if (i == 2 || i == 4 || i == 6 || i == 8) {
       writeWait("t"+i);
     }
+  }
+}
+
+function addInventory(item, firstTime) {
+  if (firstTime == true) {
+    var newInv = document.createElement("DIV");
+    newInv.setAttribute("id", "inventory");
+    document.getElementById("body").appendChild(newInv);
+
+    var invText = document.createElement("DIV");
+    invText.setAttribute("style", "margin-top: 1.8vw;");
+    invText.innerHTML = "Inventory:";
+    document.getElementById("inventory").appendChild(invText);
+  }
+
+  var newItem = document.createElement("IMG");
+  newItem.setAttribute("class", "inventoryItem");
+  document.getElementById("inventory").appendChild(newItem);
+
+  switch (item) {
+    case "leaf":
+      newItem.setAttribute("src", "images/leaf.png");
+      newItem.setAttribute("id", "leafItem");
+      inventory[inventory.length] = "leaf";
+      break;
+    case "skull":
+      for (var i = 0; i < 2; i++) {
+        newItem.setAttribute("src", "images/skull.png");
+        newItem.setAttribute("id", "skullItem");
+        inventory[inventory.length] = "skull";
+      }
+      break;
+    case "minerals":
+      for (var i = 0; i < 2; i++) {
+        newItem.setAttribute("src", "images/minerals.png");
+        newItem.setAttribute("id", "mineralsItem");
+        inventory[inventory.length] = "minerals";
+      }
+      break;
   }
 }

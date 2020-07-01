@@ -131,16 +131,37 @@ p {
 
 /* ### IDs and other classes ### */
 
-#header_left {
+#path {
   font-family: "dpcomic";
   font-size: 2vw;
   padding: 0.5vw;
 
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
 
   background-color: var(--transparent);
+}
+
+#inventory {
+  font-family: "dpcomic";
+  font-size: 2vw;
+  padding: 0.5vw;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+
+  background-color: var(--transparent);
+}
+
+.inventoryItem {
+  width: 6vw;
+  margin-left: 1vw;
 }
 
 .textScreen {
@@ -219,8 +240,8 @@ p {
   */
 
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
 
   background-color: var(--green_dark);
   width: 14.3vw;
@@ -230,7 +251,7 @@ p {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0px;
+  right: 0;
 }
 
 #jumpButton {
