@@ -159,8 +159,25 @@ p {
   background-color: var(--transparent);
 }
 
-.inventoryItem {
+#companions {
+  font-family: "dpcomic";
+  font-size: 2vw;
+  padding: 0.5vw;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+
+  background-color: var(--transparent);
+}
+
+.menuItem {
   width: 6vw;
+  height: 6vw;
   margin-left: 1vw;
 }
 
@@ -229,6 +246,17 @@ p {
   margin-bottom: 0.5vw;
 }
 
+.name {
+  font-family: "dpcomic";
+  color: var(--purple);
+  font-size: 2vw;
+
+  font-style: italic;
+
+  margin-left: 0.7vw;
+  margin-right: 0.7vw;
+}
+
 
 
 /* ### Dropdowns ### */
@@ -244,7 +272,7 @@ p {
   top: 0;
 
   background-color: var(--green_dark);
-  width: 14.3vw;
+  width: 15.5vw;
 }
 
 /* Hidden Dropdown */

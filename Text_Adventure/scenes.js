@@ -111,3 +111,15 @@ var scene0_2_1 = [
   "Carefully become that which the small workers seek, different to no other seed?",
   ""
 ];
+
+var scene0_2_2 = [
+  "",
+  "",
+  "",
+  "",
+  "Flesh and hair twine forth from within and behind the stag's crumbling bones, and lash themselves firmly in place. Gingerly and puppet-like, the monstrosity rips its hooves from their vine and earth clad resting places.<br><br><div class='flexrow'><div class='name'>Gnan Arcestul</div> will join your ascension.</div>",
+  "",
+  "",
+  "",
+  ""
+];

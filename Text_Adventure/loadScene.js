@@ -1,16 +1,12 @@
+// 0_3 LEFT, leaf
+// 0_1_3 LEFT, skull
+// 0_2_1 LEFT, minerals
+
 var scenePath = "0";
 var inventory = [];
+var companions = [];
 
 function sceneConfig(screens, pathAddition, jump, invItem) {
-  if (invItem != null) {
-    if (document.getElementById("inventory") == null) {
-      addInventory(invItem, true);
-    }
-    else {
-      addInventory(invItem, false);
-    }
-  }
-
   //clearScene();
 
   if (screens == null && pathAddition == null) {
@@ -35,6 +31,24 @@ function sceneConfig(screens, pathAddition, jump, invItem) {
 
     setScene(screens);
     writeScreens();
+  }
+
+  if (scenePath == "0_2_2") {
+    if (document.getElementById("companions") == null) {
+      addMenu("companion", true);
+    }
+    else {
+      addMenu("companion", false);
+    }
+  }
+
+  if (scenePath == "0_3_2" || scenePath ==  "0_1_3_2" || scenePath ==  "0_2_1_2") {
+    if (document.getElementById("inventory") == null) {
+      addMenu("inventory", true);
+    }
+    else {
+      addMenu("inventory", false);
+    }
   }
 
   //getScene();
@@ -157,41 +171,53 @@ function writeScreens() {
   }
 }
 
-function addInventory(item, firstTime) {
-  if (firstTime == true) {
-    var newInv = document.createElement("DIV");
-    newInv.setAttribute("id", "inventory");
-    document.getElementById("body").appendChild(newInv);
+function addMenu(menuType, firstTime) {
+  var menuID;
+  var menuText;
 
-    var invText = document.createElement("DIV");
-    invText.setAttribute("style", "margin-top: 1.8vw;");
-    invText.innerHTML = "Inventory:";
-    document.getElementById("inventory").appendChild(invText);
+  if (menuType == "inventory") {
+    menuID = "inventory";
+    menuText = "Inventory:";
+  }
+  else if (menuType == "companion") {
+    menuID = "companions";
+    menuText = "Companions:";
+  }
+
+  if (firstTime == true) {
+    var newMenu = document.createElement("DIV");
+    newMenu.setAttribute("id", menuID);
+    document.getElementById("body").appendChild(newMenu);
+
+    var menuTitle = document.createElement("DIV");
+    menuTitle.setAttribute("style", "margin-top: 2vw;");
+    menuTitle.innerHTML = menuText;
+    document.getElementById(menuID).appendChild(menuTitle);
   }
 
   var newItem = document.createElement("IMG");
-  newItem.setAttribute("class", "inventoryItem");
-  document.getElementById("inventory").appendChild(newItem);
+  newItem.setAttribute("class", "menuItem");
+  document.getElementById(menuID).appendChild(newItem);
 
-  switch (item) {
-    case "leaf":
+  switch (scenePath) {
+    /* Iventory */
+    case "0_3_2":
       newItem.setAttribute("src", "images/leaf.png");
-      newItem.setAttribute("id", "leafItem");
       inventory[inventory.length] = "leaf";
       break;
-    case "skull":
-      for (var i = 0; i < 2; i++) {
-        newItem.setAttribute("src", "images/skull.png");
-        newItem.setAttribute("id", "skullItem");
-        inventory[inventory.length] = "skull";
-      }
+    case "0_1_3_2":
+      newItem.setAttribute("src", "images/skull.png");
+      inventory[inventory.length] = "skull";
       break;
-    case "minerals":
-      for (var i = 0; i < 2; i++) {
-        newItem.setAttribute("src", "images/minerals.png");
-        newItem.setAttribute("id", "mineralsItem");
-        inventory[inventory.length] = "minerals";
-      }
+    case "0_2_1_2":
+      newItem.setAttribute("src", "images/minerals.png");
+      inventory[inventory.length] = "minerals";
+      break;
+
+    /* Companions */
+    case "0_2_2":
+      newItem.setAttribute("src", "images/arcestul.png");
+      companions[companions.length] = "arcestul";
       break;
   }
 }

@@ -2,13 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="default-style.css">
+    <!-- <link rel="stylesheet" href="default-style.css"> -->
     <link rel="icon" href="OH.png">
     <title>Nope!</title>
   </head>
 
   <body>
-    <div class="flexcolumn" style="position: absolute; top: 20%; left: 18%;">
+    <div class="flexcolumn">
 
       <h2><a href="\">Return to the main menu</a></h2>
       <div class="flexascii">
@@ -26,4 +26,47 @@
 
     </div>
   </body>
+
+  <style media="screen">
+  body {
+    background-color: #d8eff4;
+    font-family: "Trebuchet MS";
+
+    margin-bottom: 5vw;
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 1.5vw;
+  }
+
+  a {
+    color: var(--links);
+  }
+
+  a:hover {
+    color: var(--hover);
+  }
+
+  .flexcolumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    position: absolute;
+    top: 20%;
+    left: 18%;
+  }
+
+  .flexascii {
+    font-size: 2vw;
+    text-align: center;
+    font-family: monospace;
+    white-space: pre;
+  }
+  </style>
 </html>
