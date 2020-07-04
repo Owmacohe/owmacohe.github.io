@@ -80,7 +80,7 @@ var scene0_2_1 = [
 var scene0_2_2 = [
   "",
   "",
-  "<div id='a'>Flesh and hair twine forth from within and behind the stag's crumbling bones, and lash themselves firmly in place. Gingerly and puppet-like, the monstrosity rips its hooves from their vine and earth clad resting places.</div><br><div class='flexrow'><div id='name'>Gnan Arcestul</div><div id='c'> will join your ascension.</div></div>",
+  "<div id='a'>Flesh and hair twine forth from within and behind the stag's crumbling bones, and lash themselves firmly in place. Gingerly and puppet-like, the monstrosity rips its hooves from their vine and earth clad resting places.</div><br><div class='flexrow'><div id='name'>Gnan Arcestul</div><div id='b'> will join your ascension.</div></div>",
   "",
   ""
 ];

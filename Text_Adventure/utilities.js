@@ -1,4 +1,6 @@
 function writeWait(targetID, speed, startWait) {
+  isWriting = true;
+
   if (speed == null) {
     speed = 40;
   }
@@ -19,6 +21,10 @@ function writeWait(targetID, speed, startWait) {
       }, speed * k);
     }
   }, startWait);
+
+  setTimeout(function() {
+    isWriting = false;
+  }, 2750);
 }
 
 function removeElement(targetID) {

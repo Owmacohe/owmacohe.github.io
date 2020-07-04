@@ -6,55 +6,59 @@ var scenePath = "0";
 var inventory = [];
 var companions = [];
 
-function sceneConfig(screens, pathAddition, jump, invItem) {
-  //clearScene();
+var isWriting = false;
 
-  if (screens == null && pathAddition == null) {
-    setScene(scene0);
-    writeScreens();
+function sceneConfig(screens, pathAddition, jump, invItem) {
+  if (isWriting == false) {
+    if (screens == null && pathAddition == null) {
+      setScene(scene0);
+      writeScreens();
+    }
+    else {
+      if (scenePath == "0" && document.getElementById("path") == null) {
+        var newPath = document.createElement("DIV");
+        newPath.setAttribute("id", "path");
+        document.getElementById("body").appendChild(newPath);
+      }
+
+      if (jump == true) {
+        scenePath = pathAddition;
+        setPath();
+      }
+      else {
+        scenePath = scenePath + "_" + pathAddition;
+        setPath();
+      }
+
+      setScene(screens);
+      writeScreens();
+    }
+
+    if (scenePath == "0_2_2") {
+      highlightScene("a", "name", "b");
+
+      if (document.getElementById("companions") == null) {
+        addMenu("companion", true);
+      }
+      else {
+        addMenu("companion", false);
+      }
+    }
+
+    if (scenePath == "0_3_2" || scenePath ==  "0_1_3_2" || scenePath ==  "0_2_1_2") {
+      if (document.getElementById("inventory") == null) {
+        addMenu("inventory", true);
+      }
+      else {
+        addMenu("inventory", false);
+      }
+    }
+
+    console.log("CURRENT PATH: " + scenePath);
   }
   else {
-    if (scenePath == "0" && document.getElementById("path") == null) {
-      var newPath = document.createElement("DIV");
-      newPath.setAttribute("id", "path");
-      document.getElementById("body").appendChild(newPath);
-    }
-
-    if (jump == true) {
-      scenePath = pathAddition;
-      setPath();
-    }
-    else {
-      scenePath = scenePath + "_" + pathAddition;
-      setPath();
-    }
-
-    setScene(screens);
-    writeScreens();
+    return;
   }
-
-  if (scenePath == "0_2_2") {
-    highlightScene();
-
-    if (document.getElementById("companions") == null) {
-      addMenu("companion", true);
-    }
-    else {
-      addMenu("companion", false);
-    }
-  }
-
-  if (scenePath == "0_3_2" || scenePath ==  "0_1_3_2" || scenePath ==  "0_2_1_2") {
-    if (document.getElementById("inventory") == null) {
-      addMenu("inventory", true);
-    }
-    else {
-      addMenu("inventory", false);
-    }
-  }
-
-  //getScene();
-  console.log("CURRENT PATH: " + scenePath);
 }
 
 function setPath() {
@@ -220,7 +224,7 @@ function addMenu(menuType, firstTime) {
   }
 }
 
-function highlightScene() {
+function highlightScene(firstID, secondID, thirdID) {
   var texts = document.getElementsByClassName("textScreen");
   var arts = document.getElementsByClassName("artScreen");
 
@@ -232,11 +236,23 @@ function highlightScene() {
   var info = document.getElementById("infoScreen");
   info.setAttribute("id", "bigInfo");
   document.getElementById("t5").style.fontSize = "3vw";
-  document.getElementById("name").style.fontSize = "3vw";
 
-  writeWait("a", 70);
-  writeWait("name", 125, 16000);
-  writeWait("c", 125, 18000);
+  if (document.getElementById(firstID) != null) {
+    writeWait(firstID, 70);
+  }
+
+  if (document.getElementById(secondID) != null) {
+    writeWait(secondID, 125, 16000);
+    document.getElementById(secondID).style.fontSize = "3vw";
+  }
+
+  if (document.getElementById(thirdID) != null) {
+    writeWait(thirdID, 125, 18000);
+  }
+
+  if (document.getElementById(firstID) == null && document.getElementById(secondID) == null && document.getElementById(thirdID) == null) {
+    writeWait("t5", 70);
+  }
 
   setTimeout(function() {
     for (var i = 0; i < 4; i++) {
