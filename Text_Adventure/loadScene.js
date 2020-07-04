@@ -34,6 +34,8 @@ function sceneConfig(screens, pathAddition, jump, invItem) {
   }
 
   if (scenePath == "0_2_2") {
+    highlightScene();
+
     if (document.getElementById("companions") == null) {
       addMenu("companion", true);
     }
@@ -80,19 +82,15 @@ function setScene(inputScene) {
   for (var i = 0; i < 9; i++) {
     switch (i+1) {
       case 1:
-        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s1").innerHTML = randomFill("down");
         break;
       case 3:
-        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s3").innerHTML = randomFill("down");
         break;
       case 7:
-        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s7").innerHTML = randomFill("up");
         break;
       case 9:
-        document.getElementById("s" + (i+1)).innerHTML = inputScene[i];
         document.getElementById("s9").innerHTML = randomFill("up");
         break;
     }
@@ -103,7 +101,7 @@ function setScene(inputScene) {
 
     switch (i+1) {
       case 2:
-        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[0];
 
         removeElement("b1");
         newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, 1)");
@@ -113,7 +111,7 @@ function setScene(inputScene) {
         document.getElementById("s2").appendChild(newChoice);
         break;
       case 4:
-        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[1];
 
         removeElement("b2");
 
@@ -137,10 +135,10 @@ function setScene(inputScene) {
         document.getElementById("s4").appendChild(newChoice);
         break;
       case 5:
-        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[2];
         break;
       case 6:
-        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[3];
 
         removeElement("b3");
         newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, 3)");
@@ -150,7 +148,7 @@ function setScene(inputScene) {
         document.getElementById("s6").appendChild(newChoice);
         break;
       case 8:
-        document.getElementById("t" + (i+1)).innerHTML = inputScene[i];
+        document.getElementById("t" + (i+1)).innerHTML = inputScene[4];
 
         removeElement("b4");
         newChoice.setAttribute("onclick", "window.location.href = 'release.html'");
@@ -220,4 +218,34 @@ function addMenu(menuType, firstTime) {
       companions[companions.length] = "arcestul";
       break;
   }
+}
+
+function highlightScene() {
+  var texts = document.getElementsByClassName("textScreen");
+  var arts = document.getElementsByClassName("artScreen");
+
+  for (var i = 0; i < 4; i++) {
+    texts[i].style.visibility = "hidden";
+    arts[i].style.visibility = "hidden";
+  }
+
+  var info = document.getElementById("infoScreen");
+  info.setAttribute("id", "bigInfo");
+  document.getElementById("t5").style.fontSize = "3vw";
+  document.getElementById("name").style.fontSize = "3vw";
+
+  writeWait("a", 70);
+  writeWait("name", 125, 16000);
+  writeWait("c", 125, 18000);
+
+  setTimeout(function() {
+    for (var i = 0; i < 4; i++) {
+      texts[i].style.visibility = "visible";
+      arts[i].style.visibility = "visible";
+    }
+
+    info.setAttribute("id", "infoScreen");
+    document.getElementById("t5").style.fontSize = "1.75vw";
+    document.getElementById("name").style.fontSize = "2vw";
+  }, 22000);
 }

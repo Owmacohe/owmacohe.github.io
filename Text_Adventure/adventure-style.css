@@ -181,7 +181,7 @@ p {
   margin-left: 1vw;
 }
 
-.textScreen {
+.textScreen, #infoScreen {
   width: 31%;
   height: 16.5vw;
   position: relative;
@@ -196,6 +196,13 @@ p {
   display: flex;
   align-items: center;
   flex-flow: column;
+}
+
+#bigInfo {
+  width: 60vw;
+  position: absolute;
+
+  font-family: "dpcomic";
 }
 
 .artScreen {
@@ -246,15 +253,15 @@ p {
   margin-bottom: 0.5vw;
 }
 
-.name {
+#name {
   font-family: "dpcomic";
   color: var(--purple);
   font-size: 2vw;
 
   font-style: italic;
 
-  margin-left: 0.7vw;
-  margin-right: 0.7vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 
