@@ -14,7 +14,7 @@ body {
   background-color: black;
   color: var(--green);
 
-  font-family: "disposabledroid";
+  font-family: "Disposable";
   text-align: center;
   font-size: 2vw;
 }
@@ -26,7 +26,7 @@ input {
   width: 7vw;
 
   font-size: 2vw;
-  font-family: "disposabledroid";
+  font-family: "Disposable";
 
   color: var(--green);
   background-color: var(--transparent);
@@ -41,7 +41,7 @@ a, button {
   padding: 0.5vw;
 
   font-size: 3.5vw;
-  font-family: "dpcomic";
+  font-family: "Oxygene";
   text-decoration: none;
 
   color: var(--green);
@@ -54,18 +54,18 @@ a:hover, button:hover {
 
 h1 {
   font-size: 5vw;
-  font-family: "dpcomic";
+  font-family: "DPComic";
   margin: 2.5vw;
 }
 
 h2 {
   font-size: 2.5vw;
-  font-family: "dpcomic";
+  font-family: "DPComic";
   margin: 1vw;
 }
 
 h3 {
-  font-family: "dpcomic";
+  font-family: "DPComic";
   margin: 1vw;
 }
 
@@ -132,7 +132,7 @@ p {
 /* ### IDs and other classes ### */
 
 #path {
-  font-family: "dpcomic";
+  font-family: "Oxygene";
   font-size: 2vw;
   padding: 0.5vw;
 
@@ -144,7 +144,7 @@ p {
 }
 
 #inventory {
-  font-family: "dpcomic";
+  font-family: "Oxygene";
   font-size: 2vw;
   padding: 0.5vw;
 
@@ -160,7 +160,7 @@ p {
 }
 
 #companions {
-  font-family: "dpcomic";
+  font-family: "Oxygene";
   font-size: 2vw;
   padding: 0.5vw;
 
@@ -202,7 +202,7 @@ p {
   width: 60vw;
   position: absolute;
 
-  font-family: "dpcomic";
+  font-family: "DPComic";
 }
 
 .artScreen {
@@ -232,17 +232,17 @@ p {
 #s1, #s7 {
   text-align: right;
   border: none;
-  font-family: "dpcomic";
+  font-family: "DPComic";
 }
 
 #s3, #s9 {
   text-align: left;
   border: none;
-  font-family: "dpcomic";
+  font-family: "DPComic";
 }
 
 .speech {
-  font-family: "dpcomic";
+  font-family: "DPComic";
   color: var(--purple);
 
   background-color: rgba(255, 10, 255, 0.25);
@@ -254,7 +254,7 @@ p {
 }
 
 #name {
-  font-family: "dpcomic";
+  font-family: "DPComic";
   color: var(--purple);
   font-size: 2vw;
 
@@ -300,7 +300,7 @@ p {
 /* Links inside the dropdown */
 .dropdown-content button {
   font-size: 2vw;
-  font-family: "disposabledroid";
+  font-family: "Disposable";
 }
 
 /* Show the dropdown menu on hover */
@@ -319,42 +319,46 @@ p {
 
 /* ### Font Faces ### */
 
-@font-face { /* dpcomic (special) - Regular */
-    font-family: "dpcomic";
-    src: url("fonts/dpcomic-webfont.woff2") format("woff2"),
-         url("fonts/dpcomic-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face { /* disposabledroid (default) - Regular */
-    font-family: "disposabledroid";
+@font-face { /* disposabledroid (default) */
+    font-family: "Disposable";
     src: url("fonts/disposabledroidbb-webfont.woff2") format("woff2"),
          url("fonts/disposabledroidbb-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face { /* disposabledroid (default) - Bold */
-    font-family: "disposabledroid";
-    src: url("fonts/disposabledroidbb_bld-webfont.woff2") format("woff2"),
-         url("fonts/disposabledroidbb_bld-webfont.woff") format("woff");
-    font-weight: bold;
+@font-face { /* dpcomic (special) */
+    font-family: "DPComic";
+    src: url("fonts/dpcomic-webfont.woff2") format("woff2"),
+         url("fonts/dpcomic-webfont.woff") format("woff");
+    font-weight: normal;
     font-style: normal;
 }
 
-@font-face { /* disposabledroid (default) - Italic */
-    font-family: "disposabledroid";
-    src: url("fonts/disposabledroidbb_ital-webfont.woff2") format("woff2"),
-         url("fonts/disposabledroidbb_ital-webfont.woff") format("woff");
+@font-face { /* Oxygene1 (UI) */
+    font-family: "Oxygene";
+    src: url("fonts/Oxygene1.woff2") format("woff2"),
+         url("fonts/Oxygene1.woff") format("woff");
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
 }
 
-@font-face { /* disposabledroid (default) - BoldItalic */
-    font-family: "disposabledroid";
-    src: url("fonts/disposabledroidbb_bldital-webfont.woff2") format("woff2"),
-         url("fonts/disposabledroidbb_bldital-webfont.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
+
+
+/* ### Unused fonts ### */
+
+@font-face { /* game-over (small) */
+    font-family: "Gameover";
+    src: url("fonts/game-over.woff2") format("woff2"),
+         url("fonts/game-over.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* Bitmgothic (extra) */
+    font-family: "Bitmgothic";
+    src: url("fonts/Bitmgothic.woff2") format("woff2"),
+         url("fonts/Bitmgothic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }

@@ -79,7 +79,7 @@ function setPath() {
     }
   }
 
-  document.getElementById("path").innerHTML = "Path: " + result;
+  document.getElementById("path").innerHTML = "PATH: " + result;
 }
 
 function setScene(inputScene) {
@@ -179,11 +179,11 @@ function addMenu(menuType, firstTime) {
 
   if (menuType == "inventory") {
     menuID = "inventory";
-    menuText = "Inventory:";
+    menuText = "INVENTORY:";
   }
   else if (menuType == "companion") {
     menuID = "companions";
-    menuText = "Companions:";
+    menuText = "COMPANIONS:";
   }
 
   if (firstTime == true) {
