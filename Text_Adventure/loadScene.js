@@ -155,7 +155,7 @@ function setScene(inputScene) {
         document.getElementById("t" + (i+1)).innerHTML = inputScene[4];
 
         removeElement("b4");
-        newChoice.setAttribute("onclick", "window.location.href = 'release.html'");
+        newChoice.setAttribute("onclick", "window.location.href = 'epilogue.html'");
         newChoice.setAttribute("class", "moveOptions");
         newChoice.setAttribute("id", "b4");
         newChoice.innerHTML = "DOWN";

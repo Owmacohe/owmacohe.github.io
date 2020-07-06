@@ -59,7 +59,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-family: "DPComic";
   margin: 1vw;
 }
@@ -262,6 +262,13 @@ p {
 
   margin-left: 1vw;
   margin-right: 1vw;
+}
+
+.code {
+  font-family: "Oxygene";
+  font-size: 1vw;
+
+  color: var(--green_dark);
 }
 
 
