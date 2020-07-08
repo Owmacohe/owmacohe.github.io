@@ -328,16 +328,16 @@ p {
 
 @font-face { /* disposabledroid (default) */
     font-family: "Disposable";
-    src: url("fonts/disposabledroidbb-webfont.woff2") format("woff2"),
-         url("fonts/disposabledroidbb-webfont.woff") format("woff");
+    src: url("fonts/DisposableDroid.woff2") format("woff2"),
+         url("fonts/DisposableDroid.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face { /* dpcomic (special) */
     font-family: "DPComic";
-    src: url("fonts/dpcomic-webfont.woff2") format("woff2"),
-         url("fonts/dpcomic-webfont.woff") format("woff");
+    src: url("fonts/DPComic.woff2") format("woff2"),
+         url("fonts/DPComic.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -355,9 +355,9 @@ p {
 /* ### Unused fonts ### */
 
 @font-face { /* game-over (small) */
-    font-family: "Gameover";
-    src: url("fonts/game-over.woff2") format("woff2"),
-         url("fonts/game-over.woff") format("woff");
+    font-family: "GameOver";
+    src: url("fonts/GameOver.woff2") format("woff2"),
+         url("fonts/GameOver.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }

@@ -295,6 +295,7 @@ button:hover {
 
   margin-right: 8vw;
 }
+
 #blm {
   background-color: white;
   font-family: "Tahoma";
@@ -305,3 +306,13 @@ button:hover {
   align-items: center;
   margin-bottom: 1vw;
 }
+
+/*
+@font-face {
+    font-family: "BackIssues";
+    src: url("fonts/BackIssuesBB.woff2") format("woff2"),
+         url("fonts/BackIssuesBB.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+*/
