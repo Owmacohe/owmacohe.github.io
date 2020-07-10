@@ -31,7 +31,7 @@ var scene0_1 = [
 
 var scene0_2 = [
   "Turn aside and make your way to lighter pastures, where hushed voices cannot follow?", //done
-  "Remind cold flesh of their multitudinous histories, and awaken its still bones?",
+  "Remind cold flesh of their multitudinous histories, and awaken its still bones?", //done
   "Deep-seated sockets placed over its eyes conceal the beast's gaze. Antlers adorned with sun-bleached moss and a withered hide speak out toward you:<div class='speech'>Seek you to elevate us? I am old and putrid, and would make a fine pilgrim. Release me, please.</div>",
   "Grasp deeply onto coarse cervine fur, and recourse within a mind long dead?",
   "Wail utter hopelessness into the particulate air, calling forth your own entropy?"
@@ -78,9 +78,17 @@ var scene0_2_1 = [
 ];
 
 var scene0_2_2 = [
-  "",
-  "",
+  "Anchor your stream to it's own, and hurry swiftly eastward in search of understanding?",
+  "Ask guidance of Arcestul, as the dry trees and facsimilic shrubbery twist direction in the mind?",
   "<div id='a'>Flesh and hair twine forth from within and behind the stag's crumbling bones, and lash themselves firmly in place. Gingerly and puppet-like, the monstrosity rips its hooves from their vine and earth clad resting places.</div><br><div class='flexrow'><div id='name'>Gnan Arcestul</div><div id='b'> will join your ascension.</div></div>",
-  "",
-  ""
+  "Temper your heart in pallid steel, and confront <i>her</i> with this retribution?",
+  "Having performed such an act of love, unnecessarily absolve your psyche of doubt?"
+];
+
+var scene0_2_3 = [
+  "MOVEA",
+  "INTERACT",
+  "DESCRIPTION",
+  "MOVEB",
+  "DIE"
 ];

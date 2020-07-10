@@ -58,15 +58,27 @@ function randomFill(direction) {
   return output;
 }
 
-function getRandomCharacter(iterations) {
+function getRandomCharacter(iterations, alpha) {
   var randOutput = "";
-  var characters = "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
+  var characters;
+
+  if (alpha == true) {
+    characters = "abcdefghijklmnopqrstuvwxyz";
+  }
+  else {
+    characters = "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
+  }
 
   for (var i = 0; i < iterations; i++) {
     randOutput += characters[Math.floor(Math.random() * characters.length)];
   }
 
-  return randOutput + "<br>";
+  if (alpha == true) {
+    return randOutput;
+  }
+  else {
+    return randOutput + "<br>";
+  }
 }
 
 //var currentScene = [];

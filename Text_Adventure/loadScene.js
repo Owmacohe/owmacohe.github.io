@@ -44,6 +44,9 @@ function sceneConfig(screens, pathAddition, jump, invItem) {
         addMenu("companion", false);
       }
     }
+    else {
+      loadCorners();
+    }
 
     if (scenePath == "0_3_2" || scenePath ==  "0_1_3_2" || scenePath ==  "0_2_1_2") {
       if (document.getElementById("inventory") == null) {
@@ -173,6 +176,52 @@ function writeScreens() {
   }
 }
 
+function loadCorners() {
+  /*
+  var targets = [
+    document.getElementById("s2"),
+    document.getElementById("s4"),
+    document.getElementById("s5"),
+    document.getElementById("s6"),
+    document.getElementById("s8")
+  ];
+  */
+
+  //for (var i in targets) {
+    for (var j = 0; j < 4; j++) {
+      var newLetter = document.createElement("DIV");
+      newLetter.setAttribute("class", "smallLetters");
+      newLetter.innerHTML = getRandomCharacter(1, true);
+      document.getElementById("infoScreen").appendChild(newLetter);
+      //targets[i].appendChild(newLetter);
+
+      /*
+      if (document.getElementById("infoScreen") != null) {
+        document.getElementById("infoScreen").appendChild(newLetter);
+      }
+      else if (document.getElementById("infoScreen") == null && document.getElementById("bigInfo") != null) {
+        document.getElementById("bigInfo").appendChild(newLetter);
+      }
+      */
+
+      switch (j) {
+        case 0:
+          newLetter.setAttribute("style", "top: 0; right: 0;");
+          break;
+        case 1:
+          newLetter.setAttribute("style", "top: 0; left: 0;");
+          break;
+        case 2:
+          newLetter.setAttribute("style", "bottom: 0; right: 0;");
+          break;
+        case 3:
+          newLetter.setAttribute("style", "bottom: 0; left: 0;");
+          break;
+      }
+    }
+  //}
+}
+
 function addMenu(menuType, firstTime) {
   var menuID;
   var menuText;
@@ -227,10 +276,12 @@ function addMenu(menuType, firstTime) {
 function highlightScene(firstID, secondID, thirdID) {
   var texts = document.getElementsByClassName("textScreen");
   var arts = document.getElementsByClassName("artScreen");
+  var letters = document.getElementsByClassName("smallLetters");
 
   for (var i = 0; i < 4; i++) {
     texts[i].style.visibility = "hidden";
     arts[i].style.visibility = "hidden";
+    letters[i].style.visibility = "hidden";
   }
 
   var info = document.getElementById("infoScreen");
@@ -258,6 +309,7 @@ function highlightScene(firstID, secondID, thirdID) {
     for (var i = 0; i < 4; i++) {
       texts[i].style.visibility = "visible";
       arts[i].style.visibility = "visible";
+      letters[i].style.visibility = "visible";
     }
 
     info.setAttribute("id", "infoScreen");

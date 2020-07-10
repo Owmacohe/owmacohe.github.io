@@ -225,6 +225,14 @@ p {
   padding-right: 5vw;
 }
 
+.smallLetters {
+  position: absolute;
+  margin: 0.5vw;
+
+  font-size: 1.1vw;
+  font-family: "Oxygene";
+}
+
 #t5 {
   font-size: 1.75vw;
 }
@@ -286,7 +294,7 @@ p {
   top: 0;
 
   background-color: var(--green_dark);
-  width: 15.5vw;
+  width: 16.05vw;
 }
 
 /* Hidden Dropdown */
