@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="adventure-style.css">
+    <script src="utilities.js" charset="utf-8"></script>
+    <title>Hey. This is awkward...</title>
+  </head>
+
+  <body onload="loadText()">
+    <div class="flexcolumn" id="textWall">
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var lightNum = 0;
+    var satNum = 0;
+    var goingUp = true;
+
+    var colourChange = setInterval(function() {
+      if (lightNum >= 90) {
+        goingUp = false;
+      }
+      else if (lightNum <= 10) {
+        goingUp = true;
+      }
+
+      if (goingUp == true) {
+        lightNum++;
+        satNum++;
+      }
+      else {
+        lightNum--;
+        satNum--;
+      }
+
+      var codeBoxes = document.getElementsByClassName("bigCode");
+
+      for (var i in codeBoxes) {
+        if (Math.floor(Math.random() * 3) == 0) {
+          return
+        }
+        else {
+          codeBoxes[i].style.color = "hsl(120, "+satNum+"%, "+lightNum+"%)";
+        }
+      }
+    }, 5);
+
+    function loadText() {
+      var length = 14 * (screen.height / 113);
+
+      for (var i = 0; i < length; i++) {
+        var newBox = document.createElement("DIV");
+        newBox.setAttribute("class", "textBox");
+        document.getElementById("textWall").appendChild(newBox);
+
+        if (Math.floor(Math.random() * 10) == 0) {
+          newBox.setAttribute("class", "bigCode");
+          newBox.innerHTML = getRandomCharacter(1, "alpha");
+        }
+        else {
+          newBox.innerHTML = getRandomCharacter(1);
+        }
+      }
+    }
+  </script>
+</html>

@@ -38,32 +38,49 @@ function randomFill(direction) {
 
   if (direction == "down") {
     /* line 1 */ output += getRandomCharacter(1);
+    output += "<br>";
     /* line 2 */ output += getRandomCharacter(3);
+    output += "<br>";
     /* line 3 */ output += getRandomCharacter(7);
+    output += "<br>";
     /* line 4 */ output += getRandomCharacter(12);
+    output += "<br>";
     /* line 5 */ output += getRandomCharacter(16);
+    output += "<br>";
     /* line 6 */ output += getRandomCharacter(23);
+    output += "<br>";
     /* line 7 */ output += getRandomCharacter(30);
   }
   else if (direction == "up") {
     /* line 1 */ output += getRandomCharacter(30);
+    output += "<br>";
     /* line 2 */ output += getRandomCharacter(23);
+    output += "<br>";
     /* line 3 */ output += getRandomCharacter(16);
+    output += "<br>";
     /* line 4 */ output += getRandomCharacter(12);
+    output += "<br>";
     /* line 5 */ output += getRandomCharacter(7);
+    output += "<br>";
     /* line 6 */ output += getRandomCharacter(3);
+    output += "<br>";
     /* line 7 */ output += getRandomCharacter(1);
   }
 
   return output;
 }
 
-function getRandomCharacter(iterations, alpha) {
+function getRandomCharacter(iterations, type) {
   var randOutput = "";
   var characters;
 
-  if (alpha == true) {
-    characters = "abcdefghijklmnopqrstuvwxyz";
+  if (type != null) {
+    if (type == "alpha") {
+      characters = "abcdefghijklmnopqrstuvwxyz";
+    }
+    else if (type == "alphaNum") {
+      characters = "abcdefghijklmnopqrstuvwxyz01234567";
+    }
   }
   else {
     characters = "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
@@ -73,12 +90,7 @@ function getRandomCharacter(iterations, alpha) {
     randOutput += characters[Math.floor(Math.random() * characters.length)];
   }
 
-  if (alpha == true) {
-    return randOutput;
-  }
-  else {
-    return randOutput + "<br>";
-  }
+  return randOutput;
 }
 
 //var currentScene = [];

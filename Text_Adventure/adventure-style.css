@@ -279,6 +279,32 @@ p {
   color: var(--green_dark);
 }
 
+#textWall {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.textBox {
+  /*background-color: red;*/
+
+  width: 6.5vw;
+  height: 6.5vw;
+  margin: 0.2vw;
+
+  font-size: 6.5vw;
+}
+
+.bigCode {
+  width: 6.5vw;
+  height: 6.5vw;
+  margin: 0.2vw;
+
+  font-family: "Oxygene";
+  font-size: 4.5vw;
+  color: hsl(120, 100%, 13%);
+}
+
 
 
 /* ### Dropdowns ### */
