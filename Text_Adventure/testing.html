@@ -7,7 +7,7 @@
     <title>Hey. This is awkward...</title>
   </head>
 
-  <body onload="loadText()">
+  <body onload="loadText(0.5)">
     <div class="flexcolumn" id="textWall">
     </div>
   </body>
@@ -41,17 +41,22 @@
           return
         }
         else {
-          codeBoxes[i].style.color = "hsl(120, "+satNum+"%, "+lightNum+"%)";
+          //codeBoxes[i].style.color = "hsl(120, "+satNum+"%, "+lightNum+"%)";
         }
       }
     }, 5);
 
-    function loadText() {
-      var length = 14 * (screen.height / 113);
+    function loadText(size) {
+      var charLength = 112 / size;
+      var dimensions = 6.5 * size;
+      var marg = 0.2 * size;
 
-      for (var i = 0; i < length; i++) {
+      for (var k = 0; k < charLength; k++) {
         var newBox = document.createElement("DIV");
         newBox.setAttribute("class", "textBox");
+        newBox.style.width = dimensions+"vw";
+        newBox.style.height = dimensions+"vw";
+        newBox.style.margin = marg+"vw";
         document.getElementById("textWall").appendChild(newBox);
 
         if (Math.floor(Math.random() * 10) == 0) {

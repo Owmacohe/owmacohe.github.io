@@ -48,7 +48,7 @@ var scene0_3 = [
 var scene0_1_1 = [
   "Follow blue and broken stairs down and wide to their wrought-rusty throne?",
   "Fix upon fast council, and break forth your judgment to broken earrings?",
-  "Day is nightfall, and winter manifests all her colours. Plant life is sparse and cold, yet still particles float between all spaces. A soot hall, provenance of a destitute monarchy now lies grey and mixed in the spire-like wood. Silence here is hard as granite, save for amphibious warnings.",
+  "Day is nightfall, and winter manifests all zir colours. Plant life is sparse and cold, yet still particles float between all spaces. A soot hall, provenance of a destitute monarchy now lies grey and twined in the spire-like wood. Silence here is hard as granite, save for amphibious warnings.",
   "Break for the near catylistic stone displaying, in scripture, all names yet to be written?",
   "Allow sleep to come switfly now, for it is used to this place, and well-practiced here?"
 ];

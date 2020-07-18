@@ -86,6 +86,8 @@ function getRandomCharacter(iterations, type) {
     characters = "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
   }
 
+  //console.log(characters);
+
   for (var i = 0; i < iterations; i++) {
     randOutput += characters[Math.floor(Math.random() * characters.length)];
   }

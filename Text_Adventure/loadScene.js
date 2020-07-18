@@ -8,9 +8,9 @@ var companions = [];
 
 var isWriting = false;
 
-function sceneConfig(screens, pathAddition, jump, invItem) {
+function sceneConfig(targetScene, pathAddition, jump, invItem) {
   if (isWriting == false) {
-    if (screens == null && pathAddition == null) {
+    if (targetScene == null && pathAddition == null) {
       setScene(scene0);
       writeScreens();
     }
@@ -24,13 +24,17 @@ function sceneConfig(screens, pathAddition, jump, invItem) {
       if (jump == true) {
         scenePath = pathAddition;
         setPath();
+
+        if (scenePath == "0") {
+          document.getElementById("path").remove();
+        }
       }
       else {
         scenePath = scenePath + "_" + pathAddition;
         setPath();
       }
 
-      setScene(screens);
+      setScene(targetScene);
       writeScreens();
     }
 
@@ -44,9 +48,6 @@ function sceneConfig(screens, pathAddition, jump, invItem) {
         addMenu("companion", false);
       }
     }
-    else {
-      loadCorners();
-    }
 
     if (scenePath == "0_3_2" || scenePath ==  "0_1_3_2" || scenePath ==  "0_2_1_2") {
       if (document.getElementById("inventory") == null) {
@@ -57,10 +58,25 @@ function sceneConfig(screens, pathAddition, jump, invItem) {
       }
     }
 
+    document.getElementById("body").addEventListener("keydown", function(event) {
+      switch (event.keyCode) {
+        case 38:
+          sceneConfig("scene"+scenePath+"_1", "1");
+          break;
+        case 37:
+          sceneConfig("scene"+scenePath+"_2", "2");
+          break;
+        case 39:
+          sceneConfig("scene"+scenePath+"_3", "3");
+          break;
+        case 40:
+          window.location.href = "epilogue.html";
+          break;
+      }
+    });
+
+    //loadCorners();
     console.log("CURRENT PATH: " + scenePath);
-  }
-  else {
-    return;
   }
 }
 
@@ -176,51 +192,31 @@ function writeScreens() {
   }
 }
 
+/*
 function loadCorners() {
-  /*
-  var targets = [
-    document.getElementById("s2"),
-    document.getElementById("s4"),
-    document.getElementById("s5"),
-    document.getElementById("s6"),
-    document.getElementById("s8")
-  ];
-  */
+  for (var j = 0; j < 4; j++) {
+    var newLetter = document.createElement("DIV");
+    newLetter.setAttribute("class", "smallLetters");
+    newLetter.innerHTML = getRandomCharacter(1, "alpha");
+    document.getElementById("infoScreen").appendChild(newLetter);
 
-  //for (var i in targets) {
-    for (var j = 0; j < 4; j++) {
-      var newLetter = document.createElement("DIV");
-      newLetter.setAttribute("class", "smallLetters");
-      newLetter.innerHTML = getRandomCharacter(1, true);
-      document.getElementById("infoScreen").appendChild(newLetter);
-      //targets[i].appendChild(newLetter);
-
-      /*
-      if (document.getElementById("infoScreen") != null) {
-        document.getElementById("infoScreen").appendChild(newLetter);
-      }
-      else if (document.getElementById("infoScreen") == null && document.getElementById("bigInfo") != null) {
-        document.getElementById("bigInfo").appendChild(newLetter);
-      }
-      */
-
-      switch (j) {
-        case 0:
-          newLetter.setAttribute("style", "top: 0; right: 0;");
-          break;
-        case 1:
-          newLetter.setAttribute("style", "top: 0; left: 0;");
-          break;
-        case 2:
-          newLetter.setAttribute("style", "bottom: 0; right: 0;");
-          break;
-        case 3:
-          newLetter.setAttribute("style", "bottom: 0; left: 0;");
-          break;
-      }
+    switch (j) {
+      case 0:
+        newLetter.setAttribute("style", "top: 0; right: 0;");
+        break;
+      case 1:
+        newLetter.setAttribute("style", "top: 0; left: 0;");
+        break;
+      case 2:
+        newLetter.setAttribute("style", "bottom: 0; right: 0;");
+        break;
+      case 3:
+        newLetter.setAttribute("style", "bottom: 0; left: 0;");
+        break;
     }
-  //}
+  }
 }
+*/
 
 function addMenu(menuType, firstTime) {
   var menuID;
@@ -276,12 +272,12 @@ function addMenu(menuType, firstTime) {
 function highlightScene(firstID, secondID, thirdID) {
   var texts = document.getElementsByClassName("textScreen");
   var arts = document.getElementsByClassName("artScreen");
-  var letters = document.getElementsByClassName("smallLetters");
+  //var letters = document.getElementsByClassName("smallLetters");
 
   for (var i = 0; i < 4; i++) {
     texts[i].style.visibility = "hidden";
     arts[i].style.visibility = "hidden";
-    letters[i].style.visibility = "hidden";
+    //letters[i].style.visibility = "hidden";
   }
 
   var info = document.getElementById("infoScreen");
@@ -309,7 +305,7 @@ function highlightScene(firstID, secondID, thirdID) {
     for (var i = 0; i < 4; i++) {
       texts[i].style.visibility = "visible";
       arts[i].style.visibility = "visible";
-      letters[i].style.visibility = "visible";
+      //letters[i].style.visibility = "visible";
     }
 
     info.setAttribute("id", "infoScreen");

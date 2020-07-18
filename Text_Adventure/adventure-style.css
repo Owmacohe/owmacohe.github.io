@@ -2,6 +2,7 @@
 
 :root {
   --green: #0aff0a;
+  --hover: rgba(10, 255, 10, 0.75);
   --transparent: rgba(10, 255, 10, 0.25);
 
   --purple: #ff0aff;
@@ -49,7 +50,7 @@ a, button {
 }
 
 a:hover, button:hover {
-  background-color: var(--green);
+  background-color: var(--hover);
 }
 
 h1 {
@@ -286,7 +287,7 @@ p {
 }
 
 .textBox {
-  /*background-color: red;*/
+  background-color: red;
 
   width: 6.5vw;
   height: 6.5vw;
