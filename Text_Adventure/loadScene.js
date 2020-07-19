@@ -127,7 +127,7 @@ function setScene(inputScene) {
         document.getElementById("t" + (i+1)).innerHTML = inputScene[0];
 
         removeElement("b1");
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, 1)");
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_1, '1')");
         newChoice.setAttribute("class", "moveOptions");
         newChoice.setAttribute("id", "b1");
         newChoice.innerHTML = "UP";
@@ -140,16 +140,16 @@ function setScene(inputScene) {
 
         switch (scenePath) {
           case "0_3":
-            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2, false, 'leaf')");
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, '2', false, 'leaf')");
             break;
           case "0_1_3":
-            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2, false, 'skull')");
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, '2', false, 'skull')");
             break;
           case "0_2_1":
-            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2, false, 'minerals')");
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, '2', false, 'minerals')");
             break;
           default:
-            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, 2)");
+            newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_2, '2')");
         }
 
         newChoice.setAttribute("class", "moveOptions");
@@ -164,7 +164,7 @@ function setScene(inputScene) {
         document.getElementById("t" + (i+1)).innerHTML = inputScene[3];
 
         removeElement("b3");
-        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, 3)");
+        newChoice.setAttribute("onclick", "sceneConfig(scene"+scenePath+"_3, '3')");
         newChoice.setAttribute("class", "moveOptions");
         newChoice.setAttribute("id", "b3");
         newChoice.innerHTML = "RIGHT";

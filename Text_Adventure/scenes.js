@@ -86,9 +86,9 @@ var scene0_2_2 = [
 ];
 
 var scene0_2_3 = [
-  "MOVEA",
-  "INTERACT",
-  "DESCRIPTION",
-  "MOVEB",
-  "DIE"
+  "Try an opening of the hanging egress, hoping to catch a glimpse of the rising moon under the door?",
+  "Spend no rush adding fire to the hearth, itself a long-ashen cemetary of logs?",
+  "Quarks becomes all so immediately clear, and the particles of composite matter are disolved. In a moment, solidity in the subatomic is rebooted as a Netflix special; here but stale. In the dusk summer comfort of this backlogged mind, weathered doors creak idly in their frames, as if thumbed by the wind.",
+  "Fumble for the latch of a cellar door on the ground, and climb down in search of anything?",
+  "Spy a partiularly soft armchair, and rest your eyes permanently in your head?"
 ];
