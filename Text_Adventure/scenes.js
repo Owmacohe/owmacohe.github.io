@@ -33,12 +33,12 @@ var scene0_2 = [
   "Turn aside and make your way to lighter pastures, where hushed voices cannot follow?", //done
   "Remind cold flesh of their multitudinous histories, and awaken its still bones?", //done
   "Deep-seated sockets placed over its eyes conceal the beast's gaze. Antlers adorned with sun-bleached moss and a withered hide speak out toward you:<div class='speech'>Seek you to elevate us? I am old and putrid, and would make a fine pilgrim. Release me, please.</div>",
-  "Grasp deeply onto coarse cervine fur, and recourse within a mind long dead?",
+  "Grasp deeply onto coarse cervine fur, and recourse within a mind long dead?", //done
   "Wail utter hopelessness into the particulate air, calling forth your own entropy?"
 ];
 
 var scene0_3 = [
-  "Glide slowly down, and make for hollow sanctuary in a tree adjacent?",
+  "Glide slowly down, and make for hollow sanctuary in a tree adjacent?", //done
   "Attrap dusty leaves in your palm, and partake of their faded colours?",
   "Crumbling lichen and hanging branches encircle the great tree's trunk as you climb. Though once a bastion and scholar, only silent drums beat from its heart. Greater in elevation, it sways, and bright light cracks your veiled eyes. At its zenith, hesitation weighs down in all its enormities.",
   "Steel your scattered resolve, and burst into the bleached sunlight above?",
@@ -91,4 +91,12 @@ var scene0_2_3 = [
   "Quarks becomes all so immediately clear, and the particles of composite matter are disolved. In a moment, solidity in the subatomic is rebooted as a Netflix special; here but stale. In the dusk summer comfort of this backlogged mind, weathered doors creak idly in their frames, as if thumbed by the wind.",
   "Fumble for the latch of a cellar door on the ground, and climb down in search of anything?",
   "Spy a partiularly soft armchair, and rest your eyes permanently in your head?"
+];
+
+var scene0_3_1 = [
+  "Place a calloused palm over a bend in the curling bark, and slide into the chamber within?",
+  "Add your own flesh to the gifts lain about the entrance and hung in the surrounding trees?",
+  "Dropping languidly, you alight on soft willow beams. The air seems almost thicker here, laden with pollen clouds from tree crests. A knotted bore-hole gate is fixed on the tree, unlocked but unwelcoming. This roost was once frequented, but has held it's breath since the forest's wings grew silent.",
+  "Listen for the faint sound of any burning soul-whicks deep and down inside?",
+  "Feel need to hold guard before such an ingress, abandoning all other duties ad nauseum?"
 ];

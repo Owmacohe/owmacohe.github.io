@@ -1,6 +1,8 @@
-// 0_3 LEFT, leaf
-// 0_1_3 LEFT, skull
-// 0_2_1 LEFT, minerals
+// 0_3_2, leaf
+// 0_1_3_2, skull
+// 0_2_1_2, minerals
+
+// 0_2_2, Gnan Arcestul
 
 var scenePath = "0";
 var inventory = [];
