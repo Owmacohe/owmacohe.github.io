@@ -58,6 +58,10 @@ function sceneConfig(targetScene, pathAddition, jump, invItem) {
       else {
         addMenu("inventory", false);
       }
+
+      if (scenePath == "0_3_2") {
+        highlightScene("a", "name", "b");
+      }
     }
 
     document.getElementById("body").addEventListener("keydown", function(event) {

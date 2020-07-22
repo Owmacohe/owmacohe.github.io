@@ -39,7 +39,7 @@ var scene0_2 = [
 
 var scene0_3 = [
   "Glide slowly down, and make for hollow sanctuary in a tree adjacent?", //done
-  "Attrap dusty leaves in your palm, and partake of their faded colours?",
+  "Attrap dusty leaves in your palm, and partake of their faded colours?", //
   "Crumbling lichen and hanging branches encircle the great tree's trunk as you climb. Though once a bastion and scholar, only silent drums beat from its heart. Greater in elevation, it sways, and bright light cracks your veiled eyes. At its zenith, hesitation weighs down in all its enormities.",
   "Steel your scattered resolve, and burst into the bleached sunlight above?",
   "In anticipation of soft earth below, release, and seek vertiginous finality?"
@@ -99,4 +99,12 @@ var scene0_3_1 = [
   "Dropping languidly, you alight on soft willow beams. The air seems almost thicker here, laden with pollen clouds from tree crests. A knotted bore-hole gate is fixed on the tree, unlocked but unwelcoming. This roost was once frequented, but has held it's breath since the forest's wings grew silent.",
   "Listen for the faint sound of any burning soul-whicks deep and down inside?",
   "Feel need to hold guard before such an ingress, abandoning all other duties ad nauseum?"
+];
+
+var scene0_3_2 = [
+  "MOVEA",
+  "INTERACT",
+  "<div id='a'>You pluck the waxy and deep-set green leaf fronds down from above. Faint grime still holds to their fallen and static surfaces. Though saturation seems washed from their colours, they exude a child-like sense of calm.</div><br><div class='flexrow'><div id='name'>Dust Leaf</div><div id='b'> is added to your inventory.</div></div>",
+  "MOVEB",
+  "DIE"
 ];
