@@ -112,7 +112,7 @@ var scene0_3_2 = [
 var scene0_3_3 = [
   "Submerge once more in bitter and unforgiving liquor, dusted lightly in cinders?",
   "Imbide a handful of wood-chime washed water, and attain its stillfulness?",
-  "Though body breaks through olive flattened sunshade, mind has deserted to somewhere cold and silent: an ashy shallow pool formed in a hidden pocket of high sierra ridges. The basin is silent, yet thunderous in voice.<div class='speech'>[NullPointer Errror: will to live not found]</div>",
+  "Though body breaks through olive flattened sunshade, mind has deserted to somewhere cold and silent: an ashy shallow pool formed in a hidden pocket of high sierra ridges. The basin is silent, yet thunderous in voice.<div class='speech'>[NullPointer Error: will to live not found]</div>",
   "Rise from crystal waters, and begin the labourous task of slow descent?",
   "Submit your awareness for review, having ended in this unwieldy place?"
 ];
