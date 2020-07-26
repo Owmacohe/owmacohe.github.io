@@ -258,7 +258,7 @@ p {
   border-style: solid;
   border-color: var(--purple);
 
-  margin-top: 0.5vw;
+  margin-top: 1vw;
   margin-bottom: 0.5vw;
 }
 
@@ -321,7 +321,7 @@ p {
   top: 0;
 
   background-color: var(--green_dark);
-  width: 16.05vw;
+  width: 16.6vw;
 }
 
 /* Hidden Dropdown */

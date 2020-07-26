@@ -39,9 +39,9 @@ var scene0_2 = [
 
 var scene0_3 = [
   "Glide slowly down, and make for hollow sanctuary in a tree adjacent?", //done
-  "Attrap dusty leaves in your palm, and partake of their faded colours?", //
+  "Attrap dusty leaves in your palm, and partake of their faded colours?", //done
   "Crumbling lichen and hanging branches encircle the great tree's trunk as you climb. Though once a bastion and scholar, only silent drums beat from its heart. Greater in elevation, it sways, and bright light cracks your veiled eyes. At its zenith, hesitation weighs down in all its enormities.",
-  "Steel your scattered resolve, and burst into the bleached sunlight above?",
+  "Steel your scattered resolve, and burst into the bleached sunlight above?", //done
   "In anticipation of soft earth below, release, and seek vertiginous finality?"
 ];
 
@@ -102,9 +102,17 @@ var scene0_3_1 = [
 ];
 
 var scene0_3_2 = [
-  "MOVEA",
-  "INTERACT",
+  "Seek greater fullfillment beyond, where dereliction has not been laid?",
+  "Settle yourself in comfort before gorging upon this psilocybic leaflet?",
   "<div id='a'>You pluck the waxy and deep-set green leaf fronds down from above. Faint grime still holds to their fallen and static surfaces. Though saturation seems washed from their colours, they exude a child-like sense of calm.</div><br><div class='flexrow'><div id='name'>Dust Leaf</div><div id='b'> is added to your inventory.</div></div>",
-  "MOVEB",
-  "DIE"
+  "Having found a worthy keepsake, return to the ever-molding forest floor below?",
+  "Let subconcious and survivalist materialism fade along with the viridian hue once again?"
+];
+
+var scene0_3_3 = [
+  "Submerge once more in bitter and unforgiving liquor, dusted lightly in cinders?",
+  "Imbide a handful of wood-chime washed water, and attain its stillfulness?",
+  "Though body breaks through olive flattened sunshade, mind has deserted to somewhere cold and silent: an ashy shallow pool formed in a hidden pocket of high sierra ridges. The basin is silent, yet thunderous in voice.<div class='speech'>[NullPointer Errror: will to live not found]</div>",
+  "Rise from crystal waters, and begin the labourous task of slow descent?",
+  "Submit your awareness for review, having ended in this unwieldy place?"
 ];

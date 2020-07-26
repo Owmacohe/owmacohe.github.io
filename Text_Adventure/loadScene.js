@@ -1,8 +1,10 @@
-// 0_3_2, leaf
-// 0_1_3_2, skull
-// 0_2_1_2, minerals
+// 0_1_3_2, Humming Skull
+// 0_2_1_2, Deep Minerals
+// 0_3_2, Dust Leaf
 
+// 0_1_2_1, The Lectode Triumvirate
 // 0_2_2, Gnan Arcestul
+// 0_3_1_1, Iovanteres Calacent
 
 var scenePath = "0";
 var inventory = [];
