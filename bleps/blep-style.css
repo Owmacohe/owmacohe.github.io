@@ -1,6 +1,22 @@
+:root {
+  /*
+  --background: #d8eff4;
+  --boxes: #b0e9dd;
+  --links: #00cc99;
+  --hover: #99ff99;
+  */
+
+  --background: #0b090d;
+  --body: #b549ff;
+  --boxes: #2b0049;
+  --links: #6700af;
+  --hover: #967cff;
+}
+
 body {
-  background-color: #d8eff4;
+  background-color: var(--background);
   font-family: "Trebuchet MS", sans-serif;
+  color: var(--body);
 
   margin-bottom: 5vh;
 }
@@ -14,11 +30,11 @@ h2 {
 }
 
 a {
-  color: #00cc99;
+  color: var(--links);
 }
 
 a:hover {
-  color: #99ff99;
+  color: var(--hover);
 }
 
 .flexcolumn {
@@ -74,9 +90,9 @@ a:hover {
 }
 
 .invisible {
-  color: #d8eff4;
+  color: var(--background);
 }
 
 .invisible:hover {
-  color: #d8eff4;
+  color: var(--background);
 }

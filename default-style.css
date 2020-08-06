@@ -1,12 +1,18 @@
 /* Colours */
 
 :root {
+  /*
   --background: #d8eff4;
   --boxes: #b0e9dd;
   --links: #00cc99;
   --hover: #99ff99;
+  */
 
-  --purple: #5a0196;
+  --background: #0b090d;
+  --body: #b549ff;
+  --boxes: #2b0049;
+  --links: #6700af;
+  --hover: #967cff;
 }
 
 
@@ -16,6 +22,7 @@
 body {
   background-color: var(--background);
   font-family: "Trebuchet MS";
+  color: var(--body);
 
   margin-bottom: 5vw;
 }
@@ -71,6 +78,7 @@ textarea {
   resize: none;
   padding: 1vw;
   background-color: var(--boxes);
+  color: var(--body);
 }
 
 button {
@@ -299,9 +307,10 @@ button:hover {
 }
 
 #blm {
-  background-color: white;
+  background-color: grey;
   font-family: "Tahoma";
   font-size: 8vw;
+  color: black;
 
   display: flex;
   flex-flow: column;
