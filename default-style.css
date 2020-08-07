@@ -13,6 +13,12 @@
   --boxes: #2b0049;
   --links: #6700af;
   --hover: #967cff;
+
+  /*
+  100, 5, 250 (plus dark and light shades)
+  25, 75, 230 (plus light shade?)
+  95, 160, 160
+  */
 }
 
 
