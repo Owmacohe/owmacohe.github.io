@@ -6,11 +6,19 @@
   --hover: #99ff99;
   */
 
+  /*
   --background: #0b090d;
   --body: #b549ff;
   --boxes: #2b0049;
   --links: #6700af;
   --hover: #967cff;
+  */
+
+  --background: #030007;
+  --body: #5004c8;
+  --boxes: #140132;
+  --links: #5fa0c8;
+  --hover: #d1e4ef;
 }
 
 body {

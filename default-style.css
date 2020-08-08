@@ -8,11 +8,19 @@
   --hover: #99ff99;
   */
 
+  /*
   --background: #0b090d;
   --body: #b549ff;
   --boxes: #2b0049;
   --links: #6700af;
   --hover: #967cff;
+  */
+
+  --background: #030007;
+  --body: #5004c8;
+  --boxes: #140132;
+  --links: #5fa0c8;
+  --hover: #d1e4ef;
 
   /*
   100, 5, 250 (plus dark and light shades)
@@ -74,8 +82,7 @@ video {
 }
 
 textarea {
-  font-size: 3vw;
-  font-family: "Trebuchet MS", sans-serif;
+  font: 3vw "Trebuchet MS", sans-serif;
 
   height: 10vw;
   border-radius: 0.7vw;
@@ -117,8 +124,15 @@ button:hover {
 
 .flexcolumn_green {
   background-color: var(--boxes);
-  margin: 0.5vw;
+  margin: 1vw;
   padding: 1vw;
+
+  border-style: none none solid solid;
+  border-color: var(--links);
+  border-left-width: 1.5vw;
+  border-bottom-width: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+  border-top-right-radius: 3vw;
 
   display: flex;
   justify-content: center;
@@ -157,6 +171,13 @@ button:hover {
   background-color: var(--boxes);
   margin: 0.5vw;
   padding: 1vw;
+
+  border-style: none none solid solid;
+  border-color: var(--links);
+  border-left-width: 1.5vw;
+  border-bottom-width: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+  border-top-right-radius: 3vw;
 
   display: flex;
   justify-content: center;
@@ -297,7 +318,7 @@ button:hover {
   font-size: 1.25vw;
   text-decoration: none;
 
-  margin-bottom: 1vw;
+  margin-bottom: 5vw;
 }
 
 #footer {
@@ -305,23 +326,24 @@ button:hover {
 }
 
 #saw {
-  font-size: 2vw;
-  font-family: monospace;
+  font: 2vw monospace;
   white-space: pre;
 
   margin-right: 8vw;
 }
 
 #blm {
-  background-color: grey;
-  font-family: "Tahoma";
-  font-size: 8vw;
+  background-color: #d1e4ef;
+  font: 8vw "Arial Black";
   color: black;
+
+  border: 1vw solid #5004c8;
 
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-bottom: 1vw;
+  margin: 1vw;
+  padding: 0.75vw;
 }
 
 /*
