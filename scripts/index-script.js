@@ -1,12 +1,12 @@
 var animationOn = true;
 
 var patterns = [
-  "-+*%$%*+-+*%$%*+-",
-  "-•=/0/=•-•=/0/=•-",
-  "'-.,__,.-'-.,__,.-",
-  "-+<{?}>+-+<{?}>+-",
-  "-z[(&)]z-z[(&)]z-",
-  "-odO0Obo-odO0Obo-"
+  "-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-",
+  "-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-",
+  "-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-",
+  "-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-",
+  "-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-",
+  "-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-"
 ];
 
 var chars = "";
@@ -17,9 +17,6 @@ function splitPattern() {
 
   chars = patterns[chosenPattern].split("");
 }
-
-var pixNum = -1;
-var isIncreasing = true;
 
 /*
 var rainbowOn = false;
@@ -53,7 +50,8 @@ var runCheck = setInterval(function change() {
     }
 
     chars[0] = chars[chars.length - 1];
-    chars.splice(chars.length - 1, 1);
+    //chars.splice(chars.length - 1, 1);
+    chars = chars.slice(0, -1);
 
     var j;
     for (j = 0; j < text.length; j++) {
@@ -66,22 +64,6 @@ var runCheck = setInterval(function change() {
 
       text[j].innerHTML = newPattern;
     }
-
-    if (pixNum > 3) {
-      isIncreasing = false;
-    }
-    else if (pixNum < 1) {
-      isIncreasing = true;
-    }
-
-    if (isIncreasing == true) {
-      pixNum++;
-    }
-    else if (isIncreasing == false) {
-      pixNum--;
-    }
-
-    document.getElementById("titleimage").setAttribute("src", "Media/Index_Media/Me"+pixNum+".png");
 
     /*
     if (rainbowOn == true) {

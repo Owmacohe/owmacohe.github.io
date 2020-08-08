@@ -1,0 +1,78 @@
+:root {
+  --background: #140132;
+  --body: #5004c8;
+  --boxes: #030007;
+  --links: #3d1ada;
+  --hover: #846cee;
+}
+
+body {
+  background-color: var(--background);
+  font-family: "Trebuchet MS";
+  color: var(--body);
+}
+
+a {
+  color: var(--links);
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+img {
+  border: 10px solid var(--body);
+  border-radius: 180px;
+
+  width: 350px;
+  height: 350px;
+}
+
+.flexcolumn {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+}
+
+.flexitem {
+  font-size: 35px;
+  text-align: center;
+  margin: 15px;
+}
+
+.flex_extra {
+  background-color: var(--boxes);
+  margin: 30px;
+  padding: 20px;
+
+  border-style: none none solid solid;
+  border-color: var(--body);
+  border-left-width: 20px;
+  border-bottom-width: 7px;
+  border-top-right-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.flexrow_wrap {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flexanim {
+  font-size: 25px;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+
+  margin-bottom: 30px;
+}
