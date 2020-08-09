@@ -4,6 +4,7 @@
   --boxes: #030007;
   --links: #3d1ada;
   --hover: #846cee;
+  --backText: #0a0119;
 }
 
 body {
@@ -75,4 +76,27 @@ img {
   white-space: pre;
 
   margin-bottom: 30px;
+}
+
+#backgroundText {
+  z-index: -1;
+  position: fixed;
+  left: -80px;
+  top: -130px;
+
+  color: var(--backText);
+  font: 50px "Disposable";
+  line-height: 50px;
+
+  transform: rotate(10deg);
+  width: 1650px;
+  word-wrap: break-word;
+}
+
+@font-face {
+    font-family: "Disposable";
+    src: url("fonts/DisposableDroid.woff2") format("woff2"),
+         url("fonts/DisposableDroid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }

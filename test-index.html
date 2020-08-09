@@ -9,7 +9,23 @@
   </head>
 
   <body onload="splitPattern()">
+    <div id="backgroundText"></div>
     <a href="/bleps/blep.html" style="text-decoration: none;"><div class="flexanim"></div></a>
+
+    <!--
+    <svg viewBox="0 0 500 500">
+        <path id="curve" style="opacity: 0;" d="
+          M 50, 100
+          a 50,50 0 1,1 50,0
+          a 25,25 0 1,1 -50,0
+          " />
+        <text width="500">
+          <textPath xlink:href="#curve">
+            Dangerous Curves Ahead
+          </textPath>
+        </text>
+    </svg>
+    -->
 
     <div class="flexrow_wrap">
 
@@ -81,4 +97,14 @@
 
     </div>
   </body>
+
+  <script>
+  loadBackText();
+
+  function loadBackText() {
+    var text = document.getElementById("backgroundText");
+
+    text.innerHTML = getRandomCharacter(1550, "alphaNum");
+  }
+  </script>
 </html>

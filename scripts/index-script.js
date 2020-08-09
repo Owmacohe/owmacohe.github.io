@@ -89,3 +89,28 @@ var runCheck = setInterval(function change() {
     return;
   }
 }, 100);
+
+function getRandomCharacter(iterations, type) {
+  var randOutput = "";
+  var characters;
+
+  if (type != null) {
+    if (type == "alpha") {
+      characters = "abcdefghijklmnopqrstuvwxyz";
+    }
+    else if (type == "alphaNum") {
+      characters = "abcdefghijklmnopqrstuvwxyz01234567";
+    }
+  }
+  else {
+    characters = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+`~[]{}:;,.?/";
+  }
+
+  //console.log(characters);
+
+  for (var i = 0; i < iterations; i++) {
+    randOutput += characters[Math.floor(Math.random() * characters.length)];
+  }
+
+  return randOutput;
+}
