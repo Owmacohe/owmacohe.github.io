@@ -5,27 +5,12 @@
     <link rel="icon" href="Media/Index_Media/OH.png">
     <link rel="stylesheet" href="test-style.css">
     <script src="scripts/index-script.js" charset="utf-8"></script>
+    <script src="circletype.min.js"></script>
     <title>Welcome, weary traveler!</title>
   </head>
 
   <body onload="splitPattern()">
     <div id="backgroundText"></div>
-    <a href="/bleps/blep.html" style="text-decoration: none;"><div class="flexanim"></div></a>
-
-    <!--
-    <svg viewBox="0 0 500 500">
-        <path id="curve" style="opacity: 0;" d="
-          M 50, 100
-          a 50,50 0 1,1 50,0
-          a 25,25 0 1,1 -50,0
-          " />
-        <text width="500">
-          <textPath xlink:href="#curve">
-            Dangerous Curves Ahead
-          </textPath>
-        </text>
-    </svg>
-    -->
 
     <div class="flexrow_wrap">
 
@@ -61,7 +46,10 @@
         </div>
       </div>
 
-      <img src="Media/Index_Media/me.gif" alt="[A picture of me :P]" id="titleimage">
+      <div>
+        <a href="/bleps/blep.html" id="circlePosition"><div class="flexanim" id="curvedText"></div></a>
+        <img src="Media/Index_Media/me.gif" alt="[A picture of me :P]" id="titleimage">
+      </div>
 
       <div class="flexcolumn">
         <!-- Dump -->

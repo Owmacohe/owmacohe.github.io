@@ -11,6 +11,9 @@ body {
   background-color: var(--background);
   font-family: "Trebuchet MS";
   color: var(--body);
+
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -22,11 +25,10 @@ a:hover {
 }
 
 img {
-  border: 10px solid var(--body);
+  border: 0.75vw solid var(--body);
   border-radius: 180px;
 
-  width: 350px;
-  height: 350px;
+  width: 24vw;
 }
 
 .flexcolumn {
@@ -42,21 +44,21 @@ img {
 }
 
 .flexitem {
-  font-size: 35px;
+  font-size: 2.5vw;
   text-align: center;
-  margin: 15px;
+  margin: 1vw;
 }
 
 .flex_extra {
   background-color: var(--boxes);
-  margin: 30px;
-  padding: 20px;
+  margin: 2vw;
+  padding: 1.5vw;
 
   border-style: none none solid solid;
   border-color: var(--body);
-  border-left-width: 20px;
-  border-bottom-width: 7px;
-  border-top-right-radius: 20px;
+  border-left-width: 1.5vw;
+  border-bottom-width: 0.5vw;
+  border-top-right-radius: 30px;
 
   display: flex;
   justify-content: center;
@@ -70,12 +72,12 @@ img {
 }
 
 .flexanim {
-  font-size: 25px;
-  text-align: center;
+  font-size: 1.75vw;
   font-family: monospace;
-  white-space: pre;
+}
 
-  margin-bottom: 30px;
+#titleimage {
+  margin: 2vw;
 }
 
 #backgroundText {
@@ -93,10 +95,50 @@ img {
   word-wrap: break-word;
 }
 
+#circlePosition {
+  text-decoration: none;
+  position: fixed;
+  left: 49vw;
+  top: 13vw;
+}
+
 @font-face {
     font-family: "Disposable";
     src: url("fonts/DisposableDroid.woff2") format("woff2"),
          url("fonts/DisposableDroid.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /*Insert your tablet CSS in here!*/
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    /*Insert your mobile CSS in here!*/
+
+    .flexitem {
+      font-size: 5vw;
+      margin: 1vw;
+    }
+
+    #circlePosition {
+      left: 50vw;
+      top: 53vw;
+    }
+
+    .flexanim {
+      font-size: 2.75vw;
+    }
+
+    img {
+      border: 1vw solid var(--body);
+
+      width: 40vw;
+    }
 }
