@@ -1,0 +1,56 @@
+:root {
+  --backLight: #a500ff;
+  --backDark: red;
+  --border: black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(160deg, var(--backLight), var(--backDark));
+  background-attachment: fixed;
+
+  font-family: "Rowdies";
+}
+
+p {
+  line-height: 5vh;
+}
+
+#insetBorder {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  margin: 2vw;
+  padding: 2vw;
+
+  background: linear-gradient(160deg, var(--backDark), var(--backLight));
+
+  border: 2vw solid var(--border);
+}
+
+#insetArea {
+  width: 100%;
+  height: 70vh;
+  padding: 2vw;
+
+  background-color: var(--border);
+
+  font-size: 2vw;
+  color: red;
+}
+
+.pRight {
+  text-align: right;
+
+  color: var(--backLight);
+}
+
+@font-face {
+    font-family: "Rowdies";
+    src: url("Rowdies.woff2") format("woff2"),
+         url("Rowdies.woff") format("woff");
+}
