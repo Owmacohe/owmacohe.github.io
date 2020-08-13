@@ -1,138 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="default-style.css">
-    <link rel="icon" href="/Index_Media/OH.png">
-    <script src="scripts/index-script.js" charset="utf-8"></script>
     <meta charset="utf-8">
+    <link rel="icon" href="Media/Index_Media/OH.png">
+    <link rel="stylesheet" href="test-style.css">
+    <script src="scripts/index-script.js" charset="utf-8"></script>
+    <script src="circletype.min.js"></script>
     <title>Welcome, weary traveler!</title>
   </head>
 
   <body onload="splitPattern()">
-    <div class="flexcolumn">
-      <a href="/bleps/blep.html" id="header">-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-</a>
-      <!-- Checking my code are you? Make sure to click in the text banner above -->
+    <div id="backgroundText"></div>
 
-      <div class="flexcolumn" style="margin-bottom: 5vw;">
-        <div class="flexrow">
-          <div class="flexanim" style="margin-right: 7vw;"></div>
-          <img src="Media/Index_Media/me.gif" alt="[A picture of me :P]" id="titleimage">
-          <div class="flexanim" style="margin-left: 7vw;"></div>
+    <div class="flexrow_wrap">
+
+      <!-- Social Media -->
+      <div class="flex_extra" style="flex-flow: row;">
+        <div class="flexitem">
+          ٩(⁎❛ᴗ❛⁎)۶
         </div>
-        <h1>~~~~~ Owen Hellum ~~~~~</h1>
-        <!--<h3><button onclick="animToggle()"><b>Click here to toggle the animations</b></button></h3>-->
-      </div>
-
-      <div id="blm">
-        <div class="h0"><b>Black Lives Matter</b></div>
-        <h1>Explore resources to help <a href="https://blacklivesmatters.carrd.co/" style="color: red;">here</a></h1>
-      </div>
-
-      <div class="flexcolumn_green">
-        <div class="flexitem" style="width: 80vw;">
-          Hello! Welcome to my domain (name)!
-          I'm a Canadian guy currently in Computer Science / Computation Arts at Concordia University in Montréal.
-          Here are some projects I've made and am working on.
-          Take a gander, and see if you can find any secret pages!
+        <div class="flexitem">
+          <a href="pages/medias.html">Social Medias</a>
         </div>
       </div>
 
-      <h1>~~~~~~~</h1>
+      <!-- Commodore -->
+      <div class="flex_extra" style="flex-flow: row;">
+        <div class="flexitem">
+          ᕦ(✧ᗜ✧)ᕥ
+        </div>
+        <div class="flexitem">
+          <a href="pages/C64.html">Commodore 64 Game Anthology</a>
+        </div>
+      </div>
 
-      <div class="flexcolumn_green">
-
+      <div class="flexcolumn">
         <!-- Games Portfolio -->
-        <div class="flexcolumn">
-          <div class="flexrow">
-            <div class="flexitem">
-              ☞(˚▽˚)☞
-            </div>
-            <div class="flexitem">
-              <a href="pages/games.html">Games</a>
-            </div>
+        <div class="flex_extra" style="flex-flow: row;">
+          <div class="flexitem">
+            ☞(˚▽˚)☞
           </div>
-          <div class="tildeitem">
-            ~~~
+          <div class="flexitem">
+            <a href="pages/games.html">Games</a>
           </div>
         </div>
+      </div>
 
-        <!-- Social Media -->
-        <div class="flexcolumn">
-          <div class="flexrow">
-            <div class="flexitem">
-              ٩(⁎❛ᴗ❛⁎)۶
-            </div>
-            <div class="flexitem">
-              <a href="pages/medias.html">Social Medias</a>
-            </div>
-          </div>
-          <div class="tildeitem">
-            ~~~
-          </div>
-        </div>
+      <div>
+        <a href="/bleps/blep.html" id="circlePosition"><div class="flexanim" id="curvedText"></div></a>
+        <img src="Media/Index_Media/me.gif" alt="[A picture of me :P]" id="titleimage">
+      </div>
 
-        <!-- Commodore -->
-        <div class="flexcolumn">
-          <div class="flexrow">
-            <div class="flexitem">
-              ᕦ(✧ᗜ✧)ᕥ
-            </div>
-            <div class="flexitem">
-              <a href="pages/C64.html">Commodore 64 Game Anthology</a>
-            </div>
-          </div>
-          <div class="tildeitem">
-            ~~~
-          </div>
-        </div>
-
-        <!-- Image to Audio -->
-        <div class="flexcolumn">
-          <div class="flexrow">
-            <div class="flexitem">
-              ง(•̀‿•́)ง
-            </div>
-            <div class="flexitem">
-              <a href="https://imagetoaudiogenerator.github.io">ImageToAudio generator</a>
-            </div>
-          </div>
-          <div class="tildeitem">
-            ~~~
-          </div>
-        </div>
-
+      <div class="flexcolumn">
         <!-- Dump -->
-        <div class="flexcolumn">
-          <div class="flexrow">
-            <div class="flexitem">
-              (ﾉ◕ヮ◕)ﾉ
-            </div>
-            <div class="flexitem">
-              <a href="pages/dump.html">Art dump</a>
-            </div>
+        <div class="flex_extra" style="flex-flow: row;">
+          <div class="flexitem">
+            (ﾉ◕ヮ◕)ﾉ
           </div>
-          <div class="tildeitem">
-            ~~~
+          <div class="flexitem">
+            <a href="pages/dump.html">Art dump</a>
           </div>
         </div>
+      </div>
 
-        <!-- Other -->
-        <div class="flexcolumn">
-          <div class="flexrow">
-            <div class="flexitem">
-              (っ ºДº)っ
-            </div>
-            <div class="flexitem">
-              <a href="pages/other.html">Other</a>
-            </div>
-          </div>
-          <div class="tildeitem">
-            ~~~
-          </div>
+      <!-- Image to Audio -->
+      <div class="flex_extra" style="flex-flow: row;">
+        <div class="flexitem">
+          ง(•̀‿•́)ง
         </div>
+        <div class="flexitem">
+          <a href="https://imagetoaudiogenerator.github.io">ImageToAudio generator</a>
+        </div>
+      </div>
 
+      <!-- Other -->
+      <div class="flex_extra" style="flex-flow: row;">
+        <div class="flexitem">
+          (っ ºДº)っ
+        </div>
+        <div class="flexitem">
+          <a href="pages/other.html">Other</a>
+        </div>
       </div>
 
     </div>
   </body>
+
+  <script>
+  loadBackText();
+
+  function loadBackText() {
+    var text = document.getElementById("backgroundText");
+
+    text.innerHTML = getRandomCharacter(1550, "alphaNum");
+  }
+  </script>
 </html>
