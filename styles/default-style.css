@@ -13,6 +13,7 @@
   --boxes: #030007;
   --links: #3d1ada;
   --hover: #846cee;
+  --backText: #0a0119;
 }
 
 
@@ -212,6 +213,21 @@ button:hover {
   margin-top: 5vw;
 }
 
+#backgroundText {
+  z-index: -1;
+  position: fixed;
+  left: -80px;
+  top: -130px;
+
+  color: var(--backText);
+  font: 50px "Disposable";
+  line-height: 50px;
+
+  transform: rotate(10deg);
+  width: 1650px;
+  word-wrap: break-word;
+}
+
 .gameElement {
   border-radius: 0px;
   width: 5vw;
@@ -225,4 +241,15 @@ button:hover {
 
   font-size: 2vw;
   margin: 1vw;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Disposable";
+    src: url("fonts/DisposableDroid.woff2") format("woff2"),
+         url("fonts/DisposableDroid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }

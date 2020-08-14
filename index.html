@@ -10,8 +10,6 @@
   </head>
 
   <body onload="splitPattern()">
-    <div id="backgroundText"></div>
-
     <div class="flexrow_wrap">
 
       <!-- Social Media -->
@@ -90,14 +88,5 @@
 
     </div>
   </body>
-
-  <script>
-  loadBackText();
-
-  function loadBackText() {
-    var text = document.getElementById("backgroundText");
-
-    text.innerHTML = getRandomCharacter(1550, "alphaNum");
-  }
-  </script>
+  <script src="scripts/backTextLoader.js" charset="utf-8"></script>
 </html>
