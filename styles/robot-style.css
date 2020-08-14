@@ -1,0 +1,24 @@
+.flexcolumn_absolute {
+  background-color: var(--boxes);
+  margin: 1vw;
+  padding: 0.5vw;
+  width: 20vw;
+
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logStyle {
+  font-size: 2vw;
+
+  display: flex;
+  flex-flow: row;
+  padding: 0.3vw;
+}
+
+.pairSpacing {
+  margin-bottom: 2vw;
+}

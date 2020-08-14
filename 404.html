@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="Media/Index_Media/OH.png">
     <!-- <link rel="stylesheet" href="default-style.css"> -->
-    <link rel="icon" href="OH.png">
     <title>Nope!</title>
   </head>
 
@@ -11,28 +11,42 @@
     <div class="flexcolumn">
 
       <h2><a href="\">Return to the main menu</a></h2>
-      <div class="flexascii">
-|￣￣￣￣￣￣￣￣￣￣￣￣|
-|  ~~~ ERROR404 ~~~  |
-|____________________|
-        ||
- (\__/) ||
- (•ㅅ•) ||
-/ 　\づ
+
+      <div class="flexcolumn">
+        <div class="flexascii">
+  |￣￣￣￣￣￣￣￣￣￣￣￣|
+  |  ~~~ ERROR404 ~~~  |
+  |____________________|
+          ||
+   (\__/) ||
+   (•ㅅ•) ||
+  / 　\づ
+        </div>
+        <h2>The page on my site that you're trying to reach probably doesn't exist</h2>
+        <h3>Are you sure that you're typing the address in properly?</h3>
+        <h3>Feel free to send <a href="mailto:owmacohe@gmail.com">me</a> an email!</h3>
       </div>
-      <h2>The page on my site that you're trying to reach probably doesn't exist</h2>
-      <h3>Are you sure that you're typing the address in properly?</h3>
-      <h3>Feel free to send <a href="mailto:owmacohe@gmail.com">me</a> an email!</h3>
 
     </div>
   </body>
 
   <style media="screen">
-  body {
-    background-color: #d8eff4;
-    font-family: "Trebuchet MS";
+  :root {
+    --background: #140132;
+    --body: #5004c8;
+    --boxes: #030007;
+    --links: #3d1ada;
+    --hover: #846cee;
+  }
 
-    margin-bottom: 5vw;
+  body {
+    background-color: var(--background);
+    font-family: "Trebuchet MS";
+    color: var(--body);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   h2 {
@@ -44,22 +58,24 @@
   }
 
   a {
-    color: #00cc99;
+    color: var(--links);
   }
 
   a:hover {
-    color: #99ff99;
+    color: var(--hover);
   }
 
   .flexcolumn {
+    background-color: var(--boxes);
+    margin: 2vw;
+    padding: 1.5vw;
+
+    border-radius: 30px;
+
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
-
-    position: absolute;
-    top: 20%;
-    left: 18%;
   }
 
   .flexascii {

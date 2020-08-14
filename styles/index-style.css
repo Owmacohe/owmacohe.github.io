@@ -1,3 +1,5 @@
+/* Colours */
+
 :root {
   --background: #140132;
   --body: #5004c8;
@@ -6,6 +8,10 @@
   --hover: #846cee;
   --backText: #0a0119;
 }
+
+
+
+/* Elements */
 
 body {
   background-color: var(--background);
@@ -31,15 +37,21 @@ img {
   width: 24vw;
 }
 
+
+
+/* Flex classes */
+
 .flexcolumn {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
 }
 
 .flexrow {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row;
 }
 
@@ -76,6 +88,10 @@ img {
   font-family: monospace;
 }
 
+
+
+/* General Classes and IDs */
+
 #titleimage {
   margin: 2vw;
 }
@@ -98,9 +114,33 @@ img {
 #circlePosition {
   text-decoration: none;
   position: fixed;
-  left: 49vw;
+  left: 49.7vw;
   top: 13vw;
 }
+
+#descriptionBox {
+  flex-flow: row;
+  width: 25vw;
+  font-size: 1.65vw;
+}
+
+#blm {
+  background-color: #d1e4ef;
+  font: 8vw "Arial Black";
+  color: black;
+
+  border: 1vw solid #5004c8;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 1vw;
+  padding: 0.75vw;
+}
+
+
+
+/* Fonts and Mobile Optimization */
 
 @font-face {
     font-family: "Disposable";
@@ -110,7 +150,6 @@ img {
     font-style: normal;
 }
 
-/* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   .flexitem {
     font-size: 5vw;
@@ -118,8 +157,8 @@ img {
   }
 
   #circlePosition {
-    left: 50vw;
-    top: 53vw;
+    left: 66.5vw;
+    top: 38vw;
   }
 
   .flexanim {
@@ -131,14 +170,20 @@ img {
 
     width: 40vw;
   }
+
+  #descriptionBox {
+    font-size: 2.1vw;
+  }
 }
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/*
+Mobile Landscape Size to Tablet Portrait (devices and browsers)
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    /*Insert your tablet CSS in here!*/
+
 }
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 @media only screen and (max-width: 479px) {
-    /*Insert your mobile CSS in here!*/
+
 }
+*/

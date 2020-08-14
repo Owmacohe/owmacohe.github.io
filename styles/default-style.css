@@ -1,0 +1,228 @@
+/* Colours */
+
+:root {
+  /*
+  --background: #d8eff4;
+  --boxes: #b0e9dd;
+  --links: #00cc99;
+  --hover: #99ff99;
+  */
+
+  --background: #140132;
+  --body: #5004c8;
+  --boxes: #030007;
+  --links: #3d1ada;
+  --hover: #846cee;
+}
+
+
+
+/* Elements */
+
+body {
+  background-color: var(--background);
+  font-family: "Trebuchet MS";
+  color: var(--body);
+}
+
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  font-size: 1.5vw;
+}
+
+a {
+  color: var(--links);
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+img {
+  border-radius: 1vw;
+
+  width: 60%;
+}
+
+video {
+  border-radius: 1vw;
+
+  width: 60vw;
+}
+
+textarea {
+  font: 3vw "Trebuchet MS", sans-serif;
+
+  height: 10vw;
+  border-radius: 0.7vw;
+  border: none;
+
+  resize: none;
+  padding: 1vw;
+  background-color: var(--boxes);
+  color: var(--body);
+}
+
+button {
+  background-color: var(--links);
+  border: none;
+  border-radius: 0.5vw;
+
+  width: auto;
+  height: auto;
+  padding: 1vw;
+
+  font-size: 1.5vw;
+  font-family: "Trebuchet MS";
+}
+
+button:hover {
+  color: var(--hover);
+}
+
+
+
+/* Flex classes */
+
+.flexcolumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+
+.flexitem {
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 1vw;
+}
+
+.flexcolumn_left {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: 2vw;
+}
+
+.flexrow_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flexrow_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flex_extra {
+  background-color: var(--boxes);
+  margin: 2vw;
+  padding: 1.5vw;
+
+  border-style: none none solid solid;
+  border-color: var(--body);
+  border-left-width: 1.5vw;
+  border-bottom-width: 0.5vw;
+  border-top-right-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexitem_small_font {
+  font-size: 0.8vw;
+  text-align: center;
+  margin: 1vw;
+}
+
+.flexitem_small_margin {
+  font-size: 2vw;
+  text-align: center;
+  margin: 0.2vw;
+}
+
+.flexanim {
+  font-size: 1.75vw;
+  font-family: monospace;
+}
+
+.flexascii {
+  font-size: 2vw;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+}
+
+
+
+/* General Classes */
+
+.img_small {
+  border-radius: 2vw;
+  width: 13vw;
+  padding: 1vw;
+}
+
+.img_med {
+  border-radius: 2vw;
+  width: 25vw;
+  padding: 1vw;
+}
+
+.img_big {
+  border-radius: 2vw;
+  width: 70vw;
+  padding: 1vw;
+}
+
+.nounderline {
+  text-decoration: none;
+}
+
+
+
+/* Special Classes and IDs */
+
+#footer {
+  margin-top: 5vw;
+}
+
+.gameElement {
+  border-radius: 0px;
+  width: 5vw;
+  position: absolute;
+}
+
+.c64game {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+
+  font-size: 2vw;
+  margin: 1vw;
+}
