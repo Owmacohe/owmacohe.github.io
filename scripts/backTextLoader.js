@@ -6,7 +6,7 @@ function loadBackText() {
   backTextElem.setAttribute("id", "backgroundText");
 
   //var charNum = (1440 / window.innerWidth) * 1440;
-  backTextElem.innerHTML = getRandomCharacter(2 * window.innerWidth, "alphaNum");
+  backTextElem.innerHTML = getRandomCharacter(2.5 * window.innerWidth, "alphaNum");
 }
 
 function getRandomCharacter(iterations, type) {
