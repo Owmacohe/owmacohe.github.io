@@ -32,7 +32,7 @@ a:hover {
 
 img {
   border: 0.75vw solid var(--body);
-  border-radius: 180px;
+  border-radius: 20vw;
 
   width: 24vw;
 }
@@ -99,8 +99,8 @@ img {
 #backgroundText {
   z-index: -1;
   position: fixed;
-  left: -80px;
-  top: -130px;
+  left: -150px;
+  top: -150px;
 
   color: var(--backText);
   font: 50px "Disposable";
@@ -150,7 +150,7 @@ img {
     font-style: normal;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .flexitem {
     font-size: 5vw;
     margin: 1vw;
