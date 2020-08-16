@@ -1,21 +1,28 @@
-var animationOn = true;
+//var animationOn = true;
 
 var patterns = [
-  "-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+-+*%$%*+",
-  "-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•-•=/0/=•",
-  "-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.-.,_*_,.",
-  "-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+-+<{?}>+",
-  "-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z-z[(&)]z",
-  "-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo-odO0Obo"
+  "-+*%$%*+",
+  "-•=/0/=•",
+  "-+<{?}>+",
+  "-z[(&)]z",
+  "-odO0Obo"
 ];
 
-var chars = "";
-var text = document.getElementsByClassName("flexanim");
+//var chars = "";
 
-function splitPattern() {
+function setPattern() {
   var chosenPattern = Math.floor(Math.random() * patterns.length);
+  var patternTemp = patterns[chosenPattern];
 
-  chars = patterns[chosenPattern].split("");
+  for (var i = 0; i < 9; i++) {
+    patterns[chosenPattern] += patternTemp;
+  }
+
+  document.getElementById("curvedText").innerHTML = patterns[chosenPattern];
+
+  if (document.getElementById("curvedText") != null) {
+    new CircleType(document.getElementById("curvedText")).radius(window.innerWidth / (1440 / 215));
+  }
 }
 
 /*
@@ -29,7 +36,6 @@ function toggleRainbow() {
 
 var colourNum = 0;
 var countNum = 0;
-*/
 
 function animToggle() {
   switch (animationOn) {
@@ -41,8 +47,15 @@ function animToggle() {
       break;
   }
 }
+*/
 
-var runCheck = setInterval(function change() {
+var rotateNum = 0;
+
+var rotateCircle = setInterval(function() {
+  rotateNum += 4;
+  document.getElementById("curvedText").style.transform = "rotate("+rotateNum+"deg)";
+
+  /*
   if (animationOn == true) {
     var i;
     for (i = chars.length; i > 0; i--) {
@@ -65,12 +78,6 @@ var runCheck = setInterval(function change() {
       text[j].innerHTML = newPattern;
     }
 
-    if (document.getElementById("curvedText") != null) {
-      new CircleType(document.getElementById("curvedText")).radius(window.innerWidth / (1440 / 215));
-      //console.log(window.innerWidth);
-    }
-
-    /*
     if (rainbowOn == true) {
       colourNum += 15;
 
@@ -88,9 +95,9 @@ var runCheck = setInterval(function change() {
         document.getElementById("rainbow").style.color = "black";
       }
     }
-    */
   }
   else {
     return;
   }
-}, 100);
+  */
+}, 75);

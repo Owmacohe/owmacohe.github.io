@@ -83,11 +83,6 @@ img {
   flex-wrap: wrap;
 }
 
-.flexanim {
-  font-size: 1.75vw;
-  font-family: monospace;
-}
-
 
 
 /* General Classes and IDs */
@@ -99,7 +94,7 @@ img {
 #backgroundText {
   z-index: -1;
   position: fixed;
-  left: -150px;
+  left: -200px;
   top: -150px;
 
   color: var(--backText);
@@ -109,13 +104,14 @@ img {
   transform: rotate(10deg);
   width: 1650px;
   word-wrap: break-word;
+  user-select: none;
 }
 
 #circlePosition {
   text-decoration: none;
   position: fixed;
-  left: 49.7vw;
-  top: 13vw;
+  left: 50vw;
+  top: 12.7vw;
 }
 
 #descriptionBox {
@@ -124,18 +120,9 @@ img {
   font-size: 1.65vw;
 }
 
-#blm {
-  background-color: #d1e4ef;
-  font: 8vw "Arial Black";
-  color: black;
-
-  border: 1vw solid #5004c8;
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  margin: 1vw;
-  padding: 0.75vw;
+#curvedText {
+  font-size: 1.75vw;
+  font-family: monospace;
 }
 
 
@@ -157,8 +144,8 @@ img {
   }
 
   #circlePosition {
-    left: 66.5vw;
-    top: 38vw;
+    left: 66vw;
+    top: 30.5vw;
   }
 
   .flexanim {
@@ -168,11 +155,19 @@ img {
   img {
     border: 1vw solid var(--body);
 
-    width: 40vw;
+    width: 37vw;
   }
 
   #descriptionBox {
     font-size: 2.1vw;
+  }
+
+  .flexrow {
+    flex-flow: column;
+  }
+
+  #curvedText {
+    font-size: 2.6vw;
   }
 }
 
