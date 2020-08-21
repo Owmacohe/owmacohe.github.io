@@ -17,8 +17,7 @@ var scene0 = [
   "Approach an ashen stag, and commune with this extension of her hand?", //done
   "Musty elegance and fading moss lie about you. This world, while living, has long been deserted. Your skin can feel the small voles and other soft rodents churning the soil deep beneath your feet. Deer and sand-covered sprites parallel your march. The silence of this world waits, and forgets.",
   "Reach for a strong and pallid branch, hoping to ascend to the canopy?", //done
-  "Release your grip on this sunken world, for it has no true bearing to you?",
-  ""
+  "Release your grip on this sunken world, for it has no true bearing to you?"
 ];
 
 var scene0_1 = [
