@@ -6,6 +6,7 @@
   --boxes: #030007;
   --links: #3d1ada;
   --hover: #846cee;
+  --backText: #0a0119;
 }
 
 
@@ -83,7 +84,7 @@ a:hover {
 
 
 
-/* General Classes */
+/* General Classes and IDs */
 
 .newColour {
   display: flex;
@@ -102,4 +103,32 @@ a:hover {
 
 .invisible:hover {
   color: var(--background);
+}
+
+#backgroundText {
+  z-index: -1;
+  position: fixed;
+  left: -200px;
+  top: -150px;
+
+  color: var(--backText);
+  font: 50px "Disposable";
+  line-height: 50px;
+
+  transform: rotate(10deg);
+  width: 1650px;
+  word-wrap: break-word;
+  user-select: none;
+}
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Disposable";
+    src: url("fonts/DisposableDroid.woff2") format("woff2"),
+         url("fonts/DisposableDroid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
