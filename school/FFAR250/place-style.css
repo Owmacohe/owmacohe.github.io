@@ -1,0 +1,57 @@
+:root {
+  --green: #608830;
+  --yellow: #cab953;
+  --orange: #a8572e;
+  --brown: #2c1616;
+}
+
+html {
+  background-color: var(--brown);
+}
+
+body {
+  background-color: var(--yellow);
+
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--green);
+  font-size: 2.5vw;
+
+  padding: 2.5vw;
+  margin: 0;
+  margin-left: 15vw;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  color: var(--brown);
+  margin: 0;
+  position: absolute;
+  right: 2.5vw;
+
+  border-bottom: 0.75vw solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+  text-shadow:
+    2px 2px var(--yellow),
+    2px -2px var(--yellow),
+    -2px 2px var(--yellow),
+    -2px -2px var(--yellow);
+}
+
+h2 {
+  font-family: "Roboto Slab", serif;
+  color: var(--orange);
+  font-size: 2.5vw;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 3vw;
+}
+
+#poem {
+  display: flex;
+  align-items: left;
+  flex-flow: column;
+  margin-top: 7.5vw;
+}
