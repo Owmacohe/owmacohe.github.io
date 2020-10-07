@@ -102,7 +102,7 @@ img {
   line-height: 50px;
 
   transform: rotate(10deg);
-  width: 1650px;
+  width: 120vw;
   word-wrap: break-word;
   user-select: none;
 }
