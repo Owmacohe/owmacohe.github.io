@@ -20,6 +20,7 @@ body {
 
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 a {
@@ -123,6 +124,24 @@ img {
 #curvedText {
   font-size: 1.75vw;
   font-family: monospace;
+}
+
+#flex_extra_alt {
+  color: #800000;
+  font-size: 1.5vw;
+  background-color: var(--boxes);
+  margin: 2vw;
+  padding: 2vw;
+
+  border-style: none none solid solid;
+  border-color: #800000;
+  border-left-width: 1.5vw;
+  border-bottom-width: 0.5vw;
+  border-top-right-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
 }
 
 
