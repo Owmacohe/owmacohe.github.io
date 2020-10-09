@@ -167,8 +167,11 @@ img {
   }
 
   #circlePosition {
+    /*
     left: 66vw;
     top: 30.5vw;
+    */
+    visibility: hidden;
   }
 
   .flexanim {
