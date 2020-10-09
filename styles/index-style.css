@@ -112,7 +112,7 @@ img {
   text-decoration: none;
   position: fixed;
   left: 50vw;
-  top: 12.7vw;
+  top: 13.5vw;
 }
 
 #descriptionBox {
@@ -157,6 +157,10 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
+  body {
+    overflow: visible;
+  }
+
   .flexitem {
     font-size: 5vw;
     margin: 1vw;
