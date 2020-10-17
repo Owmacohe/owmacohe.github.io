@@ -1,0 +1,45 @@
+body {
+  background-color: #3f7759;
+  color: #34252F;
+  font-family: "Tahoma";
+  font-size: 2vw;
+}
+
+h1, h2 {
+  margin: 2vw;
+  font-size: 3vw;
+}
+
+h1 {
+  color: #3f7759;
+  font-size: 4.5vw;
+}
+
+p {
+  margin: 1vw;
+}
+
+img {
+  width: 25vw;
+  margin-top: 2vw;
+}
+
+.flexcolumn, .flexrow {
+  display: flex;
+  align-items: center;
+}
+
+.flexcolumn {
+  flex-flow: column;
+  background-color: #BEC5AD;
+  margin-top: 3.5vw;
+  margin-right: 3vw;
+  margin-left: 3vw;
+
+  padding-top: 4.5vw;
+  padding-bottom: 4.5vw;
+}
+
+.flexrow {
+  flex-flow: row;
+}

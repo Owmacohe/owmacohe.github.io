@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday!</title>
+  </head>
+
+  <body>
+    <div class="flexcolumn">
+      <h1>Heya there! Happy birthday :)</h1>
+      <h2>Here's a digital card, because I enjoy making these</h2>
+
+      <p>I hope you can get my gift and a hug soon. For now, enjoy this spinning mouse:</p>
+
+      <div class="flexrow">
+        <h1>--></h1><h1></h1>
+        <img src="mouse.png" alt="[image of a mouse]" id="mouse">
+        <h1></h1><h1><--</h1>
+      </div>
+
+      <p>See you soon! I love you!</p>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var mouseImage = document.getElementById("mouse");
+    var angle = 0;
+
+    var spinMouse = setInterval(function() {
+      angle++;
+      mouseImage.style.transform = "rotate("+angle+"deg)";
+    }, 2);
+  </script>
+</html>
