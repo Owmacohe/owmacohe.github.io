@@ -2,8 +2,8 @@
 
 var patterns = [
   "-+*%$%*+",
-  "-•=/0/=•",
-  "-+<{?}>+",
+  "-•=!#!=•",
+  "-<+{?}+>",
   "-z[(&)]z",
   "-odO0Obo"
 ];
@@ -20,9 +20,7 @@ function setPattern() {
 
   document.getElementById("curvedText").innerHTML = patterns[chosenPattern];
 
-  if (document.getElementById("curvedText") != null) {
-    new CircleType(document.getElementById("curvedText")).radius(window.innerWidth / (1440 / 215));
-  }
+  new CircleType(document.getElementById("curvedText")).radius(window.innerWidth / (1440 / 215));
 }
 
 /*
