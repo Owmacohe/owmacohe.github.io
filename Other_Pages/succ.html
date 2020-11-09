@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\styles/succ-style.css">
+    <script src="\scripts/succ-script.js" charset="utf-8"></script>
+    <title>Succculents!</title>
+  </head>
+
+  <body onload="setup()">
+    <h1 style="font-size: 4vw; margin: 2vw; margin-bottom: 0;">Succculents!</h1>
+
+    <div class="flexrow">
+      <div class="flexcolumn">
+        <h1 id="succCount"></h1>
+        <h1 id="dayCount"></h1>
+        <h1 id="wealthCount"></h1>
+        <h1 id="coinsCount"></h1>
+      </div>
+      <button onclick="grow(1)" id="growButton"><h2>Grow a succulent</h2></button>
+    </div>
+
+    <div id="markets"></div>
+    <h2>(overall market wealth increases each day if a certain threshhold is reached)</h2>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  font-family: "Varela Round";
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 0.5vw solid white;
+  border-radius: 2vw;
+
+  width: 15vw;
+  height: 10vw;
+  margin: 1vw;
+
+  font-size: 0.75vw;
+  font-family: "Varela Round";
+}
+
+button:hover {
+  border: 0.5vw solid grey;
+  background-color: #262626;
+}
+
+#growButton {
+  background-color: limegreen;
+  color: black;
+  border: none;
+
+  width: 25vw;
+  height: 15vw;
+  margin-left: 10vw;
+
+  font-size: 2vw;
+}
+
+#growButton:hover {
+  border: 0.5vw solid grey;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-flow: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-flow: row;
+
+  margin: 5vw;
+}
