@@ -1,7 +1,9 @@
-var typeDes = ["type", "rocky", "water", "gas", "lush"];
-var sizeDec = ["size", "asteroid", "dwarf", "average", "giant"];
+/* ### VARIABLES ### */
 
-var decPath = [typeDes, sizeDec];
+var decPath = [
+  ["TYPE", "rocky", "water", "gas", "lush"],
+  ["SIZE", "asteroid", "dwarf", "average", "giant"]
+];
 var pathNum = 0;
 
 var leftChoice = "";
@@ -9,6 +11,11 @@ var rightchoice = "";
 
 var worldStats = [];
 
+
+
+/* ### GAME METHODS ### */
+
+//starting function
 function createWorld() {
   document.getElementById("worldBox").style.visibility = "visible";
   document.getElementById("beginButton").style.visibility = "hidden";
@@ -16,6 +23,7 @@ function createWorld() {
   loadChoice();
 }
 
+//loads apropriate choices depending on the current pathNum
 function loadChoice() {
   document.getElementById("choice").innerHTML = "Choose a " + decPath[pathNum][0] + " for your world";
 
@@ -30,6 +38,7 @@ function loadChoice() {
   document.getElementById("rightChoice").innerHTML = rightChoice;
 }
 
+//sets the world values depending on which direction has been chosen, and loads the new choice
 function choose(direction) {
   switch (direction) {
     case "left":
@@ -46,6 +55,10 @@ function choose(direction) {
 
   console.log(worldStats);
 }
+
+
+
+/* ### UTILITY METHODS ### */
 
 function getNonZeroNum(length) {
   var result = Math.floor(Math.random() * length);
