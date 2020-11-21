@@ -42,6 +42,7 @@ a {
   text-decoration: none;
 
   margin: 2vw;
+  padding: 1vw;
 }
 
 a:hover {
@@ -55,6 +56,12 @@ a:hover {
   margin: 1.5vw;
 }
 
+.flexcolumn {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 .flexrow {
   display: flex;
   flex-flow: row;
@@ -63,6 +70,7 @@ a:hover {
 .smallA {
   font-size: 4vw;
   margin: 0;
+  padding: 0;
   border: none;
 }
 
