@@ -1,0 +1,166 @@
+/* ### Colours ### */
+
+:root {
+  --green: #0aff0a;
+  --green-trans: rgba(10, 255, 10, 0.25);
+
+  --pink: #ff0aff;
+  --pink-trans: rgba(255, 10, 255, 0.25);
+}
+
+/* ### Elements ### */
+
+body {
+  background-color: black;
+  color: var(--green);
+
+  font-family: "Disposable";
+  font-size: 2.5vw;
+}
+
+h1 {
+  font-size: 7vw;
+  font-family: "DPComic";
+  margin: 1vw;
+}
+
+h2 {
+  font-size: 5vw;
+  font-family: "DPComic";
+  margin: 0.5vw;
+}
+
+h3 {
+  font-size: 3vw;
+  font-family: "DPComic";
+  margin: 0.5vw;
+}
+
+h4 {
+  font-family: "DPComic";
+  margin: 0.5vw;
+}
+
+p {
+  margin: 0.5vw;
+}
+
+a {
+  border: 0.5vw solid var(--green);
+
+  margin: 1vw;
+  padding: 1vw;
+
+  font-size: 3.5vw;
+  font-family: "Disposable";
+  text-decoration: none;
+
+  color: var(--green);
+  background-color: var(--green-trans);
+}
+
+a:hover {
+  border-color: var(--green-trans);
+}
+
+
+
+/* ### Flex classes ### */
+
+.flexcolumn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flexcolumn_border {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border: 0.5vw solid var(--green);
+  margin: 1vw;
+  padding: 1vw;
+
+  width: 40vw;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexrow_wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flexitem {
+  /* TODO */
+}
+
+
+
+/* ### IDs and other classes ### */
+
+.underline {
+  text-decoration: underline;
+}
+
+.green-trans {
+  color: var(--green-trans);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.pink-trans {
+  color: var(--pink-trans);
+}
+
+.speech {
+  font-family: "DPComic";
+  color: var(--pink);
+
+  background-color: var(--pink-trans);
+  border: solid var(--pink);
+
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+}
+
+.code {
+  font-family: "Oxygene";
+  font-size: 2vw;
+}
+
+
+
+/* ### Font Faces ### */
+
+@font-face { /* disposabledroid (default) */
+    font-family: "Disposable";
+    src: url("DisposableDroid.woff2") format("woff2"),
+         url("DisposableDroid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* dpcomic (special) */
+    font-family: "DPComic";
+    src: url("DPComic.woff2") format("woff2"),
+         url("DPComic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* Oxygene1 (hidden text) */
+    font-family: "Oxygene";
+    src: url("Oxygene1.woff2") format("woff2"),
+         url("Oxygene1.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
