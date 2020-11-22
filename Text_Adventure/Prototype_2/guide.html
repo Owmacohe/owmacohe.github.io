@@ -11,10 +11,16 @@
 
       <!-- Header -->
       <h1>Arbitrium South</h1>
-      <div class="flexrow" style="background-color: var(--green-trans); margin-bottom: 3vw;">
-        <h3>Style guide</h3>
-        <p>-</p>
-        <p class="underline">Created by Owen Hellum</p>
+      <div class="flexrow">
+        <div class="flexrow" style="background-color: var(--green-trans); margin-bottom: 5vw;">
+          <h3>Style guide</h3>
+          <p>-</p>
+          <p class="underline">Created by Owen Hellum</p>
+        </div>
+        <div class="flexrow" style="background-color: var(--pink-trans); margin-bottom: 5vw; margin-left: 3vw;">
+          <p>Game alpha version can be downloaded</p>
+          <a href="https://omch.itch.io/arbitrium">here</a>
+        </div>
       </div>
 
       <div class="flexrow">
@@ -24,15 +30,15 @@
           <div class="flexcolumn_border">
             <h2 class="underline">Text Styles</h2>
             <!-- DisposableDroidBB -->
-            <p class="underline" style="margin-top: 3vw;">Disposable Droid BB</p>
+            <p class="underline" style="margin-top: 5vw;">Disposable Droid BB</p>
             <p>Main game text. Used for information presented to the user.</p>
             <p><em>Italics may be used for emphasis in-text</em></p>
             <!-- DeluxePaintComic -->
-            <h4 class="underline" style="margin-top: 3vw;">DeluxePaint Comic</h4>
+            <h4 class="underline" style="margin-top: 5vw;">DeluxePaint Comic</h4>
             <h4>Secondary typeface. Used for headers, and most/all UI elements.</h4>
             <!-- Oxygene1 -->
-            <p class="code" style="margin-top: 3vw; text-decoration: underline;">OXYGENE 1</p>
-            <p class="code">"SECRET" TEXT. USUALLY OBSCURED OR FAINT.</p>
+            <p class="code" style="margin-top: 5vw; text-decoration: underline;">OXYGENE 1</p>
+            <p class="code">"SECRET" CODE TEXT. USUALLY OBSCURED OR FAINT.</p>
             <p class="code">USED EXCLUSEIVELY IN LOWER CASE, AS SHOWN BELOW.</p>
             <p class="code">this is secret hidden text</p>
           </div>
@@ -40,16 +46,54 @@
           <!-- Graphics -->
           <div class="flexcolumn_border">
             <h2 class="underline">Graphics</h2>
-          </div>
-
-          <!-- Logo Design -->
-          <div class="flexcolumn_border">
-            <h2 class="underline">Logo Design</h2>
-          </div>
-
-          <!-- Layouts -->
-          <div class="flexcolumn_border">
-            <h2 class="underline">Layouts</h2>
+            <p>(examples only, not final design)</p>
+            <!-- Background text -->
+            <div class="flexrow" style="margin-top: 5vw;">
+              <p style="font-size: 5vw;">a</p>
+              <p style="font-size: 5vw;">b</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">c</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">d</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.25);">e</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.10);">f</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.10);">g</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.25);">h</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">i</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">j</p>
+              <p style="font-size: 5vw;">k</p>
+              <p style="font-size: 5vw;">l</p>
+            </div>
+            <div class="flexrow">
+              <p style="font-size: 5vw;">a</p>
+              <p style="font-size: 5vw;">b</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">c</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">d</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.25);">e</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.10);">f</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.10);">g</p>
+              <p style="font-size: 5vw; color: rgba(10, 255, 10, 0.25);">h</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">i</p>
+              <p style="font-size: 5vw; color: var(--green-trans);">j</p>
+              <p style="font-size: 5vw;">k</p>
+              <p style="font-size: 5vw;">l</p>
+            </div>
+            <!-- Description -->
+            <p>Background text will be comprised of very low to high opacity text, to give the feel of ASCII art.</p>
+            <p>Background text will light up in certain areas as player interacts with the game. Text may even alter to display certain messages.</p>
+            <!-- Pixel art -->
+            <div class="flexrow_wrap" style="margin-top: 5vw;">
+              <img src="images/leaf.png" alt="[leaf image]">
+              <img src="images/minerals.png" alt="[minerals image]">
+              <img src="images/skull.png" alt="[skull image]">
+            </div>
+            <!-- Description -->
+            <p>Simple pixel art for pickup items, companions, etc. Compliments the background text.</p>
+            <!-- Buttons -->
+            <div class="flexrow" style="margin-top: 5vw;">
+              <button>Button variant 1</button>
+              <button style="border-left: 0.1vw solid var(--green); border-bottom: 0.1vw solid var(--green); background-color: black;">Button variant 2</button>
+            </div>
+            <!-- Description -->
+            <p>Buttons and clickable items will be thick and analog-reminiscent.</p>
           </div>
 
         </div>
@@ -65,25 +109,54 @@
             </div>
             <p>Used for nearly all text and background elements.</p>
             <!-- Transparent Green -->
-            <div class="flexrow" style="margin-top: 3vw;">
+            <div class="flexrow" style="margin-top: 5vw;">
               <h2 class="green-trans">[!]</h2>
               <p class="green-trans">Transparent green</p>
             </div>
             <p class="green-trans">Backgrounds for most text blocks and buttons. Background text fades in and out of opacity.</p>
             <!-- Pink -->
-            <div class="flexrow" style="margin-top: 3vw;">
+            <div class="flexrow" style="margin-top: 5vw;">
               <h2 class="pink">[+]</h2>
               <p class="pink">Bright pink</p>
             </div>
             <p class="pink">Complementary to main colour. Used for very important details and stand-out words.</p>
             <!-- Transparent Pink -->
-            <div class="flexrow" style="margin-top: 3vw;">
+            <div class="flexrow" style="margin-top: 5vw;">
               <h2 class="pink-trans">[0]</h2>
               <p class="pink-trans">Transparent pink</p>
             </div>
             <p class="pink-trans">Backgrounds for pink text blocks and buttons.</p>
           </div>
 
+          <!-- Logo Design -->
+          <div class="flexcolumn_border">
+            <h2 class="underline">Logo Design</h2>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Layouts -->
+      <div id="flexcolumn_layout">
+        <h2 class="underline">Layouts</h2>
+
+        <div class="flexrow_wrap" style="margin-top: 5vw;">
+          <div class="flexcolumn">
+            <img src="images/title.png" alt="[title scene]" class="layout_img">
+            <p>Title scene</p>
+          </div>
+          <div class="flexcolumn">
+            <img src="images/main.png" alt="[main scene]" class="layout_img">
+            <p>Main game scene</p>
+          </div>
+          <div class="flexcolumn">
+            <img src="images/prologue.png" alt="[narrative scene 1]" class="layout_img">
+            <p>Narrative scene</p>
+          </div>
+          <div class="flexcolumn">
+            <img src="images/epilogue.png" alt="[narrative scene 2]" class="layout_img">
+            <p>Narrative scene</p>
+          </div>
         </div>
       </div>
 

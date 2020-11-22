@@ -2,10 +2,10 @@
 
 :root {
   --green: #0aff0a;
-  --green-trans: rgba(10, 255, 10, 0.25);
+  --green-trans: rgba(10, 255, 10, 0.5);
 
   --pink: #ff0aff;
-  --pink-trans: rgba(255, 10, 255, 0.25);
+  --pink-trans: rgba(255, 10, 255, 0.5);
 }
 
 /* ### Elements ### */
@@ -45,7 +45,7 @@ p {
   margin: 0.5vw;
 }
 
-a {
+button {
   border: 0.5vw solid var(--green);
 
   margin: 1vw;
@@ -59,8 +59,17 @@ a {
   background-color: var(--green-trans);
 }
 
-a:hover {
+button:hover {
   border-color: var(--green-trans);
+}
+
+a {
+  color: var(--pink);
+}
+
+img {
+  width: 11vw;
+  margin: 1vw;
 }
 
 
@@ -135,6 +144,23 @@ a:hover {
 .code {
   font-family: "Oxygene";
   font-size: 2vw;
+}
+
+#flexcolumn_layout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border: 0.5vw solid var(--green);
+  margin: 1vw;
+  padding: 1vw;
+
+  width: 85vw;
+}
+
+.layout_img {
+  border: 0.1vw solid var(--green);
+  width: 40vw;
 }
 
 
