@@ -68,7 +68,7 @@ a {
 }
 
 img {
-  width: 11vw;
+  height: 11vw;
   margin: 1vw;
 }
 
@@ -160,7 +160,11 @@ img {
 
 .layout_img {
   border: 0.1vw solid var(--green);
-  width: 40vw;
+  height: 22.5vw;
+}
+
+.img_big {
+  height: 25vw;
 }
 
 
