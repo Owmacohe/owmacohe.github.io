@@ -6,7 +6,7 @@ body {
 
   display: flex;
   align-items: center;
-  flex-flow: column;
+  flex-direction: column;
 
   font-family: "Varela Round";
 }
@@ -48,12 +48,12 @@ button:hover {
 
 .flexcolumn {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
 }
 
 .flexrow {
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
 
   margin: 5vw;
 }

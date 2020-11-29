@@ -46,14 +46,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column;
+  flex-direction: column;
 }
 
 .flexrow {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row;
+  flex-direction: row;
 }
 
 .flexitem {
@@ -80,7 +80,7 @@ img {
 .flexrow_wrap {
   display: flex;
   justify-content: center;
-  flex-flow: row;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -116,7 +116,7 @@ img {
 }
 
 #descriptionBox {
-  flex-flow: row;
+  flex-direction: row;
   width: 25vw;
   font-size: 1.65vw;
 }
@@ -141,7 +141,7 @@ img {
 
   display: flex;
   align-items: center;
-  flex-flow: column;
+  flex-direction: column;
 }
 
 
@@ -189,7 +189,7 @@ img {
   }
 
   .flexrow {
-    flex-flow: column;
+    flex-direction: column;
   }
 
   #curvedText {
