@@ -207,6 +207,20 @@ button:hover {
   text-decoration: none;
 }
 
+.bigA {
+  background-color: var(--links);
+  color: var(--boxes);
+  border: none;
+  border-radius: 0.5vw;
+
+  width: auto;
+  height: auto;
+  padding: 2vw;
+
+  font-size: 3vw;
+  text-decoration: none;
+}
+
 
 
 /* Special Classes and IDs */

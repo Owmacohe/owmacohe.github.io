@@ -1,0 +1,95 @@
+:root {
+  --background: #1e2025;
+  --body: #3A6975;
+  --links: #97C56B;
+  --hover: #CAE0B5;
+  --code: #75463a;
+  --box: #070809;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--body);
+
+  font-size: 3vw;
+  font-family: "Teko";
+}
+
+h1, h2 {
+  margin: 2vw;
+}
+
+h1 {
+  font-size: 7vw;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+a {
+  color: var(--links);
+
+  margin: 2vw;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+.flexcolumn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background: var(--box);
+  color: var(--code);
+
+  font-family: "Disposable";
+  font-size: 3vw;
+
+  position: relative;
+  height: 45vw;
+  width: 70vw;
+  border-radius: 50vw / 7vw;
+}
+
+.box:after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+  background: inherit;
+  border-radius: 5vw / 23vw;
+  z-index: -1;
+}
+
+@font-face {
+    font-family: "Disposable";
+    src: url("\\styles/fonts/DisposableDroid.woff2") format("woff2"),
+         url("\\styles/fonts/DisposableDroid.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Teko";
+    src: url("TekoRegular.woff2") format("woff2"),
+         url("TekoRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
