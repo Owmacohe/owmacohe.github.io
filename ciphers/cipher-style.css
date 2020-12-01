@@ -1,40 +1,61 @@
 :root {
-  --background: #1e2025;
-  --body: #3A6975;
-  --links: #97C56B;
-  --hover: #CAE0B5;
-  --code: #75463a;
-  --box: #070809;
+  --background: #070809;
+  --body: #4b6c2b;
+  --box: #1e2025;
+  --code: #97c56b;
+  --hover: #b0ff64;
 }
 
 body {
   background-color: var(--background);
   color: var(--body);
 
-  font-size: 3vw;
-  font-family: "Teko";
+  font-size: 1.5vw;
+  font-family: "Share Tech Mono";
 }
 
 h1, h2 {
-  margin: 2vw;
+  margin: 0vw;
 }
 
 h1 {
-  font-size: 7vw;
+  font-size: 6vw;
 }
 
 h2 {
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 a {
-  color: var(--links);
+  color: var(--code);
 
   margin: 2vw;
 }
 
 a:hover {
   color: var(--hover);
+}
+
+input {
+  background: var(--box);
+  border: 0.2vw solid var(--code);
+  color: var(--code);
+
+  font-size: 2vw;
+  font-family: "Share Tech Mono";
+
+  padding: 1vw;
+}
+
+button {
+  border: none;
+  background: none;
+
+  margin-left: 2vw;
+}
+
+img {
+  width: 3.5vw;
 }
 
 .flexcolumn {
@@ -53,29 +74,17 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 4vw;
 
   background: var(--box);
   color: var(--code);
+  border-top: 1vw solid var(--code);
 
   font-family: "Disposable";
   font-size: 3vw;
 
-  position: relative;
-  height: 45vw;
-  width: 70vw;
-  border-radius: 50vw / 7vw;
-}
-
-.box:after {
-  content: "";
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  right: -5%;
-  left: -5%;
-  background: inherit;
-  border-radius: 5vw / 23vw;
-  z-index: -1;
+  width: 80vw;
+  margin: 1vw;
 }
 
 @font-face {
@@ -87,9 +96,9 @@ a:hover {
 }
 
 @font-face {
-    font-family: "Teko";
-    src: url("TekoRegular.woff2") format("woff2"),
-         url("TekoRegular.woff") format("woff");
+    font-family: "Share Tech Mono";
+    src: url("ShareTechMono.woff2") format("woff2"),
+         url("ShareTechMono.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
