@@ -70,7 +70,11 @@ img {
   flex-direction: row;
 }
 
-.box {
+.one_dots {
+  user-select: none;
+}
+
+#box {
   display: flex;
   align-items: center;
   flex-direction: column;

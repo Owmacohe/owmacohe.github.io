@@ -4,41 +4,41 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="cipher-style.css">
     <script src="checkCipher.js" charset="utf-8"></script>
-    <title>A</title>
+    <title>Album</title>
   </head>
 
   <body class="flexcolumn" onload="setup()">
+    <div class="one_dots" style="position: absolute;">.</div>
+
     <!-- Header -->
     <div class="flexrow">
       <div class="flexcolumn" style="margin-right: 2vw;">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
       </div>
       <div class="flexcolumn">
         <h1 id="main_title"></h1>
         <h2 id="sub_title"></h2>
       </div>
       <div class="flexcolumn" style="margin-left: 2vw;">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
       </div>
     </div>
     <!-- Box -->
     <div class="flexcolumn" style="margin-top: 5vw;">
-      <div class="box">
-        This is a cipher
-      </div>
+      <div id="box"></div>
       <div class="flexrow">
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <div class="dots"></div>
+        <div class="dots"></div>
       </div>
     </div>
     <!-- Submission -->
     <div class="flexcolumn" style="margin-top: 2vw;">
       <div class="flexrow">
-        <input type="text" id="submitField">
+        <input type="text" id="submitField" onkeydown="slide(event)">
         <button onclick="slide()" id="submitButton"><img src="arrow.png"></button>
       </div>
       <h3 style="visibility: hidden;" id="result"></h3>
