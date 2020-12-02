@@ -6,28 +6,28 @@ var answerSets = [
   },
   {
       "name": "Brochure",
-      "question": "Sgd bzohszk ne Mdv Ydzkzmc",
-      "answer": "Wellington" /* ### "The capital of New Zealand" ### */
-  },
-  {
-      "name": "Codex",
-      "question": "01101111 01110111 01101101 01100001 01100011 01101111 01101000 01100101 00101110 01100111 01101001 01110100 01101000 01110101 01100010 00101110 01101001 01101111 00101111 01100011 01101001 01110000 01101000 01100101 01110010 01110011 00101111 01110010 01100101 01101101 01101111 01110110 01100101 01110010 00101101 01101111 01100110 00101101 01101111 01100010 01110011 01110100 01100001 01100011 01101100 01100101 01110011 00101110 01101000 01110100 01101101 01101100",
-      "answer": "4" /* ### "How many arms does Ganesha usually have?" ### */
-  },
-  {
-      "name": "Dictionary",
       "question": "Greater than a colon, closing with a parent(heses)",
       "answer": ">:)"
   },
   {
+      "name": "Codex",
+      "question": "Sgd bzohszk ne Mdv Ydzkzmc",
+      "answer": "Wellington" /* ### "The capital of New Zealand" ### */
+  },
+  {
+      "name": "Dictionary",
+      "question": "01101111 01110111 01101101 01100001 01100011 01101111 01101000 01100101 00101110 01100111 01101001 01110100 01101000 01110101 01100010 00101110 01101001 01101111 00101111 01100011 01101001 01110000 01101000 01100101 01110010 01110011 00101111 01110010 01100101 01101101 01101111 01110110 01100101 01110010 00101101 01101111 01100110 00101101 01101111 01100010 01110011 01110100 01100001 01100011 01101100 01100101 01110011 00101110 01101000 01110100 01101101 01101100",
+      "answer": "4" /* ### "owmacohe.github.io/ciphers/remover-of-obstacles.html" > "How many arms does Ganesha usually have?" ### */
+  },
+  {
       "name": "Essay",
-      "question": "[room under construction]",
-      "answer": "TODO" /* ###  ### */
+      "question": "<img src='checkerboard.png' style='width: 35vw; margin-bottom: 2vw;'>.-.. --..-- ..- --..-- ..- --..-- .-. --..-- -.. --..-- .-. --..-- .-. --..-- ..- --..-- ..- --..-- .-..",
+      "answer": "Write" /* ### "L,U,U,R,D,R,R,U,U,L" ### */
   },
   {
       "name": "Folio",
-      "question": "[room under construction]",
-      "answer": "TODO" /* ###  ### */
+      "question": "<div>SSB0b29rIHRoZSBvbmUgbGVzcyB0cmF2ZWxlZCBieQ==</div><div>QW5kIHRoYXQgaGFzIG1hZGUgYWxsIHRoZSBfX18=</div><div style='margin-top: 2vw;'>Kwb tpu mf vlh wqiijx fjeus ts vvgbth?</div>",
+      "answer": "512" /* ### "I took the one less traveled by / And that has made all the ___" > "difference" >  "How old is the oldest shark on record?" ### */
   },
   {
       "name": "Grimoire",
