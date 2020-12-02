@@ -7,12 +7,127 @@ var answerSets = [
   {
       "name": "Brochure",
       "question": "Sgd bzohszk ne Mdv Ydzkzmc",
-      "answer": "Wellington"
+      "answer": "Wellington" /* ### "The capital of New Zealand" ### */
   },
   {
       "name": "Codex",
+      "question": "--- .-- -- .- -.-. --- .... . .-.-.- --. .. - .... ..- -... .-.-.- .. --- -..-. -.-. .. .--. .... . .-. ... -..-. .-. . -- --- ...- . .-. -....- --- ..-. -....- --- -... ... - .- -.-. .-.. . ... .-.-.- .... - -- .-..",
+      "answer": "4" /* ### "How many arms does Ganesha usually have?" ### */
+  },
+  {
+      "name": "Dictionary",
+      "question": "Greater than a colon, closing with a parent(heses)",
+      "answer": ">:)"
+  },
+  {
+      "name": "Essay",
       "question": "[room under construction]",
-      "answer": "TODO"
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Folio",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Grimoire",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Hardcover",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Index",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Journal",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Keynote",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Lexicon",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Manual",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Novel",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Omnibus",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Paperback",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Quarto",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Reprint",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Scroll",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Tome",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "U",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Vade Mecum",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "W",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Xylograph",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Y",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
+  },
+  {
+      "name": "Zine",
+      "question": "[room under construction]",
+      "answer": "TODO" /* ###  ### */
   }
 ];
 
@@ -38,7 +153,7 @@ function setup() {
   }
 
   for (var j = 0; j < dots.length; j++) {
-    for (var k = 0; k < 40; k++) {
+    for (var k = 0; k < 35; k++) {
       dots[j].innerHTML += ".";
     }
   }
@@ -58,13 +173,17 @@ var dotCount = setInterval(function() {
     one_dot.setAttribute("class", "one_dots");
     one_dot.setAttribute("style", "position: absolute; z-index: -1; left: " + Math.floor(Math.random() * 99) + "vw;" + " top: " + Math.floor(Math.random() * 54) + "vw;" + " opacity: " + Math.floor(Math.random() * dotsOpacity) + "%;");
     one_dot.innerHTML = ".";
+
+    if (Math.floor(Math.random() * 20) == 0) {
+      one_dot.style.color = "#b0ff64";
+    }
   }
 }, 50);
 
 function slide() {
   var input = document.getElementById("submitField");
 
-  if (input.value == answerSets[document.title[0].charCodeAt(0) - 65].answer) {
+  if (input.value.toLowerCase() == answerSets[document.title[0].charCodeAt(0) - 65].answer.toLowerCase()) {
     showResult(true);
     sliding = true;
   }
@@ -98,7 +217,6 @@ function showResult(isCorrect) {
     }
 
     if (slideValue >= maxSlide) {
-      //window.location.href = String.fromCharCode(document.title[0].charCodeAt(0) + 1) + ".html";
       document.title = answerSets[document.title[0].charCodeAt(0) - 64].name;
       setup();
       clearInterval(slideCount);
