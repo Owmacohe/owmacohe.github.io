@@ -31,7 +31,7 @@ var answerSets = [
   },
   {
       "name": "Grimoire",
-      "question": "[room under construction]",
+      "question": "",
       "answer": "TODO" /* ###  ### */
   },
   {
