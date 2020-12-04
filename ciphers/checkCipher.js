@@ -21,7 +21,7 @@ var answerSets = [
   },
   {
       "name": "Essay",
-      "question": "<img src='checkerboard.png' style='width: 35vw; margin-bottom: 2vw;'>.-.. --..-- ..- --..-- ..- --..-- .-. --..-- -.. --..-- .-. --..-- .-. --..-- ..- --..-- ..- --..-- .-..",
+      "question": "<img src='checkerboard.png' style='width: 35vw; margin-bottom: 2vw;' onload='setHeight()'>.-.. --..-- ..- --..-- ..- --..-- .-. --..-- -.. --..-- .-. --..-- .-. --..-- ..- --..-- ..- --..-- .-..",
       "answer": "Write" /* ### "L,U,U,R,D,R,R,U,U,L" ### */
   },
   {
@@ -31,7 +31,7 @@ var answerSets = [
   },
   {
       "name": "Grimoire",
-      "question": "",
+      "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
@@ -146,21 +146,53 @@ function setup() {
   document.getElementById("submitField").value = "";
   document.getElementById("box").innerHTML = answerSets[document.title[0].charCodeAt(0) - 65].question;
 
-  var dots = document.getElementsByClassName("dots");
+  var dotLines = document.getElementsByClassName("dotLines");
 
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].innerHTML = "";
+  for (var i = 0; i < dotLines.length; i++) {
+    dotLines[i].innerHTML = "";
   }
 
-  for (var j = 0; j < dots.length; j++) {
+  for (var j = 0; j < dotLines.length; j++) {
     for (var k = 0; k < 35; k++) {
-      dots[j].innerHTML += ".";
+      dotLines[j].innerHTML += ".";
     }
   }
+
+  var letterCode = document.title[0].charCodeAt(0) - 65;
+
+  if (letterCode <= 9) { // A to J (10 letters)
+    brightChance = 700;
+  }
+  else if (letterCode > 9 && letterCode <= 15) { // K to P (6 letters)
+    brightChance = 100;
+  }
+  else if (letterCode > 15 && letterCode <= 19) { // Q to T (6 letters)
+    brightChance = 30;
+  }
+  else if (letterCode > 19 && letterCode <= 24) { // U to Y (3 letters)
+    brightChance = 3;
+  }
+  else if (letterCode > 24) { // Z (1 letter)
+    brightChance = 0;
+  }
+
+  dotsCount = 200;
+  dotsOpacity = 50;
+
+  body = document.body, html = document.documentElement;
+  setHeight();
 }
 
-var dotsCount = 100;
-var dotsOpacity = 60;
+function setHeight() {
+  height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+}
+
+var dotsCount;
+var dotsOpacity;
+var brightChance;
+
+var body;
+var height;
 
 var dotCount = setInterval(function() {
   for (var i = 0; i < document.getElementsByClassName("one_dots").length; i++) {
@@ -171,11 +203,20 @@ var dotCount = setInterval(function() {
     var one_dot = document.createElement("DIV");
     document.body.appendChild(one_dot);
     one_dot.setAttribute("class", "one_dots");
-    one_dot.setAttribute("style", "position: absolute; z-index: -1; left: " + Math.floor(Math.random() * 99) + "vw;" + " top: " + Math.floor(Math.random() * 54) + "vw;" + " opacity: " + Math.floor(Math.random() * dotsOpacity) + "%;");
+    one_dot.setAttribute("style",
+        "position: absolute; z-index: -1;" +
+        " left: " + Math.floor(Math.random() * 99) + "vw;" +
+        " top: " + Math.floor(Math.random() * (height / 15)) + "vw;" +
+        " opacity: " + Math.floor(Math.random() * dotsOpacity) + "%;");
     one_dot.innerHTML = ".";
 
-    if (Math.floor(Math.random() * 20) == 0) {
-      one_dot.style.color = "#b0ff64";
+    if (Math.floor(Math.random() * brightChance) == 0 && sliding == false) {
+      one_dot.style.color = "red";
+      one_dot.style.opacity = "100%";
+    }
+    else if (sliding == true) {
+      dotsOpacity = 100;
+      dotsCount = 300;
     }
   }
 }, 50);
