@@ -8,6 +8,8 @@
   --pink-trans: rgba(255, 10, 255, 0.5);
 }
 
+
+
 /* ### Elements ### */
 
 body {
@@ -164,7 +166,7 @@ img {
 }
 
 .img_big {
-  height: 25vw;
+  height: 17vw;
 }
 
 
