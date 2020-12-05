@@ -74,6 +74,10 @@ p {
   font-size: 2vw;
 }
 
+img {
+  width: 40vw;
+}
+
 
 
 /* ### Flex classes ### */

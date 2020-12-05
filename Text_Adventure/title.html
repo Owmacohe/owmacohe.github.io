@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="adventure-style.css">
+    <script src="utilities.js" charset="utf-8"></script>
+    <title>Landing page</title>
+  </head>
+
+  <body class="flexcolumn" onload="loadText()">
+    <h1>Arbitrium South landing page</h1>
+    <div class="flexrow">
+      <div class="flexcolumn">
+        <a href="Prototype_2/guide.html" style="width: 25vw;"><h1>Style guide</h1></a>
+        <div id="s7"></div>
+      </div>
+      <img src="Prototype_2/images/logos/Arbitrium_Logo_Crest_Colour.png" alt="[Main logo]">
+      <div class="flexcolumn">
+        <a href="entry.html" style="width: 25vw;"><h1>Prototype of game</h1></a>
+        <div id="s9"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  function loadText() {
+      document.getElementById("s7").innerHTML = randomFill("up");
+      document.getElementById("s9").innerHTML = randomFill("up");
+  }
+</script>
