@@ -26,13 +26,13 @@ var answerSets = [
   },
   {
       "name": "Folio",
-      "question": "<div>SSB0b29rIHRoZSBvbmUgbGVzcyB0cmF2ZWxlZCBieQ==</div><div>QW5kIHRoYXQgaGFzIG1hZGUgYWxsIHRoZSBfX18=</div><div style='margin-top: 2vw;'>Kwb tpu mf vlh wqiijx fjeus ts vvgbth?</div>",
-      "answer": "512" /* ### "I took the one less traveled by / And that has made all the ___" > "difference" >  "How old is the oldest shark on record?" ### */
+      "question": "<div style='margin-bottom: 2vw;'>Falling Lightly Yonder, Yesterday's Old Uncle, From Out Of Lost Space</div>omch.tech/ciphers/___-___-_____.html",
+      "answer": "Gimli" /* ### fly you fools > luncheon > "Who won the kill count contest between Gimli and Legolas at the battle of Helm's Deep?" ### */
   },
   {
       "name": "Grimoire",
-      "question": "[room under construction]",
-      "answer": "TODO" /* ###  ### */
+      "question": "<div>SSB0b29rIHRoZSBvbmUgbGVzcyB0cmF2ZWxlZCBieQ==</div><div>QW5kIHRoYXQgaGFzIG1hZGUgYWxsIHRoZSBfX18=</div><div style='margin-top: 2vw;'>Kwb tpu mf vlh wqiijx fjeus ts vvgbth?</div>",
+      "answer": "512" /* ### "I took the one less traveled by / And that has made all the ___" > "difference" >  "How old is the oldest shark on record?" ### */
   },
   {
       "name": "Hardcover",
