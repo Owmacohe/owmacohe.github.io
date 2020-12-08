@@ -74,6 +74,11 @@ img {
   margin: 1vw;
 }
 
+video {
+  height: 20vw;
+  margin: 2vw;
+}
+
 
 
 /* ### Flex classes ### */
@@ -106,10 +111,6 @@ img {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.flexitem {
-  /* TODO */
 }
 
 
