@@ -26,18 +26,18 @@ var answerSets = [
   },
   {
       "name": "Folio",
-      "question": "<div style='margin-bottom: 2vw;'>Falling Lightly Yonder, Yesterday's Old Uncle, From Out Of Lost Space</div>omch.tech/ciphers/___-___-_____.html",
-      "answer": "Gimli" /* ### fly you fools > luncheon > "Who won the kill count contest between Gimli and Legolas at the battle of Helm's Deep?" ### */
-  },
-  {
-      "name": "Grimoire",
       "question": "<div>SSB0b29rIHRoZSBvbmUgbGVzcyB0cmF2ZWxlZCBieQ==</div><div>QW5kIHRoYXQgaGFzIG1hZGUgYWxsIHRoZSBfX18=</div><div style='margin-top: 2vw;'>Kwb tpu mf vlh wqiijx fjeus ts vvgbth?</div>",
       "answer": "512" /* ### "I took the one less traveled by / And that has made all the ___" > "difference" >  "How old is the oldest shark on record?" ### */
   },
   {
+      "name": "Grimoire",
+      "question": "<div class='flexrow_wrap'><div class='characters'>S C M A</div><div class='characters'>W H B L</div><div class='characters'>I N T P</div><div class='characters'>T U O H</div></div><div style='margin-top: 3vw;'>6 1 20 8 15 13 19</div><div style='margin-top: 3vw;'>Bhta we lme wlsbwxt hjsmf yrxuqt as tal kajqd?</div>",
+      "answer": "Mariana" /* ### "switch numb to alph" > fathoms > "What is the deepest ocean trench in the world?" ### */
+  },
+  {
       "name": "Hardcover",
-      "question": "[room under construction]",
-      "answer": "TODO" /* ###  ### */
+      "question": "<div style='margin-bottom: 2vw;'>Falling Lightly Yonder, Yesterday's Old Uncle, From Out Of Lost Space</div>omch.tech/ciphers/___-___-_____.html",
+      "answer": "Gimli" /* ### fly you fools > luncheon > "Who won the kill count contest between Gimli and Legolas at the battle of Helm's Deep?" ### */
   },
   {
       "name": "Index",

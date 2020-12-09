@@ -70,8 +70,22 @@ img {
   flex-direction: row;
 }
 
+.flexrow_wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .one_dots {
   user-select: none;
+}
+
+.characters {
+  width: 60vw;
+
+  text-align: center;
+  font-size: 5vw;
 }
 
 #box {
