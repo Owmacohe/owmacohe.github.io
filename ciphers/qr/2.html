@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\ciphers/cipher-style.css">
+    <title>QR 2</title>
+  </head>
+
+  <body class="flexcolumn">
+    <div id="box">
+      What is all around, yet the target of household cleanliness, and might be called a very different thing on another planet?
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var dotsCount = 100;
+    var dotsOpacity = 60;
+
+    var dotCount = setInterval(function() {
+      for (var i = 0; i < document.getElementsByClassName("one_dots").length; i++) {
+        document.getElementsByClassName("one_dots")[i].remove();
+      }
+
+      for (var j = 0; j < dotsCount; j++) {
+        var one_dot = document.createElement("DIV");
+        document.body.appendChild(one_dot);
+        one_dot.setAttribute("class", "one_dots");
+        one_dot.setAttribute("style", "position: absolute; z-index: -1; left: " + Math.floor(Math.random() * 99) + "vw;" + " top: " + Math.floor(Math.random() * 54) + "vw;" + " opacity: " + Math.floor(Math.random() * dotsOpacity) + "%;");
+        one_dot.innerHTML = ".";
+
+        if (Math.floor(Math.random() * 20) == 0) {
+          one_dot.style.color = "#b0ff64";
+        }
+      }
+    }, 50);
+  </script>
+</html>
