@@ -93,6 +93,16 @@ img {
   margin: 1vw;
 }
 
+.binary_column {
+  font-size: 1.2vw;
+  margin-top: 2.2vw;
+  margin-right: 1vw;
+}
+
+.period_column {
+  margin-top: -0.5vw;
+}
+
 #box {
   display: flex;
   align-items: center;
