@@ -194,7 +194,6 @@ var brightChance;
 var body;
 var height;
 
-/*
 var dotCount = setInterval(function() {
   for (var i = 0; i < document.getElementsByClassName("one_dots").length; i++) {
     document.getElementsByClassName("one_dots")[i].remove();
@@ -221,7 +220,6 @@ var dotCount = setInterval(function() {
     }
   }
 }, 50);
-*/
 
 function slide() {
   var input = document.getElementById("submitField");
