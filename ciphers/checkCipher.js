@@ -182,7 +182,7 @@ function setup() {
   body = document.body, html = document.documentElement;
   setHeight();
 
-  if (document.title[0] == "K") {
+  if (document.getElementsByClassName("pigpen_text") != null) {
     translatePigpen();
   }
 }
