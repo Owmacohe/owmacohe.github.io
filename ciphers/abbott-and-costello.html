@@ -13,6 +13,9 @@
   <script type="text/javascript">
     var dotsCount = 100;
     var dotsOpacity = 60;
+    var body = document.body
+    var html = document.documentElement;
+    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
     var dotCount = setInterval(function() {
       for (var i = 0; i < document.getElementsByClassName("one_dots").length; i++) {
