@@ -46,13 +46,13 @@ var answerSets = [
   },
   {
       "name": "Journal",
-      "question": "<div class='flexrow_wrap'><img class='qrs' src='qr/qr1.png'><img class='qrs' src='qr/qr2.png'><img class='qrs' src='qr/qr3.png'><img class='qrs' src='qr/qr4.png'><img class='qrs' src='qr/qr5.png'><img class='qrs' src='qr/qr6.png'></div><div style='margin-top: 3vw;'>omch.tech/ciphers/answer1-answer2-answer3.html</div>",
-      "answer": "Poaceae" /* ### earth > water > sugar > planet > "Plants root in the earth, pull up water, and absorb sugar through photosynthesis. What family of plant does grass belong to?" ### */
+      "question": "<div class='flexcolumn'><div class='pigpen_text'>WHOS ON FIRST</div><div style='margin-top: 3vw;'>omch.tech/ciphers/______-and-________.html</div></div>",
+      "answer": "I don't know" /* ### "WHOS ON FIRST" > "IF I AM ON FIRST BASE AND I MOVE FORWARD TWO BASES WHAT IS MY NAME" ### */
   },
   {
       "name": "Keynote",
-      "question": "<div class='flexcolumn'><div class='pigpen_text'>WHOS ON FIRST</div><div style='margin-top: 3vw;'>omch.tech/ciphers/______-and-________.html</div></div>",
-      "answer": "I don't know" /* ### "WHOS ON FIRST" > "IF I AM ON FIRST BASE AND I MOVE FORWARD TWO BASES WHAT IS MY NAME" ### */
+      "question": "<div class='flexrow_wrap'><img class='qrs' src='qr/qr1.png'><img class='qrs' src='qr/qr2.png'><img class='qrs' src='qr/qr3.png'><img class='qrs' src='qr/qr4.png'><img class='qrs' src='qr/qr5.png'><img class='qrs' src='qr/qr6.png'></div><div style='margin-top: 3vw;'>omch.tech/ciphers/answer1-answer2-answer3.html</div>",
+      "answer": "Poaceae" /* ### earth > water > sugar > planet > "Plants root in the earth, pull up water, and absorb sugar through photosynthesis. What family of plant does grass belong to?" ### */
   },
   {
       "name": "Lexicon",
