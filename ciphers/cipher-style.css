@@ -93,6 +93,13 @@ img {
   margin: 1vw;
 }
 
+.pigpens {
+  width: 3vw;
+  height: 3vw;
+
+  padding: 1vw;
+}
+
 .binary_column {
   font-size: 1.2vw;
   margin-top: 2.2vw;

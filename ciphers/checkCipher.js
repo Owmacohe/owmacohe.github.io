@@ -46,13 +46,13 @@ var answerSets = [
   },
   {
       "name": "Journal",
-      "question": "<div class='flexrow_wrap'><img class='qrs' src='qr/qr1.png'><img class='qrs' src='qr/qr2.png'><img class='qrs' src='qr/qr3.png'><img class='qrs' src='qr/qr4.png'><img class='qrs' src='qr/qr5.png'><img class='qrs' src='qr/qr6.png'></div><div style='margin-top: 3vw;'>omch.tech/ciphers/answerA-answerB-answerC.html</div>",
+      "question": "<div class='flexrow_wrap'><img class='qrs' src='qr/qr1.png'><img class='qrs' src='qr/qr2.png'><img class='qrs' src='qr/qr3.png'><img class='qrs' src='qr/qr4.png'><img class='qrs' src='qr/qr5.png'><img class='qrs' src='qr/qr6.png'></div><div style='margin-top: 3vw;'>omch.tech/ciphers/answer1-answer2-answer3.html</div>",
       "answer": "Poaceae" /* ### earth > water > sugar > planet > "Plants root in the earth, pull up water, and absorb sugar through photosynthesis. What family of plant does grass belong to?" ### */
   },
   {
       "name": "Keynote",
-      "question": "[room under construction]",
-      "answer": "TODO" /* ###  ### */
+      "question": "<div class='flexcolumn'><div class='pigpen_text'>WHOS ON FIRST</div><div style='margin-top: 3vw;'>omch.tech/ciphers/______-and-________.html</div></div>",
+      "answer": "I don't know" /* ### "WHOS ON FIRST" > "IF I AM ON FIRST BASE AND I MOVE FORWARD TWO BASES WHAT IS MY NAME" ### */
   },
   {
       "name": "Lexicon",
@@ -181,6 +181,10 @@ function setup() {
 
   body = document.body, html = document.documentElement;
   setHeight();
+
+  if (document.title[0] == "K") {
+    translatePigpen();
+  }
 }
 
 function setHeight() {
@@ -263,4 +267,27 @@ function showResult(isCorrect) {
       clearInterval(slideCount);
     }
   }, 1);
+}
+
+function translatePigpen() {
+  var targetDivs = document.getElementsByClassName("pigpen_text");
+  var temp = [];
+
+  for (var i = 0; i < targetDivs.length; i++) {
+    temp[i] = targetDivs[i].innerHTML;
+    targetDivs[i].innerHTML = "";
+
+    for (var j = 0; j < temp[i].length; j++) {
+      var pig = document.createElement("IMG");
+      targetDivs[i].appendChild(pig);
+
+      if (temp[i][j] != " " && temp[i][j] != "-") {
+        pig.setAttribute("class", "pigpens");
+        pig.setAttribute("src", "pigpen/pig_" + (temp[i][j].charCodeAt(0) - 64) + ".png");
+      }
+      else if (temp[i][j] == "-") {
+        pig.setAttribute("src", "pigpen/pig_dash.png");
+      }
+    }
+  }
 }
