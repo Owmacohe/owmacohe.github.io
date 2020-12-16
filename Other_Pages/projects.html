@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="\Media/Index_Media/OH.png">
+    <link rel="stylesheet" href="\styles/default-style.css">
+    <title></title>
+  </head>
+
+  <body class="flexcolumn">
+    <div class="flexitem">
+      <h2><a href="\Main_Pages/other.html">Return to the other works menu</a></h2>
+      <h1>Random project selector</h1>
+      <h2>Time to fuel mental anxiety over both working and not working!</h2>
+    </div>
+
+    <div class="flex_extra" style="flex-direction: row;">
+      <h1>Spend time <em id="project" style="color: #800000;">doing nothing</em> for <em id="hours" style="color: #800000;">an uncountable number of</em> hour(s)</h1>
+    </div>
+
+    <button type="button" onclick="loadProject()"><h1>Generage project</h1></button>
+    <h3><a href="\scripts/projects.js">View full list of possible projects here</a></h3>
+  </body>
+
+  <script src="\scripts/backTextLoader.js" charset="utf-8"></script>
+  <script src="\scripts/projects.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    function loadProject() {
+      var temp = Math.floor(Math.random() * projects.length);
+
+      document.getElementById("project").innerHTML = projects[temp].desc;
+      document.getElementById("hours").innerHTML = Math.floor(Math.random() * (projects[temp].maxHours - projects[temp].minHours + 1)) + parseInt(projects[temp].minHours);
+    }
+  </script>
+</html>
