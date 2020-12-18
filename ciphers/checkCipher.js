@@ -1,131 +1,134 @@
+var roomNames = [
+  "Album",
+  "Brochure",
+  "Codex",
+  "Dictionary",
+  "Essay",
+  "Folio",
+  "Grimoire",
+  "Hardcover",
+  "Index",
+  "Journal",
+  "Keynote",
+  "Lexicon",
+  "Manual",
+  "Novel",
+  "Omnibus",
+  "Paperback",
+  "Quarto",
+  "Reprint",
+  "Scroll",
+  "Tome",
+  "U",
+  "Vade Mecum",
+  "W",
+  "Xylograph",
+  "Y",
+  "Zine"
+]
+
 var answerSets = [
   {
-      "name": "Album",
       "question": "What am I miss_ng?",
       "answer": "i"
   },
   {
-      "name": "Brochure",
       "question": "Greater than a colon, closing with a parent(heses)",
       "answer": ">:)"
   },
   {
-      "name": "Codex",
       "question": "Sgd bzohszk ne Mdv Ydzkzmc",
       "answer": "Wellington" /* ### "The capital of New Zealand" ### */
   },
   {
-      "name": "Dictionary",
+      "question": "The world population was __________ in the year MCMXXVII",
+      "answer": "2000000000" /* ### 1927 ### */
+  },
+  {
       "question": "01101111 01101101 01100011 01101000 00101110 01110100 01100101 01100011 01101000 00101111 01100011 01101001 01110000 01101000 01100101 01110010 01110011 00101111 01110010 01100101 01101101 01101111 01110110 01100101 01110010 00101101 01101111 01100110 00101101 01101111 01100010 01110011 01110100 01100001 01100011 01101100 01100101 01110011 00101110 01101000 01110100 01101101 01101100",
       "answer": "4" /* ### "omch.tech/ciphers/remover-of-obstacles.html" > "How many arms does Ganesha usually have?" ### */
   },
   {
-      "name": "Essay",
       "question": "<img src='checkerboard.png' style='width: 35vw; margin-bottom: 2vw;' onload='setHeight()'>.-.. --..-- ..- --..-- ..- --..-- .-. --..-- -.. --..-- .-. --..-- .-. --..-- ..- --..-- ..- --..-- .-..",
       "answer": "Write" /* ### "L,U,U,R,D,R,R,U,U,L" ### */
   },
   {
-      "name": "Folio",
       "question": "<div class='flexrow'><div class='flexcolumn' style='align-items: flex-end;'><div class='binary_column' style='margin-top: 1vw;'>01100011 01101000 01100101 01100100 01100100 01100001 01110010</div><div class='binary_column'>01110011 01110100 01101001 01101100 01110100 01101111 01101110</div><div class='binary_column'>01110111 01100101 01101110 01110011 01101100 01100101 01111001 01100100 01100001 01101100 01100101</div><div class='binary_column'>01100010 01110010 01101001 01100101</div><div class='binary_column'>01110011 01110111 01101001 01110011 01110011</div><div class='binary_column'>01101101 01101111 01111010 01111010 01100001 01110010 01100101 01101100 01101100 01100001</div><div class='binary_column'>01100110 01100101 01110100 01100001</div><div class='binary_column'>01100111 01101111 01110101 01100100 01100001</div><div class='binary_column'>01110000 01100001 01110010 01101101 01101001 01100111 01101001 01100001 01101110 01100001</div><div class='binary_column'>01110000 01110010 01101111 01110110 01101111 01101100 01101111 01101110 01100101</div></div><div class='flexrow_wrap' style='width: 1vw; margin-left: 1vw; margin-right: 2vw;'><div class='period_column' style='margin-top: -0.5vw'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div><div class='period_column'>.</div></div><div style='align-items: left;'><div style='width: 25vw;'>01101110 01101111 01101110 01101111 01101110 01101111 01101110 01101111 01101110 01101111 01101110 01101111</div><div style='width: 30vw;'>01111001 01100101 01110011</div><div style='width: 25vw;'>01101110 01101111 01101110 01101111 01101110 01101111</div></div></div><div style='margin-top: 3vw;'>Country of origin of ____?</div>",
       "answer": "Greece" /* ### yes > feta ### */
   },
   {
-      "name": "Grimoire",
-      "question": "<div>SSB0b29rIHRoZSBvbmUgbGVzcyB0cmF2ZWxlZCBieQ==</div><div>QW5kIHRoYXQgaGFzIG1hZGUgYWxsIHRoZSBfX18=</div><div style='margin-top: 2vw;'>Kwb tpu mf vlh wqiijx fjeus ts vvgbth?</div>",
-      "answer": "512" /* ### "I took the one less traveled by / And that has made all the ___" > "difference" >  "How old is the oldest shark on record?" ### */
-  },
-  {
-      "name": "Hardcover",
-      "question": "<div class='flexrow_wrap'><div class='characters'>S C M A</div><div class='characters'>W H B L</div><div class='characters'>I N T P</div><div class='characters'>T U O H</div></div><div style='margin-top: 3vw;'>6 1 20 8 15 13 19</div><div style='margin-top: 3vw;'>Bhta we lme wlsbwxt hjsmf yrxuqt as tal kajqd?</div>",
-      "answer": "Mariana" /* ### "switch numb to alph" > fathoms > "What is the deepest ocean trench in the world?" ### */
-  },
-  {
-      "name": "Index",
-      "question": "<div style='margin-bottom: 2vw;'>Falling Lightly Yonder, Yesterday's Old Uncle, From Out Of Lost Space</div>omch.tech/ciphers/___-___-_____.html",
-      "answer": "Gimli" /* ### fly you fools > luncheon > "Who won the kill count contest between Gimli and Legolas at the battle of Helm's Deep?" ### */
-  },
-  {
-      "name": "Journal",
       "question": "<div class='flexcolumn'><div class='pigpen_text'>WHOS ON FIRST</div><div style='margin-top: 3vw;'>omch.tech/ciphers/______-and-________.html</div></div>",
       "answer": "I don't know" /* ### "WHOS ON FIRST" > "IF I AM ON FIRST BASE AND I MOVE FORWARD TWO BASES WHAT IS MY NAME" ### */
   },
   {
-      "name": "Keynote",
+      "question": "<div>SSB0b29rIHRoZSBvbmUgbGVzcyB0cmF2ZWxlZCBieQ==</div><div>QW5kIHRoYXQgaGFzIG1hZGUgYWxsIHRoZSBfX18=</div><div style='margin-top: 2vw;'>Kwb tpu mf vlh wqiijx fjeus ts vvgbth?</div>",
+      "answer": "512" /* ### "I took the one less traveled by / And that has made all the ___" > "difference" >  "How old is the oldest shark on record?" ### */
+  },
+  {
+      "question": "<div class='flexrow_wrap'><div class='characters'>S C M A</div><div class='characters'>W H B L</div><div class='characters'>I N T P</div><div class='characters'>T U O H</div></div><div style='margin-top: 3vw;'>6 1 20 8 15 13 19</div><div style='margin-top: 3vw;'>Bhta we lme wlsbwxt hjsmf yrxuqt as tal kajqd?</div>",
+      "answer": "Mariana" /* ### "switch numb to alph" > fathoms > "What is the deepest ocean trench in the world?" ### */
+  },
+  {
+      "question": "<div style='margin-bottom: 2vw;'>Falling Lightly Yonder, Yesterday's Old Uncle, From Out Of Lost Space</div>omch.tech/ciphers/___-___-_____.html",
+      "answer": "Gimli" /* ### fly you fools > luncheon > "Who won the kill count contest between Gimli and Legolas at the battle of Helm's Deep?" ### */
+  },
+  {
       "question": "<div class='flexrow_wrap'><img class='qrs' src='qr/qr1.png'><img class='qrs' src='qr/qr2.png'><img class='qrs' src='qr/qr3.png'><img class='qrs' src='qr/qr4.png'><img class='qrs' src='qr/qr5.png'><img class='qrs' src='qr/qr6.png'></div><div style='margin-top: 3vw;'>omch.tech/ciphers/answer1-answer2-answer3.html</div>",
       "answer": "Poaceae" /* ### earth > water > sugar > planet > "Plants root in the earth, pull up water, and absorb sugar through photosynthesis. What family of plant does grass belong to?" ### */
   },
   {
-      "name": "Lexicon",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Manual",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Novel",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Omnibus",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Paperback",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Quarto",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Reprint",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Scroll",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Tome",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "U",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Vade Mecum",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "W",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Xylograph",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   },
   {
-      "name": "Y",
-      "question": "[room under construction]",
-      "answer": "TODO" /* ###  ### */
-  },
-  {
-      "name": "Zine",
       "question": "[room under construction]",
       "answer": "TODO" /* ###  ### */
   }
@@ -262,7 +265,7 @@ function showResult(isCorrect) {
     }
 
     if (slideValue >= maxSlide) {
-      document.title = answerSets[document.title[0].charCodeAt(0) - 64].name;
+      document.title = roomNames[document.title[0].charCodeAt(0) - 64];
       setup();
       clearInterval(slideCount);
     }

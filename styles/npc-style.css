@@ -1,0 +1,80 @@
+body {
+  background: black;
+
+  color: white;
+  font-size: 2vw;
+  font-family: "Impact";
+}
+
+h1 {
+  font-size: 5vw;
+  margin: 2vw;
+}
+
+hr {
+  color: white;
+  width: 90vw;
+  margin: 2vw;
+}
+
+input {
+  background: inherit;
+  border: 5px solid white;
+
+  color: white;
+  font-size: 2vw;
+  font-family: "Impact";
+
+  padding: 1vw;
+}
+
+button {
+  background: inherit;
+  border: 5px solid white;
+
+  color: white;
+  font-size: 2vw;
+  font-family: "Impact";
+
+  padding: 1vw;
+  margin: 2vw;
+}
+
+button:hover {
+  background: grey;
+}
+
+em {
+  font-style: normal;
+  color: red;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexitem {
+  margin: 2vw;
+}
+
+#npc_box {
+  background: inherit;
+
+  padding: 1vw;
+  margin: 2vw;
+}
+
+.npcs {
+  white-space: pre;
+
+  margin: 2vw;
+}
