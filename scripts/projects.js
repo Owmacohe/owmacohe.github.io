@@ -20,7 +20,7 @@ var projects = [
     "maxHours": "3"
   },
   {
-    "desc": "writing a wholly original song on guitar",
+    "desc": "noodling out a song on guitar",
     "minHours": "1",
     "maxHours": "2"
   },
@@ -28,5 +28,15 @@ var projects = [
     "desc": "reading a super short book",
     "minHours": "2",
     "maxHours": "4"
+  },
+  {
+    "desc": "making origami decorations",
+    "minHours": "1",
+    "maxHours": "2"
+  },
+  {
+    "desc": "writing a poem",
+    "minHours": "1",
+    "maxHours": "1"
   }
 ];

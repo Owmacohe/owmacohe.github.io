@@ -12,10 +12,11 @@
       <h2><a href="\Main_Pages/other.html">Return to the other works menu</a></h2>
       <h1>Random project selector</h1>
       <h2>Time to fuel mental anxiety over both working and not working!</h2>
+      <h2><em>I made this for myself during the winter break of 2020. Feel free to use if it's helpful.</em></h2>
     </div>
 
     <div class="flex_extra" style="flex-direction: row;">
-      <h1>Spend time <em id="project" style="color: #800000;">doing nothing</em> for <em id="hours" style="color: #800000;">an uncountable number of</em> hour(s)</h1>
+      <h1>Spend time <em id="project" style="color: #800000;">doing nothing</em> for <em id="hours" style="color: #800000;">an uncountable number of</em> hour<em id="s" style="font-style: normal;">s</em></h1>
     </div>
 
     <button type="button" onclick="loadProject()"><h1>Generage project</h1></button>
@@ -30,6 +31,13 @@
 
       document.getElementById("project").innerHTML = projects[temp].desc;
       document.getElementById("hours").innerHTML = Math.floor(Math.random() * (projects[temp].maxHours - projects[temp].minHours + 1)) + parseInt(projects[temp].minHours);
+
+      if (parseInt(document.getElementById("hours").innerHTML) != 1) {
+        document.getElementById("s").innerHTML = "s";
+      }
+      else {
+        document.getElementById("s").innerHTML = "";
+      }
     }
   </script>
 </html>
