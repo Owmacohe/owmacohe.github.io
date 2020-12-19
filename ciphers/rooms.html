@@ -8,6 +8,7 @@
   </head>
 
   <body class="flexcolumn" onload="setup()">
+
     <!-- Header -->
     <div class="flexrow">
       <div class="flexcolumn" style="margin-right: 2vw;">
@@ -39,7 +40,12 @@
         <input type="text" id="submitField" onkeydown="slide(event)">
         <button onclick="slide()" id="submitButton"><img src="arrow.png"></button>
       </div>
-      <h3 style="visibility: hidden;" id="result"></h3>
+      <h3 id="result"></h3>
+      <div class="flexrow">
+        <h3><button type="button" id="hintRequest" onclick="showHint()"></button></h3>
+        <h3 id="hint"></h3>
+      </div>
     </div>
+
   </body>
 </html>
