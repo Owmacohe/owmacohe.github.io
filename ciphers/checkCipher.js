@@ -20,7 +20,7 @@ var roomNames = [
   "Scroll",
   "Tome",
   "U",
-  "Vade Mecum",
+  "Volume",
   "W",
   "Xylograph",
   "Y",
