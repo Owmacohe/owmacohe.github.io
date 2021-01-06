@@ -1,5 +1,9 @@
 body {
   background: black;
+
+  font-family: "Roboto", sans-serif;
+  color: #e30076;
+  font-size: 2vw;
 }
 
 button {
@@ -24,6 +28,7 @@ button:hover {
   transition: 0.3s;
 
   box-shadow: 0 0 3vw blue, 0 0 5vw red;
+  cursor: pointer;
 
   color: #310093;
   font-size: 12vw;
@@ -31,4 +36,23 @@ button:hover {
   width: 70vw;
   margin-left: 15%;
   margin-top: 10%;
+}
+
+a {
+  transition: 0.3s;
+  color: #e30076;
+
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+}
+
+a:hover {
+  transition: 0.3s;
+  color: #310093;
+}
+
+#footer {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
 }
