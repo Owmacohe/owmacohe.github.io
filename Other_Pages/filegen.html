@@ -20,4 +20,39 @@
   </body>
 
   <script src="\scripts/filegen.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    const DOTSCOUNT = 100; //Number of dots on-screen
+    const DOTSOPACITY = 60; //Highest possible opacity chance
+
+    //Getting the proper window height (for mobile)
+    var body = document.body;
+    var html = document.documentElement;
+    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+    //New dot every 50 milliseconds
+    var dotCount = setInterval(function() {
+      //Deletes old dots (as so not to clutter up the screen)
+      for (var i = 0; i < document.getElementsByClassName("backDots").length; i++) {
+        document.getElementsByClassName("backDots")[i].remove();
+      }
+
+      for (var j = 0; j < DOTSCOUNT; j++) {
+        var newDot = document.createElement("DIV");
+        document.body.appendChild(newDot);
+        newDot.setAttribute("class", "backDots");
+        //Gives it a random position and opacity
+        newDot.setAttribute("style",
+            "position: absolute; z-index: -1;" +
+            " left: " + Math.floor(Math.random() * 99) + "vw;" +
+            " top: " + Math.floor(Math.random() * (height / 15.2)) + "vw;" +
+            " opacity: " + Math.floor(Math.random() * DOTSOPACITY) + "%;");
+        newDot.innerHTML = ".";
+
+        //Possible chance to become a different colour
+        if (Math.floor(Math.random() * 3) == 0) {
+          newDot.style.color = "red";
+        }
+      }
+    }, 50);
+  </script>
 </html>
