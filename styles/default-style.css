@@ -14,44 +14,40 @@
 /* Elements */
 
 body {
+  transition: 0.3s;
+
   background-color: var(--background);
   font-family: "Trebuchet MS";
   color: var(--body);
 }
 
-h1 {
-  font-size: 3vw;
-}
+h1 { font-size: 3vw; }
 
-h2 {
-  font-size: 2vw;
-}
+h2 { font-size: 2vw; }
 
-h3 {
-  font-size: 1.5vw;
-}
+h3 { font-size: 1.5vw; }
 
 a {
+  transition: 0.3s;
+
   color: var(--links);
 }
 
 a:hover {
+  transition: 0.3s;
+
   color: var(--hover);
 }
 
-p {
-  font-size: 2vw;
-}
+p { font-size: 2vw; }
 
 img {
   border-radius: 1vw;
-
-  width: 60%;
+  width: 60vw;
 }
 
 video {
   border-radius: 1vw;
-
   width: 60vw;
 }
 
@@ -69,6 +65,8 @@ textarea {
 }
 
 button {
+  transition: 0.3s;
+
   background-color: var(--links);
   border: none;
   border-radius: 0.5vw;
@@ -82,6 +80,8 @@ button {
 }
 
 button:hover {
+  transition: 0.3s;
+
   color: var(--hover);
 }
 
@@ -148,6 +148,26 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#flex_extra_alt {
+  transition: 0.3s;
+
+  color: #800000;
+  font-size: 1.5vw;
+  background-color: var(--boxes);
+  margin: 2vw;
+  padding: 2vw;
+
+  border-style: none none solid solid;
+  border-color: #800000;
+  border-left-width: 1.5vw;
+  border-bottom-width: 0.5vw;
+  border-top-right-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .flexitem_small_font {

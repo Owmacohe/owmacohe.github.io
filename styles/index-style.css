@@ -14,22 +14,14 @@
 /* Elements */
 
 body {
-  background-color: var(--background);
-  font-family: "Trebuchet MS";
-  color: var(--body);
-
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
 
-a {
-  color: var(--links);
-}
+h2 { font-size: 2.5vw; }
 
-a:hover {
-  color: var(--hover);
-}
+p { font-size: 1.65vw; }
 
 img {
   border: 0.75vw solid var(--body);
@@ -42,71 +34,13 @@ img {
 
 /* Flex classes */
 
-.flexcolumn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.flexrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.flexitem {
-  font-size: 2.5vw;
-  text-align: center;
-  margin: 1vw;
-}
-
-.flex_extra {
-  background-color: var(--boxes);
-  margin: 1.75vw;
-  padding: 1.5vw;
-
-  border-style: none none solid solid;
-  border-color: var(--body);
-  border-left-width: 1.5vw;
-  border-bottom-width: 0.5vw;
-  border-top-right-radius: 30px;
-
-  display: flex;
-  justify-content: center;
-}
-
-.flexrow_wrap {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+.flex_extra { margin: 1.75vw; }
 
 
 
 /* General Classes and IDs */
 
-#titleimage {
-  margin: 2vw;
-}
-
-#backgroundText {
-  z-index: -1;
-  position: fixed;
-  left: -200px;
-  top: -150px;
-
-  color: var(--backText);
-  font: 50px "Disposable";
-  line-height: 50px;
-
-  transform: rotate(10deg);
-  width: 120vw;
-  word-wrap: break-word;
-  user-select: none;
-}
+#titleimage { margin: 2vw; }
 
 #circlePosition {
   text-decoration: none;
@@ -115,34 +49,12 @@ img {
   top: 13.4vw;
 }
 
-#descriptionBox {
-  flex-direction: row;
-  width: 25vw;
-  font-size: 1.65vw;
-}
-
 #curvedText {
   font-size: 1.75vw;
   font-family: monospace;
 }
 
-#flex_extra_alt {
-  color: #800000;
-  font-size: 1.5vw;
-  background-color: var(--boxes);
-  margin: 2vw;
-  padding: 2vw;
-
-  border-style: none none solid solid;
-  border-color: #800000;
-  border-left-width: 1.5vw;
-  border-bottom-width: 0.5vw;
-  border-top-right-radius: 30px;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+#descriptionBox { width: 25vw; }
 
 
 
@@ -157,54 +69,22 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
-  body {
-    overflow: visible;
+  body { overflow: visible; }
+
+  img {
+    border: 1vw solid var(--body);
+    width: 37vw;
   }
 
+  .flexrow { flex-direction: column; }
   .flexitem {
     font-size: 5vw;
     margin: 1vw;
   }
+  .flexanim { font-size: 2.75vw; }
 
-  #circlePosition {
-    /*
-    left: 66vw;
-    top: 30.5vw;
-    */
-    visibility: hidden;
-  }
+  #circlePosition { visibility: hidden; }
+  #curvedText { font-size: 2.6vw; }
 
-  .flexanim {
-    font-size: 2.75vw;
-  }
-
-  img {
-    border: 1vw solid var(--body);
-
-    width: 37vw;
-  }
-
-  #descriptionBox {
-    font-size: 2.1vw;
-  }
-
-  .flexrow {
-    flex-direction: column;
-  }
-
-  #curvedText {
-    font-size: 2.6vw;
-  }
+  #descriptionBox { font-size: 2.1vw; }
 }
-
-/*
-Mobile Landscape Size to Tablet Portrait (devices and browsers)
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-}
-
-Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
-@media only screen and (max-width: 479px) {
-
-}
-*/
