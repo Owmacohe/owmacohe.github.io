@@ -45,8 +45,8 @@ img {
 #circlePosition {
   text-decoration: none;
   position: fixed;
-  left: 50vw;
-  top: 13.4vw;
+  left: 49.9vw;
+  top: 13.5vw;
 }
 
 #curvedText {
@@ -55,6 +55,12 @@ img {
 }
 
 #descriptionBox { width: 25vw; }
+
+#form {
+  font-size: 2.5vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 
 
@@ -76,6 +82,8 @@ img {
     width: 37vw;
   }
 
+  p { font-size: 3vw; }
+
   .flexrow { flex-direction: column; }
   .flexitem {
     font-size: 5vw;
@@ -86,5 +94,7 @@ img {
   #circlePosition { visibility: hidden; }
   #curvedText { font-size: 2.6vw; }
 
-  #descriptionBox { font-size: 2.1vw; }
+  #descriptionBox { width: 35vw; }
+
+  #form { font-size: 5vw; }
 }

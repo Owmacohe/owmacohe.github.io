@@ -24,11 +24,6 @@
     const DOTSCOUNT = 100; //Number of dots on-screen
     const DOTSOPACITY = 60; //Highest possible opacity chance
 
-    //Getting the proper window height (for mobile)
-    var body = document.body;
-    var html = document.documentElement;
-    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-
     //New dot every 50 milliseconds
     var dotCount = setInterval(function() {
       //Deletes old dots (as so not to clutter up the screen)
@@ -44,7 +39,7 @@
         newDot.setAttribute("style",
             "position: absolute; z-index: -1;" +
             " left: " + Math.floor(Math.random() * 99) + "vw;" +
-            " top: " + Math.floor(Math.random() * (height / 15.2)) + "vw;" +
+            " top: " + Math.floor(Math.random() * 70) + "vw;" +
             " opacity: " + Math.floor(Math.random() * DOTSOPACITY) + "%;");
         newDot.innerHTML = ".";
 

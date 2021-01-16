@@ -4,6 +4,8 @@ body {
   font-family: "Roboto", sans-serif;
   color: #e30076;
   font-size: 2vw;
+
+  overflow: hidden;
 }
 
 button {

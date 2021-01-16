@@ -274,7 +274,7 @@ button:hover {
 }
 
 
-/* Fonts */
+/* Fonts and Mobile Optimization */
 
 @font-face {
     font-family: "Disposable";
@@ -282,4 +282,16 @@ button:hover {
          url("fonts/DisposableDroid.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 { font-size: 5vw; }
+
+  h2 { font-size: 3.5vw; }
+
+  p { font-size: 2.5vw; }
+
+  .flexitem { font-size: 3.5vw; }
+
+  #flex_extra_alt { font-size: 3vw; }
 }
