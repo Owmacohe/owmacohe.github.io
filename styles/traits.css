@@ -1,0 +1,23 @@
+button {
+  font-size: 2vw;
+  margin: 1vw;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subj {
+  white-space: pre;
+  margin: 1vw;
+}

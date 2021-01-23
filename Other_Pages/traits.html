@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="\styles/traits.css">
+    <script src="\scripts/traits.js" charset="utf-8"></script>
+    <title>Traits!</title>
+  </head>
+
+  <body class="flexcolumn" onload="disable()">
+    <h1 id="day">Day: 0</h1>
+    <button type="button" onclick="generateSubject(1)">Add subject</button>
+    <div class="flexrow" id="subjects" style="flex-wrap: wrap;"></div>
+    <button type="button" id="start" onclick="simulate()" disabled>Start simulation</button>
+  </body>
+</html>
