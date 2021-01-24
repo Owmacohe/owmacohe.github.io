@@ -8,7 +8,11 @@
   </head>
 
   <body class="flexcolumn" onload="disable()">
-    <h1 id="day">Day: 0</h1>
+    <div class="flexrow">
+      <h1 id="day">Day: 0</h1>
+      <h1 id="pop">Population: 0</h1>
+      <h1 id="fam">Mode family name: none</h1>
+    </div>
     <button type="button" onclick="generateSubject(1)">Add subject</button>
     <div class="flexrow" id="subjects" style="flex-wrap: wrap;"></div>
     <button type="button" id="start" onclick="simulate()" disabled>Start simulation</button>

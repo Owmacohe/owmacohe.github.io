@@ -6,6 +6,7 @@ function disable() {
 // Traits: First name, Last name, Age, Strength, Intelligence, Speciality, Hunger, Strength Factor, Intelligence Factor
 
 var subjects = [];
+var nameColours = [];
 var day = 0;
 
 var fNames = [
@@ -622,6 +623,7 @@ var specs = [
 function generateSubject(iterations, traits) {
   for (var i = 0; i < iterations; i++) {
     var subj;
+    var colour;
 
     //If there are no starting given traits, subject is generated randomly
     if (traits == null) {
@@ -636,6 +638,8 @@ function generateSubject(iterations, traits) {
       }
 
       setStrInt(subj);
+      colour = getRandomHex();
+      nameColours.push([subj.lName, colour]);
     }
     else {
       subj = {
@@ -648,6 +652,12 @@ function generateSubject(iterations, traits) {
         "hunger": traits.hunger,
         "strFact": traits.strFact,
         "intFact": traits.intFact
+      }
+
+      for (var j = 0; j < nameColours.length; j++) {
+        if (subj.lName == nameColours[j][0]) {
+          colour = nameColours[j][1];
+        }
       }
     }
 
@@ -667,6 +677,7 @@ function generateSubject(iterations, traits) {
     var newSubject = document.createElement("DIV");
     newSubject.setAttribute("class", "subj");
     document.getElementById("subjects").appendChild(newSubject);
+    newSubject.style.backgroundColor = colour;
   }
 
   document.getElementById("start").disabled = false; //Allow the simulation to begin
@@ -677,6 +688,9 @@ setInterval(function() {
   for (var i = 0; i < document.getElementsByClassName("subj").length; i++) {
     document.getElementsByClassName("subj")[i].innerHTML = "Name: "+subjects[i].fName+" "+subjects[i].lName+"\nAge: "+subjects[i].age+"\nStrength: "+subjects[i].str+"\nIntelligence: "+subjects[i].int+"\nSpeciality: "+subjects[i].spec.trim().replace(/^\w/, (c) => c.toUpperCase())+"\nHunger: "+subjects[i].hunger;
   }
+
+  document.getElementById("pop").innerHTML = "Population: " + subjects.length;
+  checkFamily();
 }, 50);
 
 //Ups the day count, and changes relevant subject traits
@@ -714,8 +728,9 @@ function simulate() {
         return;
       }
 
+      //Checking whether subjects are able to get food for a particular day
       var gatherChance = Math.floor((subjects[i].str + subjects[i].int) / 2) / 42;
-      console.log(gatherChance);
+      //console.log(gatherChance);
       switch (subjects[i].hunger) {
         case "Starving":
           if (Math.floor(Math.random() * gatherChance) == 0) {
@@ -740,8 +755,9 @@ function simulate() {
           break;
       }
 
+      // 1/5 chance to create a new subject (if parents are both full, of age, and unrelated)
       if (Math.floor(Math.random() * 5) == 0) {
-        if (i != subjects.length - 1 && subjects[i].hunger == "Full" && subjects[i].age >= 18 && subjects[i+1].hunger == "Full" && subjects[i+1].age >= 18) {
+        if (i != subjects.length - 1 && subjects[i].hunger == "Full" && subjects[i].age >= 18 && subjects[i+1].hunger == "Full" && subjects[i+1].age >= 18 && subjects[i].lName != subjects[i+1].lName) {
           var baby = {
             "fName": fNames[Math.floor(Math.random() * fNames.length)],
             "age": 1,
@@ -776,4 +792,48 @@ function setStrInt(subj) {
   subj.str = Math.floor((-1/40)*Math.pow(subj.age-50, 2)+75) + subj.strFact;
   //Intelligence steadily goes up with age
   subj.int = Math.floor((2/3)*subj.age+10) + subj.intFact;
+}
+
+//Finds which family name is the most common
+function checkFamily() {
+  var frequencies = [["test", 0]];
+
+  for (var i = 0; i < subjects.length; i++) {
+    for (var j = 0; j < frequencies.length; j++) {
+      //If the name is already in the array, it ups the count
+      if (subjects[i].lName == frequencies[j][0]) {
+        frequencies[j][1]++;
+        break;
+      }
+      //Otherwise, it adds a new entry
+      else {
+        frequencies.push([subjects[i].lName, 1]);
+        break;
+      }
+    }
+  }
+
+  var max = ["", 0];
+
+  //Sets the highest result and corresponding family
+  for (var k = 0; k < frequencies.length; k++) {
+    if (frequencies[k][1] > max[1]) {
+      max[0] = frequencies[k][0];
+      max[1] = frequencies[k][1];
+    }
+  }
+
+  document.getElementById("fam").innerHTML = "Mode family name: " + max[0];
+  //console.log("Highest: " + max[0]);
+}
+
+function getRandomHex() {
+  var letters = "0123456789ABCDEF";
+  var colour = '#';
+
+  for (var i = 0; i < 6; i++) {
+    colour += letters[(Math.floor(Math.random() * 16))];
+  }
+
+  return colour;
 }

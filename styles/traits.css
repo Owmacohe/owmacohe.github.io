@@ -1,3 +1,7 @@
+h1 {
+  margin: 1vw;
+}
+
 button {
   font-size: 2vw;
   margin: 1vw;
@@ -20,4 +24,5 @@ button {
 .subj {
   white-space: pre;
   margin: 1vw;
+  padding: 1vw;
 }
