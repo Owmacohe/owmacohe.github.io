@@ -273,6 +273,11 @@ button:hover {
   margin: 1vw;
 }
 
+.findLink {
+  font-size: 2.5vw;
+  margin: 1vw;
+}
+
 
 /* Fonts and Mobile Optimization */
 
@@ -294,4 +299,6 @@ button:hover {
   .flexitem { font-size: 3.5vw; }
 
   #flex_extra_alt { font-size: 3vw; }
+
+  .findLink { font-size: 3vw; }
 }

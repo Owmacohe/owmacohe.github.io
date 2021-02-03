@@ -15,22 +15,26 @@
 
     <div class="flexcolumn" style="background-color: var(--boxes); padding: 2vw; margin: 2vw; border-radius: 2vw;">
       <h1>Personal finds</h1>
+      <div id="personalTarget" class="flexrow_wrap"></div>
+      <!--
       <h2><a target="_blank" rel="noopener noreferrer" href="https://palemaskpress.com">Pale Mask Press</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://billwurtz.com">Bill Wurtz's site</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://www.thiswebsitewillselfdestruct.com">The Website Will Self-Destruct</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="http://www.libraryofbabel.info">The Library Of Babel</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://www.cognizance.observer">Cognizance/Observer</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="http://orteil.dashnet.org/nested">Nested</a></h2>
-      <!--<h2><a target="_blank" rel="noopener noreferrer" href="https://philosopherai.com">Philosopher AI</a></h2>-->
       <h2><a target="_blank" rel="noopener noreferrer" href="https://jazzkeys.plan8.co">JazzKeys</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://window-swap.com">WindowSwap</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://alexanderperrin.com.au/paper/shorttrip">Short Trip</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://emupedia.net/beta/emuos">EmuOS</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="https://www.incognitube.com">Incognitube (possibly broken)</a></h2>
+      -->
     </div>
 
     <div class="flexcolumn" style="background-color: var(--boxes); padding: 2vw; margin: 2vw; border-radius: 2vw;">
       <h1>My favourites from the <a target="_blank" rel="noopener noreferrer" href="https://theuselessweb.com">Useless Web</a></h1>
+      <div id="uselessTarget" class="flexrow_wrap"></div>
+      <!--
       <h2><a target="_blank" rel="noopener noreferrer" href="http://endless.horse">Endless Horse</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="http://chihuahuaspin.com">Chihuahua Spin</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="http://www.staggeringbeauty.com">Staggering Beauty</a></h2>
@@ -40,9 +44,61 @@
       <h2><a target="_blank" rel="noopener noreferrer" href="http://www.muchbetterthanthis.com">Much Better Than This</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="http://www.hackertyper.com">Hacker Typer</a></h2>
       <h2><a target="_blank" rel="noopener noreferrer" href="http://pixelsfighting.com">Pixels Fighting</a></h2>
+      -->
     </div>
 
   </body>
 
   <script src="\scripts/backTextLoader.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var personalLinks = [
+      ["Pale Mask Press", "https://palemaskpress.com"],
+      ["Bill Wurtz's site", "https://billwurtz.com"],
+      ["This Website Will Self Destruct", "http://thiswebsitewillselfdestruct.com"],
+      ["Library Of Babel", "http://libraryofbabel.info"],
+      ["Orteil", "https://orteil.dashnet.org"],
+      ["Cognizance/Observer", "http://cognizance.observer"],
+      ["Nested", "http://orteil.dashnet.org/nested"],
+      ["Video Game Generator", "http://orteil.dashnet.org/gamegen"],
+      ["JazzKeys", "https://jazzkeys.plan8.co"],
+      ["WindowSwap", "https://window-swap.com"],
+      ["Short Trip", "https://alexanderperrin.com.au/paper/shorttrip"],
+      ["EmuOS", "https://emupedia.net/beta/emuos"],
+      ["Incognitube (possibly broken)", "https://incognitube.com"]
+    ];
+
+    var uselessLinks = [
+      ["Endless Horse", "http://endless.horse"],
+      ["Chihuahua Spin", "http://chihuahuaspin.com"],
+      ["Staggering Beauty", "http://staggeringbeauty.com"],
+      ["Eelslap", "http://eelslap.com"],
+      ["Has The Large Hadron Collider Destroyed The World Yet?", "http://hasthelargehadroncolliderdestroyedtheworldyet.com"],
+      ["Pointer Pointer", "https://pointerpointer.com"],
+      ["Much Better Than This", "http://muchbetterthanthis.com"],
+      ["Hacker Typer", "http://hackertyper.com"],
+      ["Pixels Fighting", "http://pixelsfighting.com"]
+    ];
+
+    loopLinks();
+
+    function loopLinks() {
+      for (var i = 0; i < personalLinks.length; i++) {
+        createLink(personalLinks, i, "personalTarget");
+      }
+
+      for (var j = 0; j < uselessLinks.length; j++) {
+        createLink(uselessLinks, j, "uselessTarget");
+      }
+    }
+
+    function createLink(array, index, target) {
+      var newLink = document.createElement("A");
+      newLink.setAttribute("class", "findLink");
+      newLink.setAttribute("target", "_blank");
+      newLink.setAttribute("rel", "noopener noreferrer");
+      newLink.setAttribute("href", array[index][1]);
+      newLink.innerHTML = array[index][0];
+      document.getElementById(target).appendChild(newLink);
+    }
+  </script>
 </html>
