@@ -2,20 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="\styles/universe.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Creation!</title>
   </head>
 
-  <body>
-    <div class="flexrow">
-      <button data-toggle="collapse" data-target="#tab_0_0">universe</button>
-      The observable universe.
-    </div>
-    <div id="tab_0_0" class="collapse"></div>
-  </body>
+  <body id="tab_0_0"></body>
 
   <script src="\scripts/universe.js" charset="utf-8"></script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        panel.style.transition = "2.5s";
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = (panel.scrollHeight * 2) + "vw";
+        }
+      });
+    }
+  </script>
 </html>
