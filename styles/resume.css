@@ -1,0 +1,76 @@
+:root {
+  --warm-dark: #782D28;
+  --warm-light: #C84637;
+  --back: #F0DCD2;
+  --cold-light: #197378;
+  --cold-dark: #283C3C;
+}
+
+body {
+  background-color: var(--back);
+  background-image: url("\\Media/Resume_Media/spine.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vw;
+  background-position: 0 20vw;
+
+  color: var(--cold-dark);
+  font-family: "Hind Siliguri";
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "LTC Globe Gothic";
+  font-size: 10vw;
+  margin: 2vw;
+}
+
+h2 {
+  color: var(--cold-dark);
+  font-size: 3vw;
+  margin: 0;
+}
+
+span {
+  color: var(--back);
+  font-size: 2vw;
+}
+
+a { color: var(--back); }
+
+img {
+  position: absolute;
+  width: 20vw;
+  z-index: 0;
+}
+
+.flexcolumn, .flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  z-index: 1;
+
+  background-color: var(--warm-light);
+  border-right: 2vw solid var(--warm-dark);
+
+  padding: 1vw;
+  margin: 1vw;
+
+  transition: 0.3s;
+}
+.flexcolumn { flex-direction: column; }
+.flexrow { flex-direction: row; }
+.flexcolumn span { display: block; }
+.flexcolumn:hover, .flexrow:hover {
+  border-right: 4vw solid var(--warm-dark);
+  transition: 0.3s;
+}
+
+.separator {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
