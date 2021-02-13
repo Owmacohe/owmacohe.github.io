@@ -10,7 +10,7 @@ body {
   background-color: var(--back);
   background-image: url("\\Media/Resume_Media/spine.svg");
   background-repeat: no-repeat;
-  background-size: 100vw 100vw;
+  background-size: 100vw 200vw;
   background-position: 0 20vw;
 
   color: var(--cold-dark);
@@ -24,8 +24,10 @@ body {
 }
 
 h1 {
-  font-family: "LTC Globe Gothic";
+  font-family: "ltc-globe-gothic";
   font-size: 10vw;
+  letter-spacing: 0.6vw;
+
   margin: 2vw;
 }
 
@@ -40,7 +42,14 @@ span {
   font-size: 2vw;
 }
 
-a { color: var(--back); }
+a {
+  color: var(--back);
+  transition: 0.3s;
+}
+a:hover {
+  color: var(--warm-dark);
+  transition: 0.3s;
+}
 
 img {
   position: absolute;
@@ -48,10 +57,11 @@ img {
   z-index: 0;
 }
 
-.flexcolumn, .flexrow {
+.flexcolumn {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: left;
+  flex-direction: column;
   z-index: 1;
 
   background-color: var(--warm-light);
@@ -62,15 +72,40 @@ img {
 
   transition: 0.3s;
 }
-.flexcolumn { flex-direction: column; }
-.flexrow { flex-direction: row; }
 .flexcolumn span { display: block; }
-.flexcolumn:hover, .flexrow:hover {
+.flexcolumn:hover {
   border-right: 4vw solid var(--warm-dark);
   transition: 0.3s;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  width: 88vw;
+}
+.flexrow .separator { width: 44vw; }
+
+#back {
+  position: absolute;
+  top: 0.57vw;
+  left: 2.5vw;
+  z-index: -1;
+
+  color: var(--cold-light);
 }
 
 .separator {
   margin-top: 1vw;
   margin-bottom: 1vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  #back {
+    top: 0.8vw;
+    left: 2.5vw;
+  }
 }
