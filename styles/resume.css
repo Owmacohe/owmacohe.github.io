@@ -26,7 +26,7 @@ body {
 h1 {
   font-family: "ltc-globe-gothic";
   font-size: 10vw;
-  letter-spacing: 0.6vw;
+  letter-spacing: 0.66vw;
 
   margin: 2vw;
 }
@@ -55,6 +55,8 @@ img {
   position: absolute;
   width: 20vw;
   z-index: 0;
+
+  user-select: none;
 }
 
 .flexcolumn {
@@ -90,12 +92,14 @@ img {
 .flexrow .separator { width: 44vw; }
 
 #back {
-  position: absolute;
-  top: 0.57vw;
-  left: 2.5vw;
+  position: relative;
+  margin-top: -12vw;
+  margin-left: 2.8vw;
   z-index: -1;
 
   color: var(--cold-light);
+
+  user-select: none;
 }
 
 .separator {
@@ -104,8 +108,7 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
-  #back {
-    top: 0.8vw;
-    left: 2.5vw;
+  h1 {
+    letter-spacing: 0.42vw;
   }
 }
