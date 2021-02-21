@@ -251,11 +251,11 @@ button:hover {
   color: var(--backText);
   font: 50px "Disposable";
   line-height: 50px;
+  word-wrap: break-word;
+  user-select: none;
 
   transform: rotate(10deg);
   width: 120vw;
-  word-wrap: break-word;
-  user-select: none;
 }
 
 .gameElement {

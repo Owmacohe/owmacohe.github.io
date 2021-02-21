@@ -3,26 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="\styles/universe.css">
-    <title>Creation!</title>
+    <title>Idea based on orteil.dashnet.org/nested</title>
   </head>
 
   <body id="tab_0_0"></body>
 
   <script src="\scripts/universe.js" charset="utf-8"></script>
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        panel.style.transition = "2.5s";
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = (panel.scrollHeight * 2) + "vw";
-        }
-      });
-    }
-  </script>
 </html>
