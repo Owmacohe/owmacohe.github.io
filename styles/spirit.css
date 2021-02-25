@@ -1,0 +1,14 @@
+input {
+  font-size: 2vw;
+  margin: 1vw;
+}
+
+img {
+  width: 5vw;
+  margin: 0.5vw;
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+}
