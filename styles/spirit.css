@@ -1,14 +1,15 @@
-input {
-  font-size: 2vw;
-  margin: 1vw;
-}
-
 img {
   width: 5vw;
   margin: 0.5vw;
 }
 
-#output {
-  display: flex;
-  flex-direction: column;
+#input {
+  font-size: 2vw;
+  margin: 1vw;
 }
+
+#output, .words {
+  display: flex;
+}
+#output { flex-direction: row; }
+.words { flex-direction: column; }
