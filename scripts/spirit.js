@@ -2,7 +2,9 @@
 window.onload = function() {
   var input = document.getElementById("input");
   input.value = "";
-  input.setAttribute("onkeyup", "translate()");
+  //input.setAttribute("onkeyup", "translate()"); //automatic generation
+
+  document.getElementsByTagName("button")[0].setAttribute("onclick", "translate()"); //manual generation
 
   var target;
 }
@@ -15,9 +17,11 @@ function translate() {
         output.removeChild(output.lastChild);
   }
 
-  createWord(); //creates the default word
+  if (input.value != "") {
+    createWord(); //creates the default word
+  }
 
-  input.value = input.value.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  input.value = input.value.replace(/[.,\/#!?'"$%\^&\*;:{}=\-_`~()]/g,""); //clears all the punctuation
 
   for (var j = 0; j < input.value.length; j++) {
     var numb = input.value[j].toLowerCase().charCodeAt(0) - 96; //finds the ASCII code for the typed letter

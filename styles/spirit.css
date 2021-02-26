@@ -1,15 +1,54 @@
+:root {
+  --dark: #008000;
+  --med: #b3ffb3;
+  --light: #e6ffe6;
+}
+
+body {
+  background-color: var(--light);
+}
+
 img {
   width: 5vw;
   margin: 0.5vw;
 }
 
-#input {
+button {
   font-size: 2vw;
-  margin: 1vw;
+  color: var(--med);
+
+  margin: 0.5vw;
+  padding: 1vw;
+
+  border: none;
+  background-color: var(--dark);
+
+  cursor: pointer;
 }
 
-#output, .words {
+#input {
+  font-size: 2vw;
+  color: var(--dark);
+
+  margin: 0.5vw;
+  padding: 1vw;
+  width: 40vw;
+
+  border: none;
+  border-radius: 5vw;
+  background-color: var(--med);
+}
+
+#output, .words, .flexrow {
   display: flex;
 }
-#output { flex-direction: row; }
-.words { flex-direction: column; }
+#output, .flexrow { flex-direction: row; }
+.words {
+  flex-direction: column;
+
+  margin: 0.5vw;
+  padding: 1vw;
+
+  background-color: var(--med);
+  border-bottom: 1vw groove var(--dark);
+}
