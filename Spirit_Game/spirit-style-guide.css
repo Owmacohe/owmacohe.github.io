@@ -1,0 +1,72 @@
+/*Colours and fonts */
+
+:root {
+  --base1: hsl(35, 50%, 80%); /* dust (#e6d0b3) */
+  --base2: hsl(10, 30%, 50%); /* terracotta (#a66659) */
+  --base3: hsl(10, 30%, 30%); /* dark terracotta (#633d36) */
+  --highlights1: hsl(200, 30%, 50%); /* silica (#598ca6) */
+  --highlights2: hsl(140, 30%, 50%); /* seafoam (#59a673) */
+  --shine: hsl(50, 100%, 50%); /* gold (#ffd500) */
+}
+
+@font-face {
+    font-family: "PJ Masks Bold";
+    src: url("PJMasksBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*Elements */
+
+body {
+  background: var(--base1);
+  font-family: "PJ Masks Bold";
+}
+
+h1, h2 {
+  margin: 0.5vw;
+  color: var(--highlights2);
+}
+h1 { font-size: 5vw; }
+h2 { font-size: 3vw; }
+
+p, a {
+  color: var(--highlights1);
+}
+p {
+  margin: 0.5vw;
+  font-size: 2vw;
+}
+
+img {
+  width: 30vw;
+  margin: 1.5vw;
+}
+
+
+
+/*Clases and IDs */
+
+.flexcolumn, .flexrow, .flexitem, #header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1vw;
+
+  background-color: inherit;
+}
+.flexcolumn { background-color: var(--base2); }
+.flexrow { flex-direction: row; }
+.flexitem {
+  width: 45vw;
+  background-color: var(--base3);
+}
+
+.miniheader {
+  margin-top: 3vw;
+  text-decoration: underline;
+}
