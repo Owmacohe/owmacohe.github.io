@@ -9,20 +9,13 @@
   --shine: hsl(50, 100%, 50%); /* gold (#ffd500) */
 }
 
-@font-face {
-    font-family: "PJ Masks Bold";
-    src: url("PJMasksBold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 
 /*Elements */
 
 body {
   background: var(--base1);
-  font-family: "PJ Masks Bold";
+  font-family: "Nunito";
 }
 
 h1, h2 {
@@ -37,7 +30,7 @@ p, a {
 }
 p {
   margin: 0.5vw;
-  font-size: 2vw;
+  font-size: 1.9vw;
 }
 
 img {
