@@ -4,8 +4,8 @@
   --base1: hsl(35, 50%, 80%); /* dust (#e6d0b3) */
   --base2: hsl(10, 30%, 50%); /* terracotta (#a66659) */
   --base3: hsl(10, 30%, 30%); /* dark terracotta (#633d36) */
-  --highlights1: hsl(200, 30%, 50%); /* silica (#598ca6) */
-  --highlights2: hsl(140, 30%, 50%); /* seafoam (#59a673) */
+  --highlights1: hsl(140, 30%, 50%); /* seafoam (#59a673) */
+  --highlights2: hsl(200, 30%, 50%); /* silica (#598ca6) */
   --shine: hsl(50, 100%, 50%); /* gold (#ffd500) */
 }
 
@@ -20,13 +20,13 @@ body {
 
 h1, h2 {
   margin: 0.5vw;
-  color: var(--highlights2);
+  color: var(--highlights1);
 }
 h1 { font-size: 5vw; }
 h2 { font-size: 3vw; }
 
 p, a {
-  color: var(--highlights1);
+  color: var(--highlights2);
 }
 p {
   margin: 0.5vw;
@@ -36,6 +36,7 @@ p {
 img {
   width: 30vw;
   margin: 1.5vw;
+  border: 0.5vw solid var(--shine);
 }
 
 
@@ -57,6 +58,7 @@ img {
 .flexitem {
   width: 45vw;
   background-color: var(--base3);
+  text-align: center;
 }
 
 .miniheader {

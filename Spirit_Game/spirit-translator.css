@@ -1,11 +1,14 @@
 :root {
-  --dark: #008000;
-  --med: #b3ffb3;
-  --light: #e6ffe6;
+  --base1: hsl(35, 50%, 80%); /* dust (#e6d0b3) */
+  --base2: hsl(10, 30%, 50%); /* terracotta (#a66659) */
+  --base3: hsl(10, 30%, 30%); /* dark terracotta (#633d36) */
+  --highlights1: hsl(140, 30%, 50%); /* seafoam (#59a673) */
+  --highlights2: hsl(200, 30%, 50%); /* silica (#598ca6) */
+  --shine: hsl(50, 100%, 50%); /* gold (#ffd500) */
 }
 
 body {
-  background-color: var(--light);
+  background-color: var(--base1);
 }
 
 img {
@@ -15,20 +18,20 @@ img {
 
 button {
   font-size: 2vw;
-  color: var(--med);
+  color: var(--base3);
 
   margin: 0.5vw;
   padding: 1vw;
 
   border: none;
-  background-color: var(--dark);
+  background-color: var(--base2);
 
   cursor: pointer;
 }
 
 #input {
   font-size: 2vw;
-  color: var(--dark);
+  color: var(--base3);
 
   margin: 0.5vw;
   padding: 1vw;
@@ -36,7 +39,7 @@ button {
 
   border: none;
   border-radius: 5vw;
-  background-color: var(--med);
+  background-color: var(--base2);
 }
 
 #output, .words, .flexrow {
@@ -49,6 +52,6 @@ button {
   margin: 0.5vw;
   padding: 1vw;
 
-  background-color: var(--med);
-  border-bottom: 1vw groove var(--dark);
+  background-color: var(--highlights1);
+  border-bottom: 1vw groove var(--highlights2);
 }
