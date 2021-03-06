@@ -2,9 +2,10 @@
   --base1: hsl(35, 50%, 80%); /* dust (#e6d0b3) */
   --base2: hsl(10, 30%, 50%); /* terracotta (#a66659) */
   --base3: hsl(10, 30%, 30%); /* dark terracotta (#633d36) */
-  --highlights1: hsl(140, 30%, 50%); /* seafoam (#59a673) */
+  --highlights1: hsl(130, 30%, 70%); /* seafoam (#9cc9a3) */
   --highlights2: hsl(200, 30%, 50%); /* silica (#598ca6) */
-  --shine: hsl(50, 100%, 50%); /* gold (#ffd500) */
+  --shine1: hsl(5, 100%, 50%); /* crimson (#ff1500) */
+  --shine2: hsl(50, 100%, 50%); /* gold (#ffd500) */
 }
 
 body {
@@ -24,6 +25,7 @@ button {
   padding: 1vw;
 
   border: none;
+  border-right: 1vw solid var(--shine2);
   background-color: var(--base2);
 
   cursor: pointer;
@@ -38,6 +40,7 @@ button {
   width: 40vw;
 
   border: none;
+  border-right: 1vw solid var(--shine1);
   border-radius: 5vw;
   background-color: var(--base2);
 }

@@ -4,9 +4,10 @@
   --base1: hsl(35, 50%, 80%); /* dust (#e6d0b3) */
   --base2: hsl(10, 30%, 50%); /* terracotta (#a66659) */
   --base3: hsl(10, 30%, 30%); /* dark terracotta (#633d36) */
-  --highlights1: hsl(140, 30%, 50%); /* seafoam (#59a673) */
+  --highlights1: hsl(130, 30%, 70%); /* seafoam (#9cc9a3) */
   --highlights2: hsl(200, 30%, 50%); /* silica (#598ca6) */
-  --shine: hsl(50, 100%, 50%); /* gold (#ffd500) */
+  --shine1: hsl(5, 100%, 50%); /* crimson (#ff1500) */
+  --shine2: hsl(50, 100%, 50%); /* gold (#ffd500) */
 }
 
 
@@ -25,25 +26,27 @@ h1, h2 {
 h1 { font-size: 5vw; }
 h2 { font-size: 3vw; }
 
-p, a {
-  color: var(--highlights2);
-}
 p {
   margin: 0.5vw;
+  color: var(--highlights2);
   font-size: 1.9vw;
+}
+
+a {
+  color: var(--shine2);
 }
 
 img {
   width: 30vw;
-  margin: 1.5vw;
-  border: 0.5vw solid var(--shine);
+  margin: 1vw;
+  border: 0.5vw solid var(--shine1);
 }
 
 
 
 /*Clases and IDs */
 
-.flexcolumn, .flexrow, .flexitem, #header {
+.flexcolumn, .flexrow, .flexitem {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +59,10 @@ img {
 .flexcolumn { background-color: var(--base2); }
 .flexrow { flex-direction: row; }
 .flexitem {
-  width: 45vw;
+  width: 43vw;
+
+  padding: 1vw;
+
   background-color: var(--base3);
   text-align: center;
 }

@@ -9,7 +9,7 @@
 
   <body>
     <!--Header -->
-    <div id="header">
+    <div class="flexcolumn">
       <h1>Spirit Game style guide</h1>
       <h2>Visit the Itch.io page <a target="_blank" rel="noopener noreferrer" href="https://omch.itch.io/spirit-game">here</a> and the Trello page <a target="_blank" rel="noopener noreferrer" href="https://trello.com/b/PDh0lnFr/spirit-game">here</a></h2>
       <h2>Visit the Sanctus traslation page <a target="_blank" rel="noopener noreferrer" href="spirit-translator.html">here</a></h2>
@@ -36,15 +36,17 @@
           <p style="color: var(--base2);">Terracotta (#a66659) (midtones)</p>
           <p style="color: var(--base3); background-color: var(--base2);">Dark Terracotta (#633d36) (foreground)</p>
           <p class="miniheader">~ Highlight colours ~</p>
-          <p style="color: var(--highlights1);">Seafoam (#59a673) (main highlights)</p>
+          <p style="color: var(--highlights1);">Seafoam (#9cc9a3) (main highlights)</p>
           <p style="color: var(--highlights2);">Silica (#598ca6) (secondary highlights)</p>
-          <p style="color: var(--shine);">Gold (#ffd500) (bright spots)</p>
+          <p style="color: var(--shine1);">Crimson (#ff1500) (accents around Dark Terracotta)</p>
+          <p style="color: var(--shine2);">Gold (#ffd500) (bright spots)</p>
           <p class="miniheader">~ Colour rules ~</p>
           <p>1. Highlight colours must always be placed on top of Dark Terracotta</p>
           <p>2. Highlight colours must never touch themselves</p>
           <p>3. Gold colour should only be used for interactable objects or for things that could be made of gold</p>
           <p>4. Base colour order must never be subverted</p>
           <p>5. Seafoam colour has higher priority than Silica colour</p>
+          <p>6. Dark Terracotta is almost always rimmed with a line of Crimson</p>
         </div>
         <!-- Logo design -->
         <div class="flexitem">
@@ -65,23 +67,27 @@
           <p class="miniheader">~ Sketches ~</p>
           <img src="sketch1.jpg" alt="[sketch1]">
           <img src="sketch2.jpg" alt="[sketch2]">
+          <img src="sketch3.jpg" alt="[sketch3]">
         </div>
         <!-- UI design -->
         <div class="flexitem">
           <h2>UI design</h2>
-          <img src="ui_button.png" alt="[ui button example]">
-          <img src="ui_slot.png" alt="[ui item slot example]">
-          <img src="ui_slider.png" alt="[ui slider example]">
-          <img src="ui_checkbox.png" alt="[ui checkbox example]">
-          <img src="ui_choices.png" alt="[ui controller/keyboard choices example]">
+          <img src="ui_all.png" alt="[ui examples]">
         </div>
       </div>
     </div>
 
     <!-- Sample Layouts/UI -->
     <div class="flexcolumn">
-      <div class="flexitem">
-        <h2>Sample Layouts/UI</h2>
+      <div class="flexitem" style="width: inherit;">
+        <h2>Sample Screens / UI Layouts</h2>
+        <div class="flexrow" style="flex-wrap: wrap;">
+          <img src="screen1.png" alt="[game screen example]">
+          <img src="screen2.png" alt="[game screen example]">
+          <img src="screen3.png" alt="[game screen example]">
+          <img src="ui1.png" alt="[ui layout example]">
+          <img src="ui2.png" alt="[ui layout example]">
+        </div>
       </div>
     </div>
   </body>
