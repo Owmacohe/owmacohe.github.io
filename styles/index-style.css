@@ -63,17 +63,7 @@ img {
   cursor: pointer;
 }
 
-
-
-/* Fonts and Mobile Optimization */
-
-@font-face {
-    font-family: "Disposable";
-    src: url("fonts/DisposableDroid.woff2") format("woff2"),
-         url("fonts/DisposableDroid.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+/* Mobile Optimization */
 
 @media only screen and (max-width: 1000px) {
   body { overflow: visible; }

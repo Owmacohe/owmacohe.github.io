@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/csa5hex.css");
+
 /* Colours */
 
 :root {
@@ -16,8 +18,11 @@
 body {
   transition: 0.3s;
 
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
   background-color: var(--background);
-  font-family: "Trebuchet MS";
   color: var(--body);
 }
 
@@ -52,7 +57,9 @@ video {
 }
 
 textarea {
-  font: 3vw "Trebuchet MS", sans-serif;
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
   height: 10vw;
   border-radius: 0.7vw;
@@ -75,8 +82,11 @@ button {
   height: auto;
   padding: 1vw;
 
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
   font-size: 1.5vw;
-  font-family: "Trebuchet MS";
 }
 
 button:hover {
@@ -248,8 +258,13 @@ button:hover {
   left: -200px;
   top: -150px;
 
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 2.5vw;
+
   color: var(--backText);
-  font: 50px "Disposable";
   line-height: 50px;
   word-wrap: break-word;
   user-select: none;
@@ -278,25 +293,21 @@ button:hover {
   margin: 1vw;
 }
 
-
-/* Fonts and Mobile Optimization */
-
-@font-face {
-    font-family: "Disposable";
-    src: url("fonts/DisposableDroid.woff2") format("woff2"),
-         url("fonts/DisposableDroid.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+/* Mobile Optimization */
 
 @media only screen and (max-width: 1000px) {
   h1 { font-size: 5vw; }
 
-  h2 { font-size: 3.5vw; }
+  h2 { font-size: 3vw; }
 
   p { font-size: 2.5vw; }
 
   .flexitem { font-size: 3.5vw; }
+
+  #backgroundText {
+    left: -150px;
+    font-size: 4vw;
+  }
 
   #flex_extra_alt { font-size: 3vw; }
 

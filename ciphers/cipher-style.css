@@ -1,3 +1,13 @@
+@import url("https://use.typekit.net/csa5hex.css");
+
+@font-face {
+    font-family: "Share Tech Mono";
+    src: url("ShareTechMono.woff2") format("woff2"),
+         url("ShareTechMono.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
   --background: #070809;
   --body: #4b6c2b;
@@ -117,7 +127,10 @@ img {
   color: var(--code);
   border-top: 1vw solid var(--code);
 
-  font-family: "Disposable";
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
   font-size: 3vw;
 
   width: 80vw;
@@ -141,20 +154,4 @@ img {
 
 #hintRequest:hover {
   color: var(--hover);
-}
-
-@font-face {
-    font-family: "Disposable";
-    src: url("\\styles/fonts/DisposableDroid.woff2") format("woff2"),
-         url("\\styles/fonts/DisposableDroid.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Share Tech Mono";
-    src: url("ShareTechMono.woff2") format("woff2"),
-         url("ShareTechMono.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
 }
