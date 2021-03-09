@@ -16,7 +16,8 @@
 
 body {
   background: var(--base1);
-  font-family: "Nunito";
+  font-family: "Kefa";
+  font-weight: bold;
 }
 
 h1, h2 {
@@ -70,4 +71,16 @@ img {
 .miniheader {
   margin-top: 3vw;
   text-decoration: underline;
+}
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Bulky Pixels";
+    src: url("kefa.woff2") format("woff2"),
+         url("kefa.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
