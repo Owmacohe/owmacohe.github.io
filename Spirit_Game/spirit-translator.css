@@ -10,6 +10,8 @@
 
 body {
   background-color: var(--base1);
+  font-family: "Kefa";
+  font-weight: bold;
 }
 
 img {
@@ -20,6 +22,8 @@ img {
 button {
   font-size: 2vw;
   color: var(--base3);
+  font-family: "Kefa";
+  font-weight: bold;
 
   margin: 0.5vw;
   padding: 1vw;
@@ -34,6 +38,8 @@ button {
 #input {
   font-size: 2vw;
   color: var(--base3);
+  font-family: "Kefa";
+  font-weight: bold;
 
   margin: 0.5vw;
   padding: 1vw;
@@ -57,4 +63,16 @@ button {
 
   background-color: var(--highlights1);
   border-bottom: 1vw groove var(--highlights2);
+}
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Bulky Pixels";
+    src: url("kefa.woff2") format("woff2"),
+         url("kefa.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
