@@ -35,13 +35,18 @@ h3 { font-size: 1.5vw; }
 a {
   transition: 0.3s;
 
-  color: var(--links);
+  background: linear-gradient(to bottom right, var(--links), var(--hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: 0.15vw var(--links) underline;
 }
 
 a:hover {
   transition: 0.3s;
 
-  color: var(--hover);
+  background: linear-gradient(to top left, var(--links), var(--hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p { font-size: 2vw; }
@@ -60,6 +65,7 @@ textarea {
   font-family: lores-12, sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 2.5vw;
 
   height: 10vw;
   border-radius: 0.7vw;

@@ -53,6 +53,8 @@ img {
 #curvedText {
   font-size: 1.75vw;
   font-family: monospace;
+
+  -webkit-text-fill-color: var(--links);
 }
 
 #descriptionBox { width: 25vw; }
