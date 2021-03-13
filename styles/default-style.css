@@ -7,7 +7,7 @@
   --body: #5004c8;
   --boxes: #030007;
   --links: #3d1ada;
-  --hover: #846cee;
+  --hover: #a08ef2;
   --backText: #0a0119;
 }
 
@@ -32,21 +32,32 @@ h2 { font-size: 2vw; }
 
 h3 { font-size: 1.5vw; }
 
-a {
-  transition: 0.3s;
+a, #form {
+  text-decoration: none;
+  position: relative;
 
   background: linear-gradient(to bottom right, var(--links), var(--hover));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-decoration: 0.15vw var(--links) underline;
 }
-
-a:hover {
-  transition: 0.3s;
-
-  background: linear-gradient(to top left, var(--links), var(--hover));
+a:after, #form:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 0.2vw solid;
+  border-image-source: linear-gradient(to bottom right, red, var(--links));
+  border-image-slice: 1;
+  transition: 0.5s;
+}
+a:hover, #form:hover {
+  background: linear-gradient(to bottom right, var(--links), red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+a:hover:after, #form:hover:after {
+  width: 100%;
 }
 
 p { font-size: 2vw; }
@@ -78,28 +89,20 @@ textarea {
 }
 
 button {
-  transition: 0.3s;
-
-  background-color: var(--links);
   border: none;
   border-radius: 0.5vw;
-
-  width: auto;
-  height: auto;
   padding: 1vw;
 
+  color: var(--boxes);
+  font-size: 1.5vw;
   font-family: lores-12, sans-serif;
   font-weight: 400;
   font-style: normal;
 
-  font-size: 1.5vw;
+  background: linear-gradient(to bottom right, var(--links), var(--hover));
 }
 
-button:hover {
-  transition: 0.3s;
-
-  color: var(--hover);
-}
+button:hover { background: linear-gradient(to bottom right, var(--links), red); }
 
 
 
@@ -166,26 +169,6 @@ button:hover {
   align-items: center;
 }
 
-#flex_extra_alt {
-  transition: 0.3s;
-
-  color: #800000;
-  font-size: 1.5vw;
-  background-color: var(--boxes);
-  margin: 2vw;
-  padding: 2vw;
-
-  border-style: none none solid solid;
-  border-color: #800000;
-  border-left-width: 1.5vw;
-  border-bottom-width: 0.5vw;
-  border-top-right-radius: 30px;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .flexitem_small_font {
   font-size: 0.8vw;
   text-align: center;
@@ -198,65 +181,23 @@ button:hover {
   margin: 0.2vw;
 }
 
-.flexanim {
-  font-size: 1.75vw;
-  font-family: monospace;
-}
-
-.flexascii {
-  font-size: 2vw;
-  text-align: center;
-  font-family: monospace;
-  white-space: pre;
-}
-
 
 
 /* General Classes */
 
-.img_small {
+.img_small, .img_med, .img_big {
   border-radius: 2vw;
-  width: 13vw;
   padding: 1vw;
 }
+.img_small { width: 13vw; }
+.img_med { width: 25vw; }
+.img_big { width: 70vw; }
 
-.img_med {
-  border-radius: 2vw;
-  width: 25vw;
-  padding: 1vw;
-}
-
-.img_big {
-  border-radius: 2vw;
-  width: 70vw;
-  padding: 1vw;
-}
-
-.nounderline {
-  text-decoration: none;
-}
-
-.bigA {
-  background-color: var(--links);
-  color: var(--boxes);
-  border: none;
-  border-radius: 0.5vw;
-
-  width: auto;
-  height: auto;
-  padding: 2vw;
-
-  font-size: 3vw;
-  text-decoration: none;
-}
+.nounderline { text-decoration: none; }
 
 
 
 /* Special Classes and IDs */
-
-#footer {
-  margin-top: 5vw;
-}
 
 #backgroundText {
   z-index: -1;
@@ -297,6 +238,12 @@ button:hover {
 .findLink {
   font-size: 2.5vw;
   margin: 1vw;
+}
+
+.alert {
+  background: linear-gradient(to bottom right, red, var(--links));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Mobile Optimization */
