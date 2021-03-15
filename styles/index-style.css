@@ -51,8 +51,6 @@ img {
   cursor: pointer;
 }
 
-#no_fancy_underline:after { border: none; }
-
 /* Mobile Optimization */
 
 @media only screen and (max-width: 1000px) {

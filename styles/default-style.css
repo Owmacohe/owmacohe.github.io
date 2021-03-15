@@ -26,10 +26,14 @@ body {
   color: var(--body);
 }
 
+h1, h2, h3, button, #backgroundText, .alert {
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1 { font-size: 3vw; }
-
 h2 { font-size: 2vw; }
-
 h3 { font-size: 1.5vw; }
 
 a, #form {
@@ -95,9 +99,6 @@ button {
 
   color: var(--boxes);
   font-size: 1.5vw;
-  font-family: lores-12, sans-serif;
-  font-weight: 400;
-  font-style: normal;
 
   background: linear-gradient(to bottom right, var(--links), var(--hover));
 }
@@ -194,6 +195,7 @@ button:hover { background: linear-gradient(to bottom right, var(--links), red); 
 .img_big { width: 70vw; }
 
 .nounderline { text-decoration: none; }
+.nounderline_fancy:after { border: none; }
 
 
 
@@ -204,10 +206,6 @@ button:hover { background: linear-gradient(to bottom right, var(--links), red); 
   position: fixed;
   left: -200px;
   top: -150px;
-
-  font-family: lores-12-bold-alt-oakland, sans-serif;
-  font-weight: 400;
-  font-style: normal;
 
   font-size: 2.5vw;
 
