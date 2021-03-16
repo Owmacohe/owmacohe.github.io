@@ -13,12 +13,17 @@
       <h1>Some dumb and wonderful websites you can digest</h1>
     </div>
 
-    <div class="flexcolumn" style="background-color: var(--boxes); padding: 2vw; margin: 2vw; border-radius: 2vw;">
-      <h1>Personal finds</h1>
-      <div id="personalTarget" class="flexrow_wrap"></div>
+    <div class="flex_extra" style="flex-direction: column;">
+      <h1>Net art</h1>
+      <div id="netArtTarget" class="flexrow_wrap"></div>
     </div>
 
-    <div class="flexcolumn" style="background-color: var(--boxes); padding: 2vw; margin: 2vw; border-radius: 2vw;">
+    <div class="flex_extra" style="flex-direction: column;">
+      <h1>Tools</h1>
+      <div id="toolsTarget" class="flexrow_wrap"></div>
+    </div>
+
+    <div class="flex_extra" style="flex-direction: column;">
       <h1>My favourites from <a target="_blank" rel="noopener noreferrer" href="https://theuselessweb.com">The Useless Web</a></h1>
       <div id="uselessTarget" class="flexrow_wrap"></div>
     </div>
@@ -27,28 +32,31 @@
 
   <script src="\scripts/backTextLoader.js" charset="utf-8"></script>
   <script type="text/javascript">
-    var personalLinks = [
+    var netArtLinks = [
       ["Pale Mask Press", "https://palemaskpress.com"],
       ["Bill Wurtz's site", "https://billwurtz.com"],
       ["This Website Will Self Destruct", "http://thiswebsitewillselfdestruct.com"],
-      ["Library Of Babel", "http://libraryofbabel.info"],
-      ["Orteil", "https://orteil.dashnet.org"],
       ["Cognizance/Observer", "http://cognizance.observer"],
-      ["Nested", "http://orteil.dashnet.org/nested"],
-      ["Videogame Premise Generator", "http://orteil.dashnet.org/gamegen"],
-      ["JazzKeys", "https://jazzkeys.plan8.co"],
+      ["Nested", "https://orteil.dashnet.org/nested"],
       ["WindowSwap", "https://window-swap.com"],
       ["Short Trip", "https://alexanderperrin.com.au/paper/shorttrip"],
-      ["EmuOS", "https://emupedia.net/beta/emuos"],
       ["Incognitube (possibly broken)", "https://incognitube.com"],
-      ["QR Picture", "https://qrpicture.com"],
-      ["Sprites-as-a-service", "https://ljvmiranda921.github.io/sprites-as-a-service"],
       ["Jodi.org", "https://wwwwwwwww.jodi.org"],
       ["aem1k", "https://aem1k.com"],
       ["Every Icon", "http://numeral.com/appletsoftware/eicon.html"],
       ["Cashemonet", "http://cachemonet.com"],
-      ["Windows93.net", "https://www.windows93.net"],
       ["Shredder", "https://potatoland.org/shredder/shredder.html"]
+    ];
+
+    var toolsLinks = [
+      ["Library Of Babel", "http://libraryofbabel.info"],
+      ["Orteil", "https://orteil.dashnet.org"],
+      ["Videogame Premise Generator", "https://orteil.dashnet.org/gamegen"],
+      ["JazzKeys", "https://jazzkeys.plan8.co"],
+      ["EmuOS", "https://emupedia.net/beta/emuos"],
+      ["QR Picture", "https://qrpicture.com"],
+      ["Sprites-as-a-service", "https://ljvmiranda921.github.io/sprites-as-a-service"],
+      ["Windows93.net", "https://www.windows93.net"]
     ];
 
     var uselessLinks = [
@@ -66,12 +74,16 @@
     loopLinks();
 
     function loopLinks() {
-      for (var i = 0; i < personalLinks.length; i++) {
-        createLink(personalLinks, i, "personalTarget");
+      for (var i = 0; i < netArtLinks.length; i++) {
+        createLink(netArtLinks, i, "netArtTarget");
       }
 
-      for (var j = 0; j < uselessLinks.length; j++) {
-        createLink(uselessLinks, j, "uselessTarget");
+      for (var j = 0; j < toolsLinks.length; j++) {
+        createLink(toolsLinks, j, "toolsTarget");
+      }
+
+      for (var k = 0; k < uselessLinks.length; k++) {
+        createLink(uselessLinks, k, "uselessTarget");
       }
     }
 
