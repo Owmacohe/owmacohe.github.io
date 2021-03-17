@@ -34,14 +34,21 @@ img {
   text-decoration: none;
   position: fixed;
   left: 49.9vw;
-  top: 12.8vw;
+  top: 12.7vw;
 }
 
 #curvedText {
+  transition: 0.3s;
+
   font-size: 1.75vw;
   font-family: monospace;
 
-  -webkit-text-fill-color: var(--links);
+  -webkit-text-fill-color: var(--body);
+}
+
+#curvedText:hover {
+  transition: 0.3s;
+  -webkit-text-fill-color: var(--hover);
 }
 
 #descriptionBox { width: 25vw; }

@@ -4,11 +4,10 @@
 
 :root {
   --background: #140132;
-  --body: #5004c8;
   --boxes: #030007;
+  --body: #5004c8;
   --links: #3d1ada;
   --hover: #a08ef2;
-  --backText: #0a0119;
 }
 
 
@@ -209,7 +208,8 @@ button:hover { background: linear-gradient(to bottom right, var(--links), red); 
 
   font-size: 2.5vw;
 
-  color: var(--backText);
+  color: var(--boxes);
+  opacity: 0.5;
   line-height: 50px;
   word-wrap: break-word;
   user-select: none;
