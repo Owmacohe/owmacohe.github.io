@@ -48,7 +48,7 @@ img {
 
 #curvedText:hover {
   transition: 0.3s;
-  -webkit-text-fill-color: var(--hover);
+  -webkit-text-fill-color: var(--highlight);
 }
 
 #descriptionBox { width: 25vw; }
@@ -57,6 +57,8 @@ img {
   font-size: 2.5vw;
   cursor: pointer;
 }
+
+
 
 /* Mobile Optimization */
 

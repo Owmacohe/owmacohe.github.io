@@ -3,12 +3,21 @@
 /* Colours */
 
 :root {
-  --background: #140132;
-  --boxes: #030007;
-  --body: #5004c8;
-  --links: #3d1ada;
-  --hover: #a08ef2;
+  --background: #140132; /*obvious*/
+  --boxes: #030007; /*background of special flex containers*/
+  --body: #5004c8; /*default text colour*/
+  --links: #3d1ada; /*primary link colour*/
+  --hover: #a08ef2; /*secondary link colour*/
+  --highlight: #dd1906; /*for when a gradient can't be acheived*/
+  --gradient-normal: linear-gradient(to bottom right, var(--links), var(--hover)); /*default gradient*/
+  --gradient-hover: linear-gradient(to bottom right, var(--links), red); /*hover gradient*/
+  --gradient-hover-flipped: linear-gradient(to bottom right, red, var(--links)); /*inverted hover gradient*/
 }
+
+::selection {
+ 	background-color: var(--highlight);
+  text-shadow: 0.15vw 0.15vw var(--hover);
+ }
 
 
 
@@ -20,9 +29,9 @@ body {
   font-family: lores-12, sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--body);
 
   background-color: var(--background);
-  color: var(--body);
 }
 
 h1, h2, h3, button, #backgroundText, .alert {
@@ -39,7 +48,7 @@ a, #form {
   text-decoration: none;
   position: relative;
 
-  background: linear-gradient(to bottom right, var(--links), var(--hover));
+  background: var(--gradient-normal);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -50,12 +59,12 @@ a:after, #form:after {
   left: 0;
   width: 0%;
   border-bottom: 0.2vw solid;
-  border-image-source: linear-gradient(to bottom right, red, var(--links));
+  border-image-source: var(--gradient-hover-flipped);
   border-image-slice: 1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 a:hover, #form:hover {
-  background: linear-gradient(to bottom right, var(--links), red);
+  background: var(--gradient-hover);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -99,10 +108,10 @@ button {
   color: var(--boxes);
   font-size: 1.5vw;
 
-  background: linear-gradient(to bottom right, var(--links), var(--hover));
+  background: var(--gradient-normal);
 }
 
-button:hover { background: linear-gradient(to bottom right, var(--links), red); }
+button:hover { background: var(--gradient-hover); }
 
 
 
@@ -194,7 +203,7 @@ button:hover { background: linear-gradient(to bottom right, var(--links), red); 
 .img_big { width: 70vw; }
 
 .nounderline { text-decoration: none; }
-.nounderline_fancy:after { border: none; }
+.nounderline_fancy:after { border-image-slice: 0; }
 
 
 
@@ -239,10 +248,12 @@ button:hover { background: linear-gradient(to bottom right, var(--links), red); 
 }
 
 .alert {
-  background: linear-gradient(to bottom right, red, var(--links));
+  background: var(--gradient-hover-flipped);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 /* Mobile Optimization */
 
@@ -252,6 +263,8 @@ button:hover { background: linear-gradient(to bottom right, var(--links), red); 
   h2 { font-size: 3vw; }
 
   p { font-size: 2.5vw; }
+
+  a:after, #form:after { border: none; }
 
   .flexitem { font-size: 3.5vw; }
 
