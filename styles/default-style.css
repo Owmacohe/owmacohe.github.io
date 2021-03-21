@@ -8,10 +8,12 @@
   --body: #5004c8; /*default text colour*/
   --links: #3d1ada; /*primary link colour*/
   --hover: #a08ef2; /*secondary link colour*/
-  --highlight: #dd1906; /*for when a gradient can't be acheived*/
-  --gradient-normal: linear-gradient(to bottom right, var(--links), var(--hover)); /*default gradient*/
-  --gradient-hover: linear-gradient(to bottom right, var(--links), red); /*hover gradient*/
-  --gradient-hover-flipped: linear-gradient(to bottom right, red, var(--links)); /*inverted hover gradient*/
+  --highlight: #dd2c06; /*for when a gradient can't be acheived*/
+
+  --gradient-degree: 135deg;
+  --gradient-normal: linear-gradient(var(--gradient-degree), var(--links), var(--hover)); /*default gradient*/
+  --gradient-hover: linear-gradient(var(--gradient-degree), var(--links), red); /*hover gradient*/
+  --gradient-hover-flipped: linear-gradient(var(--gradient-degree), red, var(--links)); /*inverted hover gradient*/
 }
 
 ::selection {
@@ -51,6 +53,8 @@ a, #form {
   background: var(--gradient-normal);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  transition: 0.3s;
 }
 a:after, #form:after {
   content: "";
@@ -58,15 +62,16 @@ a:after, #form:after {
   bottom: 0;
   left: 0;
   width: 0%;
+
   border-bottom: 0.2vw solid;
   border-image-source: var(--gradient-hover-flipped);
   border-image-slice: 1;
+
   transition: 0.3s;
 }
 a:hover, #form:hover {
   background: var(--gradient-hover);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 a:hover:after, #form:hover:after {
   width: 100%;
@@ -167,7 +172,9 @@ button:hover { background: var(--gradient-hover); }
   margin: 2vw;
   padding: 1.5vw;
 
-  border: 0.75vw transparent;
+  border-width: 0.75vw;
+  border-top: 0;
+  border-right: 0;
   border-style: none none solid solid;
 	border-image: var(--gradient-hover);
 	border-image-slice: 1;
