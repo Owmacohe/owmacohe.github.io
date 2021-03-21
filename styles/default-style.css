@@ -167,11 +167,11 @@ button:hover { background: var(--gradient-hover); }
   margin: 2vw;
   padding: 1.5vw;
 
+  border: 0.75vw transparent;
   border-style: none none solid solid;
-  border-color: var(--body);
-  border-left-width: 1.5vw;
-  border-bottom-width: 0.5vw;
-  border-top-right-radius: 30px;
+	border-image: var(--gradient-hover);
+	border-image-slice: 1;
+  border-top-right-radius: 2vw;
 
   display: flex;
   justify-content: center;

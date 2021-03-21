@@ -65,10 +65,7 @@ img {
 @media only screen and (max-width: 1000px) {
   body { overflow: visible; }
 
-  img {
-    border: 1vw solid var(--body);
-    width: 37vw;
-  }
+  img { width: 37vw; }
 
   p { font-size: 3vw; }
 
