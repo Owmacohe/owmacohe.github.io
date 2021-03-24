@@ -1,0 +1,91 @@
+@import url("https://use.typekit.net/csa5hex.css");
+
+:root {
+  --blue: #5e6472; /*background*/
+  --blue-dark: #23252a;
+  --blue-darker: hsl(222, 9%, 5%);
+
+  --red: #ffa69e; /*header text*/
+  --yellow: #fff5d6; /*body text*/
+  --green: #b8f2d3; /*clickables*/
+  --green-dark: hsl(147, 30%, 50%);
+}
+
+body {
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background: var(--blue);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  margin-bottom: 1vw;
+
+  color: var(--red);
+  font-family: lores-12-bold-alt-oakland, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 { font-size: 6vw; }
+h2 { font-size: 4vw; }
+h3 { font-size: 2vw; }
+
+p {
+  margin: 0;
+  color: var(--yellow);
+  font-size: 2vw;
+}
+
+button {
+  transition: 0.5s;
+
+  border: none;
+  margin: 0.5vw;
+
+  color: var(--blue-dark);
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2vw;
+
+  background: var(--green);
+}
+button:hover {
+  transition: 0.1s;
+  color: var(--yellow);
+  background: var(--green-dark);
+}
+
+.flexcolumn, .flexcolumn_dark, .flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+  margin: 1vw;
+}
+.flexcolumn, .flexcolumn_dark { flex-direction: column; }
+.flexcolumn_dark {
+  width: 15vw;
+  padding: 1vw;
+  background: var(--blue-dark);
+}
+.flexrow { flex-direction: row; }
+
+.darker {
+  width: 30vw;
+  height: 30vw;
+
+  margin: 1vw;
+
+  background: var(--blue-darker);
+}
+
+.backDots {
+  color: var(--blue-dark);
+  font-size: 1.5vw;
+  user-select: none;
+}
