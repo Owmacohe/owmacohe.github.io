@@ -54,7 +54,11 @@ button {
 }
 button:hover {
   transition: 0.1s;
+
+  cursor: pointer;
+
   color: var(--yellow);
+
   background: var(--green-dark);
 }
 
