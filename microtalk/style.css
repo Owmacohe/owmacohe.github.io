@@ -1,9 +1,9 @@
 :root {
-  --background: #030e00;
-  --flex: hsl(100, 100%, 10%);
-  --flex-light: hsl(100, 100%, 35%);
-  --special: hsl(600, 100%, 10%);
-  --special-light: hsl(600, 100%, 35%);
+  --background: hsl(100, 100%, 3%);
+  --flex: hsl(100, 30%, 20%);
+  --flex-light: hsl(100, 30%, 45%);
+  --special: hsl(600, 30%, 20%);
+  --special-light: hsl(600, 30%, 35%);
 }
 
 body {
