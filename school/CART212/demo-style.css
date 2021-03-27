@@ -58,6 +58,15 @@ button:hover {
   background: var(--green-dark);
 }
 
+a {
+  transition: 0.5s;
+  color: var(--green);
+}
+a:hover {
+  transition: 0.1s;
+  color: var(--green-dark);
+}
+
 .flexcolumn, .flexcolumn_dark, .flexrow {
   display: flex;
   justify-content: center;
@@ -88,4 +97,13 @@ button:hover {
   color: var(--blue-dark);
   font-size: 1.5vw;
   user-select: none;
+}
+
+.marginP {
+  width: 80vw;
+
+  padding: 2vw;
+  margin-bottom: 5vw;
+
+  background: var(--blue-darker);
 }

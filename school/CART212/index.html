@@ -2,96 +2,66 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="simulate.js" charset="utf-8"></script>
-    <title></title>
+    <link rel="stylesheet" href="demo-style.css">
+    <title>CART 212 Project #3</title>
   </head>
 
   <body class="flexcolumn">
-    <h1>Normalizer XE-9000</h1>
-    <div class="flexrow">
 
-      <div class="flexcolumn">
-        <div class="flexcolumn_dark">
-          <h3>Biological needs</h3>
-          <p id="bio"></p>
-          <button>Eat</button>
-          <button>Sleep</button>
-          <button>Waste</button>
-        </div>
-        <div class="flexcolumn_dark">
-          <h3>Emotional needs</h3>
-          <p id="emo"></p>
-          <button>Socialize</button>
-          <button>Seclude</button>
-          <button>Cavort</button>
-        </div>
-      </div>
+    <h1>CART 212 Project #3</h1>
+    <h2>The demo is under construction <a href="demo.html">here</a>.</h2>
 
-      <div class="flexcolumn_dark" style="width: 40vw; height: 40vw;">
-        <h2 id="name"></h2>
-        <div class="darker"></div>
-      </div>
+    <div class="flexcolumn_dark" style="width: 90vw;">
+      <h2>Project Brief</h2>
 
-      <div class="flexcolumn">
-        <div class="flexcolumn_dark">
-          <h3>Large decisions</h3>
-          <p id="lrg"></p>
-          <div class="flexrow">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-        <div class="flexcolumn_dark">
-          <h3>Small decisions</h3>
-          <p id="sml">Test</p>
-          <div class="flexrow">
-            <button>Yes</button>
-            <button>No</button>
-          </div>
-        </div>
-      </div>
+      <h3>Tagline:</h3>
+      <p class="marginP">A short-form web game addressing the fleeting 'normalacy' that we humans seem to try to cling to during various moments of our lives.</p>
 
+      <h3>Gameplay description:</h3>
+      <p class="marginP">
+        Over the course of 2 minutes, the player will have a limited sort of control over a simulated human as the grow old, tend to their bodily needs, and make life decisions.
+        The game's speed, complexity and format will change rapidly as the player progresses, simulating the turbulent and inconsistend changes one goes through in life.
+        As the game changes, it will be blantantly and overtly informing the player to 'adapt', and that this most recent change is 'the new normal'.
+      </p>
+
+      <h3>Software used:</h3>
+      <p class="marginP">
+        - HTML, CSS, and JavaScript (programming)<br>
+        - Aseprite (pixel art)<br>
+        - Premiere Pro / After Effects (visual effects and/or cutscenes)
+      </p>
     </div>
+
+    <div class="flexcolumn_dark" style="width: 90vw;">
+      <h2>Style Guide</h2>
+
+      <h3>Colours:</h3>
+      <div class="flexcolumn" style="margin-bottom: 5vw;">
+        <div class="flexrow">
+          <p style="color: var(--blue);">Blue-grey (background)</p>
+          <p style="margin-left: 1vw; margin-right: 1vw; color: var(--blue-dark); background: var(--blue);">Dark blue-grey (dividers)</p>
+          <p style="color: var(--blue-darker);">Darker blue-grey (more dividers)</p>
+        </div>
+        <div class="flexrow">
+          <p style="color: var(--red);">Red (headers)</p>
+          <p style="margin-left: 1vw; margin-right: 1vw; color: var(--yellow);">Yellow (body text)</p>
+          <p style="margin-right: 1vw; color: var(--green);">Green (buttons)</p>
+          <p style="color: var(--green-dark);">Dark green (activated buttons)</p>
+        </div>
+      </div>
+
+      <h3>Font usage:</h3>
+      <p class="marginP">
+        - Body text: LoRes 12 OT Regular<br>
+        - Headers: <em style="font-style: normal; font-family: lores-12-bold-alt-oakland, sans-serif; font-weight: 400; font-style: normal;">LoRes 12 Bold Alt Oakland</em>
+      </p>
+
+      <h3>Graphics:</h3>
+      <p class="marginP">Under construction</p>
+
+      <h3>Sample Layouts</h3>
+      <p class="marginP">Under construction</p>
+    </div>
+
   </body>
-
-  <script type="text/javascript">
-    const DOTSCOUNT = 50; //Number of dots on-screen
-    const DOTSOPACITY = 75; //Highest possible opacity chance
-
-    //New dot every 50 milliseconds
-    var dotCount = setInterval(function() {
-      //Deletes old dots (as so not to clutter up the screen)
-      for (var i = 0; i < document.getElementsByClassName("backDots").length; i++) {
-        document.getElementsByClassName("backDots")[i].remove();
-      }
-
-      for (var j = 0; j < DOTSCOUNT; j++) {
-        var newDot = document.createElement("DIV");
-        document.body.appendChild(newDot);
-        newDot.setAttribute("class", "backDots");
-        //Gives it a random position and opacity
-        newDot.setAttribute("style",
-            "position: absolute; z-index: -1;" +
-            " left: " + Math.floor(Math.random() * 99) + "vw;" +
-            " top: " + Math.floor(Math.random() * 55) + "vw;" +
-            " opacity: " + Math.floor(Math.random() * DOTSOPACITY) + "%;");
-        newDot.innerHTML = ".";
-
-        //Possible chance to become a different colour
-        var rand = Math.floor(Math.random() * 10);
-        switch (rand) {
-          case 0:
-            newDot.style.color = "var(--red)";
-            break;
-          case 1:
-            newDot.style.color = "var(--green)";
-            break;
-          case 2:
-            newDot.style.color = "var(--yellow)";
-            break;
-        }
-      }
-    }, 50);
-  </script>
 </html>
