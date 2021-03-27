@@ -1,0 +1,15 @@
+:root {
+  --background: black;
+  --text: #ff2f6f;
+}
+
+body {
+  color: var(--text);
+  font-family: "Caveat Brush";
+
+  background: var(--background);
+}
+
+h1, h2 {
+  font-family: "Permanent Marker";
+}
