@@ -8,7 +8,7 @@
 body {
   color: var(--text);
   font-family: "Caveat Brush";
-  font-size: 2vw;
+  font-size: 3.5vw;
 
   background: var(--background);
 }
@@ -18,8 +18,8 @@ h1, h2 {
   color: var(--header);
   font-family: "Permanent Marker";
 }
-h1 { font-size: 5vw; }
-h2 { font-size: 2vw; }
+h1 { font-size: 6vw; }
+h2 { font-size: 3.5vw; }
 
 a { color: var(--special); }
 
@@ -30,7 +30,7 @@ em {
 }
 
 hr {
-  width: 80%;
+  width: 85%;
   border: none;
   border-top: dotted var(--text);
 }
@@ -43,7 +43,7 @@ hr {
 .flexcolumn { flex-direction: column; }
 .flexrow { flex-direction: row; }
 .dotbox {
-  width: 50vw;
+  width: 90vw;
   margin: 3vw;
 
   border: dotted;
