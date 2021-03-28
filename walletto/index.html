@@ -7,10 +7,115 @@
     <title></title>
   </head>
 
-  <body>
-    <h1>Test</h1>
-    <h2>Test</h2>
-    <p>Test</p>
-    Test
+  <body class="flexcolumn">
+    <h1>WALLETTO</h1>
+    <h2>The wallet-sized TTRPG</h2>
+    <p>Inspiried by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/micaholism/status/1366273473019060225">this</a> Twitter post</p>
+    <p>Designed for short-form one-shots, version 1.0</p>
+
+    <div class="dotbox" style="flex-direction: column">
+      <h2>Stats</h2>
+      <p><em>STRN</em>, <em>DEXT</em>, <em>INTL</em>, <em>MAGI</em> = 1d20 each (minimum of 5)</p>
+      <p><em>HLTH</em> = <em>STRN</em></p>
+      <p><em>ARMR</em> = (<em>STRN</em> + <em>DEXT</em>) / 2</p>
+      <p>Initiative = <em>DEXT</em></p>
+    </div>
+
+    <div class="dotbox" style="flex-direction: column">
+      <h2>Race / Class</h2>
+      <div class="flexrow">
+        <div class="flexrow">
+          <p>Race (1d6) =</p>
+          <p>
+            <em>Fey</em><br>
+            <em>Undead</em><br>
+            <em>Humanoid</em><br>
+          </p>
+          <p>
+            <em>Orcish</em><br>
+            <em>Elemental</em><br>
+            <em>Construct</em><br>
+          </p>
+        </div>
+        <div class="flexrow">
+          <p>Class (1d3) =</p>
+          <p>
+            <em>Wizard</em><br>
+            <em>Fighter</em><br>
+            <em>War Mage</em><br>
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div class="flexrow">
+        <p>Wizard (1d6 x4) =</p>
+        <p>
+          <em>Gravel Slap</em> (1d6 damage)<br>
+          <em>Ice Sweep</em> (1d4 damage) (15ft diameter)<br>
+          <em>Magic Teapot</em> (truth serum) (10m duration)<br>
+          <em>Cheese Shackles</em> (immobilizes target for 5m)<br>
+          <em>Pillow Armour</em> (1d6 <em>ARMR</em>) (only for others)<br>
+          <em>Ember Bell</em> (1d4 damage) (burns target's feet)<br>
+        </p>
+      </div>
+      <div class="flexrow">
+        <p>Fighter =</p>
+        <p>Extra 2 damage, Extra 3 <em>STRN</em> and <em>DEXT</em></p>
+      </div>
+      <div class="flexrow">
+        <p>War Mage =</p>
+        <p>Extra 1 damage, Extra 2 <em>STRN</em>, 1d6 x2 from spells</p>
+      </div>
+    </div>
+
+    <div class="dotbox" style="flex-direction: column">
+      <h2>Equipment</h2>
+      <div class="flexcolumn">
+        <div class="flexrow">
+          <p>Weapons (1d6 x2) =</p>
+          <p>
+            <em>Club</em> (1d6 damage) (melee)<br>
+            <em>Bow</em> (1d4 damage) (ranged)<br>
+            <em>Staff</em> (1d4 damage) (melee)<br>
+            <em>Sword</em> (1d6 damage) (melee)<br>
+            <em>Spear</em> (1d6 damage) (melee/ranged)<br>
+            <em>Knife</em> (1d4 damage) (melee/ranged)<br>
+          </p>
+        </div>
+        <div class="flexrow">
+          <p>Inventory (1d12 x4) =</p>
+          <p>
+            <em>Rope</em><br>
+            <em>Book</em><br>
+            <em>Drugs</em><br>
+            <em>Trinket</em><br>
+            <em>Costume</em><br>
+            <em>Companion</em><br>
+          </p>
+          <p>
+            <em>Food</em><br>
+            <em>Cards</em><br>
+            <em>Poison</em><br>
+            <em>Artifact</em><br>
+            <em>Explosive</em><br>
+            <em>Instrument</em><br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dotbox" style="flex-direction: column">
+      <h2>Rules</h2>
+      <p>
+        • To hit with a weapon, roll 1d20 >= 1/2 of target's <em>ARMR</em><br>
+        • To land a spell, roll 1d20 >= 1/2 of target's <em>MAGI</em><br>
+        • Spells cost 1d3 <em>MAGI</em> on cast<br>
+        • When <em>HLTH</em> = 0, roll 1d20 >= 10 each turn to stay alive<br>
+        • Advantage / Disadvantage = Roll twice and take highest / lowest<br>
+        • To move in stealth, roll 1d20 >= 10<br>
+        • All other checks must roll 1d20 >= respective stat<br>
+      </p>
+    </div>
+
   </body>
 </html>

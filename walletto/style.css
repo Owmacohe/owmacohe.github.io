@@ -1,15 +1,51 @@
 :root {
   --background: black;
-  --text: #ff2f6f;
+  --header: #d16f27;
+  --text: #7b4117;
+  --special: #8b27d1;
 }
 
 body {
   color: var(--text);
   font-family: "Caveat Brush";
+  font-size: 2vw;
 
   background: var(--background);
 }
 
+h1, h2, p { margin: 0.5vw; }
 h1, h2 {
+  color: var(--header);
   font-family: "Permanent Marker";
+}
+h1 { font-size: 5vw; }
+h2 { font-size: 2vw; }
+
+a { color: var(--special); }
+
+em {
+  color: var(--special);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+hr {
+  width: 80%;
+  border: none;
+  border-top: dotted var(--text);
+}
+
+.flexcolumn, .flexrow, .dotbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolumn { flex-direction: column; }
+.flexrow { flex-direction: row; }
+.dotbox {
+  width: 50vw;
+  margin: 3vw;
+
+  border: dotted;
+  border-radius: 0.5vw;
 }
