@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <title></title>
+    <script src="script.js" charset="utf-8"></script>
+    <title>Walletto: The wallet-sized TTRPG</title>
   </head>
 
   <body class="flexcolumn">
@@ -12,6 +13,7 @@
     <h2>The wallet-sized TTRPG</h2>
     <p>Inspiried by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/micaholism/status/1366273473019060225">this</a> Twitter post</p>
     <p>Designed for short-form one-shots, version 1.0</p>
+    <p>Jump to the character generator <a href="#generator">here</a></p>
 
     <div class="dotbox" style="flex-direction: column">
       <h2>Dice</h2>
@@ -135,6 +137,31 @@
         • Sessions should contain ~1-2 simple combat sequences<br>
         • Use these same rules to create NPCs or enemies
       </p>
+    </div>
+
+    <div class="dotbox" style="flex-direction: column" id="generator">
+      <div class="flexrow">
+        <h2>Character Generator</h2>
+        <button onclick="generate()">Generate</button>
+      </div>
+      <div class="flexrow">
+        <p>Stats =</p>
+        <em id="stats"></em>
+      </div>
+      <p>Race = <em id="r"></em></p>
+      <p>Class = <em id="c"></em></p>
+      <div class="flexrow">
+        <p>Spells =</p>
+        <em id="s"></em>
+      </div>
+      <div class="flexrow">
+        <p>Weapons =</p>
+        <em id="w"></em>
+      </div>
+      <div class="flexrow">
+        <p>Inventory =</p>
+        <em id="i"></em>
+      </div>
     </div>
 
   </body>

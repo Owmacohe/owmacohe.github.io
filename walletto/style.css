@@ -35,6 +35,29 @@ hr {
   border-top: dotted var(--text);
 }
 
+button {
+  transition: 0.2s;
+  cursor: pointer;
+
+  margin: 2vw;
+
+  font-family: "Permanent Marker";
+  font-size: 3.5vw;
+  color: var(--header);
+
+  border: none;
+  border-radius: 0.5vw;
+
+  background: var(--text);
+}
+button:hover {
+  transition: 0.1s;
+
+  color: var(--background);
+
+  background: var(--special);
+}
+
 .flexcolumn, .flexrow, .dotbox {
   display: flex;
   justify-content: center;
