@@ -71,6 +71,11 @@ a:hover {
   color: var(--green-dark);
 }
 
+img {
+  width: 70%;
+  margin: 2vw;
+}
+
 .flexcolumn, .flexcolumn_dark, .flexrow {
   display: flex;
   justify-content: center;

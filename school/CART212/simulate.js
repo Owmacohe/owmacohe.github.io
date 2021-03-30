@@ -15,15 +15,42 @@
 
 */
 
+var gameIsStarted = false;
+
 var bio_needs = [100, 100, 100]; // eat, sleep, waste
 var emo_needs = [100, 100, 100]; // socialize, seclude, cavort
 var needs = [bio_needs, emo_needs];
 
 var lrg_decisons = [
-  "Be born"
+  "Be born", // youth
+  "Go to school",
+  "Move out", // adulthood
+  "Get a job",
+  "Retire", // old age
+  "Die",
+  "Diffuse into the universe", // beyond
+  "Grasp the full scale of the cosmos",
+  "Finally, be at peace"
 ];
 var sml_decisons = [
-  "Go for a walk"
+  "Make infant noises", // youth
+  "Crawl around aimlessly",
+  "Try to learn",
+  "Be blissfully innocent",
+  "Go for a walk", // adulthood
+  "Let loneliness set in",
+  "Settle into routine",
+  "Find love",
+  "Shed responsabilities", // old age
+  "Surrender to mediocraty",
+  "Go silently",
+  "Begin to decompose",
+  "Become a part of the water cylce", // beyond
+  "Struggle against loss of self",
+  "Travel into the cosmos",
+  "Amass all conceivable information",
+  "Observe the heat death of the universe",
+  "Begin again?"
 ];
 var lrg_index = 0;
 var sml_index = 0;
@@ -31,8 +58,18 @@ var sml_index = 0;
 var gameTime = 0;
 var gameSpeed = 1;
 var increaseGameSpeed = setInterval(function() {
-  gameTime++;
-  gameSpeed += 1/8;
+  if (gameIsStarted) {
+    gameTime++;
+
+    if (gameTime >= 90) {
+      gameIsStarted = false;
+    }
+
+    gameSpeed += 0.05;
+    gameSpeed = Math.round(gameSpeed * 100) / 100;
+
+    document.getElementById("time").innerHTML = "Time: " + gameTime + "s, Speed: " + gameSpeed;
+  }
 }, 1000);
 
 window.onload = function() {
@@ -41,73 +78,87 @@ window.onload = function() {
 }
 
 function increaseNeeds(array, index) {
-  array[index] += 50;
+  if (gameIsStarted) {
+    array[index] = 100;
 
-  for (var i = 0; i < 3; i++) {
-    if (bio_needs[i] >= 110) {
-      switch (i) {
-        case 0:
-          document.getElementById("bio").innerHTML = "Too much food!";
-          break;
-        case 1:
-          document.getElementById("bio").innerHTML = "Too much sleep!";
-          break;
-        case 2:
-          document.getElementById("bio").innerHTML = "No need to waste!";
-          break;
-      }
+    if (array == bio_needs) {
+      document.getElementById("bio").innerHTML = "";
     }
-    if (emo_needs[i] >= 110) {
-      switch (i) {
-        case 0:
-          document.getElementById("emo").innerHTML = "Too much socializing!";
-          break;
-        case 1:
-          document.getElementById("emo").innerHTML = "Too much secluding!";
-          break;
-        case 2:
-          document.getElementById("emo").innerHTML = "No need to cavort!";
-          break;
-      }
+    else if (array == emo_needs) {
+      document.getElementById("emo").innerHTML = "";
     }
   }
 }
 
 var decreaseNeeds = setInterval(function() {
-  for (var i in needs) {
-    for (var j in needs[i]) {
-      needs[i][j] -= Math.floor(Math.random() * (2 * gameSpeed));
-    }
-  }
-
-  for (var j = 0; j < 3; j++) {
-    if (bio_needs[j] <= 50) {
-      switch (j) {
-        case 0:
-          document.getElementById("bio").innerHTML = "Need to eat!";
-          break;
-        case 1:
-          document.getElementById("bio").innerHTML = "Need to sleep!";
-          break;
-        case 2:
-          document.getElementById("bio").innerHTML = "Need to waste!";
-          break;
-      }
-    }
-    if (emo_needs[j] <= 50) {
-      switch (j) {
-        case 0:
-          document.getElementById("emo").innerHTML = "Need to socialize!";
-          break;
-        case 1:
-          document.getElementById("emo").innerHTML = "Need to seclude!";
-          break;
-        case 2:
-          document.getElementById("emo").innerHTML = "Need to cavort!";
-          break;
+  if (gameIsStarted) {
+    for (var i in needs) {
+      for (var j in needs[i]) {
+        needs[i][j] -= Math.floor(Math.random() * (2 * gameSpeed));
       }
     }
   }
-
-  //console.log("Bio: " + bio_needs[0] + " " + bio_needs[1] + " " + bio_needs[2] + "\nEmo: " + emo_needs[0] + " " + emo_needs[1] + " " + emo_needs[2]);
 }, 1000);
+
+var checkNeeds = setInterval(function() {
+  if (gameIsStarted) {
+    for (var i in needs) {
+      for (var j in needs[i]) {
+        if (needs[i][j] <= 50) {
+          if (i == 0 && j == 0) { document.getElementById("bio").innerHTML = "Need to eat!"; }
+          if (i == 0 && j == 1) { document.getElementById("bio").innerHTML = "Need to sleep!"; }
+          if (i == 0 && j == 2) { document.getElementById("bio").innerHTML = "Need to waste!"; }
+
+          if (i == 1 && j == 0) { document.getElementById("emo").innerHTML = "Need to socialize!"; }
+          if (i == 1 && j == 1) { document.getElementById("emo").innerHTML = "Need to seclude!"; }
+          if (i == 1 && j == 2) { document.getElementById("emo").innerHTML = "Need to cavort!"; }
+        }
+      }
+    }
+
+    console.log("Bio: " + bio_needs[0] + " " + bio_needs[1] + " " + bio_needs[2] + "\nEmo: " + emo_needs[0] + " " + emo_needs[1] + " " + emo_needs[2]);
+  }
+}, 1000);
+
+var checkDecisions = setInterval(function() {
+  if (gameIsStarted) {
+    if ((lrg_index * 10) < gameTime) {
+      document.getElementById("lrg").innerHTML = lrg_decisons[lrg_index];
+    }
+
+    if ((sml_index * 5) < gameTime) {
+      document.getElementById("sml").innerHTML = sml_decisons[sml_index];
+    }
+
+    console.log("LRG: " + lrg_decisons[lrg_index] + "\nSML: " + sml_decisons[sml_index]);
+  }
+}, 1000);
+
+function decide(size, isYes) {
+  if (gameIsStarted) {
+    if (size == "lrg") {
+      if (isYes) {
+        lrg_index++;
+        document.getElementById("lrg").innerHTML = "";
+      }
+      else {
+        lrg_index++;
+        document.getElementById("lrg").innerHTML = "";
+      }
+    }
+    else if (size == "sml") {
+      if (isYes) {
+        sml_index++;
+        document.getElementById("sml").innerHTML = "";
+
+        if (sml_index >= 17) {
+          window.location.reload(true);
+        }
+      }
+      else {
+        sml_index++;
+        document.getElementById("sml").innerHTML = "";
+      }
+    }
+  }
+}
