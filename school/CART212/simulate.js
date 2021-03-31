@@ -62,6 +62,7 @@ var increaseGameSpeed = setInterval(function() {
     gameTime++;
 
     if (gameTime >= 90) {
+      document.getElementById("subjectImg").setAttribute("src", "subject/CART212_7.png");
       gameIsStarted = false;
     }
 
@@ -124,6 +125,27 @@ var checkDecisions = setInterval(function() {
   if (gameIsStarted) {
     if ((lrg_index * 10) < gameTime) {
       document.getElementById("lrg").innerHTML = lrg_decisons[lrg_index];
+
+      switch (lrg_index) {
+        case 0:
+          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_1.png");
+          break;
+        case 2:
+          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_2.png");
+          break;
+        case 4:
+          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_3.png");
+          break;
+        case 6:
+          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_4.png");
+          break;
+        case 7:
+          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_5.png");
+          break;
+        case 8:
+          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_6.png");
+          break;
+      }
     }
 
     if ((sml_index * 5) < gameTime) {

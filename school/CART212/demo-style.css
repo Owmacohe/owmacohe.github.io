@@ -8,7 +8,7 @@
   --red: #ffa69e; /*header text*/
   --yellow: #fff5d6; /*body text*/
   --green: #b8f2d3; /*clickables*/
-  --green-dark: hsl(147, 30%, 50%);
+  --green-dark: #59a67c;
 }
 
 body {
@@ -72,8 +72,7 @@ a:hover {
 }
 
 img {
-  width: 70%;
-  margin: 2vw;
+  width: 15vw;
 }
 
 .flexcolumn, .flexcolumn_dark, .flexrow {
@@ -93,7 +92,7 @@ img {
 }
 .flexrow { flex-direction: row; }
 
-.darker {
+#darker {
   width: 30vw;
   height: 30vw;
 
@@ -115,4 +114,12 @@ img {
   margin-bottom: 5vw;
 
   background: var(--blue-darker);
+}
+
+#subjectImg {
+  width: 80%;
+  height: 80%;
+  align-self: center;
+
+  border: none;
 }
