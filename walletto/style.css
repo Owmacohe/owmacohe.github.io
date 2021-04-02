@@ -21,7 +21,16 @@ h1, h2 {
 h1 { font-size: 6vw; }
 h2 { font-size: 3.5vw; }
 
-a { color: var(--special); }
+a {
+  transition: 0.2s;
+
+  color: var(--special);
+}
+a:hover {
+  transition: 0.2s;
+
+  color: var(--header);
+}
 
 em {
   color: var(--special);
@@ -51,24 +60,30 @@ button {
   background: var(--text);
 }
 button:hover {
-  transition: 0.1s;
+  transition: 0.2s;
 
   color: var(--background);
 
   background: var(--special);
 }
 
-.flexcolumn, .flexrow, .dotbox {
+.flexcolumn, .flexrow, .dotbox, .dotbox_mini {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .flexcolumn { flex-direction: column; }
 .flexrow { flex-direction: row; }
-.dotbox {
+.dotbox, .dotbox_mini {
   width: 90vw;
   margin: 3vw;
+  padding: 1vw;
 
   border: dotted;
   border-radius: 0.5vw;
+}
+.dotbox_mini {
+  width: inherit;
+  margin: 1vw;
 }
