@@ -1,40 +1,38 @@
-@import url("https://use.typekit.net/csa5hex.css");
-
 :root {
-  --blue: #5e6472; /*background*/
-  --blue-dark: #23252a;
-  --blue-darker: hsl(222, 9%, 5%);
+  --base: white;
+  --mid: #86868B;
+  --contrast: black;
 
-  --red: #ffa69e; /*header text*/
-  --yellow: #fff5d6; /*body text*/
-  --green: #b8f2d3; /*clickables*/
-  --green-dark: #59a67c;
+  --highlight: #0858E7;
+  --highlight-hover: #2A74F8;
+  --highlight-dark: hsl(218, 93%, 15%);
 }
 
 body {
-  font-family: lores-12, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Helvetica";
+  font-weight: lighter;
 
-  background: var(--blue);
+  background: var(--base);
 }
 
 h1, h2, h3 {
   margin: 0;
   margin-bottom: 1vw;
 
-  color: var(--red);
-  font-family: lores-12-bold-alt-oakland, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  color: var(--contrast);
+  font-family: "Helvetica";
+  font-weight: bold;
 }
 h1 { font-size: 6vw; }
 h2 { font-size: 4vw; }
-h3 { font-size: 2vw; }
+h3 {
+  font-size: 2vw;
+  color: var(--base);
+}
 
 p {
   margin: 0;
-  color: var(--yellow);
+  color: var(--base);
   font-size: 2vw;
 }
 
@@ -42,38 +40,34 @@ button {
   transition: 0.5s;
 
   border: none;
+  border-radius: 0.2vw;
   margin: 0.5vw;
 
-  color: var(--blue-dark);
-  font-family: lores-12, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  color: var(--base);
   font-size: 2vw;
+  font-family: "Helvetica";
+  font-weight: lighter;
 
-  background: var(--green);
+  background: var(--highlight);
 }
 button:hover {
   transition: 0.1s;
 
   cursor: pointer;
 
-  color: var(--yellow);
-
-  background: var(--green-dark);
+  background: var(--highlight-hover);
 }
 
 a {
   transition: 0.5s;
-  color: var(--green);
+  color: var(--highlight);
 }
 a:hover {
   transition: 0.1s;
-  color: var(--green-dark);
+  color: var(--highlight-hover);
 }
 
-img {
-  width: 15vw;
-}
+img { width: 15vw; }
 
 .flexcolumn, .flexcolumn_dark, .flexrow {
   display: flex;
@@ -88,7 +82,7 @@ img {
 .flexcolumn_dark {
   width: 15vw;
   padding: 1vw;
-  background: var(--blue-dark);
+  background-image: linear-gradient(to bottom right, var(--contrast), var(--highlight-dark));
 }
 .flexrow { flex-direction: row; }
 
@@ -98,11 +92,11 @@ img {
 
   margin: 1vw;
 
-  background: var(--blue-darker);
+  background: var(--contrast);
 }
 
 .backDots {
-  color: var(--blue-dark);
+  color: var(--mid);
   font-size: 1.5vw;
   user-select: none;
 }
@@ -113,7 +107,15 @@ img {
   padding: 2vw;
   margin-bottom: 5vw;
 
-  background: var(--blue-darker);
+  background: var(--mid);
+}
+
+.finePrint {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+
+  color: var(--mid);
+  font-size: 1vw;
 }
 
 #subjectImg {

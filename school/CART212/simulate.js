@@ -60,6 +60,7 @@ var gameSpeed = 1;
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
     gameTime++;
+    dotsCount++;
 
     if (gameTime >= 90) {
       document.getElementById("subjectImg").setAttribute("src", "subject/CART212_7.png");

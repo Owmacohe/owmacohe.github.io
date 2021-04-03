@@ -2,13 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="squash2.svg">
     <link rel="stylesheet" href="demo-style.css">
     <script src="simulate.js" charset="utf-8"></script>
-    <title></title>
+    <title>Squash Inc. iSim</title>
   </head>
 
   <body class="flexcolumn">
-    <h1>CART 212 Project #3</h1>
+    <h1>iSim XS+ Pro Extended Edition</h1>
+    <div class="flexrow">
+      <h2>Lightweight. Imaginative. Powerful.</h2>
+      <img src="sim1.svg" alt="[iSim logo]" style="width: 4vw; margin-left: 1vw;">
+    </div>
     <div class="flexrow">
       <h2 id="time">Time: 0s, Speed: 1</h2>
       <button onclick="gameIsStarted = true;">Start</button>
@@ -33,9 +38,8 @@
       </div>
 
       <div class="flexcolumn_dark" style="width: 40vw; height: 40vw;">
-        <h2 id="name"></h2>
         <div id="darker">
-          <img alt="[subject image]" id="subjectImg">
+          <img alt=" " id="subjectImg">
         </div>
       </div>
 
@@ -59,10 +63,17 @@
       </div>
 
     </div>
+
+    <div class="flexrow">
+      <p class="finePrint">Copyright © 2021 Squash Inc. All rights reserved.</p>
+      <p class="finePrint">Squash Inc. cannot be held responsible for any existential crisises resulting from any iSim product.</p>
+      <p class="finePrint">iSim, the Squash logo, and anything else we want is held under patent pending international law.</p>
+      <img src="squash1.svg" alt="[Squash Inc. logo]" style="width: 1vw;">
+    </div>
   </body>
 
   <script type="text/javascript">
-    const DOTSCOUNT = 50; //Number of dots on-screen
+    var dotsCount = 0; //Number of dots on-screen
     const DOTSOPACITY = 75; //Highest possible opacity chance
 
     //New dot every 50 milliseconds
@@ -73,7 +84,7 @@
           document.getElementsByClassName("backDots")[i].remove();
         }
 
-        for (var j = 0; j < DOTSCOUNT; j++) {
+        for (var j = 0; j < dotsCount; j++) {
           var newDot = document.createElement("DIV");
           document.body.appendChild(newDot);
           newDot.setAttribute("class", "backDots");
@@ -86,16 +97,10 @@
           newDot.innerHTML = ".";
 
           //Possible chance to become a different colour
-          var rand = Math.floor(Math.random() * 10);
+          var rand = Math.floor(Math.random() *3);
           switch (rand) {
             case 0:
-              newDot.style.color = "var(--red)";
-              break;
-            case 1:
-              newDot.style.color = "var(--green)";
-              break;
-            case 2:
-              newDot.style.color = "var(--yellow)";
+              newDot.style.color = "var(--contrast)";
               break;
           }
         }
