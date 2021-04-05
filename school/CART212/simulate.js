@@ -74,11 +74,6 @@ var increaseGameSpeed = setInterval(function() {
   }
 }, 1000);
 
-window.onload = function() {
-  var rand = Math.floor(Math.random() * 10000);
-  document.getElementById("name").innerHTML = "Test Subject #" + rand;
-}
-
 function increaseNeeds(array, index) {
   if (gameIsStarted) {
     array[index] = 100;

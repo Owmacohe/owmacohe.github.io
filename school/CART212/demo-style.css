@@ -67,8 +67,6 @@ a:hover {
   color: var(--highlight-hover);
 }
 
-img { width: 15vw; }
-
 .flexcolumn, .flexcolumn_dark, .flexrow {
   display: flex;
   justify-content: center;
@@ -116,6 +114,22 @@ img { width: 15vw; }
 
   color: var(--mid);
   font-size: 1vw;
+}
+
+.video_big {
+  width: 102vw;
+
+  margin-top: -2vw;
+  margin-left: -5vw;
+}
+
+.h1_big {
+  position: absolute;
+
+  color: var(--base);
+
+  user-select: none;
+  pointer-events: none;
 }
 
 #subjectImg {

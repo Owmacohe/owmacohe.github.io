@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="squash2.svg">
+    <link rel="stylesheet" href="demo-style.css">
+    <title>Squash Inc. iSim</title>
+  </head>
+
+  <body style="background: var(--contrast);">
+    <div class="flexcolumn">
+
+      <video src="subject/side_slide.mp4" class="video_big" id="video1" muted></video>
+      <video src="subject/bottom_slide.mp4" class="video_big" id="video2" muted></video>
+      <video src="subject/roll.mp4" class="video_big" id="video3" muted></video>
+
+      <h1 style="top: 50vw;" class="h1_big">Lightweight.</h1>
+      <h1 style="top: 150vw;" class="h1_big">Imaginative.</h1>
+      <h1 style="top: 250vw;" class="h1_big">Powerful.</h1>
+
+      <div class="flexcolumn" style="background: var(--base); width: 90vw;">
+        <div class="flexrow">
+          <img src="squash1.svg" alt="[Squash Inc. logo]" style="width: 4vw; margin-right: 2vw;">
+          <h1>Squash iSim</h1>
+          <img src="sim1.svg" alt="[iSim logo]" style="width: 4vw; margin-left: 2vw;">
+        </div>
+        <h2>XS+ Pro Extended Edition</h2>
+
+        <h2><a href="game.html">Begin yourself with a new normal.</a></h2>
+
+        <div class="flexrow">
+          <p class="finePrint">Copyright © 2021 Squash Inc. All rights reserved.</p>
+          <p class="finePrint">Squash Inc. cannot be held responsible for any existential crisises resulting from any iSim product.</p>
+          <p class="finePrint">iSim, the Squash logo, and anything else we want is held under patent pending international law.</p>
+          <img src="squash1.svg" alt="[Squash Inc. logo]" style="width: 1vw;">
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      for (var i = 0; i < document.getElementsByClassName("video_big").length; i++) {
+        document.getElementsByClassName("video_big")[i].setAttribute("onmouseenter", "fadeIn(" + (i+1) + ")");
+        document.getElementsByClassName("video_big")[i].setAttribute("onmouseout", "fadeOut(" + (i+1) + ")");
+      }
+    }
+
+    function fadeIn(id) {
+      var temp = document.getElementById("video" + id);
+
+      temp.play();
+
+      setTimeout(function() {
+        temp.style.opacity = 1;
+      }, 50);
+    }
+
+    function fadeOut(id) {
+      var temp = document.getElementById("video" + id);
+
+      if (temp.style.opacity == "") {
+        temp.style.opacity = 1;
+      }
+
+      if (temp.style.opacity > 0) {
+        console.log("hi");
+
+        setTimeout(function() {
+          temp.style.opacity -= 0.1;
+          fadeOut(id);
+        }, 50);
+      }
+    }
+  </script>
+</html>
