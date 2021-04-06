@@ -50,9 +50,10 @@
 
     window.onscroll = function() {
       var scroll = window.scrollY;
-      var percent = Math.floor((scroll / 3430) * 100);
+      var scrollMax = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+      var percent = Math.floor((scroll / scrollMax) * 100);
 
-      if (percent <= 40) {
+      if (percent <= 20) {
         is1Animating = true;
         is2Animating = false;
         is3Animating = false;
@@ -64,7 +65,7 @@
         fadeOut(2);
         fadeOut(3);
       }
-      else if (percent > 40 && percent <= 95) {
+      else if (percent > 20 && percent <= 60) {
         is1Animating = false;
         is2Animating = true;
         is3Animating = false;
@@ -76,7 +77,7 @@
         fadeOut(1);
         fadeOut(3);
       }
-      else if (percent > 95 && percent <= 100) {
+      else if (percent > 60 && percent <= 75) {
         is1Animating = false;
         is2Animating = false;
         is3Animating = true;
