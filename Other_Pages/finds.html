@@ -14,6 +14,11 @@
     </div>
 
     <div class="flex_extra" style="flex-direction: column;">
+      <h1>Personal websites</h1>
+      <div id="personalTarget" class="flexrow_wrap"></div>
+    </div>
+
+    <div class="flex_extra" style="flex-direction: column;">
       <h1>Net art</h1>
       <div id="netArtTarget" class="flexrow_wrap"></div>
     </div>
@@ -32,9 +37,15 @@
 
   <script src="\scripts/backTextLoader.js" charset="utf-8"></script>
   <script type="text/javascript">
+    var personalLinks = [
+      ["Bill Wurtz's site", "https://billwurtz.com"],
+      ["Orteil", "https://orteil.dashnet.org"],
+      ["Tabita Rezaire's site", "https://www.tabitarezaire.com"],
+      ["Skawennati's site", "https://www.skawennati.com"]
+    ]
+
     var netArtLinks = [
       ["Pale Mask Press", "https://palemaskpress.com"],
-      ["Bill Wurtz's site", "https://billwurtz.com"],
       ["This Website Will Self Destruct", "http://thiswebsitewillselfdestruct.com"],
       ["Cognizance/Observer", "http://cognizance.observer"],
       ["Nested", "https://orteil.dashnet.org/nested"],
@@ -45,12 +56,12 @@
       ["aem1k", "https://aem1k.com"],
       ["Every Icon", "http://numeral.com/appletsoftware/eicon.html"],
       ["Cashemonet", "http://cachemonet.com"],
-      ["Shredder", "https://potatoland.org/shredder/shredder.html"]
+      ["Shredder", "https://potatoland.org/shredder/shredder.html"],
+      ["Net Flag", "https://netflag.guggenheim.org/html"]
     ];
 
     var toolsLinks = [
       ["Library Of Babel", "http://libraryofbabel.info"],
-      ["Orteil", "https://orteil.dashnet.org"],
       ["Videogame Premise Generator", "https://orteil.dashnet.org/gamegen"],
       ["JazzKeys", "https://jazzkeys.plan8.co"],
       ["EmuOS", "https://emupedia.net/beta/emuos"],
@@ -71,9 +82,11 @@
       ["Pixels Fighting", "http://pixelsfighting.com"]
     ];
 
-    loopLinks();
+    window.onload = function() {
+      for (var i = 0; i < personalLinks.length; i++) {
+        createLink(personalLinks, i, "personalTarget");
+      }
 
-    function loopLinks() {
       for (var i = 0; i < netArtLinks.length; i++) {
         createLink(netArtLinks, i, "netArtTarget");
       }
