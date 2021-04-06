@@ -40,21 +40,82 @@
   </body>
 
   <script type="text/javascript">
-    window.onload = function() {
-      for (var i = 0; i < document.getElementsByClassName("video_big").length; i++) {
-        document.getElementsByClassName("video_big")[i].setAttribute("onmouseenter", "fadeIn(" + (i+1) + ")");
-        document.getElementsByClassName("video_big")[i].setAttribute("onmouseout", "fadeOut(" + (i+1) + ")");
+    var is1Animating = false;
+    var is2Animating = false;
+    var is3Animating = false;
+
+    var has1Animated = false;
+    var has2Animated = false;
+    var has3Animated = false;
+
+    window.onscroll = function() {
+      var scroll = window.scrollY;
+      var percent = Math.floor((scroll / 3430) * 100);
+
+      if (percent <= 40) {
+        is1Animating = true;
+        is2Animating = false;
+        is3Animating = false;
+
+        has2Animated = false;
+        has3Animated = false;
+
+        fadeIn(1);
+        fadeOut(2);
+        fadeOut(3);
       }
-    }
+      else if (percent > 40 && percent <= 95) {
+        is1Animating = false;
+        is2Animating = true;
+        is3Animating = false;
+
+        has1Animated = false;
+        has3Animated = false;
+
+        fadeIn(2);
+        fadeOut(1);
+        fadeOut(3);
+      }
+      else if (percent > 95 && percent <= 100) {
+        is1Animating = false;
+        is2Animating = false;
+        is3Animating = true;
+
+        has1Animated = false;
+        has2Animated = false;
+
+        fadeIn(3);
+        fadeOut(1);
+        fadeOut(2);
+      }
+    };
 
     function fadeIn(id) {
-      var temp = document.getElementById("video" + id);
+      if (
+        (id == 1 && is1Animating == true && has1Animated == false) ||
+        (id == 2 && is2Animating == true && has2Animated == false) ||
+        (id == 3 && is3Animating == true && has3Animated == false)) {
 
-      temp.play();
+        var temp = document.getElementById("video" + id);
 
-      setTimeout(function() {
-        temp.style.opacity = 1;
-      }, 50);
+        temp.play();
+
+        setTimeout(function() {
+          temp.style.opacity = 1;
+        }, 50);
+
+        switch (id) {
+          case 1:
+            has1Animated = true;
+            break;
+          case 2:
+            has2Animated = true;
+            break;
+          case 3:
+            has3Animated = true;
+            break;
+        }
+      }
     }
 
     function fadeOut(id) {
@@ -65,8 +126,6 @@
       }
 
       if (temp.style.opacity > 0) {
-        console.log("hi");
-
         setTimeout(function() {
           temp.style.opacity -= 0.1;
           fadeOut(id);
