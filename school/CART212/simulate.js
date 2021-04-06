@@ -60,6 +60,7 @@ var gameSpeed = 1;
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
     gameTime++;
+    dotsCount++;
 
     if (gameTime >= 90) {
       document.getElementById("subjectImg").setAttribute("src", "subject/CART212_7.png");
@@ -72,11 +73,6 @@ var increaseGameSpeed = setInterval(function() {
     document.getElementById("time").innerHTML = "Time: " + gameTime + "s, Speed: " + gameSpeed;
   }
 }, 1000);
-
-window.onload = function() {
-  var rand = Math.floor(Math.random() * 10000);
-  document.getElementById("name").innerHTML = "Test Subject #" + rand;
-}
 
 function increaseNeeds(array, index) {
   if (gameIsStarted) {
