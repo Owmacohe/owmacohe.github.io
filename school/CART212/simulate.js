@@ -1,4 +1,45 @@
 /*
+var dotsCount = 0; //Number of dots on-screen
+const DOTSOPACITY = 75; //Highest possible opacity chance
+
+//New dot every 50 milliseconds
+var dotCount = setInterval(function() {
+  try {
+    if (gameIsStarted) {
+      //Deletes old dots (as so not to clutter up the screen)
+      for (var i = 0; i < document.getElementsByClassName("backDots").length; i++) {
+        document.getElementsByClassName("backDots")[i].remove();
+      }
+
+      for (var j = 0; j < dotsCount; j++) {
+        var newDot = document.createElement("DIV");
+        document.body.appendChild(newDot);
+        newDot.setAttribute("class", "backDots");
+        //Gives it a random position and opacity
+        newDot.setAttribute("style",
+            "position: absolute; z-index: -1;" +
+            " left: " + Math.floor(Math.random() * 99) + "vw;" +
+            " top: " + Math.floor(Math.random() * 55) + "vw;" +
+            " opacity: " + Math.floor(Math.random() * DOTSOPACITY) + "%;");
+        newDot.innerHTML = ".";
+
+        //Possible chance to become a different colour
+        var rand = Math.floor(Math.random() *3);
+        switch (rand) {
+          case 0:
+            newDot.style.color = "var(--contrast)";
+            break;
+        }
+      }
+    }
+  }
+  catch(err) {
+    return;
+  }
+}, 50);
+*/
+
+/*
 
 0-30 seconds: Tutorial
   - 0-10 seconds: overview
@@ -32,35 +73,53 @@ var lrg_decisons = [
   "Grasp the full scale of the cosmos",
   "Finally, be at peace"
 ];
-var sml_decisons = [
-  "Make infant noises", // youth
-  "Crawl around aimlessly",
-  "Try to learn",
-  "Be blissfully innocent",
-  "Go for a walk", // adulthood
-  "Let loneliness set in",
-  "Settle into routine",
-  "Find love",
-  "Shed responsabilities", // old age
-  "Surrender to mediocraty",
-  "Go silently",
-  "Begin to decompose",
-  "Become a part of the water cylce", // beyond
-  "Struggle against loss of self",
-  "Travel into the cosmos",
-  "Amass all conceivable information",
-  "Observe the heat death of the universe",
-  "Begin again?"
-];
+
+var sml_decisons = {
+  "youth": [
+    "Make infant noises",
+    "Crawl around aimlessly",
+    "Try to learn",
+    "Be blissfully innocent",
+    "Begin to gain conciousness",
+    "Memorize new smells",
+    "Appreciate love",
+    "Be filled with wonder"],
+  "adulthood": [
+    "Go for a walk",
+    "Let loneliness set in",
+    "Settle into routine",
+    "Pretend you are composed",
+    "Search for meaningfulness",
+    "Accomplish difficult goals",
+    "Find love"],
+  "old_age": [
+    "Shed responsabilities",
+    "Surrender to mediocraty",
+    "Go silently",
+    "Devolve into mediocraty",
+    "Be forgotten",
+    "Begin to decompose"],
+  "beyond": [
+    "Become a part of the water cylce",
+    "Struggle against loss of self",
+    "Travel into the cosmos",
+    "Amass all conceivable information",
+    "Observe the heat death of the universe",
+    "Fulfill evolutionary purpose",
+    "Exhaust Murphy's Law",
+    "Become finally and truly free"]
+};
+
 var lrg_index = 0;
-var sml_index = 0;
+var breakLevel = 0;
 
 var gameTime = 0;
 var gameSpeed = 1;
+
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
     gameTime++;
-    dotsCount++;
+    //dotsCount++;
 
     if (gameTime >= 90) {
       document.getElementById("subjectImg").setAttribute("src", "subject/CART212_7.png");
@@ -70,7 +129,38 @@ var increaseGameSpeed = setInterval(function() {
     gameSpeed += 0.05;
     gameSpeed = Math.round(gameSpeed * 100) / 100;
 
-    document.getElementById("time").innerHTML = "Time: " + gameTime + "s, Speed: " + gameSpeed;
+    breakLevel = Math.round(breakLevel * 100) / 100;
+
+    document.getElementById("time").innerHTML = "Time: " + gameTime + "s, Speed: " + gameSpeed + ", Breakage: " + breakLevel;
+  }
+}, 1000);
+
+var checkBreakage = setInterval(function() {
+  var subj = document.getElementById("subjectImg");
+
+  if (breakLevel < 4) {
+    subj.setAttribute("src", "subject/subject_default_glow.png");
+  }
+  else if (breakLevel >= 4 && breakLevel < 8) {
+    subj.setAttribute("src", "subject/subject_error_1.png");
+  }
+  else if (breakLevel >= 8 && breakLevel < 12) {
+    subj.setAttribute("src", "subject/subject_error_2.png");
+  }
+  else if (breakLevel >= 12 && breakLevel < 16) {
+    subj.setAttribute("src", "subject/subject_error_3.png");
+  }
+  else if (breakLevel >= 16 && breakLevel < 20) {
+    subj.setAttribute("src", "subject/subject_default.png");
+  }
+  else if (breakLevel >= 20 && breakLevel < 24) {
+    subj.setAttribute("src", "subject/subject_error_4.png");
+  }
+  else if (breakLevel >= 24 && breakLevel < 28) {
+    subj.setAttribute("src", "subject/subject_error_5.png");
+  }
+  else if (breakLevel >= 28 && breakLevel < 32) {
+    subj.setAttribute("src", "subject/subject_error_6.png");
   }
 }, 1000);
 
@@ -109,6 +199,8 @@ var checkNeeds = setInterval(function() {
           if (i == 1 && j == 0) { document.getElementById("emo").innerHTML = "Need to socialize!"; }
           if (i == 1 && j == 1) { document.getElementById("emo").innerHTML = "Need to seclude!"; }
           if (i == 1 && j == 2) { document.getElementById("emo").innerHTML = "Need to cavort!"; }
+
+          breakLevel += 0.15;
         }
       }
     }
@@ -119,63 +211,52 @@ var checkNeeds = setInterval(function() {
 
 var checkDecisions = setInterval(function() {
   if (gameIsStarted) {
-    if ((lrg_index * 10) < gameTime) {
+    if ((lrg_index * 10) < (gameTime + 1)) {
       document.getElementById("lrg").innerHTML = lrg_decisons[lrg_index];
-
-      switch (lrg_index) {
-        case 0:
-          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_1.png");
-          break;
-        case 2:
-          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_2.png");
-          break;
-        case 4:
-          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_3.png");
-          break;
-        case 6:
-          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_4.png");
-          break;
-        case 7:
-          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_5.png");
-          break;
-        case 8:
-          document.getElementById("subjectImg").setAttribute("src", "subject/CART212_6.png");
-          break;
-      }
+      lrg_index++;
     }
 
-    if ((sml_index * 5) < gameTime) {
-      document.getElementById("sml").innerHTML = sml_decisons[sml_index];
+    switch (gameTime) {
+      case 1: case 5: case 10: case 15:
+        loadSmallDecisions(sml_decisons.youth, "sml");
+        break;
+      case 20: case 25: case 30: case 35:
+        loadSmallDecisions(sml_decisons.adulthood, "sml");
+        break;
+      case 40: case 45: case 50: case 55:
+        loadSmallDecisions(sml_decisons.old_age, "sml");
+        break;
+      case 60: case 65: case 70: case 75: case 80: case 85:
+        loadSmallDecisions(sml_decisons.beyond, "sml");
+        break;
     }
-
-    console.log("LRG: " + lrg_decisons[lrg_index] + "\nSML: " + sml_decisons[sml_index]);
   }
 }, 1000);
+
+function loadSmallDecisions(array, id) {
+  var temp = Math.floor(Math.random() * array.length);
+  document.getElementById(id).innerHTML = array[temp];
+  array.splice(temp, 1);
+}
 
 function decide(size, isYes) {
   if (gameIsStarted) {
     if (size == "lrg") {
       if (isYes) {
-        lrg_index++;
         document.getElementById("lrg").innerHTML = "";
       }
       else {
-        lrg_index++;
         document.getElementById("lrg").innerHTML = "";
+        breakLevel += 2;
       }
     }
     else if (size == "sml") {
       if (isYes) {
-        sml_index++;
         document.getElementById("sml").innerHTML = "";
-
-        if (sml_index >= 17) {
-          window.location.reload(true);
-        }
       }
       else {
-        sml_index++;
         document.getElementById("sml").innerHTML = "";
+        breakLevel++;
       }
     }
   }
