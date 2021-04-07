@@ -1,6 +1,4 @@
-loadBackText();
-
-function loadBackText() {
+window.onload = function() {
   var backTextElem = document.createElement("DIV");
   document.body.appendChild(backTextElem);
   backTextElem.setAttribute("id", "backgroundText");
