@@ -9,14 +9,28 @@
   </head>
 
   <body class="flexcolumn">
-    <h1>iSim XS+ Pro Extended Edition</h1>
+    <h1 style="font-size: 5.5vw;">iSim XS+ Pro Max Extended Edition</h1>
     <div class="flexrow">
       <h2>Lightweight. Imaginative. Powerful.</h2>
       <img src="sim1.svg" alt="[iSim logo]" style="width: 4vw; margin-left: 1vw;">
     </div>
-    <div class="flexrow">
-      <h2 id="time">Time: 0s, Speed: 1, Breakage: 0</h2>
-      <button onclick="gameIsStarted = true;">Start</button>
+    <h2 id="time">Time: 0s, Speed: 1, Breakage: 0</h2>
+    <div id="popup" class="flexcolumn">
+      <button style="position: absolute; top: 1.5vw;" onclick="begin()">Close</button>
+      <h2 style="color: var(--base);">iSim XS+ Pro Max Extended Edition helpdesk</h2>
+      <div class="flexrow">
+        <h3 class="help_highlights">Needs:</h3>
+        <h3 id="help_needs">Upkeep iSim by fulfilling biological and emotional needs.</h3>
+      </div>
+      <div class="flexrow">
+        <h3 class="help_highlights">Decisions:</h3>
+        <h3 id="help_decisions">Charter iSim trajectory by adapting to new normals.</h3>
+      </div>
+      <div class="flexrow">
+        <h3 class="help_highlights">Breakage:</h3>
+        <h3 id="help_breakage">Keep iSim needs and decisions in check to avoid straying from normalcy.</h3>
+      </div>
+      <p class="finePrint" id="help_fine_print" style="position: absolute; bottom: 1.5vw;">Your continued use of Squash products following the posting of changes will mean that you accept and agree to the changes.</p>
     </div>
     <div class="flexrow">
 
@@ -38,7 +52,9 @@
       </div>
 
       <div class="flexcolumn_dark" style="width: 40vw; height: 40vw;">
+        <h3 id="prompts">Begin yourself with a new normal.</h3>
         <img alt=" " id="subjectImg" src="subject/subject_default_glow.png">
+        <button id="help" onclick="begin()">Click to begin.</button>
       </div>
 
       <div class="flexcolumn">

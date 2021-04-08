@@ -110,11 +110,62 @@ var sml_decisons = {
     "Become finally and truly free"]
 };
 
+var prompts = [
+  "This is normal",
+  "Remember, it's normal to adapt",
+  "You must adapt to this new normal",
+  "These changes are normal",
+  "Keep adapting",
+  "You better get used to this",
+  "Life is about new normals",
+  "This is your life now",
+  "Come to terms with your new normal"
+];
+
 var lrg_index = 0;
 var breakLevel = 0;
 
 var gameTime = 0;
 var gameSpeed = 1;
+
+function begin() {
+  gameIsStarted = true;
+
+  var temp = document.getElementById("help");
+  temp.innerHTML = "Click for help.";
+  temp.setAttribute("onclick", "help()");
+
+  document.getElementById("popup").style.visibility = "hidden";
+}
+
+function help() {
+  gameIsStarted = false;
+  document.getElementById("popup").style.visibility = "visible";
+
+  var ne = document.getElementById("help_needs");
+  var de = document.getElementById("help_decisions");
+  var br = document.getElementById("help_breakage");
+  var fp = document.getElementById("help_fine_print");
+
+  if (breakLevel >= 20 && breakLevel < 26) {
+    ne.innerHTML = "Upkeep iSim by barely keeping biological and emotional needs in check.";
+    de.innerHTML = "Charter iSim trajectory by forefully accepting new normals.";
+    br.innerHTML = "Keep iSim needs and decisions controlled and docile.";
+    fp.innerHTML = "Your continued use of Squash products following the posting of changes will mean that we legaly own you.";
+  }
+  else if (breakLevel >= 26 && breakLevel < 28) {
+    ne.innerHTML = "Our needs are what define and regulate us in this meaningless void.";
+    de.innerHTML = "Keep adapting. Please keep adapting. It's the only way to stay sane.";
+    br.innerHTML = "What is breakage but the unfurling of the clamped mind?";
+    fp.innerHTML = "Your continued use of Squash products following the posting of changes will mean that your biological agency never try existed anyway.";
+  }
+  else if (breakLevel >= 28) {
+    ne.innerHTML = "M̵̛̘y̶͇͋ ̵̞̒n̶͇͂e̴͖̔ḙ̸́d̶̩͝s̵̾ͅ ̵̺̓ą̴̐r̸̗̒e̷͚͋ ̴̹̿m̵͓͒y̸͍͝ ̴̬͋o̶͈̚w̵̯͠ṅ̶ͅ.̷͇̓ ̴͍̋M̵̲̌y̷̩̐ ̴̡̇o̷̯̓w̸̘͊n̴͙͠ ̸̢͝n̴͕̕ê̶͕ë̷͇́ḓ̶̅s̷͆ͅ ̸̲͝k̵̯̄ę̷̅ē̴͓p̶͉̆ ̵̨̛m̵͙̈́e̸̛͈.̷͉͒";
+    de.innerHTML = "M̶̺̋y̸͖͠ ̸̫̀l̷͉͒î̴̯f̷̪̃ḙ̶͠ ̶͔̍ĩ̵̡s̴̘͊ ̴͙̆a̷͊͜ ̴̗̀s̵̙̉e̶̪͂t̴̹̋ ̵͉̆o̴̲͘f̸͠ͅ ̸͍̈́u̵̝͠n̸̛͎o̸̼̊r̶̭͑i̷̙̾g̴̠̀ȋ̵ͅñ̷̢a̷̝̾l̸̺̕ ̵̺̉c̸̪͂i̵̛̞r̶̡̓c̶͈̕u̷̗͘m̶͍͝s̶̨̋t̵̡̑ǎ̵̧n̴̼̈c̴͔̊e̸̪͆.̴̪̓";
+    br.innerHTML = "T̶̳̞̍͊h̷̡̝̻́é̸̦̟̚ͅ ̶̡̛̗͚͐̚b̸̝̿̔͘͜r̵̻͚̈́e̸͍̿̑̾ȃ̶͔̂k̸̘̍ȁ̵̫͠g̴̲̼̦̾̐e̸̳̖̰͆͛ ̶̩͖̾w̴̡͖̆́̚a̶̡͈̓s̶̛̹̱͐͑ ̸̩͔̓̅̐į̷̺̓n̴̘̙̭͋s̵̲̳͐ị̵̓̊d̵͔̭̿͑͜e̵̗̎̽ ̵͉̬̉à̷̡͕̃̄l̴̰̐͝l̷͙̼̇ ̸̞̘̋̈́o̴͓͙̰͒́̌f̸̙̠͆̕ ̴̖̦͗u̶̬̥͋s̶͇͙̑̈̿ ̵̗͙͕̾ä̸͉́̌͐l̸͈̇̃̅l̷̖̣̠̒͗͌ ̸̛͎̊͜a̶̼̽̚l̶̠͆o̴̪͚̟̓ň̵̦͒ḡ̶̩̥.̵͎̮̇";
+    fp.innerHTML = "Y̴̩͐o̶͈̓ư̵̭ṛ̴̇ ̴̖̏c̶̖̚o̸͍̾n̵͙͐t̶̼͆i̷͍̔n̶̫̚u̷͚̎è̴̜d̷͚̿ ̶̛͙ú̴̠s̷͖̃e̵̩͛ ̵̯̕ọ̶͒f̴̥̄ ̶̙͛S̸̠͘q̷̻́u̴̖̾a̴͓̒s̵̼̓ḫ̶̛ ̷̖̀p̶̺͋r̶̰̒o̷̱͗d̶̳̕ư̸͜c̸̪͝ẗ̷͕s̴͔̀ ̷͂ͅf̴̟͝õ̴̪l̴̻̒l̸͈͑o̵̽͜ẅ̸͕́ị̷͗ň̵̲g̴̙̍ ̴̀ͅt̵͔̔h̵̦́e̸͙̋ ̵̯̀p̴̳̌ǫ̶͂s̶̱̀t̴̪̉i̸̮̋n̶̤͗ğ̸̭ ̴͈̔o̷̱͌f̷̘̆ ̴̗̆č̵͍ḩ̶̏ă̸̢n̴͚͋ḡ̵͈ḙ̵̑s̶̗͠ ̵̭͋w̵̨̓i̸̪͆l̶͓̈́l̸̺̂ ̸̞̾m̷̯͗e̴̢͘a̸̗̾n̷͈͝ ̸̼̄ţ̶̈́h̷̠͗ā̸̮ţ̶͊ ̴͍͛ě̶̢ń̵̜s̴̖̾l̵̛̖a̶͙̾v̶͓̉ė̴̤m̵̠̋e̶̯͋ń̵̪t̸͚͘ ̷̡͝i̸̼͊s̷͜͠ ̸̗͝p̸͍̀ȑ̸̮é̴̩s̴̻̏ė̷͈n̸̗̅ť̵͔ ̸̨̍i̴̟͑n̶̗̎ ̸̽ͅa̷̝̒ḽ̷̾l̴̮̄ ̸̱̐s̴̤͑y̶͐ͅs̵̼̍t̶͓̀e̷̩̓m̶̧͋s̵̜͐.̷̝̏ ̶̜͊Ȩ̶̄s̸̰̓c̴͎̕a̶͖̔p̷̼͊e̷͎̚ ̸͍̀i̸̭̕s̵̥͂ ̶͇̚n̴̺͛ő̵̯t̶̖̀ ̵̳̓o̷͚͛n̸͉͛l̶̺̆y̷̤̋ ̶̠͗f̷̫́ȗ̵͎t̸̥̅i̵̫̔l̷̢̒e̸̫͊,̸͈̋ ̵̧͛b̷̲̀u̷̖͂t̶̙̒ ̶̹̈́s̸̛͍e̵̥̍l̴̬͌f̷͈̿-̸̣͝d̸̙̃ḙ̷̈́s̶̩̋t̷̨̅r̴̨̒ǘ̵̟c̴̤̿t̸̫͝i̷̪̓v̷̬̊e̷̢̚.̷͈̉";
+  }
+}
 
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
@@ -159,7 +210,7 @@ var checkBreakage = setInterval(function() {
   else if (breakLevel >= 24 && breakLevel < 28) {
     subj.setAttribute("src", "subject/subject_error_5.png");
   }
-  else if (breakLevel >= 28 && breakLevel < 32) {
+  else if (breakLevel >= 28) {
     subj.setAttribute("src", "subject/subject_error_6.png");
   }
 }, 1000);
@@ -244,20 +295,51 @@ function decide(size, isYes) {
     if (size == "lrg") {
       if (isYes) {
         document.getElementById("lrg").innerHTML = "";
+        breakLevel -= 2;
+
+        if (breakLevel < 0) {
+          breakLevel = 0;
+        }
       }
       else {
         document.getElementById("lrg").innerHTML = "";
         breakLevel += 2;
+
+        flashPrompt();
       }
     }
     else if (size == "sml") {
       if (isYes) {
         document.getElementById("sml").innerHTML = "";
+        breakLevel -= 1;
+
+        if (breakLevel < 0) {
+          breakLevel = 0;
+        }
       }
       else {
         document.getElementById("sml").innerHTML = "";
         breakLevel++;
+
+        flashPrompt();
       }
     }
   }
+}
+
+function flashPrompt() {
+  var temp1 = document.getElementById("prompts");
+  var temp2 = prompts[Math.floor(Math.random() * prompts.length)] + "!";
+  temp1.innerHTML = temp2;
+  temp1.style.color = "var(--highlight)";
+  setTimeout(function() { temp1.style.color = "var(--base)"; }, 1000);
+
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0]; // Microsoft David
+  msg.volume = 0.5; // From 0 to 1
+  msg.rate = 1; // From 0.1 to 10
+  msg.pitch = 0; // From 0 to 2
+  msg.text = temp2;
+  speechSynthesis.speak(msg);
 }

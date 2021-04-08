@@ -130,3 +130,23 @@ a:hover {
 
   border: none;
 }
+
+#popup {
+  visibility: hidden;
+  opacity: 0.95;
+
+  position: absolute;
+  top: 1vw;
+  width: 95vw;
+  height: 50vw;
+
+  border-radius: 0.6vw;
+
+  background: var(--contrast);
+}
+
+.help_highlights {
+  margin-right: 1vw;
+
+  color: var(--highlight);
+}

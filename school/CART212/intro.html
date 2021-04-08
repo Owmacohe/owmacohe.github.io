@@ -24,7 +24,7 @@
           <h1>Squash iSim</h1>
           <img src="sim1.svg" alt="[iSim logo]" style="width: 4vw; margin-left: 2vw;">
         </div>
-        <h2>XS+ Pro Extended Edition</h2>
+        <h2>XS+ Pro Max Extended Edition</h2>
 
         <h2><a href="game.html">Begin yourself with a new normal.</a></h2>
 
@@ -108,12 +108,17 @@
         switch (id) {
           case 1:
             has1Animated = true;
+            tts("Lightweight.");
             break;
           case 2:
             has2Animated = true;
+            tts("Imaginative.");
             break;
           case 3:
             has3Animated = true;
+            tts("Powerful.");
+            tts("iSim XS+ Pro Max Extended Edition");
+            tts("Begin yourself with a new normal.");
             break;
         }
       }
@@ -132,6 +137,17 @@
           fadeOut(id);
         }, 50);
       }
+    }
+
+    function tts(text) {
+      var msg = new SpeechSynthesisUtterance();
+      var voices = window.speechSynthesis.getVoices();
+      msg.voice = voices[0]; // Microsoft David
+      msg.volume = 0.5; // From 0 to 1
+      msg.rate = 1; // From 0.1 to 10
+      msg.pitch = 0; // From 0 to 2
+      msg.text = text;
+      speechSynthesis.speak(msg);
     }
   </script>
 </html>
