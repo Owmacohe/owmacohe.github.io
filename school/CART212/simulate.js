@@ -41,18 +41,11 @@ var dotCount = setInterval(function() {
 
 /*
 
-0-30 seconds: Tutorial
-  - 0-10 seconds: overview
-  - 10-20 seconds: needs descriptions
-  - 20-30 seconds: decision descriptions
-30-90 seconds: Rising action
-  - 0-20 seconds: youth
-  - 20-40 seconds: adulthood
-  - 40-60 seconds: old age
-90-120 seconds: Climax ending
-  - 0-10 seconds: Unatainable needs
-  - 10-20 seconds: Indecipherable decisions
-  - 20-30 seconds: Complete loss of control
+0-20 seconds: Infantcy
+20-40 seconds: Youth
+40-70 seconds: Adulthood
+70-90 seconds: Old age
+90-120 seconds: Beyond
 
 */
 
@@ -61,12 +54,17 @@ var dotCount = setInterval(function() {
 TODO:
 - Add button sounds
 - Create ending cases
-- Add 30s to game and breakage timeline
-  - New childhood stage?
-  - More 3D renders
-- Add more small decison options and prompts
+- More 3D renders
 - Soundtrack?
-- Add game info dropdown
+
+
+var para = new URLSearchParams();
+para.append("ending", "normalcy");
+location.href = "ending.html?" + para.toString();
+
+
+var para = new URLSearchParams(window.location.search);
+var pass = para.get("ending");
 
 */
 
@@ -77,9 +75,12 @@ var emo_needs = [100, 100, 100]; // socialize, seclude, cavort
 var needs = [bio_needs, emo_needs];
 
 var lrg_decisons = [
-  "Be born", // youth
-  "Go to school",
+  "Be born", // infantcy
+  "Gain conciousness",
+  "Go to school", // youth
+  "Learn to socialize",
   "Move out", // adulthood
+  "Go to school (again)",
   "Get a job",
   "Retire", // old age
   "Die",
@@ -89,15 +90,23 @@ var lrg_decisons = [
 ];
 
 var sml_decisons = {
-  "youth": [
+  "infantcy": [
     "Make infant noises",
     "Crawl around aimlessly",
+    "Begin to grow",
+    "Bite many things",
+    "Copy others",
+    "Attain object permanence"
+  ],
+  "youth": [
+    "Make friends",
+    "Pick up coping mechanisms",
     "Try to learn",
     "Be blissfully innocent",
-    "Begin to gain conciousness",
     "Memorize new smells",
     "Appreciate love",
-    "Be filled with wonder"],
+    "Be filled with wonder"
+  ],
   "adulthood": [
     "Go for a walk",
     "Let loneliness set in",
@@ -105,14 +114,16 @@ var sml_decisons = {
     "Pretend you are composed",
     "Search for meaningfulness",
     "Accomplish difficult goals",
-    "Find love"],
+    "Find love"
+  ],
   "old_age": [
     "Shed responsabilities",
     "Surrender to mediocraty",
     "Go silently",
     "Devolve into mediocraty",
     "Be forgotten",
-    "Begin to decompose"],
+    "Begin to decompose"
+  ],
   "beyond": [
     "Become a part of the water cylce",
     "Struggle against loss of self",
@@ -121,7 +132,8 @@ var sml_decisons = {
     "Observe the heat death of the universe",
     "Fulfill evolutionary purpose",
     "Exhaust Murphy's Law",
-    "Become finally and truly free"]
+    "Become finally and truly free"
+  ]
 };
 
 var prompts = [
@@ -181,14 +193,39 @@ function help() {
   }
 }
 
+function details(open) {
+  if (open) {
+    document.getElementById("time").style.visibility = "visible";
+    document.getElementById("details").innerHTML = "Hide details";
+    document.getElementById("details").setAttribute("onclick", "details(false)");
+  }
+  else {
+    document.getElementById("time").style.visibility = "hidden";
+    document.getElementById("details").innerHTML = "Show details";
+    document.getElementById("details").setAttribute("onclick", "details(true)");
+  }
+}
+
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
     gameTime++;
     //dotsCount++;
 
-    if (gameTime >= 90) {
-      document.getElementById("subjectImg").setAttribute("src", "subject/CART212_7.png");
+    if (gameTime >= 120) {
       gameIsStarted = false;
+
+      if (breakLevel < 4) {
+        // normalcy ending
+      }
+      else if (breakLevel >= 4 && breakLevel < 12) {
+        // moderate ending
+      }
+      else if (breakLevel >= 12 && breakLevel < 24) {
+        // broken ending
+      }
+      else if (breakLevel >= 24) {
+        // free ending
+      }
     }
 
     gameSpeed += 0.05;
@@ -196,7 +233,25 @@ var increaseGameSpeed = setInterval(function() {
 
     breakLevel = Math.round(breakLevel * 100) / 100;
 
-    document.getElementById("time").innerHTML = "Time: " + gameTime + "s, Speed: " + gameSpeed + ", Breakage: " + breakLevel;
+    var age;
+
+    if (gameTime < 20) {
+      age = "Infantcy";
+    }
+    else if (gameTime >= 20 && gameTime < 40) {
+      age = "Youth";
+    }
+    else if (gameTime >= 40 && gameTime < 70) {
+      age = "Adulthood";
+    }
+    else if (gameTime >= 70 && gameTime < 90) {
+      age = "Old age";
+    }
+    else if (gameTime >= 90 && gameTime < 120) {
+      age = "Beyond";
+    }
+
+    document.getElementById("time").innerHTML = "Time: " + gameTime + "s, Speed: " + gameSpeed + ", Breakage: " + breakLevel + ", Age: " + age;
   }
 }, 1000);
 
@@ -283,15 +338,18 @@ var checkDecisions = setInterval(function() {
 
     switch (gameTime) {
       case 1: case 5: case 10: case 15:
-        loadSmallDecisions(sml_decisons.youth, "sml");
+        loadSmallDecisions(sml_decisons.infantcy, "sml");
         break;
       case 20: case 25: case 30: case 35:
+        loadSmallDecisions(sml_decisons.youth, "sml");
+        break;
+      case 40: case 45: case 50: case 55: case 60: case 65:
         loadSmallDecisions(sml_decisons.adulthood, "sml");
         break;
-      case 40: case 45: case 50: case 55:
+      case 70: case 75: case 80: case 85:
         loadSmallDecisions(sml_decisons.old_age, "sml");
         break;
-      case 60: case 65: case 70: case 75: case 80: case 85:
+      case 90: case 95: case 100: case 105: case 110: case 115:
         loadSmallDecisions(sml_decisons.beyond, "sml");
         break;
     }
