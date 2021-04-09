@@ -56,6 +56,20 @@ var dotCount = setInterval(function() {
 
 */
 
+/*
+
+TODO:
+- Add button sounds
+- Create ending cases
+- Add 30s to game and breakage timeline
+  - New childhood stage?
+  - More 3D renders
+- Add more small decison options and prompts
+- Soundtrack?
+- Add game info dropdown
+
+*/
+
 var gameIsStarted = false;
 
 var bio_needs = [100, 100, 100]; // eat, sleep, waste
