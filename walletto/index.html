@@ -135,14 +135,15 @@
         • To set up initiative, order all participants by <em>DEXT</em><br>
         • Sessions should last from ~30-60 minutes (possibly longer)<br>
         • Sessions should contain ~1-2 simple combat sequences<br>
-        • Use these same rules to create NPCs or enemies
+        • Use these same rules to create NPCs or enemies<br>
+        • Tweak generated NPCs or enemies to be more or less powerful<br>
       </p>
     </div>
 
     <div class="dotbox" style="flex-direction: column" id="generator">
       <div class="flexrow">
         <h2>Character Generator</h2>
-        <button onclick="generate()">Generate</button>
+        <button onclick="generateCharacter()">Generate</button>
       </div>
       <div class="flexrow">
         <div class="dotbox_mini">
@@ -168,6 +169,24 @@
         <div class="dotbox_mini">
           <p>Inventory =</p>
           <em id="i"></em>
+        </div>
+      </div>
+    </div>
+
+    <div class="dotbox" style="flex-direction: column">
+      <div class="flexrow">
+        <h2>Adventure Generator</h2>
+        <button onclick="generateAdventure()">Generate</button>
+      </div>
+      <div class="flexcolumn">
+        <div class="dotbox_mini">
+          <p>Location = <em id="l"></em></p>
+        </div>
+        <div class="dotbox_mini">
+          <p>Motive = <em id="m"></em></p>
+        </div>
+        <div class="dotbox_mini">
+          <p>Antagonist = <em id="a"></em></p>
         </div>
       </div>
     </div>

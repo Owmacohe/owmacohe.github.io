@@ -4,7 +4,7 @@ var spells = ["Gravel Slap", "Ice Sweep", "Magic Teapot", "Cheese Shackles", "Pi
 var weapons = ["Club", "Bow", "Staff", "Sword", "Spear", "Knife"];
 var inventories = ["Rope", "Book", "Drugs", "Trinket", "Costume", "Companion", "Food", "Cards", "Poison", "Artifact", "Explosive", "Instrument"];
 
-function generate() {
+function generateCharacter() {
   var stats = [];
   stats[0] = rollDie(20); //STRN
   stats[1] = rollDie(20); //DEXT
@@ -76,11 +76,62 @@ function generate() {
   document.getElementById("s").innerHTML = mySpells;
   document.getElementById("w").innerHTML = myWeapons;
   document.getElementById("i").innerHTML = myInventory;
-  document.getElementById("stats").innerHTML = "STRN = " + stats[0] + "<br>DEXT = " + stats[1] + "<br>INTL = " + stats[2] + "<br>MAGI = " + stats[3] + "<br>HLTH = " + stats[4] + "<br>ARMR = " + stats[5];
+  document.getElementById("stats").innerHTML =
+    "STRN = " + stats[0] +
+    "<br>DEXT = " + stats[1] +
+    "<br>INTL = " + stats[2] +
+    "<br>MAGI = " + stats[3] +
+    "<br>HLTH = " + stats[4] +
+    "<br>ARMR = " + stats[5];
 
   spells = ["Gravel Slap", "Ice Sweep", "Magic Teapot", "Cheese Shackles", "Pillow Armour", "Ember Bell"];
   weapons = ["Club", "Bow", "Staff", "Sword", "Spear", "Knife"];
   inventories = ["Rope", "Book", "Drugs", "Trinket", "Costume", "Companion", "Food", "Cards", "Poison", "Artifact", "Explosive", "Instrument"];
+}
+
+var locations = [
+  "A wizard's tower",
+  "An sunken city",
+  "A forest of leafless trees",
+  "A leech-infested swamp",
+  "Sprawling city rooftops",
+  "Twin mountain peaks",
+  "A caravan route",
+  "The high seas",
+  "A non-euclidean labyrinth",
+  "A busy factory"
+];
+
+var motives = [
+  "Escaping the location",
+  "Defeating the antagonist",
+  "Claiming a bounty",
+  "Following orders",
+  "Seeking lost treasure",
+  "Seeking revenge",
+  "Going on vacation",
+  "Following a map",
+  "Closing a portal",
+  "Breaking up a crime ring"
+];
+
+var antagonists = [
+  "A dark sorcerer",
+  "A spider hydra",
+  "A gang of sentient armor sets",
+  "One or more doppelgängers",
+  "An eldritch horror",
+  "A fallen angel",
+  "A collectively sentient swarm of beetles",
+  "The pressures of bureaucracy",
+  "An insane royal",
+  "An animated dragon automaton"
+];
+
+function generateAdventure() {
+  document.getElementById("l").innerHTML = rollArray(locations);
+  document.getElementById("m").innerHTML = rollArray(motives);
+  document.getElementById("a").innerHTML = rollArray(antagonists);
 }
 
 function rollArray(array) {
