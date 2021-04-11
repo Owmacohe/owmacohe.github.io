@@ -2,11 +2,48 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="demo-style.css.css">
+    <link rel="stylesheet" href="demo-style.css">
     <title>Ending</title>
   </head>
 
   <body>
+    <div class="flexcolumn">
+      <h1 style="font-size: 5.5vw; color: var(--base);">iSim XS+ Pro Max Extended Edition</h1>
+      <h2 style="color: var(--base);">Your experience has ended.</h2>
 
+      <video src="subject/roll.mp4" style="position: absolute; width: 99vw; top: 0; z-index: -1;" autoplay></video>
+
+      <div class="flexcolumn_dark" style="width: 60vw; margin-top: 27vw;">
+        <h2 style="color: var(--base);" id="level">You have acheived: [LEVEL]</h2>
+        <h3 id="description">This is [DESCRIPTION]</h3>
+        <button onclick="location.href='game.html'">Begin yourself with a new normal.</button>
+      </div>
+    </div>
   </body>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      var para = new URLSearchParams(window.location.search);
+      var pass = para.get("ending");
+
+      switch (pass) {
+        case "normalcy":
+          document.getElementById("level").innerHTML = "You have acheived: normalcy";
+          document.getElementById("description").innerHTML = "This is good. You have adapted to new normals.";
+          break;
+        case "moderate":
+          document.getElementById("level").innerHTML = "You have acheived: moderate normalcy";
+          document.getElementById("description").innerHTML = "This is okay. Remember to keep adapting.";
+          break;
+        case "broken":
+          document.getElementById("level").innerHTML = "You have acheived: broken normalcy";
+          document.getElementById("description").innerHTML = "This is very bad. Normalcy must be adapted to.";
+          break;
+        case "free":
+          document.getElementById("level").innerHTML = "You have acheived: freedom";
+          document.getElementById("description").innerHTML = "This is spectacular. You have lifted beyond the shackles of normalcy to define existance for your own reality.";
+          break;
+      }
+    }
+  </script>
 </html>

@@ -60,7 +60,7 @@
 
       <div class="flexcolumn">
         <div class="flexcolumn_dark">
-          <h3>Large decisions</h3>
+          <h3 id="lrg_header">Large decisions</h3>
           <p id="lrg"></p>
           <div class="flexrow">
             <button onclick="decide('lrg', true)">Yes</button>
@@ -86,4 +86,40 @@
       <img src="squash1.svg" alt="[Squash Inc. logo]" style="width: 1vw;">
     </div>
   </body>
+
+  <script type="text/javascript">
+    var dotsCount = 0; //Number of dots on-screen
+    const DOTSOPACITY = 75; //Highest possible opacity chance
+
+    //New dot every 50 milliseconds
+    var dotCount = setInterval(function() {
+      if (gameIsStarted) {
+        //Deletes old dots (as so not to clutter up the screen)
+        for (var i = 0; i < document.getElementsByClassName("backDots").length; i++) {
+          document.getElementsByClassName("backDots")[i].remove();
+        }
+
+        for (var j = 0; j < dotsCount; j++) {
+          var newDot = document.createElement("DIV");
+          document.body.appendChild(newDot);
+          newDot.setAttribute("class", "backDots");
+          //Gives it a random position and opacity
+          newDot.setAttribute("style",
+              "position: absolute; z-index: -1;" +
+              " left: " + Math.floor(Math.random() * 99) + "vw;" +
+              " top: " + Math.floor(Math.random() * 55) + "vw;" +
+              " opacity: " + Math.floor(Math.random() * DOTSOPACITY) + "%;");
+          newDot.innerHTML = ".";
+
+          //Possible chance to become a different colour
+          var rand = Math.floor(Math.random() *3);
+          switch (rand) {
+            case 0:
+              newDot.style.color = "var(--contrast)";
+              break;
+          }
+        }
+      }
+    }, 50);
+  </script>
 </html>

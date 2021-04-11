@@ -1,72 +1,10 @@
 /*
-var dotsCount = 0; //Number of dots on-screen
-const DOTSOPACITY = 75; //Highest possible opacity chance
-
-//New dot every 50 milliseconds
-var dotCount = setInterval(function() {
-  try {
-    if (gameIsStarted) {
-      //Deletes old dots (as so not to clutter up the screen)
-      for (var i = 0; i < document.getElementsByClassName("backDots").length; i++) {
-        document.getElementsByClassName("backDots")[i].remove();
-      }
-
-      for (var j = 0; j < dotsCount; j++) {
-        var newDot = document.createElement("DIV");
-        document.body.appendChild(newDot);
-        newDot.setAttribute("class", "backDots");
-        //Gives it a random position and opacity
-        newDot.setAttribute("style",
-            "position: absolute; z-index: -1;" +
-            " left: " + Math.floor(Math.random() * 99) + "vw;" +
-            " top: " + Math.floor(Math.random() * 55) + "vw;" +
-            " opacity: " + Math.floor(Math.random() * DOTSOPACITY) + "%;");
-        newDot.innerHTML = ".";
-
-        //Possible chance to become a different colour
-        var rand = Math.floor(Math.random() *3);
-        switch (rand) {
-          case 0:
-            newDot.style.color = "var(--contrast)";
-            break;
-        }
-      }
-    }
-  }
-  catch(err) {
-    return;
-  }
-}, 50);
-*/
-
-/*
 
 0-20 seconds: Infantcy
 20-40 seconds: Youth
 40-70 seconds: Adulthood
 70-90 seconds: Old age
 90-120 seconds: Beyond
-
-*/
-
-/*
-
-TODO:
-- Add sound effects
-  - Buttons
-  - Breakage
-- Create ending cases
-- More 3D renders
-- Soundtrack?
-
-
-var para = new URLSearchParams();
-para.append("ending", "normalcy");
-location.href = "ending.html?" + para.toString();
-
-
-var para = new URLSearchParams(window.location.search);
-var pass = para.get("ending");
 
 */
 
@@ -167,6 +105,8 @@ function begin() {
 }
 
 function help() {
+  playSound("button");
+
   gameIsStarted = false;
   document.getElementById("popup").style.visibility = "visible";
 
@@ -211,23 +151,20 @@ function details(open) {
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
     gameTime++;
-    //dotsCount++;
+    dotsCount++;
 
     if (gameTime >= 120) {
       gameIsStarted = false;
+      var temp;
 
-      if (breakLevel < 4) {
-        // normalcy ending
-      }
-      else if (breakLevel >= 4 && breakLevel < 12) {
-        // moderate ending
-      }
-      else if (breakLevel >= 12 && breakLevel < 24) {
-        // broken ending
-      }
-      else if (breakLevel >= 24) {
-        // free ending
-      }
+      if (breakLevel < 4) { temp = "normalcy"; }
+      else if (breakLevel >= 4 && breakLevel < 12) { temp = "moderate"; }
+      else if (breakLevel >= 12 && breakLevel < 24) { temp = "broken"; }
+      else if (breakLevel >= 24) { temp = "free"; }
+
+      var para = new URLSearchParams();
+      para.append("ending", temp);
+      location.href = "ending.html?" + para.toString();
     }
 
     gameSpeed += 0.05;
@@ -288,6 +225,8 @@ var checkBreakage = setInterval(function() {
 
 function increaseNeeds(array, index) {
   if (gameIsStarted) {
+    playSound("button");
+
     array[index] = 100;
 
     if (array == bio_needs) {
@@ -336,6 +275,11 @@ var checkDecisions = setInterval(function() {
     if ((lrg_index * 10) < (gameTime + 1)) {
       document.getElementById("lrg").innerHTML = lrg_decisons[lrg_index];
       lrg_index++;
+
+      playSound("breakage");
+      var temp = document.getElementById("lrg_header");
+      temp.style.color = "var(--highlight)";
+      setTimeout(function() { temp.style.color = "var(--base)"; }, 1000);
     }
 
     switch (gameTime) {
@@ -366,7 +310,9 @@ function loadSmallDecisions(array, id) {
 
 function decide(size, isYes) {
   if (gameIsStarted) {
-    if (size == "lrg") {
+    playSound("button");
+
+    if (size == "lrg" && document.getElementById("lrg").innerHTML != "") {
       if (isYes) {
         document.getElementById("lrg").innerHTML = "";
         breakLevel -= 2;
@@ -382,7 +328,7 @@ function decide(size, isYes) {
         flashPrompt();
       }
     }
-    else if (size == "sml") {
+    else if (size == "sml" && document.getElementById("sml").innerHTML != "") {
       if (isYes) {
         document.getElementById("sml").innerHTML = "";
         breakLevel -= 1;
@@ -412,8 +358,33 @@ function flashPrompt() {
   var voices = window.speechSynthesis.getVoices();
   msg.voice = voices[0]; // Microsoft David
   msg.volume = 0.5; // From 0 to 1
-  msg.rate = 1; // From 0.1 to 10
+  msg.rate = (-0.025 * breakLevel) + 1; // From 0.1 to 10
   msg.pitch = 0; // From 0 to 2
   msg.text = temp2;
   speechSynthesis.speak(msg);
+}
+
+function playSound(soundType) {
+  switch (soundType) {
+    case "breakage":
+      var audio = new Audio("sounds/breakage.wav");
+      audio.play();
+      break;
+    case "button":
+      var temp;
+
+      if (breakLevel < 12) {
+        temp = 1;
+      }
+      else if (breakLevel >= 12 && breakLevel < 24) {
+        temp = 2;
+      }
+      else if (breakLevel >= 24) {
+        temp = 3;
+      }
+
+      var audio = new Audio("sounds/button_" + temp + ".wav");
+      audio.play();
+      break;
+  }
 }
