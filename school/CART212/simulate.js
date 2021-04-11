@@ -52,7 +52,9 @@ var dotCount = setInterval(function() {
 /*
 
 TODO:
-- Add button sounds
+- Add sound effects
+  - Buttons
+  - Breakage
 - Create ending cases
 - More 3D renders
 - Soundtrack?
