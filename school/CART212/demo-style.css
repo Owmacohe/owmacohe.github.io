@@ -67,6 +67,8 @@ a:hover {
   color: var(--highlight-hover);
 }
 
+img { width: 15vw; }
+
 .flexcolumn, .flexcolumn_dark, .flexrow {
   display: flex;
   justify-content: center;

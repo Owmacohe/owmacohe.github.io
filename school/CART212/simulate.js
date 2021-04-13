@@ -8,6 +8,10 @@
 
 */
 
+
+
+/* ### Variables ### */
+
 var gameIsStarted = false;
 
 var bio_needs = [100, 100, 100]; // eat, sleep, waste
@@ -94,6 +98,11 @@ var breakLevel = 0;
 var gameTime = 0;
 var gameSpeed = 1;
 
+
+
+/* ### Non-decision, non-needs functions ### */
+
+// Starts the game
 function begin() {
   gameIsStarted = true;
 
@@ -104,6 +113,7 @@ function begin() {
   document.getElementById("popup").style.visibility = "hidden";
 }
 
+// Updates and displays the help popup
 function help() {
   playSound("button");
 
@@ -135,6 +145,7 @@ function help() {
   }
 }
 
+// Toggles the help popup
 function details(open) {
   if (open) {
     document.getElementById("time").style.visibility = "visible";
@@ -148,6 +159,11 @@ function details(open) {
   }
 }
 
+
+
+/* ### Upkeep functions ### */
+
+// Catch-all function, increases time/speed and updates details
 var increaseGameSpeed = setInterval(function() {
   if (gameIsStarted) {
     gameTime++;
@@ -194,6 +210,7 @@ var increaseGameSpeed = setInterval(function() {
   }
 }, 1000);
 
+// Updates subject image based on breakage
 var checkBreakage = setInterval(function() {
   var subj = document.getElementById("subjectImg");
 
@@ -223,21 +240,7 @@ var checkBreakage = setInterval(function() {
   }
 }, 1000);
 
-function increaseNeeds(array, index) {
-  if (gameIsStarted) {
-    playSound("button");
-
-    array[index] = 100;
-
-    if (array == bio_needs) {
-      document.getElementById("bio").innerHTML = "";
-    }
-    else if (array == emo_needs) {
-      document.getElementById("emo").innerHTML = "";
-    }
-  }
-}
-
+// Decreases subject needs faster each second
 var decreaseNeeds = setInterval(function() {
   if (gameIsStarted) {
     for (var i in needs) {
@@ -248,6 +251,7 @@ var decreaseNeeds = setInterval(function() {
   }
 }, 1000);
 
+// Displays warning messages if needs are too low, and increases breakage because if it
 var checkNeeds = setInterval(function() {
   if (gameIsStarted) {
     for (var i in needs) {
@@ -266,10 +270,11 @@ var checkNeeds = setInterval(function() {
       }
     }
 
-    console.log("Bio: " + bio_needs[0] + " " + bio_needs[1] + " " + bio_needs[2] + "\nEmo: " + emo_needs[0] + " " + emo_needs[1] + " " + emo_needs[2]);
+    //console.log("Bio: " + bio_needs[0] + " " + bio_needs[1] + " " + bio_needs[2] + "\nEmo: " + emo_needs[0] + " " + emo_needs[1] + " " + emo_needs[2]);
   }
 }, 1000);
 
+// Checks the game time to see which decisions need to be displayed
 var checkDecisions = setInterval(function() {
   if (gameIsStarted) {
     if ((lrg_index * 10) < (gameTime + 1)) {
@@ -284,30 +289,46 @@ var checkDecisions = setInterval(function() {
 
     switch (gameTime) {
       case 1: case 5: case 10: case 15:
-        loadSmallDecisions(sml_decisons.infantcy, "sml");
+        loadSmallDecisions(sml_decisons.infantcy);
         break;
       case 20: case 25: case 30: case 35:
-        loadSmallDecisions(sml_decisons.youth, "sml");
+        loadSmallDecisions(sml_decisons.youth);
         break;
       case 40: case 45: case 50: case 55: case 60: case 65:
-        loadSmallDecisions(sml_decisons.adulthood, "sml");
+        loadSmallDecisions(sml_decisons.adulthood);
         break;
       case 70: case 75: case 80: case 85:
-        loadSmallDecisions(sml_decisons.old_age, "sml");
+        loadSmallDecisions(sml_decisons.old_age);
         break;
       case 90: case 95: case 100: case 105: case 110: case 115:
-        loadSmallDecisions(sml_decisons.beyond, "sml");
+        loadSmallDecisions(sml_decisons.beyond);
         break;
     }
   }
 }, 1000);
 
-function loadSmallDecisions(array, id) {
-  var temp = Math.floor(Math.random() * array.length);
-  document.getElementById(id).innerHTML = array[temp];
-  array.splice(temp, 1);
+
+
+
+/* ### Interaction functions ### */
+
+// Resets specific needs back to 100%
+function increaseNeeds(array, index) {
+  if (gameIsStarted) {
+    playSound("button");
+
+    array[index] = 100;
+
+    if (array == bio_needs) {
+      document.getElementById("bio").innerHTML = "";
+    }
+    else if (array == emo_needs) {
+      document.getElementById("emo").innerHTML = "";
+    }
+  }
 }
 
+// Increases or decreases breakage based on decision
 function decide(size, isYes) {
   if (gameIsStarted) {
     playSound("button");
@@ -347,6 +368,18 @@ function decide(size, isYes) {
   }
 }
 
+
+
+/* ### Utility functions ### */
+
+// Sets the small decision field to a random possible decision
+function loadSmallDecisions(array) {
+  var temp = Math.floor(Math.random() * array.length);
+  document.getElementById("sml").innerHTML = array[temp];
+  array.splice(temp, 1);
+}
+
+// Displays a warning message when the player answers 'no' to a decision
 function flashPrompt() {
   var temp1 = document.getElementById("prompts");
   var temp2 = prompts[Math.floor(Math.random() * prompts.length)] + "!";
@@ -364,6 +397,7 @@ function flashPrompt() {
   speechSynthesis.speak(msg);
 }
 
+// Plays either a breakage or a button sound
 function playSound(soundType) {
   switch (soundType) {
     case "breakage":
