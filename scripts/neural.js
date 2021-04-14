@@ -3,13 +3,19 @@ window.onload = function() {
 }
 
 var wordScores = [];
-
 var sentenceLength = 0;
-var words = [];
 
 function wordParse() {
-  var text = document.getElementById("input").value;
+  var text = document.getElementById("input").value.replace(/[,\n\/#!?$%\^&\*;:{}=\-_`~()]/g,"");
+
+  if (text[text.length - 1] == ".") {
+    text = text.substring(0, text.length - 1);
+  }
+
   var sentences = text.split(". ");
+  var words = [];
+
+  //console.log(text[text.length - 1]);
 
   for (var i in sentences) {
     words[i] = sentences[i].split(" ");
@@ -79,36 +85,47 @@ function createSentences(sentenceNum) {
   var freqFirst = 0;
   var freqSecond = 0;
   var freqThird = 0;
+  var freqFourth = 0;
+  var freqFifth = 0;
 
-  for (var i in words) {
-    for (var j in words[i]) {
-      console.log((words[i][j].startScore + words[i][j].frequency) + " " + startHighest);
+  for (var j in wordScores) {
+    if (wordScores[j].startScore >= startHighest) {
+      start = wordScores[j].word;
+      startHighest = wordScores[j].startScore;
+    }
 
-      if (words[i][j].startScore + words[i][j].frequency >= startHighest) {
-        start = words[i][j].word;
-        startHighest = words[i][j].startScore + words[i][j].frequency;
-      }
+    if (wordScores[j].endScore >= endHighest) {
+      end = wordScores[j].word;
+      endHighest = wordScores[j].endScore;
+    }
 
-      if (words[i][j].endScore + words[i][j].frequency >= endHighest) {
-        end = words[i][j].word;
-        endHighest = words[i][j].endScore + words[i][j].frequency;
-      }
-
-      if (words[i][j].frequency >= freqFirst) {
-        freqThird = freqSecond;
-        freqSecond = freqFirst;
-        freqFirst = words[i][j].frequency;
-      }
+    if (wordScores[j].frequency >= freqFirst) {
+      freqFifth = freqFourth;
+      freqFourth = freqThird;
+      freqThird = freqSecond;
+      freqSecond = freqFirst;
+      freqFirst = wordScores[j].frequency;
     }
   }
 
-  var middle;
+  var middle = "";
+  var lastAdded = "";
 
-  for (var k in words) {
-    for (var l in words[k]) {
-      if ((words[k][l].frequency == freqFirst || words[k][l].frequency == freqSecond || words[k][l].frequency == freqThird) && Math.floor(Math.random() * sentenceLength) == 0) {
-        middle += " " + words[k][l].word;
+  for (var k in wordScores) {
+    var chance = sentenceLength / 6;
+
+    if (k > 0) {
+      for (var l in wordScores[k - 1].precursor) {
+        if (wordScores[k - 1].word == lastAdded) {
+          //console.log(wordScores[k - 1].precursor + " " + wordScores[k].word);
+          chance = sentenceLength / 1.5;
+        }
       }
+    }
+
+    if (Math.floor(Math.random() * sentenceLength) <= chance) {
+      middle += " " + wordScores[k].word;
+      lastAdded = wordScores[k].word;
     }
   }
 
