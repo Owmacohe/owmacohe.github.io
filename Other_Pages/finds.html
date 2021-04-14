@@ -35,7 +35,6 @@
 
   </body>
 
-  <script src="\scripts/backTextLoader.js" charset="utf-8"></script>
   <script type="text/javascript">
     var netArtLinks = [
       ["Pale Mask Press", "https://palemaskpress.com"],
@@ -69,7 +68,8 @@
       ["EmuOS", "https://emupedia.net/beta/emuos"],
       ["QR Picture", "https://qrpicture.com"],
       ["Sprites-as-a-service", "https://ljvmiranda921.github.io/sprites-as-a-service"],
-      ["Windows93.net", "https://www.windows93.net"]
+      ["Windows93.net", "https://www.windows93.net"],
+      ["r74n (Copy-Paste dump especially)", "https://r74n.com"]
     ];
 
     var uselessLinks = [
@@ -84,7 +84,9 @@
       ["Pixels Fighting", "http://pixelsfighting.com"]
     ];
 
-    window.onload = function() {
+    populateLinks();
+
+    function populateLinks() {
       for (var i = 0; i < personalLinks.length; i++) {
         createLink(personalLinks, i, "personalTarget");
       }
@@ -112,4 +114,6 @@
       document.getElementById(target).appendChild(newLink);
     }
   </script>
+
+  <script src="\scripts/backTextLoader.js" charset="utf-8"></script>
 </html>
