@@ -33,6 +33,11 @@
       <div id="uselessTarget" class="flexrow_wrap"></div>
     </div>
 
+    <div class="flex_extra" style="flex-direction: column;">
+      <h1>My favourites from <a target="_blank" rel="noopener noreferrer" href="https://tinytools.directory">TinyTools</a></h1>
+      <div id="tinyTarget" class="flexrow_wrap"></div>
+    </div>
+
   </body>
 
   <script type="text/javascript">
@@ -56,9 +61,10 @@
 
     var personalLinks = [
       ["Bill Wurtz's site", "https://billwurtz.com"],
-      ["Orteil", "https://orteil.dashnet.org"],
+      ["Orteil's site", "https://orteil.dashnet.org"],
       ["Tabita Rezaire's site", "https://www.tabitarezaire.com"],
-      ["Skawennati's site", "https://www.skawennati.com"]
+      ["Skawennati's site", "https://www.skawennati.com"],
+      ["Max Bittker's site", "https://maxbittker.github.io"]
     ]
 
     var toolsLinks = [
@@ -69,7 +75,7 @@
       ["QR Picture", "https://qrpicture.com"],
       ["Sprites-as-a-service", "https://ljvmiranda921.github.io/sprites-as-a-service"],
       ["Windows93.net", "https://www.windows93.net"],
-      ["r74n (Copy-Paste dump especially)", "https://r74n.com"]
+      ["r74n (Copy-Paste dump specifically)", "https://r74n.com"]
     ];
 
     var uselessLinks = [
@@ -84,6 +90,19 @@
       ["Pixels Fighting", "http://pixelsfighting.com"]
     ];
 
+    var tinyLinks = [
+      ["BitFontMaker2", "http://www.pentacom.jp/pentacom/bitfontmaker2"],
+      ["Woah.css", "https://www.joerezendes.com/projects/Woah.css"],
+      ["Neumorphism", "https://neumorphism.io"],
+      ["broider", "https://maxbittker.github.io/broider"],
+      ["Pigment", "https://pigment.shapefactory.co"],
+      ["Dither Me This", "https://doodad.dev/dither-me-this"],
+      ["SmartNormap 2.0", "http://www.smart-page.net/smartnormal"],
+      ["pattern mutation", "https://lorenschmidt.itch.io/pattern-mutation-tool"],
+      ["Blobs", "https://blobs.app"],
+      ["Mapgen4", "https://www.redblobgames.com/maps/mapgen4/"]
+    ];
+
     populateLinks();
 
     function populateLinks() {
@@ -91,16 +110,20 @@
         createLink(personalLinks, i, "personalTarget");
       }
 
-      for (var i = 0; i < netArtLinks.length; i++) {
-        createLink(netArtLinks, i, "netArtTarget");
+      for (var j = 0; j < netArtLinks.length; j++) {
+        createLink(netArtLinks, j, "netArtTarget");
       }
 
-      for (var j = 0; j < toolsLinks.length; j++) {
-        createLink(toolsLinks, j, "toolsTarget");
+      for (var k = 0; k < toolsLinks.length; k++) {
+        createLink(toolsLinks, k, "toolsTarget");
       }
 
-      for (var k = 0; k < uselessLinks.length; k++) {
-        createLink(uselessLinks, k, "uselessTarget");
+      for (var l = 0; l < uselessLinks.length; l++) {
+        createLink(uselessLinks, l, "uselessTarget");
+      }
+
+      for (var m = 0; m < uselessLinks.length; m++) {
+        createLink(tinyLinks, m, "tinyTarget");
       }
     }
 
