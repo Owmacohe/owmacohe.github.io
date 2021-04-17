@@ -12,6 +12,7 @@
 
   --gradient-degree: 135deg;
   --gradient-normal: linear-gradient(var(--gradient-degree), var(--links), var(--hover)); /*default gradient*/
+  --gradient-dark: linear-gradient(var(--gradient-degree), var(--boxes), var(--links)); /*dark gradient*/
   --gradient-hover: linear-gradient(var(--gradient-degree), var(--links), red); /*hover gradient*/
   --gradient-hover-flipped: linear-gradient(var(--gradient-degree), red, var(--links)); /*inverted hover gradient*/
 }
@@ -117,6 +118,22 @@ button {
 }
 
 button:hover { background: var(--gradient-hover); }
+
+em {
+  background: var(--gradient-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-style: normal;
+}
+
+strong {
+  background: var(--gradient-hover-flipped);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-style: normal;
+}
 
 
 
