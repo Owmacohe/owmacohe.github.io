@@ -1,6 +1,6 @@
 var backTextElem;
 
-var speed = 100;
+var speed = 0;
 var colourDefault = 10000;
 var colourChance;
 
@@ -8,12 +8,6 @@ var spikeChance = 300;
 var isSpiking = false;
 
 window.onload = function() {
-  backTextElem = document.createElement("DIV");
-  document.body.appendChild(backTextElem);
-  backTextElem.setAttribute("id", "backgroundText");
-
-  backTextElem.innerHTML = getRandomCharacter(2.5 * window.innerWidth, "special");
-
   colourChance = colourDefault;
 
   if (speed != 0) {
@@ -33,6 +27,15 @@ window.onload = function() {
       }
     }, speed);
   }
+  else {
+    colourChance = Math.floor(Math.random() * 500) + 500; //500 to 1000
+  }
+
+  backTextElem = document.createElement("DIV");
+  document.body.appendChild(backTextElem);
+  backTextElem.setAttribute("id", "backgroundText");
+
+  backTextElem.innerHTML = getRandomCharacter(2.5 * window.innerWidth, "special");
 }
 
 function getRandomCharacter(iterations, type) {
