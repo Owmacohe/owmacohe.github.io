@@ -2,15 +2,18 @@ body {
   padding-bottom: 5vw;
 
   color: white;
-  font-size: 2vw;
   font-family: "Consolas";
 
   background: black;
 }
 
-h1 {
+h1, h2, h3 {
   transition: 0.1s;
 
+  cursor: default;
+}
+
+h1 {
   margin-bottom: 0;
 
   font-size: 5vw;
@@ -23,8 +26,6 @@ h1:hover {
 }
 
 h2 {
-  transition: 0.1s;
-
   margin-top: 10vw;
 
   font-size: 3vw;
@@ -36,9 +37,38 @@ h2:hover {
   text-shadow: 0.5vw 0.5vw green;
 }
 
+h3 {
+  margin: 1vw;
+
+  font-size: 3vw;
+  font-family: "Futura PT";
+}
+h3:hover {
+  transition: 0.3s;
+
+  text-shadow: 0.3vw 0.3vw red;
+}
+
+p {
+  margin: 0.5vw;
+
+  font-size: 1.5vw;
+}
+
+a {
+  color: red;
+}
+
 .flexcolumn, body {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
