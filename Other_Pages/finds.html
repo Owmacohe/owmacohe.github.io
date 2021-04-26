@@ -38,6 +38,11 @@
       <div id="tinyTarget" class="flexrow_wrap"></div>
     </div>
 
+    <div class="flex_extra" style="flex-direction: column;">
+      <h1>My favourites from <a target="_blank" rel="noopener noreferrer" href="https://rec0de.net">rec0de</a></h1>
+      <div id="rec0deTarget" class="flexrow_wrap"></div>
+    </div>
+
   </body>
 
   <script type="text/javascript">
@@ -103,27 +108,30 @@
       ["Mapgen4", "https://www.redblobgames.com/maps/mapgen4/"]
     ];
 
+    var rec0deLinks = [
+      ["Triptych", "https://rec0de.net/var/triptych"],
+      ["Words", "https://rec0de.net/var/words"],
+      ["Infinite Bookshelf", "https://rec0de.net/var/infinitebookshelf"],
+      ["Graphite", "https://rec0de.net/var/graphite"],
+      ["Radio Silence", "https://rec0de.net/var/radiosilence"]
+    ];
+
+    var allLinks = [
+      [netArtLinks, "netArtTarget"],
+      [personalLinks, "personalTarget"],
+      [toolsLinks, "toolsTarget"],
+      [uselessLinks, "uselessTarget"],
+      [tinyLinks, "tinyTarget"],
+      [rec0deLinks, "rec0deTarget"]
+    ];
+
     populateLinks();
 
     function populateLinks() {
-      for (var i = 0; i < personalLinks.length; i++) {
-        createLink(personalLinks, i, "personalTarget");
-      }
-
-      for (var j = 0; j < netArtLinks.length; j++) {
-        createLink(netArtLinks, j, "netArtTarget");
-      }
-
-      for (var k = 0; k < toolsLinks.length; k++) {
-        createLink(toolsLinks, k, "toolsTarget");
-      }
-
-      for (var l = 0; l < uselessLinks.length; l++) {
-        createLink(uselessLinks, l, "uselessTarget");
-      }
-
-      for (var m = 0; m < uselessLinks.length; m++) {
-        createLink(tinyLinks, m, "tinyTarget");
+      for (var i in allLinks) {
+        for (var j in allLinks[i][0]) {
+          createLink(allLinks[i][0], j, allLinks[i][1]);
+        }
       }
     }
 
