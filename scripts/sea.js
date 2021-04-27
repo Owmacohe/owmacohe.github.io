@@ -1,37 +1,29 @@
 window.onload = function() {
-  newWave(Math.floor(Math.random() * 4) + 3);
+  //newWave();
 }
 
 var signif = 0;
 
-function newWave(count) {
-  var imgCount = count;
-  var imgRatio = 100 / imgCount;
+function newWave() {
+  var newImg = document.createElement('img');
+
+  var resolution = 1000;
+  var tempX = Math.floor(Math.random() * (resolution - (resolution / 4))) + (resolution / 4);
+
+  newImg.setAttribute('src', 'https://source.unsplash.com/random/' + tempX + 'x' + (2 * resolution) + '?sig=' + signif);
+  signif++;
+
+  newImg.style.width = (tempX / (resolution / 35)) + '%';
+  newImg.style.marginLeft = (Math.floor(Math.random() * 1500) + 1500) + 'px';
+
   var imgGray = (Math.floor(Math.random() * 30) + 70);
+  newImg.style.filter = 'grayscale(' + imgGray + '%)';
 
-  for (var i = 0; i < imgCount; i++) {
-    var newImg = document.createElement('img');
-
-    var tempX = Math.floor(window.innerWidth / 3.75);
-    var tempY = (230 * imgCount) + 10;
-
-    newImg.setAttribute('src', 'https://source.unsplash.com/random/' + tempX + 'x' + tempY + '?sig=' + signif);
-    signif++;
-
-    newImg.style.left = (imgRatio * i) + '%';
-    newImg.style.width = imgRatio + '%';
-    newImg.style.marginLeft = (Math.floor(Math.random() * 600) + 1400) + 'px';
-
-    newImg.style.filter = 'grayscale(' + imgGray + '%)';
-
-    document.body.appendChild(newImg);
-  }
+  document.body.appendChild(newImg);
 }
 
 var waveTime = 0;
 var waveSpeed;
-var isRushing = false;
-
 var waveCount = 0;
 
 var waves = setInterval(function() {
@@ -44,7 +36,7 @@ var waves = setInterval(function() {
   var images = document.getElementsByTagName('img');
 
   for (var i in images) {
-    var wavePace = Math.random() * 5;
+    var wavePace = (Math.random() * 5) / 2;
     waveSpeed = 100 * (wavePace * Math.cos(waveTime * Math.PI)) / 100 + wavePace;
 
     try {
@@ -59,9 +51,8 @@ var waves = setInterval(function() {
     var remaining = images[i].getBoundingClientRect().left;
 
     if (waveCount < 30) {
-      var temp = (Math.floor(Math.random() * 4) + 3);
-      newWave(temp);
-      waveCount += temp;
+      newWave();
+      waveCount++;
     }
     else if (remaining <= -500) {
       images[i].remove();
