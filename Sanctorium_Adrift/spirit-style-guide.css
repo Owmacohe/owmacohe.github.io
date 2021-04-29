@@ -43,6 +43,22 @@ img {
   border: 0.5vw solid var(--shine1);
 }
 
+input {
+  font-size: 2vw;
+  color: var(--base3);
+  font-family: "Kefa";
+  font-weight: bold;
+
+  margin: 0.5vw;
+  padding: 1vw;
+  width: 40vw;
+
+  border: none;
+  border-right: 1vw solid var(--shine1);
+  border-radius: 5vw;
+  background-color: var(--base2);
+}
+
 
 
 /*Clases and IDs */
@@ -73,12 +89,32 @@ img {
   text-decoration: underline;
 }
 
+.dropdown {
+  width: 1w;
+  padding: 0.5vw;
+
+  background: var(--base2);
+}
+.dropdown_button {
+  margin: 1vw;
+
+  font-size: 3vw;
+
+  background: var(--base3);
+}
+.dropdown_content {
+  display: none;
+}
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
 
 
 /* Fonts */
 
 @font-face {
-    font-family: "Bulky Pixels";
+    font-family: "Kefa";
     src: url("kefa.woff2") format("woff2"),
          url("kefa.woff") format("woff");
     font-weight: normal;

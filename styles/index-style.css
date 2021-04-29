@@ -11,10 +11,22 @@ h2 { font-size: 2.5vw; }
 p { font-size: 1.65vw; }
 
 img {
-  border: 0.75vw solid var(--body);
-  border-radius: 20vw;
+  animation: fullRotation 5s linear infinite;
 
-  width: 24vw;
+  width: 23vw;
+  height: 23vw;
+  margin-top: 1vw;
+  margin-left: 1vw;
+
+  border-radius: 20vw;
+}
+
+
+
+/* Animations */
+
+@keyframes fullRotation {
+  to { transform: rotate(360deg); }
 }
 
 
@@ -28,13 +40,24 @@ img {
 
 /* General Classes and IDs */
 
-#titleimage { margin: 2vw; }
+#imgOuter {
+  animation: fullRotation 5s reverse linear infinite;
+
+  width: 25vw;
+  height: 25vw;
+  margin: 2vw;
+
+  border-radius: 20vw;
+
+  background: var(--gradient-hover);
+}
 
 #circlePosition {
-  text-decoration: none;
   position: fixed;
   left: 49.9vw;
-  top: 12.7vw;
+  top: 12.9vw;
+
+  text-decoration: none;
 }
 
 #curvedText {
@@ -63,9 +86,12 @@ img {
 /* Mobile Optimization */
 
 @media only screen and (max-width: 1000px) {
-  body { overflow: visible; }
+  body { overflow-y: visible; }
 
-  img { width: 37vw; }
+  img {
+    width: 36vw;
+    height: 36vw;
+  }
 
   p { font-size: 3vw; }
 
@@ -75,6 +101,11 @@ img {
     margin: 1vw;
   }
   .flexanim { font-size: 2.75vw; }
+
+  #imgOuter {
+    width: 38vw;
+    height: 38vw;
+  }
 
   #circlePosition { visibility: hidden; }
   #curvedText { font-size: 2.6vw; }

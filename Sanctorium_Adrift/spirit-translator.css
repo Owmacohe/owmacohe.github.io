@@ -70,7 +70,7 @@ button {
 /* Fonts */
 
 @font-face {
-    font-family: "Bulky Pixels";
+    font-family: "Kefa";
     src: url("kefa.woff2") format("woff2"),
          url("kefa.woff") format("woff");
     font-weight: normal;
