@@ -1,0 +1,59 @@
+body {
+  overflow: hidden;
+
+  background: black;
+}
+
+img {
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Helvetica';
+  font-size: 1.2vw;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  transition: 0.3s;
+
+  margin: 0.5vw;
+  margin-right: 1.5vw;
+
+  border: none;
+  border-radius: 0.3vw;
+
+  color: black;
+  font-size: 1.2vw;
+}
+
+button:hover {
+  transition: 0.3s;
+
+  font-size: 1.8vw;
+
+  cursor: pointer;
+}
+
+#creditBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 1vw;
+  bottom: 1vw;
+
+  padding: 0.5vw;
+
+  background: black;
+
+  z-index: 100;
+}
