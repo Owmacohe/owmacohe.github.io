@@ -19,13 +19,13 @@
     </div>
 
     <div class="flex_extra" style="flex-direction: column;">
-      <h1>Personal websites</h1>
-      <div id="personalTarget" class="flexrow_wrap"></div>
+      <h1>Tools</h1>
+      <div id="toolsTarget" class="flexrow_wrap"></div>
     </div>
 
     <div class="flex_extra" style="flex-direction: column;">
-      <h1>Tools</h1>
-      <div id="toolsTarget" class="flexrow_wrap"></div>
+      <h1>Personal websites</h1>
+      <div id="personalTarget" class="flexrow_wrap"></div>
     </div>
 
     <div class="flex_extra" style="flex-direction: column;">
@@ -41,6 +41,11 @@
     <div class="flex_extra" style="flex-direction: column;">
       <h1>My favourites from <a target="_blank" rel="noopener noreferrer" href="https://rec0de.net">rec0de</a></h1>
       <div id="rec0deTarget" class="flexrow_wrap"></div>
+    </div>
+
+    <div class="flex_extra" style="flex-direction: column;">
+      <h1>My favourites from <a target="_blank" rel="noopener noreferrer" href="https://neal.fun">Neal.fun</a></h1>
+      <div id="nealTarget" class="flexrow_wrap"></div>
     </div>
 
   </body>
@@ -61,16 +66,9 @@
       ["Shredder", "https://potatoland.org/shredder/shredder.html"],
       ["Net Flag", "https://netflag.guggenheim.org/html"],
       ["Million Dollar Homepage", "http://www.milliondollarhomepage.com"],
-      ["The Restart page", "http://www.therestartpage.com"]
+      ["The Restart page", "http://www.therestartpage.com"],
+      ["h1ghf1ve.me", "https://h1ghf1ve.me"]
     ];
-
-    var personalLinks = [
-      ["Bill Wurtz's site", "https://billwurtz.com"],
-      ["Orteil's site", "https://orteil.dashnet.org"],
-      ["Tabita Rezaire's site", "https://www.tabitarezaire.com"],
-      ["Skawennati's site", "https://www.skawennati.com"],
-      ["Max Bittker's site", "https://maxbittker.github.io"]
-    ]
 
     var toolsLinks = [
       ["Library Of Babel", "http://libraryofbabel.info"],
@@ -80,7 +78,17 @@
       ["QR Picture", "https://qrpicture.com"],
       ["Sprites-as-a-service", "https://ljvmiranda921.github.io/sprites-as-a-service"],
       ["Windows93.net", "https://www.windows93.net"],
-      ["r74n (Copy-Paste dump specifically)", "https://r74n.com"]
+      ["r74n (Copy-Paste dump specifically)", "https://r74n.com"],
+      ["Pattern Generator", "https://doodad.dev/pattern-generator"],
+      ["Big Ass Message", "https://bigassmessage.com"]
+    ];
+
+    var personalLinks = [
+      ["Bill Wurtz's site", "https://billwurtz.com"],
+      ["Orteil's site", "https://orteil.dashnet.org"],
+      ["Tabita Rezaire's site", "https://www.tabitarezaire.com"],
+      ["Skawennati's site", "https://www.skawennati.com"],
+      ["Max Bittker's site", "https://maxbittker.github.io"]
     ];
 
     var uselessLinks = [
@@ -116,13 +124,21 @@
       ["Radio Silence", "https://rec0de.net/var/radiosilence"]
     ];
 
+    var nealLinks = [
+      ["Ten Years Ago", "https://neal.fun/ten-years-ago"],
+      ["Sell! Sell! Sell!", "https://neal.fun/sell-sell-sell"],
+      ["Universe Forecast", "https://neal.fun/universe-forecast"],
+      ["Share This Page", "https://neal.fun/share-this-page"]
+    ];
+
     var allLinks = [
       [netArtLinks, "netArtTarget"],
-      [personalLinks, "personalTarget"],
       [toolsLinks, "toolsTarget"],
+      [personalLinks, "personalTarget"],
       [uselessLinks, "uselessTarget"],
       [tinyLinks, "tinyTarget"],
-      [rec0deLinks, "rec0deTarget"]
+      [rec0deLinks, "rec0deTarget"],
+      [nealLinks, "nealTarget"]
     ];
 
     populateLinks();
