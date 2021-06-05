@@ -1,0 +1,51 @@
+@import url("https://use.typekit.net/csa5hex.css");
+
+body {
+  font-family: consolas, sans-serif;
+}
+
+p { font-size: 2vw; }
+
+h1, h2 {
+  margin: 1.5vw;
+
+  font-family: rockwell, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 { font-size: 4vw; }
+h2 { font-size: 3vw; }
+
+input {
+  width: 35vw;
+  margin: 1.5vw;
+
+  font-family: consolas, sans-serif;
+  font-size: 2vw;
+}
+
+button {
+  cursor: pointer;
+
+  font-family: rockwell, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2vw;
+}
+
+body, .flexcolumn, .flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body, .flexcolumn { flex-direction: column; }
+.flexrow { flex-direction: row; }
+
+@media only screen and (max-width: 1300px) {
+  p, input, button { font-size: 4vw; }
+  input { width: 60vw; }
+
+  h1, h2 { margin: 4vw; }
+  h1 { font-size: 8vw; }
+  h2 { font-size: 6vw; }
+}

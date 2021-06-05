@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="convert.js" charset="utf-8"></script>
+    <title>toki pona</title>
+  </head>
+
+  <body>
+    <h1>toki pona <strong>dictionary</strong></h1>
+
+    <input type="search" placeholder="enter a toki pona word..." id="in" onkeydown="search(event)">
+    <button type="button" onclick="load()">random word</button>
+
+    <h2><strong id="out1"></strong></h2>
+    <h2 style="margin-top: 0;"><em id="out2"></em></h2>
+  </body>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      clearInput();
+    }
+
+    // Method to clear the input field
+    function clearInput() {
+      document.getElementById('in').value = '';
+    }
+
+    // Method to check if the given word is valid
+    function search(event) {
+      if (event.keyCode == 13) {
+        try {
+          var word = document.getElementById('in').value;
+          load(word);
+
+          clearInput();
+        }
+        catch {
+          document.getElementById('out1').innerHTML = 'no such word exists';
+          document.getElementById('out2').innerHTML = 'did you spell it correctly?';
+
+          clearInput();
+        }
+      }
+    }
+
+    // Method to load the word (or randomly pick one)
+    function load(word) {
+      if (word == null) {
+        word = textJSON.words[Math.floor(Math.random() * textJSON.words.length)].toki_pona;
+      }
+
+      var translations = getWord(word);
+
+      document.getElementById('out1').innerHTML = word + ' = ' + translations[0];
+      document.getElementById('out2').innerHTML = '';
+
+      if (translations[1] != '') {
+        document.getElementById('out2').innerHTML = 'also: ' + translations[1];
+      }
+    }
+  </script>
+</html>

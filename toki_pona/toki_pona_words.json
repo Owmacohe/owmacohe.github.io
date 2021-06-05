@@ -1,0 +1,616 @@
+{
+  "words": [
+    {
+      "toki_pona": "li",
+      "english_main": "connects subject to predicate, when subject =/= mi or sina",
+      "english_alt": "",
+      "section": "grammar_connecters"
+    },
+    {
+      "toki_pona": "e",
+      "english_main": "connects predicate to object, when object =/= wile",
+      "english_alt": "",
+      "section": "connecters"
+    },
+    {
+      "toki_pona": "pi",
+      "english_main": "connects object to multiple descriptors",
+      "english_alt": "",
+      "section": "connecters"
+    },
+    {
+      "toki_pona": "la",
+      "english_main": "connects if/then statement, also used with time",
+      "english_alt": "",
+      "section": "connecters"
+    },
+    {
+      "toki_pona": "ala",
+      "english_main": "doubles verb for question, also used for negation",
+      "english_alt": "",
+      "section": "grammar_replacers"
+    },
+    {
+      "toki_pona": "o",
+      "english_main": "replaces li for command",
+      "english_alt": "",
+      "section": "grammar_replacers"
+    },
+    {
+      "toki_pona": "en",
+      "english_main": "and",
+      "english_alt": "",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "seme",
+      "english_main": "what/which",
+      "english_alt": "",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "lon",
+      "english_main": "on/in",
+      "english_alt": "at",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "tawa",
+      "english_main": "go/to",
+      "english_alt": "for / in the opinion of",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "kepeken",
+      "english_main": "using",
+      "english_alt": "",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "anu",
+      "english_main": "or",
+      "english_alt": "",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "tan",
+      "english_main": "from/because",
+      "english_alt": "",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "taso",
+      "english_main": "and/but",
+      "english_alt": "only",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "a",
+      "english_main": "so",
+      "english_alt": "",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "mi",
+      "english_main": "me",
+      "english_alt": "",
+      "section": "people"
+    },
+    {
+      "toki_pona": "sina",
+      "english_main": "you",
+      "english_alt": "",
+      "section": "people"
+    },
+    {
+      "toki_pona": "ona",
+      "english_main": "they",
+      "english_alt": "she/he/it",
+      "section": "people"
+    },
+    {
+      "toki_pona": "jan",
+      "english_main": "person",
+      "english_alt": "",
+      "section": "people"
+    },
+    {
+      "toki_pona": "kulupu",
+      "english_main": "community",
+      "english_alt": "group",
+      "section": "people"
+    },
+    {
+      "toki_pona": "mama",
+      "english_main": "parent",
+      "english_alt": "ancestor/creator",
+      "section": "people"
+    },
+    {
+      "toki_pona": "meli",
+      "english_main": "feminine",
+      "english_alt": "",
+      "section": "people"
+    },
+    {
+      "toki_pona": "mije",
+      "english_main": "masculin",
+      "english_alt": "",
+      "section": "people"
+    },
+    {
+      "toki_pona": "pona",
+      "english_main": "good",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "ike",
+      "english_main": "bad",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "suli",
+      "english_main": "big",
+      "english_alt": "important/old",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "lili",
+      "english_main": "small",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "nasa",
+      "english_main": "strange",
+      "english_alt": "stupid",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "jaki",
+      "english_main": "gross",
+      "english_alt": "unclean",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "sewi",
+      "english_main": "superior",
+      "english_alt": "up/top/religious",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "sin",
+      "english_main": "new",
+      "english_alt": "extra",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "jelo",
+      "english_main": "yellow",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "laso",
+      "english_main": "blue/green",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "loje",
+      "english_main": "red",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "pimeja",
+      "english_main": "dark",
+      "english_alt": "black",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "walo",
+      "english_main": "light",
+      "english_alt": "white",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "wawa",
+      "english_main": "powerful",
+      "english_alt": "sure/intense",
+      "section": "descriptors"
+    },
+    {
+      "toki_pona": "moku",
+      "english_main": "food/eat",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "telo",
+      "english_main": "water",
+      "english_alt": "liquid",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "kili",
+      "english_main": "fruit",
+      "english_alt": "vegetable",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "pipi",
+      "english_main": "bug",
+      "english_alt": "pest",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "kala",
+      "english_main": "fish",
+      "english_alt": "aquatic animal",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "kasi",
+      "english_main": "plant",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "soweli",
+      "english_main": "land animal",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "akesi",
+      "english_main": "lizard",
+      "english_alt": "non-cute animal",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "pan",
+      "english_main": "bread",
+      "english_alt": "grain-based food",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "lete",
+      "english_main": "cold",
+      "english_alt": "uncooked",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "suwi",
+      "english_main": "sweet/cute",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "palisa",
+      "english_main": "stick",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "waso",
+      "english_main": "bird",
+      "english_alt": "flying animal",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "lukin",
+      "english_main": "see",
+      "english_alt": "eye",
+      "section": "body"
+    },
+    {
+      "toki_pona": "kute",
+      "english_main": "hear",
+      "english_alt": "ear",
+      "section": "body"
+    },
+    {
+      "toki_pona": "luka",
+      "english_main": "hand",
+      "english_alt": "arm",
+      "section": "body"
+    },
+    {
+      "toki_pona": "noka",
+      "english_main": "foot",
+      "english_alt": "leg",
+      "section": "body"
+    },
+    {
+      "toki_pona": "lawa",
+      "english_main": "control",
+      "english_alt": "head",
+      "section": "body"
+    },
+    {
+      "toki_pona": "sijelo",
+      "english_main": "body",
+      "english_alt": "",
+      "section": "body"
+    },
+    {
+      "toki_pona": "len",
+      "english_main": "clothing",
+      "english_alt": "fabric",
+      "section": "body"
+    },
+    {
+      "toki_pona": "sinpin",
+      "english_main": "front",
+      "english_alt": "face",
+      "section": "body"
+    },
+    {
+      "toki_pona": "pakala",
+      "english_main": "break",
+      "english_alt": "mistake",
+      "section": "action"
+    },
+    {
+      "toki_pona": "jo",
+      "english_main": "have",
+      "english_alt": "",
+      "section": "action"
+    },
+    {
+      "toki_pona": "pana",
+      "english_main": "give",
+      "english_alt": "",
+      "section": "action"
+    },
+    {
+      "toki_pona": "pali",
+      "english_main": "make/work",
+      "english_alt": "do",
+      "section": "action"
+    },
+    {
+      "toki_pona": "wile",
+      "english_main": "want/need",
+      "english_alt": "",
+      "section": "action"
+    },
+    {
+      "toki_pona": "lape",
+      "english_main": "sleep",
+      "english_alt": "rest",
+      "section": "action"
+    },
+    {
+      "toki_pona": "utala",
+      "english_main": "fight",
+      "english_alt": "",
+      "section": "action"
+    },
+    {
+      "toki_pona": "pini",
+      "english_main": "end",
+      "english_alt": "complete",
+      "section": "action"
+    },
+    {
+      "toki_pona": "kama",
+      "english_main": "begin",
+      "english_alt": "arrive/become/succeed",
+      "section": "action"
+    },
+    {
+      "toki_pona": "awen",
+      "english_main": "continue/stay",
+      "english_alt": "",
+      "section": "action"
+    },
+    {
+      "toki_pona": "alasa",
+      "english_main": "hunt",
+      "english_alt": "gather",
+      "section": "action"
+    },
+    {
+      "toki_pona": "moli",
+      "english_main": "kill",
+      "english_alt": "death",
+      "section": "action"
+    },
+    {
+      "toki_pona": "open",
+      "english_main": "start",
+      "english_alt": "begin",
+      "section": "action"
+    },
+    {
+      "toki_pona": "weka",
+      "english_main": "away",
+      "english_alt": "absent",
+      "section": "action"
+    },
+    {
+      "toki_pona": "ijo",
+      "english_main": "thing",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "toki",
+      "english_main": "speak",
+      "english_alt": "language/hello",
+      "section": "other"
+    },
+    {
+      "toki_pona": "suno",
+      "english_main": "the Sun",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ilo",
+      "english_main": "tool",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ni",
+      "english_main": "that/this",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ma",
+      "english_main": "place",
+      "english_alt": "land",
+      "section": "other"
+    },
+    {
+      "toki_pona": "esun",
+      "english_main": "shop/buy",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "kalama",
+      "english_main": "sound",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "lipu",
+      "english_main": "book",
+      "english_alt": "read/document/record",
+      "section": "other"
+    },
+    {
+      "toki_pona": "tenpo",
+      "english_main": "time",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "linja",
+      "english_main": "rope",
+      "english_alt": "hair",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ken",
+      "english_main": "can",
+      "english_alt": "ability/possible",
+      "section": "other"
+    },
+    {
+      "toki_pona": "tomo",
+      "english_main": "house",
+      "english_alt": "structure",
+      "section": "other"
+    },
+    {
+      "toki_pona": "sona",
+      "english_main": "knowledge",
+      "english_alt": "skill/wisdom",
+      "section": "other"
+    },
+    {
+      "toki_pona": "mute",
+      "english_main": "many",
+      "english_alt": "duplicate",
+      "section": "other"
+    },
+    {
+      "toki_pona": "kiwen",
+      "english_main": "stone/metal",
+      "english_alt": "hard",
+      "section": "other"
+    },
+    {
+      "toki_pona": "kon",
+      "english_main": "air",
+      "english_alt": "gas/invisible",
+      "section": "other"
+    },
+    {
+      "toki_pona": "poki",
+      "english_main": "box",
+      "english_alt": "container",
+      "section": "other"
+    },
+    {
+      "toki_pona": "musi",
+      "english_main": "art",
+      "english_alt": "entertainment",
+      "section": "other"
+    },
+    {
+      "toki_pona": "olin",
+      "english_main": "love",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "mani",
+      "english_main": "money",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "lupa",
+      "english_main": "hole",
+      "english_alt": "doorway",
+      "section": "other"
+    },
+    {
+      "toki_pona": "mun",
+      "english_main": "the Moon",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "nimi",
+      "english_main": "name",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "insa",
+      "english_main": "inside",
+      "english_alt": "contents",
+      "section": "other"
+    },
+    {
+      "toki_pona": "monsi",
+      "english_main": "behind",
+      "english_alt": "back",
+      "section": "other"
+    },
+    {
+      "toki_pona": "poka",
+      "english_main": "beside/near",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ante",
+      "english_main": "different",
+      "english_alt": "other",
+      "section": "other"
+    },
+    {
+      "toki_pona": "sama",
+      "english_main": "same",
+      "english_alt": "similar",
+      "section": "other"
+    },
+    {
+      "toki_pona": "supa",
+      "english_main": "furniture",
+      "english_alt": "",
+      "section": "other"
+    }
+  ]
+}
