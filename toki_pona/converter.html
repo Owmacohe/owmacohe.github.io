@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="convert.js" charset="utf-8"></script>
+    <title>toki pona</title>
+  </head>
+
+  <body>
+    <h1>toki pona <strong>converter</strong></h1>
+    <h2>dictionary <a href="index.html">here</a></h2>
+
+    <div class="flexrow">
+      <input type="search" placeholder="convert a word..." id="in" onkeydown="change(event)">
+      <button type="button" id="convertButton" onclick="change(event)">convert</button>
+    </div>
+
+    <h2><strong id="out"></strong></h2>
+    <p><em>(still under construction)</em></p>
+  </body>
+</html>

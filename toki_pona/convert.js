@@ -1,29 +1,77 @@
-/*
+window.onload = function() {
+  clearInput();
+}
 
-Simple JavaSctipt AJAX script modified from this guide:
-https://www.encodedna.com/javascript/how-to-read-data-from-external-json-file-in-javascript.htm
+// Method to clear the input field
+function clearInput() {
+  document.getElementById('in').value = '';
+}
 
-*/
+// Method to check if the given word is valid
+function change(event) {
+  if (event.keyCode == 13 || event.target.id == 'convertButton') {
+    var word = document.getElementById('in').value;
 
-var request = new XMLHttpRequest(); // XMLHttpRequest object
-var textJSON; // JSON object to be read from once it is extracted from the file
+    var result = replaceLetters(word);
 
-// Initiating request
-request.onreadystatechange = reportStatus;
-request.open('GET', 'toki_pona_words.json', true); // Getting the json file
-request.send();
+    if (result == null) {
+      document.getElementById('out').innerHTML = 'unable to convert';
+    }
+    else {
+      document.getElementById('out').innerHTML = word + ' = ' + result;
+    }
 
-function reportStatus() {
-  // Checking if request is complete
-  if (request.readyState == 4) {
-    textJSON = JSON.parse(this.responseText);
+    clearInput();
   }
 }
 
-function getWord(givenWord) {
-  for (var i = 0; i < textJSON.words.length; i++) {
-    if (givenWord == textJSON.words[i].toki_pona) {
-      return [textJSON.words[i].english_main, textJSON.words[i].english_alt];
+function replaceLetters(givenWord) {
+  try {
+    if (givenWord == '') {
+      throw new err;
     }
+
+    var newWord = '';
+
+    for (var i = 0; i < givenWord.length; i++) {
+      switch (givenWord[i].toLowerCase()) {
+        case 'b':
+        case 'f':
+          newWord += 'p';
+          break;
+        case 'c':
+        case 'g':
+        case 'q':
+          newWord += 'k';
+          break;
+        case 'd':
+          newWord += 't';
+          break;
+        case 'h':
+          newWord += '';
+          break;
+        case 'r':
+          newWord += 'l';
+          break;
+        case 'v':
+          newWord += 'w';
+          break;
+        case 'x':
+        case 'z':
+          newWord += 's';
+          break;
+        case 'y':
+          newWord += 'j';
+          break;
+        default:
+          newWord += givenWord[i];
+          break;
+      }
+    }
+
+    return newWord;
+  }
+  catch {
+    return null;
   }
 }

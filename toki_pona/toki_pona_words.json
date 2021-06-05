@@ -10,19 +10,19 @@
       "toki_pona": "e",
       "english_main": "connects predicate to object, when object =/= wile",
       "english_alt": "",
-      "section": "connecters"
+      "section": "grammar_connecters"
     },
     {
       "toki_pona": "pi",
       "english_main": "connects object to multiple descriptors",
       "english_alt": "",
-      "section": "connecters"
+      "section": "grammar_connecters"
     },
     {
       "toki_pona": "la",
       "english_main": "connects if/then statement, also used with time",
       "english_alt": "",
-      "section": "connecters"
+      "section": "grammar_connecters"
     },
     {
       "toki_pona": "ala",
@@ -57,7 +57,7 @@
     {
       "toki_pona": "tawa",
       "english_main": "go/to",
-      "english_alt": "for / in the opinion of",
+      "english_alt": "for/in the opinion of",
       "section": "grammar_other"
     },
     {

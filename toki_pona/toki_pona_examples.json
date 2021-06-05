@@ -1,0 +1,64 @@
+{
+  "examples": [
+    {
+      "sentence": "mi moku",
+      "translation": "I am eating",
+      "complexity": 0
+    },
+    {
+      "sentence": "jan li toki",
+      "translation": "Someone speaks",
+      "complexity": 0
+    },
+    {
+      "sentence": "ken la mi lape",
+      "translation": "Maybe I'm sleeping",
+      "complexity": 1
+    },
+    {
+      "sentence": "jan ike mi li pipi",
+      "translation": "My enemies are bugs",
+      "complexity": 1
+    },
+    {
+      "sentence": "jan pona mi li esun e ilo kalama",
+      "translation": "My friend buys an instrument",
+      "complexity": 2
+    },
+    {
+      "sentence": "mama sina li lawa e kulupu pi lipu suli",
+      "translation": "Your parents are in charge of a collection of large books",
+      "complexity": 2
+    },
+    {
+      "sentence": "sina lape la sina jo e sona",
+      "translation": "If you had slept, you would have knowledge",
+      "complexity": 3
+    },
+    {
+      "sentence": "sina pona li lukin e lipu e jan",
+      "translation": "You are good, and look at books and people",
+      "complexity": 3
+    },
+    {
+      "sentence": "soweli li moli ala moli e mun?",
+      "translation": "Did a bear kill the Moon?",
+      "complexity": 4
+    },
+    {
+      "sentence": "jan Wapa o moku e liki sina",
+      "translation": "Eat your fruit, Robert",
+      "complexity": 4
+    },
+    {
+      "sentence": "mi kama tan ma Kanata, en mi toki kepeken toki Inli",
+      "translation": "I come from Canada, and I speak English",
+      "complexity": 5
+    },
+    {
+      "sentence": "mi lon poka sina la mi pana e tomo tawa sina",
+      "translation": "If I'm near you, I'll give you a house",
+      "complexity": 5
+    },
+  ]
+}
