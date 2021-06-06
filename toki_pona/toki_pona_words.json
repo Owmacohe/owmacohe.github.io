@@ -87,7 +87,7 @@
     {
       "toki_pona": "a",
       "english_main": "so",
-      "english_alt": "",
+      "english_alt": "also used for emphasis",
       "section": "grammar_other"
     },
     {
@@ -129,13 +129,13 @@
     {
       "toki_pona": "meli",
       "english_main": "feminine",
-      "english_alt": "",
+      "english_alt": "female",
       "section": "people"
     },
     {
       "toki_pona": "mije",
       "english_main": "masculin",
-      "english_alt": "",
+      "english_alt": "male",
       "section": "people"
     },
     {
@@ -223,6 +223,12 @@
       "section": "descriptors"
     },
     {
+      "toki_pona": "kule",
+      "english_main": "colourful",
+      "english_alt": "colour",
+      "section": "descriptors"
+    },
+    {
       "toki_pona": "moku",
       "english_main": "food/eat",
       "english_alt": "",
@@ -301,6 +307,18 @@
       "section": "food/nature"
     },
     {
+      "toki_pona": "mu",
+      "english_main": "animal sound",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "seli",
+      "english_main": "fire/heat",
+      "english_alt": "chemical reaction",
+      "section": "food/nature"
+    },
+    {
       "toki_pona": "lukin",
       "english_main": "see",
       "english_alt": "eye",
@@ -346,6 +364,24 @@
       "toki_pona": "sinpin",
       "english_main": "front",
       "english_alt": "face",
+      "section": "body"
+    },
+    {
+      "toki_pona": "unpa",
+      "english_main": "sex",
+      "english_alt": "",
+      "section": "body"
+    },
+    {
+      "toki_pona": "uta",
+      "english_main": "mouth/lips",
+      "english_alt": "",
+      "section": "body"
+    },
+    {
+      "toki_pona": "nena",
+      "english_main": "bump/nose",
+      "english_alt": "hill/mountain",
       "section": "body"
     },
     {
@@ -430,6 +466,12 @@
       "toki_pona": "weka",
       "english_main": "away",
       "english_alt": "absent",
+      "section": "action"
+    },
+    {
+      "toki_pona": "pilin",
+      "english_main": "feeling",
+      "english_alt": "emotion",
       "section": "action"
     },
     {
@@ -595,6 +637,12 @@
       "section": "other"
     },
     {
+      "toki_pona": "anpa",
+      "english_main": "bottom",
+      "english_alt": "lower/under",
+      "section": "other"
+    },
+    {
       "toki_pona": "ante",
       "english_main": "different",
       "english_alt": "other",
@@ -610,6 +658,66 @@
       "toki_pona": "supa",
       "english_main": "furniture",
       "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ale",
+      "english_main": "all",
+      "english_alt": "everything",
+      "section": "other"
+    },
+    {
+      "toki_pona": "ko",
+      "english_main": "semisolid substance",
+      "english_alt": "clay/dough/paste",
+      "section": "other"
+    },
+    {
+      "toki_pona": "selo",
+      "english_main": "outer layer",
+      "english_alt": "skin/boundary",
+      "section": "other"
+    },
+    {
+      "toki_pona": "sike",
+      "english_main": "round thing",
+      "english_alt": "ball/circle/year",
+      "section": "other"
+    },
+    {
+      "toki_pona": "sitelen",
+      "english_main": "writing",
+      "english_alt": "picture",
+      "section": "other"
+    },
+    {
+      "toki_pona": "pu",
+      "english_main": "interacting with the book, Toki Pona: The Language of Good by Sonja Lang",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "nanpa",
+      "english_main": "number",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "wan",
+      "english_main": "one",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "tu",
+      "english_main": "two",
+      "english_alt": "",
+      "section": "other"
+    },
+    {
+      "toki_pona": "nasin",
+      "english_main": "way/manner",
+      "english_alt": "custom",
       "section": "other"
     }
   ]

@@ -10,6 +10,8 @@ function clearInput() {
 }
 
 var quizWord;
+var correctNum = 0;
+var incorrectNum = 0;
 
 // Method to check if the given word is valid
 function check(event) {
@@ -27,6 +29,8 @@ function check(event) {
 
             isCorrect = true;
 
+            document.getElementById('correct').innerHTML = ++correctNum;
+
             break;
           }
         }
@@ -40,6 +44,8 @@ function check(event) {
 
             isCorrect = true;
 
+            document.getElementById('correct').innerHTML = ++correctNum;
+
             break;
           }
         }
@@ -51,6 +57,8 @@ function check(event) {
         if (textJSON.words[l].toki_pona == quizWord) {
             document.getElementById('out1').innerHTML = 'incorrect';
             translate(l);
+
+            document.getElementById('incorrect').innerHTML = ++incorrectNum;
 
             break;
         }

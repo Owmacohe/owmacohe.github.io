@@ -1,0 +1,39 @@
+{
+  "phrases": [
+    {
+      "sentence": "toki!",
+      "translation": "Hello!",
+      "complexity": 0
+    },
+    {
+      "sentence": "mi tawa! / tawa pona!",
+      "translation": "Goodbye! (leaving) / Goodbye! (not leaving)",
+      "complexity": 0
+    },
+    {
+      "sentence": "sina pilin seme?",
+      "translation": "How are you?",
+      "complexity": 1
+    },
+    {
+      "sentence": "sina pilin seme?",
+      "translation": "How are you?",
+      "complexity": 1
+    },
+    {
+      "sentence": "mi pakala",
+      "translation": "I'm sorry",
+      "complexity": 1
+    },
+    {
+      "sentence": "o toki kepeken tempo mute",
+      "translation": "Please speak slower",
+      "complexity": 2
+    },
+    {
+      "sentence": "sina toki ala toki e toki Inli?",
+      "translation": "Do you speak English?",
+      "complexity": 2
+    }
+  ]
+}

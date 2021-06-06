@@ -60,5 +60,20 @@
       "translation": "If I'm near you, I'll give you a house",
       "complexity": 5
     },
+    {
+      "sentence": "soweli sina li pona a tawa mi. taso, mi ken ala jo e ona",
+      "translation": "I really like your animal, but I cannot have it",
+      "complexity": 6
+    },
+    {
+      "sentence": "mi sona e ni: soweli mi li pona tawa sina",
+      "translation": "I know you like my cat",
+      "complexity": 6
+    },
+    {
+      "sentence": "tomo tawa supa mi pi lon sewi li jo e kala linja mute mute",
+      "translation": "My hovercraft is full of eels",
+      "complexity": 7
+    },
   ]
 }

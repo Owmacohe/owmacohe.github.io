@@ -1,0 +1,20 @@
+{
+  "synonyms": [
+    {
+      "word": "ale",
+      "replacement": "ali"
+    },
+    {
+      "word": "a",
+      "replacement": "kin"
+    },
+    {
+      "word": "lukin",
+      "replacement": "oko"
+    },
+    {
+      "word": "sin",
+      "replacement": "namako"
+    }
+  ]
+}

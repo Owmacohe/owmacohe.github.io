@@ -13,6 +13,11 @@
     <h2>dictionary <a href="index.html">here</a></h2>
 
     <div class="flexrow">
+      <h2>correct: <em id="correct">0</em></h2>
+      <h2>incorrect: <em id="incorrect">0</em></h2>
+    </div>
+
+    <div class="flexrow">
       <h2>what does <strong id="question">temp</strong> mean?</h2>
       <input type="search" placeholder="input a word..." id="in" onkeydown="check(event)">
       <button type="button" id="checkButton" onclick="check(event)">check</button>
