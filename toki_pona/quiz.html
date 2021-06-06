@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="parse.js" charset="utf-8"></script>
+    <script src="quiz.js" charset="utf-8"></script>
+    <title>toki pona</title>
+  </head>
+
+  <body>
+    <h1>toki pona <strong>quiz</strong></h1>
+    <h2>dictionary <a href="index.html">here</a></h2>
+
+    <div class="flexrow">
+      <h2>what does <strong id="question">temp</strong> mean?</h2>
+      <input type="search" placeholder="input a word..." id="in" onkeydown="check(event)">
+      <button type="button" id="checkButton" onclick="check(event)">check</button>
+    </div>
+
+    <h2><strong id="out1"></strong></h2>
+    <h2 style="margin-top: 0;"><em id="out2"></em></h2>
+  </body>
+</html>
