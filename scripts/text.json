@@ -1,0 +1,19 @@
+{
+  "scenes": [
+    {
+      "path": "0",
+      "main": "Do you understand?",
+      "secret": ""
+    },
+    {
+      "path": "0.0",
+      "main": "I'm glad that you do.",
+      "secret": ""
+    },
+    {
+      "path": "0.1",
+      "main": "That's okay too. We'll continue.",
+      "secret": ""
+    }
+  ]
+}

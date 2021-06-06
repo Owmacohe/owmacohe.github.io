@@ -1,0 +1,60 @@
+/* Elements */
+
+body {
+  font-family: "Kefa";
+  color: white;
+
+  background: black;
+}
+
+textarea {
+  height: 13vw;
+
+  margin: 0.5vw;
+  padding: 0.5vw;
+
+  font-family: "Kefa";
+  font-size: 2.2vw;
+}
+
+button {
+  margin: 0.5vw;
+
+  font-family: "Kefa";
+  font-size: 3vw;
+}
+
+p {
+  margin: 2vw;
+
+  font-size: 1.5vw;
+  white-space: pre;
+  font-family: monospace;
+}
+
+
+
+/* Flex classes */
+
+body, .flexcolumn, .flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body, .flexcolumn { flex-direction: column; }
+.flexrow {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "Kefa";
+    src: url("kefa.woff2") format("woff2"),
+         url("kefa.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tree.css">
+    <script src="tree.js" charset="utf-8"></script>
+    <title>Branching JSON creator</title>
+  </head>
+
+  <body>
+
+    <div class="flexrow">
+      <textarea type="text" placeholder="1. Path" id="path"></textarea>
+      <textarea type="text" placeholder="2. Response" id="response"></textarea>
+    </div>
+
+    <div class="flexrow">
+      <textarea type="text" placeholder="3. Primary choice" id="primary"></textarea>
+      <textarea type="text" placeholder="4. Secondary choice" id="secondary"></textarea>
+      <textarea type="text" placeholder="5. Tertiary choice" id="tertiary"></textarea>
+    </div>
+
+    <div class="flexrow">
+      <textarea type="text" placeholder="6. Special choice" id="special"></textarea>
+      <textarea type="text" placeholder="7. Type choice" id="type"></textarea>
+    </div>
+
+    <button type="button" onclick="add()">Add to tree</button>
+
+    <div class="flexrow" id="tree"></div>
+
+  </body>
+</html>

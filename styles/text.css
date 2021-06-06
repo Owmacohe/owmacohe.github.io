@@ -1,0 +1,74 @@
+:root {
+  --main: limegreen;
+  --link: palegreen;
+  --dark: darkgreen;
+}
+
+body {
+  font-family: "Tinier";
+  color: var(--main);
+  font-size: 3vw;
+
+  background: black;
+}
+
+p {
+  animation: glow 1s infinite alternate;
+
+  position: absolute;
+  width: 60vw;
+  height: 75vh;
+  left: 20vw;
+  top: 4vh;
+
+  padding: 1vw;
+
+  word-wrap: normal;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+button {
+  transition: 0.3s;
+  cursor: pointer;
+
+  position: absolute;
+  top: 85vh;
+
+  padding: 0.5vw;
+
+  border: none;
+
+  font-family: "Tinier";
+  color: var(--main);
+  font-size: 3vw;
+
+  background: black;
+}
+
+button:hover {
+  transition: 0.15s;
+
+  color: var(--link);
+  text-shadow: 0 0 1vw var(--main);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1vw var(--main);
+  }
+  to {
+    text-shadow: 0 0 2vw var(--main);
+  }
+}
+
+@font-face {
+    font-family: "Tinier";
+    src: url("fonts/Tinier.woff2") format("woff2"),
+         url("fonts/Tinier.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
