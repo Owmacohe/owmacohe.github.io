@@ -164,7 +164,7 @@
     },
     {
       "toki_pona": "nasa",
-      "english_main": "strange",
+      "english_main": "strange/weird",
       "english_alt": "stupid",
       "section": "descriptors"
     },
@@ -320,7 +320,7 @@
     },
     {
       "toki_pona": "lukin",
-      "english_main": "see",
+      "english_main": "see/look",
       "english_alt": "eye",
       "section": "body"
     },

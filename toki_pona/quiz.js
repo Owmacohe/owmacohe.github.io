@@ -12,6 +12,7 @@ function clearInput() {
 var quizWord;
 var correctNum = 0;
 var incorrectNum = 0;
+var correctWords = [];
 
 // Method to check if the given word is valid
 function check(event) {
@@ -29,6 +30,8 @@ function check(event) {
 
             isCorrect = true;
 
+            correctWords[correctWords.length] = quizWord;
+
             document.getElementById('correct').innerHTML = ++correctNum;
 
             break;
@@ -43,6 +46,8 @@ function check(event) {
             translate(i);
 
             isCorrect = true;
+
+            correctWords[correctWords.length] = quizWord;
 
             document.getElementById('correct').innerHTML = ++correctNum;
 
@@ -79,9 +84,18 @@ function translate(index) {
 
 function loadWord() {
   var index = Math.floor(Math.random() * textJSON.words.length);
+  var isMatched = true;
 
-  while (textJSON.words[index].section == 'grammar_connecters' || textJSON.words[index].section == 'grammar_replacers') {
+  while ((textJSON.words[index].section == 'grammar_connecters' || textJSON.words[index].section == 'grammar_replacers') || isMatched) {
+    isMatched = false;
+
     index = Math.floor(Math.random() * textJSON.words.length);
+
+    for (var i = 0; i < correctWords.length + 1; i++) {
+      if (correctWords[i] == textJSON.words[index].toki_pona) {
+        isMatched = true;
+      }
+    }
   }
 
   quizWord = textJSON.words[index].toki_pona;
@@ -89,4 +103,6 @@ function loadWord() {
   document.getElementById('question').innerHTML = quizWord;
 
   clearInput();
+
+  console.log(correctWords);
 }
