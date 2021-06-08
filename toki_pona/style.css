@@ -13,7 +13,7 @@ h1, h2 {
   font-weight: 400;
   font-style: normal;
 
-  white-space: pre;
+  word-wrap: normal;
 }
 h1 { font-size: 4vw; }
 h2 { font-size: 3vw; }

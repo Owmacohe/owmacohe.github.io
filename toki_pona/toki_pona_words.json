@@ -92,7 +92,7 @@
     },
     {
       "toki_pona": "mi",
-      "english_main": "me",
+      "english_main": "me/my",
       "english_alt": "",
       "section": "people"
     },
@@ -104,8 +104,8 @@
     },
     {
       "toki_pona": "ona",
-      "english_main": "they",
-      "english_alt": "she/he/it",
+      "english_main": "they/them",
+      "english_alt": "she/her/he/him/it",
       "section": "people"
     },
     {
@@ -159,7 +159,7 @@
     {
       "toki_pona": "lili",
       "english_main": "small",
-      "english_alt": "",
+      "english_alt": "unimportant/young",
       "section": "descriptors"
     },
     {
@@ -315,7 +315,7 @@
     {
       "toki_pona": "seli",
       "english_main": "fire/heat",
-      "english_alt": "chemical reaction",
+      "english_alt": "burn/chemical reaction",
       "section": "food/nature"
     },
     {

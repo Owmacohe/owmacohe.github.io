@@ -10,15 +10,9 @@ h2 { font-size: 2.5vw; }
 
 p { font-size: 1.65vw; }
 
+/* To help align the CSS for the nightnight plugin  */
 img {
-  animation: fullRotation 5s linear infinite;
-
-  width: 23vw;
-  height: 23vw;
-  margin-top: 1vw;
-  margin-left: 1vw;
-
-  border-radius: 20vw;
+  width: 10vw;
 }
 
 
@@ -33,12 +27,24 @@ img {
 
 /* Flex classes */
 
+.flexcolumn { margin-top: -1vw; }
 .flexitem { font-size: 2.45vw; }
 .flex_extra { margin: 1.75vw; }
 
 
 
 /* General Classes and IDs */
+
+#imgInner {
+  animation: fullRotation 5s linear infinite;
+
+  width: 23vw;
+  height: 23vw;
+  margin-top: 1vw;
+  margin-left: 1vw;
+
+  border-radius: 20vw;
+}
 
 #imgOuter {
   animation: fullRotation 5s reverse linear infinite;
@@ -55,7 +61,7 @@ img {
 #circlePosition {
   position: fixed;
   left: 49.9vw;
-  top: 14vw;
+  top: 13vw;
 
   text-decoration: none;
 }
