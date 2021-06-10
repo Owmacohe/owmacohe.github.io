@@ -24,7 +24,7 @@ function check(event) {
         var mainArray = textJSON.words[i].english_main.toLowerCase().split('/');
 
         for (var j = 0; j < mainArray.length; j++) {
-          if (document.getElementById('in').value.toLowerCase()s == mainArray[j]) {
+          if (document.getElementById('in').value.toLowerCase() == mainArray[j]) {
             document.getElementById('out1').innerHTML = 'correct';
             translate(i);
 
@@ -41,7 +41,7 @@ function check(event) {
         var altArray = textJSON.words[i].english_alt.toLowerCase().split('/');
 
         for (var k = 0; k < altArray.length; k++) {
-          if (document.getElementById('in').value.toLowerCase()s == altArray[k]) {
+          if (document.getElementById('in').value.toLowerCase() == altArray[k]) {
             document.getElementById('out1').innerHTML = 'correct';
             translate(i);
 
