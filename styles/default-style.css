@@ -251,7 +251,7 @@ strong {
   user-select: none;
 
   transform: rotate(10deg);
-  width: 120vw;
+  width: 150vw;
 }
 
 .gameElement {
@@ -296,7 +296,7 @@ strong {
   .flexitem { font-size: 3.5vw; }
 
   #backgroundText {
-    left: -160px;
+    left: -220px;
     font-size: 4vw;
   }
 
