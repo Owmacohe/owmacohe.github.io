@@ -66,7 +66,7 @@ a:after, #form:after {
 
   border-bottom: 0.2vw solid;
   border-image-source: var(--gradient-hover-flipped);
-  border-image-slice: 1;
+  border-image-slice: 0;
 
   transition: 0.3s;
 }
@@ -76,6 +76,7 @@ a:hover, #form:hover {
 }
 a:hover:after, #form:hover:after {
   width: 100%;
+  border-image-slice: 1;
 }
 
 p { font-size: 2vw; }
@@ -227,7 +228,9 @@ strong {
 .img_big { width: 70vw; }
 
 .nounderline { text-decoration: none; }
+
 .nounderline_fancy:after { border-image-slice: 0; }
+.nounderline_fancy:hover:after { border-image-slice: 0; }
 
 
 
@@ -293,7 +296,7 @@ strong {
   .flexitem { font-size: 3.5vw; }
 
   #backgroundText {
-    left: -150px;
+    left: -160px;
     font-size: 4vw;
   }
 
