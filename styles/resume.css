@@ -27,6 +27,7 @@ h1 {
   font-family: "ltc-globe-gothic";
   font-size: 10vw;
   letter-spacing: 0.66vw;
+  text-shadow: 1vw 0 var(--cold-light);
 
   margin: 2vw;
 }
@@ -90,17 +91,6 @@ img {
   width: 88vw;
 }
 .flexrow .separator { width: 44vw; }
-
-#back {
-  position: relative;
-  margin-top: -14vw;
-  margin-left: 2.8vw;
-  z-index: -1;
-
-  color: var(--cold-light);
-
-  user-select: none;
-}
 
 .separator {
   margin-top: 1vw;
