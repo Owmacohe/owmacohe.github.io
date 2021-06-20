@@ -10,10 +10,7 @@ h2 { font-size: 2.5vw; }
 
 p { font-size: 1.65vw; }
 
-/* To help align the CSS for the nightnight plugin  */
-img {
-  width: 10vw;
-}
+img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 
 
 
@@ -40,14 +37,14 @@ img {
 
   width: 21vw;
   height: 21vw;
-  top: 17.5vw;
+  top: 17vw;
   left: 39.5vw;
 
   border-radius: 20vw;
 }
 
 #imgOuter {
-  animation: fullRotation 5s reverse linear infinite;
+  animation: fullRotation 1.5s reverse linear infinite;
 
   width: 25vw;
   height: 25vw;
@@ -59,9 +56,11 @@ img {
 }
 
 #circlePosition {
+  animation: fullRotation 8s linear infinite;
+
   position: fixed;
   left: 49.9vw;
-  top: 13vw;
+  top: 12.5vw;
 
   text-decoration: none;
 }
@@ -109,7 +108,7 @@ img {
   .flexanim { font-size: 2.75vw; }
 
   #imgInner {
-    top: 56vw;
+    top: 55vw;
     left: 55vw;
 
     width: 32vw;

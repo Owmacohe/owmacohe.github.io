@@ -33,7 +33,7 @@
     {
       "toki_pona": "o",
       "english_main": "replaces li for command",
-      "english_alt": "",
+      "english_alt": "hey!",
       "section": "grammar_replacers"
     },
     {
@@ -50,8 +50,8 @@
     },
     {
       "toki_pona": "lon",
-      "english_main": "on/in",
-      "english_alt": "at",
+      "english_main": "on/in/at",
+      "english_alt": "",
       "section": "grammar_other"
     },
     {
@@ -86,14 +86,14 @@
     },
     {
       "toki_pona": "a",
-      "english_main": "so",
-      "english_alt": "also used for emphasis",
+      "english_main": "used for emphasis",
+      "english_alt": "so",
       "section": "grammar_other"
     },
     {
       "toki_pona": "mi",
       "english_main": "me/my",
-      "english_alt": "",
+      "english_alt": "we/us",
       "section": "people"
     },
     {
@@ -129,19 +129,19 @@
     {
       "toki_pona": "meli",
       "english_main": "feminine",
-      "english_alt": "female",
+      "english_alt": "female/wife",
       "section": "people"
     },
     {
       "toki_pona": "mije",
       "english_main": "masculin",
-      "english_alt": "male",
+      "english_alt": "male/husband",
       "section": "people"
     },
     {
       "toki_pona": "pona",
       "english_main": "good",
-      "english_alt": "",
+      "english_alt": "simple",
       "section": "descriptors"
     },
     {
@@ -219,7 +219,7 @@
     {
       "toki_pona": "wawa",
       "english_main": "powerful",
-      "english_alt": "sure/intense",
+      "english_alt": "confident/intense",
       "section": "descriptors"
     },
     {
@@ -231,7 +231,7 @@
     {
       "toki_pona": "moku",
       "english_main": "food/eat",
-      "english_alt": "",
+      "english_alt": "drink",
       "section": "food/nature"
     },
     {
@@ -308,7 +308,7 @@
     },
     {
       "toki_pona": "mu",
-      "english_main": "animal sound",
+      "english_main": "animal noise",
       "english_alt": "",
       "section": "food/nature"
     },
@@ -327,13 +327,13 @@
     {
       "toki_pona": "kute",
       "english_main": "hear",
-      "english_alt": "ear",
+      "english_alt": "ear/listen/obey",
       "section": "body"
     },
     {
       "toki_pona": "luka",
       "english_main": "hand",
-      "english_alt": "arm",
+      "english_alt": "five/arm",
       "section": "body"
     },
     {
@@ -344,7 +344,7 @@
     },
     {
       "toki_pona": "lawa",
-      "english_main": "control",
+      "english_main": "control/guide",
       "english_alt": "head",
       "section": "body"
     },
@@ -375,13 +375,13 @@
     {
       "toki_pona": "uta",
       "english_main": "mouth/lips",
-      "english_alt": "",
+      "english_alt": "jaw",
       "section": "body"
     },
     {
       "toki_pona": "nena",
-      "english_main": "bump/nose",
-      "english_alt": "hill/mountain",
+      "english_main": "bump/hill/mountain",
+      "english_alt": "nose",
       "section": "body"
     },
     {
@@ -434,14 +434,14 @@
     },
     {
       "toki_pona": "kama",
-      "english_main": "begin",
-      "english_alt": "arrive/become/succeed",
+      "english_main": "arrive/come",
+      "english_alt": "become/succeed",
       "section": "action"
     },
     {
       "toki_pona": "awen",
-      "english_main": "continue/stay",
-      "english_alt": "",
+      "english_main": "protected/safe",
+      "english_alt": "stay/wait",
       "section": "action"
     },
     {
@@ -458,8 +458,8 @@
     },
     {
       "toki_pona": "open",
-      "english_main": "start",
-      "english_alt": "begin",
+      "english_main": "start/begin",
+      "english_alt": "",
       "section": "action"
     },
     {
@@ -489,7 +489,7 @@
     {
       "toki_pona": "suno",
       "english_main": "the Sun",
-      "english_alt": "",
+      "english_alt": "glow/radiance",
       "section": "other"
     },
     {
@@ -507,7 +507,7 @@
     {
       "toki_pona": "ma",
       "english_main": "place",
-      "english_alt": "land",
+      "english_alt": "land/territory",
       "section": "other"
     },
     {
@@ -525,13 +525,13 @@
     {
       "toki_pona": "lipu",
       "english_main": "book",
-      "english_alt": "read/document/record",
+      "english_alt": "read/paper/record",
       "section": "other"
     },
     {
       "toki_pona": "tenpo",
       "english_main": "time",
-      "english_alt": "",
+      "english_alt": "duration",
       "section": "other"
     },
     {
@@ -548,7 +548,7 @@
     },
     {
       "toki_pona": "tomo",
-      "english_main": "house",
+      "english_main": "house/building",
       "english_alt": "structure",
       "section": "other"
     },
@@ -615,13 +615,13 @@
     {
       "toki_pona": "nimi",
       "english_main": "name",
-      "english_alt": "",
+      "english_alt": "word",
       "section": "other"
     },
     {
       "toki_pona": "insa",
-      "english_main": "inside",
-      "english_alt": "contents",
+      "english_main": "inside/centre",
+      "english_alt": "contents/organ",
       "section": "other"
     },
     {
@@ -633,13 +633,13 @@
     {
       "toki_pona": "poka",
       "english_main": "beside/near",
-      "english_alt": "",
+      "english_alt": "hip",
       "section": "other"
     },
     {
       "toki_pona": "anpa",
-      "english_main": "bottom",
-      "english_alt": "lower/under",
+      "english_main": "lower/downward",
+      "english_alt": "bottom/under",
       "section": "other"
     },
     {
@@ -656,8 +656,8 @@
     },
     {
       "toki_pona": "supa",
-      "english_main": "furniture",
-      "english_alt": "",
+      "english_main": "horizontal surface",
+      "english_alt": "furniture",
       "section": "other"
     },
     {
@@ -686,13 +686,13 @@
     },
     {
       "toki_pona": "sitelen",
-      "english_main": "writing",
-      "english_alt": "picture",
+      "english_main": "writing/picture",
+      "english_alt": "",
       "section": "other"
     },
     {
       "toki_pona": "pu",
-      "english_main": "interacting with the book, Toki Pona: The Language of Good by Sonja Lang",
+      "english_main": "interacting with the official Toki Pona book",
       "english_alt": "",
       "section": "other"
     },
@@ -705,7 +705,7 @@
     {
       "toki_pona": "wan",
       "english_main": "one",
-      "english_alt": "",
+      "english_alt": "united",
       "section": "other"
     },
     {
@@ -716,8 +716,8 @@
     },
     {
       "toki_pona": "nasin",
-      "english_main": "way/manner",
-      "english_alt": "custom",
+      "english_main": "way/custom",
+      "english_alt": "method/path",
       "section": "other"
     }
   ]

@@ -19,9 +19,9 @@ function check(event) {
   if (event.keyCode == 13 || (event.target != null && event.target.id == 'checkButton')) {
     var isCorrect = false;
 
-    for (var i = 0; i < textJSON.words.length; i++) {
-      if (textJSON.words[i].toki_pona == quizWord) {
-        var mainArray = textJSON.words[i].english_main.toLowerCase().split('/');
+    for (var i = 0; i < wordsJSON.words.length; i++) {
+      if (wordsJSON.words[i].toki_pona == quizWord) {
+        var mainArray = wordsJSON.words[i].english_main.toLowerCase().split('/');
 
         for (var j = 0; j < mainArray.length; j++) {
           if (document.getElementById('in').value.toLowerCase() == mainArray[j]) {
@@ -38,7 +38,7 @@ function check(event) {
           }
         }
 
-        var altArray = textJSON.words[i].english_alt.toLowerCase().split('/');
+        var altArray = wordsJSON.words[i].english_alt.toLowerCase().split('/');
 
         for (var k = 0; k < altArray.length; k++) {
           if (document.getElementById('in').value.toLowerCase() == altArray[k]) {
@@ -58,8 +58,8 @@ function check(event) {
     }
 
     if (!isCorrect) {
-      for (var l = 0; l < textJSON.words.length; l++) {
-        if (textJSON.words[l].toki_pona.toLowerCase() == quizWord) {
+      for (var l = 0; l < wordsJSON.words.length; l++) {
+        if (wordsJSON.words[l].toki_pona.toLowerCase() == quizWord) {
             document.getElementById('out1').innerHTML = 'incorrect';
             translate(l);
 
@@ -75,30 +75,30 @@ function check(event) {
 }
 
 function translate(index) {
-  document.getElementById('out2').innerHTML = textJSON.words[index].toki_pona + ' = ' + textJSON.words[index].english_main;
+  document.getElementById('out2').innerHTML = wordsJSON.words[index].toki_pona + ' = ' + wordsJSON.words[index].english_main;
 
-  if (textJSON.words[index].english_alt != '') {
-    document.getElementById('out2').innerHTML += '\nalso: ' + textJSON.words[index].english_alt;
+  if (wordsJSON.words[index].english_alt != '') {
+    document.getElementById('out2').innerHTML += '\nalso: ' + wordsJSON.words[index].english_alt;
   }
 }
 
 function loadWord() {
-  var index = Math.floor(Math.random() * textJSON.words.length);
+  var index = Math.floor(Math.random() * wordsJSON.words.length);
   var isMatched = true;
 
-  while ((textJSON.words[index].section == 'grammar_connecters' || textJSON.words[index].section == 'grammar_replacers') || isMatched) {
+  while ((wordsJSON.words[index].section == 'grammar_connecters' || wordsJSON.words[index].section == 'grammar_replacers') || isMatched) {
     isMatched = false;
 
-    index = Math.floor(Math.random() * textJSON.words.length);
+    index = Math.floor(Math.random() * wordsJSON.words.length);
 
     for (var i = 0; i < correctWords.length + 1; i++) {
-      if (correctWords[i] == textJSON.words[index].toki_pona) {
+      if (correctWords[i] == wordsJSON.words[index].toki_pona) {
         isMatched = true;
       }
     }
   }
 
-  quizWord = textJSON.words[index].toki_pona;
+  quizWord = wordsJSON.words[index].toki_pona;
 
   document.getElementById('question').innerHTML = quizWord;
 

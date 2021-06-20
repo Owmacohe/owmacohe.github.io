@@ -4,12 +4,11 @@ window.onload = function() {
   var backTextElem;
 
   var speed = 0;
-  var colourDefault = 10000;
 
   var spikeChance = 300;
   var isSpiking = false;
 
-  colourChance = colourDefault;
+  colourChance = 10000;
 
   if (speed != 0) {
     var reloadBack = setInterval(function() {
@@ -62,11 +61,12 @@ function getRandomCharacter(iterations, type) {
 
   for (var i = 0; i < iterations; i++) {
     var temp = Math.floor(Math.random() * colourChance);
+    console.log(temp);
 
-    if (temp >= 5 && temp < 15) {
+    if (temp >= 20 && temp < 40) {
       randOutput += "<em>" + characters[Math.floor(Math.random() * characters.length)] + "</em>";
     }
-    else if (temp >= 0 && temp < 5) {
+    else if (temp >= 0 && temp < 20) {
       randOutput += "<strong>" + characters[Math.floor(Math.random() * characters.length)] + "</strong>";
     }
     else {

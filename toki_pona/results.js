@@ -34,7 +34,7 @@ function search(event) {
 // Method to load the word (or randomly pick one)
 function load(word) {
   if (word == null) {
-    word = textJSON.words[Math.floor(Math.random() * textJSON.words.length)].toki_pona;
+    word = wordsJSON.words[Math.floor(Math.random() * wordsJSON.words.length)].toki_pona;
   }
 
   var translations = getWord(word);

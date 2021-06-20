@@ -15,10 +15,3 @@ function setPattern() {
 
   new CircleType(document.getElementById("curvedText")).radius(window.innerWidth / (1440 / 215));
 }
-
-var rotateNum = 0;
-
-var rotateCircle = setInterval(function() {
-  rotateNum += 4;
-  document.getElementById("curvedText").style.transform = "rotate("+rotateNum+"deg)";
-}, 100);
