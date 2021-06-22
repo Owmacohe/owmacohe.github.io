@@ -56,7 +56,7 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 }
 
 #circlePosition {
-  animation: fullRotation 8s linear infinite;
+  animation: fullRotation 9s linear infinite;
 
   position: fixed;
   left: 49.9vw;
