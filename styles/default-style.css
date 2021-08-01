@@ -26,6 +26,10 @@
 
 /* Elements */
 
+html {
+  cursor: url('\\Media/Index_Media/cursor_big.png'), default;
+}
+
 body {
   transition: 0.3s;
 
@@ -56,6 +60,8 @@ a, #form {
   -webkit-text-fill-color: transparent;
 
   transition: 0.3s;
+
+  cursor: url('\\Media/Index_Media/cursor_big_highlight.png'), default;
 }
 a:after, #form:after {
   content: "";

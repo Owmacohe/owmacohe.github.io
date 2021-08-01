@@ -83,7 +83,7 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 
 #form {
   font-size: 2.5vw;
-  cursor: pointer;
+  cursor: url('\\Media/Index_Media/cursor_big_highlight.png'), default;
 }
 
 

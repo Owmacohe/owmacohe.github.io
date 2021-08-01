@@ -61,7 +61,6 @@ function getRandomCharacter(iterations, type) {
 
   for (var i = 0; i < iterations; i++) {
     var temp = Math.floor(Math.random() * colourChance);
-    console.log(temp);
 
     if (temp >= 20 && temp < 40) {
       randOutput += "<em>" + characters[Math.floor(Math.random() * characters.length)] + "</em>";
