@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trying something out</title>
+  </head>
+
+  <body style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <input placeholder="type text here..." style="font-size: 2vw; margin: 1vw;" onkeydown="checkKey(event)" id="input">
+    <button style="font-size: 3vw; margin: 1vw;" onclick="generate()">Generate</button>
+  </body>
+
+  <script type="text/javascript">
+    var inputField;
+    var sequence = "msii";
+
+    window.onload = function() {
+      inputField = document.getElementById('input');
+      inputField.value = '';
+    }
+
+    function checkKey(event) {
+      if (event.keyCode == 13) {
+        generate();
+      }
+    }
+
+    /*
+
+    Hue (0 - 345)
+    - 126 - 32 = 94
+    - 345 / 94 = 3.67
+
+    */
+
+    function generate() {
+      var inputText = inputField.value;
+      inputField.value = "";
+
+      for (var i = 0; i < sequence.length; i++) {
+        switch (sequence[i]) {
+          case "m":
+            inputText = shiftText(inputText);
+            break;
+          case "i":
+            inputText = interspliceText(inputText);
+            break;
+          case "s":
+            inputText = multiplyText(inputText);
+            break;
+        }
+      }
+
+      if (document.getElementById('box')) {
+        document.getElementById('box').remove();
+      }
+
+      var newBox = document.createElement('div');
+      newBox.id = 'box';
+      newBox.style.display = 'flex';
+      newBox.style.flexDirection = 'row';
+      newBox.style.flexWrap = 'wrap';
+      newBox.style.alignItems = 'center';
+      newBox.style.justifyContent = 'center';
+      newBox.style.width = '55%';
+      document.body.appendChild(newBox);
+
+      for (var j = 0; j < inputText.length; j++) {
+        var hue = (inputText[j].charCodeAt(0) - 32) * 3.67;
+
+        var newPixel = document.createElement('div');
+        newPixel.style.width = Math.pow(0.9, (0.055 * inputText.length) - 20) + 'vw';
+        newPixel.style.height = newPixel.style.width;
+        newPixel.style.background = 'hsl(' + hue + ', 100%, 50%)';
+        newBox.appendChild(newPixel);
+      }
+    }
+
+    function multiplyText(givenText) {
+      var temp = "";
+
+      for (var i = 0; i < givenText.length; i++) {
+        temp += givenText;
+      }
+
+      return temp;
+    }
+
+    function interspliceText(givenText) {
+      var temp = "";
+      var startText = givenText.substring(0, givenText.length / 2);
+      var endText = givenText.substring(givenText.length / 2, givenText.length);
+
+      if (endText.length > startText.length) {
+        temp += endText[0];
+      }
+
+      for (var i = 0; i < startText.length; i++) {
+        if (endText.length > startText.length) {
+          temp += startText[i] + endText[i + 1];
+        }
+        else {
+          temp += startText[i] + endText[i];
+        }
+      }
+
+      return temp;
+    }
+
+    function shiftText(givenText) {
+      var temp = "";
+
+      for (var i = 0; i < givenText.length; i++) {
+        var tempInt = givenText[i].charCodeAt(0) + givenText.length;
+
+        if (tempInt > 126) {
+          tempInt = (tempInt - 126) + 31;
+        }
+
+        temp += String.fromCharCode(tempInt);
+      }
+
+      return temp;
+    }
+
+  </script>
+</html>
