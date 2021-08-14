@@ -1,5 +1,9 @@
 window.onload = function() {
   clearInput();
+
+  setTimeout(function() {
+    document.getElementById('wordCount').innerHTML = 'now with ' + wordsJSON.words.length + ' words!';
+  }, 50);
 }
 
 // Method to clear the input field

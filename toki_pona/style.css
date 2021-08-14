@@ -6,7 +6,7 @@ body {
 
 p { font-size: 2vw; }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 1.5vw;
 
   font-family: rockwell, sans-serif;
@@ -17,6 +17,11 @@ h1, h2 {
 }
 h1 { font-size: 4vw; }
 h2 { font-size: 3vw; }
+h3 {
+  margin: 0.5vw;
+
+  font-size: 2vw;
+}
 
 input {
   width: 35vw;

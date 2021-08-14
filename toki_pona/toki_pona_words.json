@@ -80,14 +80,20 @@
     },
     {
       "toki_pona": "taso",
-      "english_main": "and/but",
-      "english_alt": "only",
+      "english_main": "but/only",
+      "english_alt": "however",
       "section": "grammar_other"
     },
     {
       "toki_pona": "a",
       "english_main": "used for emphasis",
       "english_alt": "so",
+      "section": "grammar_other"
+    },
+    {
+      "toki_pona": "kin",
+      "english_main": "also/too",
+      "english_alt": "",
       "section": "grammar_other"
     },
     {
@@ -136,6 +142,12 @@
       "toki_pona": "mije",
       "english_main": "masculin",
       "english_alt": "male/husband",
+      "section": "people"
+    },
+    {
+      "toki_pona": "tonsi",
+      "english_main": "non-binary/transgender",
+      "english_alt": "queer/LGBTQIA2S+",
       "section": "people"
     },
     {
@@ -229,6 +241,12 @@
       "section": "descriptors"
     },
     {
+      "toki_pona": "epiku",
+      "english_main": "epic/awesome",
+      "english_alt": "",
+      "section": "descriptors"
+    },
+    {
       "toki_pona": "moku",
       "english_main": "food/eat",
       "english_alt": "drink",
@@ -319,9 +337,39 @@
       "section": "food/nature"
     },
     {
+      "toki_pona": "namako",
+      "english_main": "spice",
+      "english_alt": "adornment",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "monsuta",
+      "english_main": "monster/fear",
+      "english_alt": "scary",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "kijetesantakalu",
+      "english_main": "procyonid",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "soko",
+      "english_main": "mushroom/fungus",
+      "english_alt": "",
+      "section": "food/nature"
+    },
+    {
+      "toki_pona": "misikeke",
+      "english_main": "medication/medicine",
+      "english_alt": "pill",
+      "section": "food/nature"
+    },
+    {
       "toki_pona": "lukin",
-      "english_main": "see/look",
-      "english_alt": "eye",
+      "english_main": "see/observe",
+      "english_alt": "check",
       "section": "body"
     },
     {
@@ -382,6 +430,12 @@
       "toki_pona": "nena",
       "english_main": "bump/hill/mountain",
       "english_alt": "nose",
+      "section": "body"
+    },
+    {
+      "toki_pona": "oko",
+      "english_main": "eye",
+      "english_alt": "see",
       "section": "body"
     },
     {
@@ -472,6 +526,24 @@
       "toki_pona": "pilin",
       "english_main": "feeling",
       "english_alt": "emotion",
+      "section": "action"
+    },
+    {
+      "toki_pona": "kipisi",
+      "english_main": "split/slice",
+      "english_alt": "cut/divide",
+      "section": "action"
+    },
+    {
+      "toki_pona": "kokosila",
+      "english_main": "speak another language in a Toki Pona only environment",
+      "english_alt": "",
+      "section": "action"
+    },
+    {
+      "toki_pona": "lanpan",
+      "english_main": "steal/seize",
+      "english_alt": "grab",
       "section": "action"
     },
     {
@@ -718,6 +790,30 @@
       "toki_pona": "nasin",
       "english_main": "way/custom",
       "english_alt": "method/path",
+      "section": "other"
+    },
+    {
+      "toki_pona": "leko",
+      "english_main": "square/cube",
+      "english_alt": "block",
+      "section": "other"
+    },
+    {
+      "toki_pona": "jamisa",
+      "english_main": "reflect/opposite",
+      "english_alt": "reverse",
+      "section": "other"
+    },
+    {
+      "toki_pona": "meso",
+      "english_main": "average/moderate",
+      "english_alt": "medium",
+      "section": "other"
+    },
+    {
+      "toki_pona": "n",
+      "english_main": "umm/hmm",
+      "english_alt": "",
       "section": "other"
     }
   ]
