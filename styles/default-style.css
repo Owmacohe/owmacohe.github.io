@@ -27,7 +27,7 @@
 /* Elements */
 
 html {
-  cursor: url('\\Media/Index_Media/cursor_big.png'), default;
+  cursor: url('\\Media/Index_Media/cursor_default.png'), default;
 }
 
 body {
@@ -61,7 +61,7 @@ a, #form {
 
   transition: 0.3s;
 
-  cursor: url('\\Media/Index_Media/cursor_big_highlight.png'), default;
+  /* cursor: url('\\Media/Index_Media/cursor_point.png'), default; */
 }
 a:after, #form:after {
   content: "";
