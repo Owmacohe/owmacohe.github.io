@@ -1,0 +1,21 @@
+body {
+  font-size: 2vw;
+}
+
+body, .flexcolumn, .flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body, .flexcolumn { flex-direction: column; }
+.flexrow { flex-direction: row; }
+
+h1, h2, h3 {
+  margin: 0.5vw;
+}
+
+button {
+  font-size: 2vw;
+  margin: 1vw;
+}
