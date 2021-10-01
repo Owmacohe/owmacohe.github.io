@@ -12,16 +12,15 @@
     <h1>WALLETTO</h1>
     <h2>The wallet-sized TTRPG</h2>
     <p>Inspiried by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/micaholism/status/1366273473019060225">this</a> Twitter post</p>
-    <p>Designed for short-form one-shots, version 1.0</p>
-    <p>Jump to the character generator <a href="#generator">here</a></p>
+    <p>Designed for short-form one-shots</p>
+    <p>v1.5</p>
+    <p>Jump to the generators <a href="#generator">here</a></p>
 
     <div class="dotbox" style="flex-direction: column">
       <h2>Dice</h2>
       <div class="flexrow">
-        <p>d<em>3</em></p>
         <p>d<em>4</em></p>
         <p>d<em>6</em></p>
-        <p>d<em>12</em></p>
         <p>d<em>20</em></p>
       </div>
     </div>
@@ -96,14 +95,13 @@
           </p>
         </div>
         <div class="flexrow">
-          <p>Inventory (1d12 x4) =</p>
+          <p>Inventory (1d20 x4) =</p>
           <p>
             <em>Rope</em><br>
             <em>Book</em><br>
             <em>Drugs</em><br>
             <em>Trinket</em><br>
             <em>Costume</em><br>
-            <em>Companion</em><br>
           </p>
           <p>
             <em>Food</em><br>
@@ -111,7 +109,20 @@
             <em>Poison</em><br>
             <em>Artifact</em><br>
             <em>Explosive</em><br>
+          </p>
+          <p>
+            <em>Companion</em><br>
             <em>Instrument</em><br>
+            <em>Lantern</em><br>
+            <em>Lockpick</em><br>
+            <em>Hammer</em><br>
+          </p>
+          <p>
+            <em>Tent</em><br>
+            <em>Alcohol</em><br>
+            <em>Wealth</em><br>
+            <em>Bowl</em><br>
+            <em>Matches</em><br>
           </p>
         </div>
       </div>
@@ -120,20 +131,18 @@
     <div class="dotbox" style="flex-direction: column">
       <h2>Rules</h2>
       <p>
-        • To hit with a weapon, roll 1d20 >= 1/2 of target's <em>ARMR</em><br>
-        • To land a spell, roll 1d20 >= 1/2 of target's <em>MAGI</em><br>
-        • Spells cost 1d3 <em>MAGI</em> on cast<br>
+        • To hit with a weapon, roll 1d20 >= of target's <em>ARMR</em><br>
+        • To land a spell, roll 1d20 <= <em>MAGI</em><br>
+        • Spells cost 2 <em>MAGI</em> on cast<br>
         • When <em>HLTH</em> = 0, roll 1d20 >= 10 each turn to stay alive<br>
         • Advantage / Disadvantage = Roll twice and take highest / lowest<br>
-        • To move in stealth, roll 1d20 >= 10<br>
+        • To move in stealth, roll 1d20 <= <em>DEXT</em><br>
         • All other checks must roll 1d20 >= respective stat<br>
-        • Round up on all divided values<br>
-        • 1d3 = 1d6 / 2<br>
       </p>
       <hr>
       <p>
         • To set up initiative, order all participants by <em>DEXT</em><br>
-        • Sessions should last from ~30-60 minutes (possibly longer)<br>
+        • Sessions should last from ~30-60 minutes<br>
         • Sessions should contain ~1-2 simple combat sequences<br>
         • Use these same rules to create NPCs or enemies<br>
         • Tweak generated NPCs or enemies to be more or less powerful<br>
@@ -187,6 +196,9 @@
         </div>
         <div class="dotbox_mini">
           <p>Antagonist = <em id="a"></em></p>
+        </div>
+        <div class="dotbox_mini">
+          <p>Twist = <em id="t"></em></p>
         </div>
       </div>
     </div>

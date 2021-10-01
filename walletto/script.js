@@ -2,7 +2,12 @@ var races = ["Fey", "Undead", "Humanoid", "Orcish", "Elemental", "Construct"];
 var classes = ["Wizard", "Fighter", "War Mage"];
 var spells = ["Gravel Slap", "Ice Sweep", "Magic Teapot", "Cheese Shackles", "Pillow Armour", "Ember Bell"];
 var weapons = ["Club", "Bow", "Staff", "Sword", "Spear", "Knife"];
-var inventories = ["Rope", "Book", "Drugs", "Trinket", "Costume", "Companion", "Food", "Cards", "Poison", "Artifact", "Explosive", "Instrument"];
+var inventories = [
+  "Rope", "Book", "Drugs", "Trinket", "Costume",
+  "Companion", "Instrument", "Lantern", "Lockpick", "Hammer",
+  "Food", "Cards", "Poison", "Artifact", "Explosive",
+  "Tent", "Alcohol", "Wealth", "Bowl", "Matches"
+];
 
 function generateCharacter() {
   var stats = [];
@@ -86,7 +91,12 @@ function generateCharacter() {
 
   spells = ["Gravel Slap", "Ice Sweep", "Magic Teapot", "Cheese Shackles", "Pillow Armour", "Ember Bell"];
   weapons = ["Club", "Bow", "Staff", "Sword", "Spear", "Knife"];
-  inventories = ["Rope", "Book", "Drugs", "Trinket", "Costume", "Companion", "Food", "Cards", "Poison", "Artifact", "Explosive", "Instrument"];
+  inventories = [
+    "Rope", "Book", "Drugs", "Trinket", "Costume",
+    "Companion", "Instrument", "Lantern", "Lockpick", "Hammer",
+    "Food", "Cards", "Poison", "Artifact", "Explosive",
+    "Tent", "Alcohol", "Wealth", "Bowl", "Matches"
+  ];
 }
 
 var locations = [
@@ -128,10 +138,23 @@ var antagonists = [
   "An animated dragon automaton"
 ];
 
+var twists = [
+  "The location is filling with water",
+  "Every few mintes, the world shift and changes",
+  "The world is sentient",
+  "One of the players goes blind",
+  "The party finds a lost child",
+  "One of the players gains the ability to fly",
+  "The antagonist is a germaphobe",
+  "The antagonist is invisible",
+  "The antagonist was dead all along"
+];
+
 function generateAdventure() {
   document.getElementById("l").innerHTML = rollArray(locations);
   document.getElementById("m").innerHTML = rollArray(motives);
   document.getElementById("a").innerHTML = rollArray(antagonists);
+  document.getElementById("t").innerHTML = rollArray(twists);
 }
 
 function rollArray(array) {

@@ -1,8 +1,8 @@
 :root {
-  --background: black;
   --header: #d16f27;
   --text: #7b4117;
   --special: #8b27d1;
+  --special-text: #391055;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
   font-family: "Caveat Brush";
   font-size: 3.5vw;
 
-  background: var(--background);
+  background: black;
 }
 
 h1, h2, p { margin: 0.5vw; }
@@ -62,7 +62,7 @@ button {
 button:hover {
   transition: 0.2s;
 
-  color: var(--background);
+  color: var(--special-text);
 
   background: var(--special);
 }
