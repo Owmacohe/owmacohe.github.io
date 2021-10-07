@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="transport.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+
+  <body>
+    <div class="flexcolumn">
+
+      <div class="flexrow">
+        <h1>Delivery: </h1>
+        <h2 id="delivery">temp</h2>
+      </div>
+
+      <div class="flexrow">
+        <h1>Time: </h1>
+        <h2 id="time">temp</h2>
+      </div>
+
+      <button onclick="startJob()">Start</button>
+
+      <div id="progressBar" style="margin-top: 3vw;"></div>
+
+      <div class="flexrow">
+        <h1>Completed: </h1>
+        <h2 id="completed"></h2>
+      </div>
+
+      <ol id="log">
+      </ol>
+
+    </div>
+  </body>
+</html>

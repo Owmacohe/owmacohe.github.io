@@ -1,0 +1,71 @@
+:root {
+  --back: midnightblue;
+  --text: aquamarine;
+  --special: cornflowerblue;
+}
+
+body {
+  font-family: 'Press Start 2P';
+
+  background: var(--back);
+}
+
+.flexcolumn, .flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolumn {
+  flex-direction: column;
+}
+.flexrow {
+  flex-direction: row;
+  margin-top: 3vw;
+}
+
+#progressBar {
+  width: 0vw;
+  height: 1vw;
+
+  background: var(--special);
+}
+
+h1, h2, li {
+  color: var(--text);
+
+  margin: 1vw;
+}
+h1 { font-size: 3.5vw; }
+h2, li { font-size: 2vw; }
+li {
+  transition: 0.1s;
+  color: var(--special);
+}
+li:hover {
+  transition: 0.1s;
+
+  font-size: 2.2vw;
+  color: var(--text);
+}
+
+button {
+  transition: 0.1s;
+
+  font-size: 4vw;
+  font-family: 'Press Start 2P';
+  color: var(--back);
+
+  border: none;
+  border-radius: 1vw;
+  padding: 2vw;
+  margin-top: 3vw;
+
+  background: var(--text);
+}
+button:hover {
+  transition: 0.1s;
+
+  cursor: pointer;
+
+  background: var(--special);
+}
