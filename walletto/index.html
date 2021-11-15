@@ -14,7 +14,7 @@
     <p>Inspiried by <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/micaholism/status/1366273473019060225">this</a> Twitter post</p>
     <p>Designed for short-form one-shots</p>
     <p>v1.5</p>
-    <p>Jump to the generators <a href="#generator">here</a></p>
+    <p>Jump to the generators <a href="#generators">here</a></p>
 
     <div class="dotbox" style="flex-direction: column">
       <h2>Dice</h2>
@@ -132,24 +132,23 @@
       <h2>Rules</h2>
       <p>
         • To hit with a weapon, roll 1d20 >= of target's <em>ARMR</em><br>
-        • To land a spell, roll 1d20 <= <em>MAGI</em><br>
-        • Spells cost 2 <em>MAGI</em> on cast<br>
+        • To hit with a spell, roll 1d20 <= caster's <em>MAGI</em> (if target is unwilling)<br>
+        • Spells cost 2 <em>MAGI</em> to cast<br>
         • When <em>HLTH</em> = 0, roll 1d20 >= 10 each turn to stay alive<br>
         • Advantage / Disadvantage = Roll twice and take highest / lowest<br>
-        • To move in stealth, roll 1d20 <= <em>DEXT</em><br>
-        • All other checks must roll 1d20 >= respective stat<br>
+        • To move in stealth, roll 1d20 <= character's <em>DEXT</em><br>
+        • Other checks roll 1d20 >= respective stat (<em>STRN</em>/<em>DEXT</em>/<em>INTL</em>/<em>MAGI</em>)<br>
       </p>
       <hr>
       <p>
-        • To set up initiative, order all participants by <em>DEXT</em><br>
         • Sessions should last from ~30-60 minutes<br>
-        • Sessions should contain ~1-2 simple combat sequences<br>
+        • Sessions should contain 1-2 simple combat sequences<br>
         • Use these same rules to create NPCs or enemies<br>
         • Tweak generated NPCs or enemies to be more or less powerful<br>
       </p>
     </div>
 
-    <div class="dotbox" style="flex-direction: column" id="generator">
+    <div class="dotbox" style="flex-direction: column" id="generators">
       <div class="flexrow">
         <h2>Character Generator</h2>
         <button onclick="generateCharacter()">Generate</button>
@@ -192,10 +191,10 @@
           <p>Location = <em id="l"></em></p>
         </div>
         <div class="dotbox_mini">
-          <p>Motive = <em id="m"></em></p>
+          <p>Antagonist = <em id="a"></em></p>
         </div>
         <div class="dotbox_mini">
-          <p>Antagonist = <em id="a"></em></p>
+          <p>Motive = <em id="m"></em></p>
         </div>
         <div class="dotbox_mini">
           <p>Twist = <em id="t"></em></p>

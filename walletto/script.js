@@ -15,8 +15,6 @@ function generateCharacter() {
   stats[1] = rollDie(20); //DEXT
   stats[2] = rollDie(20); //INTL
   stats[3] = rollDie(20); //MAGI
-  stats[4] = stats[0]; //HLTH
-  stats[5] = Math.ceil((stats[0] + stats[1]) / 2) //ARMR
 
   var myRace = rollArray(races);
   var myClass = rollArray(classes);
@@ -42,8 +40,9 @@ function generateCharacter() {
       }
       break;
     case "Fighter":
-      stats[0] += " +3";
-      stats[1] += " +3";
+      stats[0] += 3;
+      stats[1] += 3;
+      stats[4] += 3;
 
       mySpells = "No spells";
 
@@ -54,7 +53,8 @@ function generateCharacter() {
       }
       break;
     case "War Mage":
-      stats[0] += " +2";
+      stats[0] += 2;
+      stats[4] += 2;
 
       for (var i = 0; i < 2; i++) {
         spellsTemp[i] = rollArray(spells);
@@ -69,6 +69,9 @@ function generateCharacter() {
       }
       break;
   }
+
+  stats[4] = stats[0]; //HLTH
+  stats[5] = Math.ceil((stats[0] + stats[1]) / 2) //ARMR
 
   for (var k = 0; k < 4; k++) {
     inventoryTemp[i] = rollArray(inventories);
@@ -109,7 +112,9 @@ var locations = [
   "A caravan route",
   "The high seas",
   "A non-euclidean labyrinth",
-  "A busy factory"
+  "A busy factory",
+  "Floating rock city",
+  "Abandoned sewer system"
 ];
 
 var motives = [
@@ -122,7 +127,9 @@ var motives = [
   "Going on vacation",
   "Following a map",
   "Closing a portal",
-  "Breaking up a crime ring"
+  "Breaking up a crime ring",
+  "Returning an artifact",
+  "Summoning an entity"
 ];
 
 var antagonists = [
@@ -135,7 +142,9 @@ var antagonists = [
   "A collectively sentient swarm of beetles",
   "The pressures of bureaucracy",
   "An insane royal",
-  "An animated dragon automaton"
+  "An animated dragon automaton",
+  "A vengeful farmer",
+  "A ghost of one of the party's ancestors"
 ];
 
 var twists = [
@@ -147,7 +156,9 @@ var twists = [
   "One of the players gains the ability to fly",
   "The antagonist is a germaphobe",
   "The antagonist is invisible",
-  "The antagonist was dead all along"
+  "The antagonist was dead all along",
+  "Mysterious orbs are following the party",
+  "The antagonist is hiding itself as an NPC"
 ];
 
 function generateAdventure() {
