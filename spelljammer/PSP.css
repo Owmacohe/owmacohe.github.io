@@ -1,0 +1,25 @@
+textarea {
+  width: 40vw;
+}
+
+button {
+  font-size: 2vw;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+img {
+  width: 5vw;
+
+  margin: -0.3vw;
+  margin-bottom: -0.5vw;
+}
+
+.out {
+  padding: 1vw;
+
+  display: flex;
+  flex-wrap: wrap;
+}
