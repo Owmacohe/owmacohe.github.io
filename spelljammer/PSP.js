@@ -58,14 +58,17 @@ function translate() {
         var offset = 0;
 
         switch (text[i]) {
+          case 'a':
+            offset += 0;
+            break;
           case 'e':
-            offset += 4;
+            offset += 5;
             break;
           case 'i':
-            offset += 8;
+            offset += 10;
             break;
           case 'o':
-            offset += 16;
+            offset += 15;
             break;
           case 'u':
             offset += 20;
@@ -143,6 +146,7 @@ function isValid(character) {
     character == 'n' ||
     character == 'o' ||
     character == 'p' ||
+    character == 'q' ||
     character == 'r' ||
     character == 's' ||
     character == 't' ||
@@ -151,6 +155,7 @@ function isValid(character) {
     character == 'w' ||
     character == 'x' ||
     character == 'y' ||
+    character == 'z' ||
     character == ' ' ||
     character == '.' ||
     character == '?') {
