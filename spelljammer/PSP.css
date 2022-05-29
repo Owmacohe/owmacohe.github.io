@@ -3,7 +3,9 @@ textarea {
 }
 
 button {
-  font-size: 2vw;
+  font-size: 3vw;
+
+  margin: 2vw;
 }
 
 p {
@@ -11,10 +13,16 @@ p {
 }
 
 img {
-  width: 5vw;
+  width: 5.3vw;
 
   margin: -0.3vw;
   margin-bottom: -0.5vw;
+}
+
+#guide {
+  width: 50vw;
+
+  padding: 3vw;
 }
 
 .out {
@@ -23,3 +31,12 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+
+.flexcolumn, .flexrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.flexcolumn { flex-direction: column; }
+.flexrow { flex-direction: row; }

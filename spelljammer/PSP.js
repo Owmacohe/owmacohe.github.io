@@ -6,18 +6,20 @@ function clear() {
   document.getElementById('in').value = '';
 }
 
-function translate() {
+function convert() {
   var text = document.getElementById('in').value.toLowerCase();
 
   clear();
 
+  var translations = document.getElementById('translations');
+
+  var output = document.createElement('DIV');
+  output.setAttribute('class', 'out');
+  translations.prepend(output);
+
   var copy = document.createElement('P');
   copy.innerHTML = text;
-  document.body.appendChild(copy);
-
-  var out = document.createElement('DIV');
-  out.setAttribute('class', 'out');
-  document.body.appendChild(out);
+  translations.prepend(copy);
 
   for (var i = 0; i < text.length; i++) {
     if (isValid(text[i])) {
@@ -123,9 +125,11 @@ function translate() {
 
       var newLetter = document.createElement('IMG');
       newLetter.setAttribute('src', path);
-      out.appendChild(newLetter);
+      output.appendChild(newLetter);
     }
   }
+
+  window.scrollTo(0, output.scrollHeight);
 }
 
 function isValid(character) {
