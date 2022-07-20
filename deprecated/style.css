@@ -1,0 +1,9 @@
+body {
+  font-family: 'Trebuchet MS';
+
+  background: black;
+}
+
+p {
+  white-space: pre-wrap;
+}
