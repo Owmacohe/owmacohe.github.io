@@ -24,7 +24,7 @@ h3 {
   font-family: 'Nabla', cursive;
   font-size: 2vw;
 
-  margin: 1vw;
+  margin: 3vw;
 }
 
 p {
@@ -37,10 +37,14 @@ a {
   text-decoration: none;
 }
 
-em {
+strong {
   color: #FFEB6E;
 
   font-style: normal;
+}
+
+em {
+  color: #FF7E26;
 }
 
 img {
