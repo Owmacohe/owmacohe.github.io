@@ -1,5 +1,14 @@
+:root {
+  --default: #fcab12;
+  --light: #FFEB6E;
+  --emphasis: #FF7E26;
+  --dark: #2a2a2a;
+  --dark-extra: #101010;
+  --dark-transparent: rgba(17, 17, 17, 0.3);
+}
+
 body {
-  background-color: #2a2a2a;
+  background-color: var(--dark);
 
   background-image: url("tree.png");
 
@@ -14,12 +23,15 @@ h1, h2 {
 
 h2, h3, p {
   font-family: Coolvetica;
-  color: #fcab12;
+  color: var(--default);
 }
 
 h1 {
   font-family: 'Nabla', cursive;
   font-size: 4vw;
+
+  text-decoration: underline;
+  text-decoration-color: var(--default);
 }
 
 h2 {
@@ -28,13 +40,15 @@ h2 {
 
 h3 {
   font-family: 'Nabla', cursive;
-  font-size: 2vw;
+  font-size: 2.5vw;
 
   margin: 3vw;
 }
 
 p {
-  font-size: 1.2vw;
+  font-size: 1.6vw;
+
+  width: 85vw;
 
   margin: 1vw;
 }
@@ -44,47 +58,57 @@ a {
 }
 
 strong {
-  color: #FFEB6E;
+  color: var(--light);
 
   font-style: normal;
 }
 
 em {
-  color: #FF7E26;
+  color: var(--emphasis);
 }
 
 img {
   width: 50vw;
 
-  box-shadow: 0.75vw 0.5vw #FFEB6E;
+  box-shadow: 0.75vw 0.5vw var(--light);
 
   margin: 1vw;
 }
 
-.flex_column, .flex_row {
+.flex_column, .flex_row, .report {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-bottom: 5vw;
 }
 
-.flex_column {
+.flex_column, .report {
   flex-flow: column;
 }
 
 .flex_row {
   flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.report {
+  padding: 0.5vw;
+  margin: 1vw;
+  margin-bottom: 3vw;
+
+  border-radius: 0.5vw;
+
+  background: var(--dark-transparent);
 }
 
 .caption {
+  font-size: 1.3vw;
   font-style: italic;
 
   padding: 0.5vw;
   border-radius: 0.3vw;
   width: 15vw;
 
-  background: #101010;
+  background: var(--dark-extra);
 }
 
 @font-face {
