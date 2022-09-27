@@ -4,7 +4,7 @@
   --emphasis: #FF7E26;
   --dark: #2a2a2a;
   --dark-extra: #101010;
-  --dark-transparent: rgba(17, 17, 17, 0.3);
+  --dark-transparent: rgba(17, 17, 17, 0.5);
 }
 
 body {
