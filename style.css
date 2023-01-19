@@ -1,0 +1,99 @@
+/* Elements */
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    margin: 1vw;
+    font-size: 3vw;
+}
+
+img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
+
+
+
+/* General Classes and IDs */
+
+.flexrow {
+    margin: 5vw;
+
+    flex-wrap: wrap;
+}
+
+.social_media_a {
+    background: var(--gradient-hover);
+    -webkit-background-clip: text;
+}
+.social_media_a:hover {
+    background: var(--gradient-normal);
+    -webkit-background-clip: text;
+}
+
+#imgInner {
+    position: absolute;
+
+    width: 21vw;
+    height: 21vw;
+    top: 8.5vw;
+    left: 39.5vw;
+
+    border-radius: 20vw;
+}
+
+#imgOuter {
+    animation: fullRotation 1.5s reverse linear infinite;
+
+    width: 25vw;
+    height: 25vw;
+
+    border-radius: 20vw;
+
+    background: var(--gradient-hover);
+}
+
+#circlePosition {
+    position: fixed;
+    left: 49.9vw;
+    top: 4vw;
+
+    text-decoration: none;
+}
+
+#curvedText {
+    font-size: 1.75vw;
+    font-family: monospace;
+
+    -webkit-text-fill-color: var(--body);
+}
+
+
+
+/* Mobile Optimization */
+
+@media only screen and (max-width: 1000px) {
+    body { overflow-y: visible; }
+
+    img {
+        width: 36vw;
+        height: 36vw;
+    }
+
+    .flexrow { flex-direction: column; }
+
+    #imgInner {
+        width: 32vw;
+        height: 32vw;
+
+        top: 10vw;
+        left: 34.5vw;
+    }
+
+    #imgOuter {
+        width: 38vw;
+        height: 38vw;
+    }
+
+    #curvedText { font-size: 2.6vw; }
+}

@@ -18,17 +18,13 @@
 }
 
 ::selection {
- 	background-color: var(--highlight);
+  background-color: var(--highlight);
   text-shadow: 0.15vw 0.15vw var(--hover);
- }
+}
 
 
 
 /* Elements */
-
-html {
-  cursor: url('\\Media/Index_Media/cursor_default.png'), default;
-}
 
 body {
   transition: 0.3s;
