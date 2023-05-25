@@ -9,9 +9,9 @@ var patterns = [
 function setPattern() {
   var chosenPattern = Math.floor(Math.random() * patterns.length);
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 11; i++) {
     document.getElementById("curvedText").innerHTML += patterns[chosenPattern];
   }
 
-  new CircleType(document.getElementById("curvedText")).radius(window.innerWidth / (1440 / 215));
+  new CircleType(document.getElementById("curvedText"));
 }
