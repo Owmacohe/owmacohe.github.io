@@ -17,8 +17,6 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 /* General Classes and IDs */
 
 .flexrow {
-    margin: 5vw;
-
     width: 50vw;
 
     flex-wrap: wrap;
