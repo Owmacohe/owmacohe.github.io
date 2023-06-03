@@ -7,7 +7,7 @@ body {
 
 a {
     margin: 1vw;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
@@ -17,7 +17,7 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 /* General Classes and IDs */
 
 .flexrow {
-    margin: 5vw;
+    width: 50vw;
 
     flex-wrap: wrap;
 }
@@ -34,10 +34,10 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 #imgInner {
     position: absolute;
 
-    width: 21vw;
-    height: 21vw;
-    top: 8.5vw;
-    left: 39.5vw;
+    width: 19vw;
+    height: 19vw;
+    top: 7.8vw;
+    left: 40.5vw;
 
     border-radius: 20vw;
 }
@@ -45,8 +45,8 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 #imgOuter {
     animation: fullRotation 1.5s reverse linear infinite;
 
-    width: 25vw;
-    height: 25vw;
+    width: 22vw;
+    height: 22vw;
 
     border-radius: 20vw;
 
@@ -56,7 +56,7 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 #circlePosition {
     position: fixed;
     left: 49.9vw;
-    top: 4vw;
+    top: 2.8vw;
 
     text-decoration: none;
 }
@@ -80,7 +80,15 @@ img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
         height: 36vw;
     }
 
-    .flexrow { flex-direction: column; }
+    a {
+        font-size: 6vw;
+    }
+
+    .flexrow {
+        width: 90vw;
+
+        flex-direction: column;
+    }
 
     #imgInner {
         width: 32vw;
