@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="registry.js"></script>
+    <script src="tags.js"></script>
+    <script src="utilities.js"></script>
+    <script src="convert.js"></script>
+
+    <title>The Pantry</title>
+</head>
+
+<body class="flexcolumn" style="justify-content: start; align-items: start;">
+    <div class="flexcolumn" style="justify-self: center; align-self: center;">
+        <h1 id="title">The Pantry - Worldbuilding wiki</h1>
+        <h3>Owen Hellum, 2021-2023</h3>
+    </div>
+
+    <div class="flexrow" style="justify-content: start; align-items: center;">
+        <div class="flexrow" id="search"><h3>Search:</h3><input onkeydown="search(event, this)"></div>
+        <div class="flexrow" id="list"><h3>Recent pages:</h3></div>
+        <i><h3 style="color: #F67E7D">Still under construction, please be kind!</h3></i>
+    </div>
+
+    <div class="flexrow">
+        <div class="flexrow" id="current_article"></div>
+    </div>
+</body>
+</html>

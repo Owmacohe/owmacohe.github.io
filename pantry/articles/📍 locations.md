@@ -1,0 +1,5 @@
+# 📍 locations
+
+{🌐 The Pantry}
+
+
