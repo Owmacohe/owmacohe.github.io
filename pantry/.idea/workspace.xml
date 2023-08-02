@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de01f4ae-ef7a-41d3-9ccc-a33c23a5df9a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pantry.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_1/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_2/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/day_3/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/1.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/10.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/11.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/12.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/13.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/14.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/15.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/16.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/17.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/18.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/19.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/2.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/20.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/21.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/22.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/23.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/24.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/25.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/26.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/27.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/28.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/29.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/3.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/30.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/4.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/5.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/6.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/7.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/8.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_1/9.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/1.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/10.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/11.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/12.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/13.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/14.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/15.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/16.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/17.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/18.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/19.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/2.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/20.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/21.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/22.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/3.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/4.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/5.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/6.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/7.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/8.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_2/9.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/1.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/10.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/11.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/12.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/13.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/14.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/15.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/16.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/17.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/18.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/19.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/2.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/20.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/21.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/3.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/4.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/5.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/6.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/7.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/8.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/images/high/day_3/9.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vancouver/load.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/Devil-Eater.md" beforeDir="false" afterPath="$PROJECT_DIR$/articles/Devil-Eater.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/Hinengaro Heist Session 2.md" beforeDir="false" afterPath="$PROJECT_DIR$/articles/Hinengaro Heist Session 2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/Introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/articles/Introduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/ crew sections.md" beforePathEscaped="$PROJECT_DIR$/articles/📛 crew sections.md" beforeDir="false" afterPath="$PROJECT_DIR$/articles/ crew sections.md" afterPathEscaped="$PROJECT_DIR$/articles/📛 crew sections.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/ gods.md" beforePathEscaped="$PROJECT_DIR$/articles/😇 gods.md" beforeDir="false" afterPath="$PROJECT_DIR$/articles/ gods.md" afterPathEscaped="$PROJECT_DIR$/articles/😇 gods.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csvtomd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csvtomd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiddlers.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walletto/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../walletto/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../walletto/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../walletto/script.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SWyZ6eFOpzeLe2joMvb0fBXPSn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ohellum/Documents/GitHub/owmacohe.github.io/pantry&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de01f4ae-ef7a-41d3-9ccc-a33c23a5df9a" name="Changes" comment="" />
+      <created>1689276683214</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689276683214</updated>
+      <workItem from="1689276684475" duration="49000" />
+      <workItem from="1689276747804" duration="469000" />
+      <workItem from="1689277231448" duration="42000" />
+      <workItem from="1689277316612" duration="2000" />
+      <workItem from="1690990130556" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
