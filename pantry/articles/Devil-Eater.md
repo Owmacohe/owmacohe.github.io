@@ -1,6 +1,6 @@
 # Devil-Eater
 
-{😇 gods,Oleald Zoofolk,🧑‍🔬 figures,Aetivima Period,Yyenwid Modsiw,🐐 Aaliat}
+{😇 gods,Oleald,Zoofolk,🧑‍🔬 figures,Aetivima Period,Yyenwid Modsiw,🐐 Aaliat}
 
 A mammalian Zoofolk [Oleald] god, specifically of the species *Tasmanian Devil*, and one of the most feared assassins during the [Aetivima Period]. She was one of the only documented cases throughout history of the murder of a demigod.
 

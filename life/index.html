@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="life.css">
+  <script src="life.js"></script>
+  <title>Game of Life</title>
+</head>
+
+<body>
+  <div class="flex_column">
+    <div class="flex_row" style="z-index: 1">
+      <button onclick="location.reload()">CLEAR</button>
+      <button onclick="reset()" id="reset" style="display: none;">RESET</button>
+      <button onclick="start()">START</button>
+      <button onclick="stop()">STOP</button>
+      <p id="status">OFF</p>
+      <input placeholder="SPEED=1" id="speed">
+      <input placeholder="SCALE=1" id="scale" onkeydown="markForReload()">
+      <p id="warning" style="display: none;">please reload to set scale</p>
+    </div>
+
+    <div class="flex_column" id="grid" style="z-index: 0"></div>
+  </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # 😇 gods
 
-{🌐 The Pantry,🧑 races}
+{🌐 The Pantry,🧑 races,❗ featured articles}
 
 Gods have a very strong presence throughout [🌐 The Pantry]. Many lineages that descend from them, and their demi-god grandchildren still roam and rule. Though multitudinous and with many varied myths, the gods are still fundamentally other, alien. Gods have many forms and are worshipped in many different ways, by many different peoples. Whether this is an actual representation of the god itself duplicating, or an effect of culture, none know.
 

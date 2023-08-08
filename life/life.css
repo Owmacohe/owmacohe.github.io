@@ -1,0 +1,46 @@
+.flex_row, .flex_column, .flex_element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_row { flex-direction: row; }
+.flex_column { flex-direction: column; }
+
+.flex_element {
+    user-select: none;
+
+    width: 0.7vw;
+    height: 0.7vw;
+
+    border-width: 0.01vw;
+    border-style: dotted;
+
+    margin: 0;
+}
+
+#grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-width: 0.1vw;
+    border-style: solid;
+}
+
+button {
+    margin: 1vw;
+    font-size: 1.5vw;
+}
+
+p {
+    margin: 1vw;
+    font-size: 1.5vw;
+
+    background: white;
+}
+
+input {
+    margin: 1vw;
+    font-size: 0.8vw;
+}

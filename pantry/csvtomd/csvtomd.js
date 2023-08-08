@@ -10,19 +10,6 @@ window.onload = function() {
     }, 1000);
 }
 
-function download(filename, text) {
-    //Create the hidden anchor
-    let hiddenAnchor = document.createElement('a');
-    hiddenAnchor.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    hiddenAnchor.setAttribute('download', filename);
-    hiddenAnchor.style.display = 'none';
-    document.body.appendChild(hiddenAnchor);
-
-    //Click it, then remove it
-    hiddenAnchor.click();
-    document.body.removeChild(hiddenAnchor);
-}
-
 function download_individual(index) {
     download(csv[index][0] + '.md', '# ' + csv[index][0] + '\n\n{' + csv[index][2] + '}\n\n' + format(csv[index][1]));
 }
