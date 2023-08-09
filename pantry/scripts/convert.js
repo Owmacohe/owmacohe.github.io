@@ -1,7 +1,14 @@
-let file_list = []; // The list of all names of articles
-let is_wiki_private = false; // Whether this wiki is in private mode
-let default_article = ''; // The article to load by default
-let loaded = false; // Variable to let other scripts know that the initial page has been loaded
+// The list of all names of articles
+let file_list = [];
+
+// Whether this wiki is in private mode
+let is_wiki_private = false;
+
+// The article to load by default
+let default_article = '';
+
+// Variable to let other scripts know that the initial page has been loaded
+let loaded = false;
 
 window.onload = function() {
     reset_search();
@@ -15,8 +22,8 @@ window.onload = function() {
     // Making sure to wait for the tag loading to be done
     setTimeout(function() {
         // Setting the wiki stats
-        document.getElementById('creator').innerText +=
-            ' (' + file_list.length + ' articles, ' + tags[0].length + ' tags)';
+        document.getElementById('creator').innerHTML +=
+            ' (' + file_list.length + ' articles, ' + tags[0].length + ' tags) (built using the <a href="https://github.com/owmacohe/pantry" target="_blank" rel="noopener noreferrer">Pantry</a> wiki system)';
 
         document.getElementById('loading').remove(); // Removing the loading message
 
@@ -34,7 +41,7 @@ function setup() {
     fetch('settings.txt')
         .then((res) => res.text())
         .then((text) => {
-            let split = text.split('\n');
+            let split = trim_array(text.split('\n'));
             let title = split[0].split(':')[1];
 
             // Setting the wiki title
@@ -56,11 +63,16 @@ function setup() {
     fetch('registry.txt')
         .then((res) => res.text())
         .then((text) => {
-            file_list = text.split('\n');
+            file_list = trim_array(text.split('\n'));
+
+            for (let i = 0; i < file_list.length; i++)
+                if (file_list[i] === '')
+                    file_list.splice(i, 1);
         });
 }
 
-let list_contents = []; // The list of most recently visited articles
+// The list of most recently visited articles
+let list_contents = [];
 
 /// Adds an article to the list of most recently visited ones
 function add_to_list(file_name) {
@@ -108,7 +120,11 @@ function get_text(file_name) {
         });
 }
 
-let description = null; // The description element of the article
+// The description element of the article
+let description = null;
+
+// The description's temporary HTML content
+// (transferred to the element at the end so that Javascript doesn't automatically complete the ends of tags)
 let description_html = '';
 
 /// Creates a new article, setting its fields and such
@@ -140,8 +156,8 @@ function process_text(text, title) {
     let associated_parent = null;
     let associated = null;
 
-    // Getting an HTML-formatted list of all the associated articles for the current article
-    let lst = get_list_from_tag(title);
+    // Getting an HTML-formatted button sequence of all the associated articles for the current article
+    let lst = get_associated_from_tag(title);
 
     if (lst.length > 0) {
         // Creating the parent of the associated list
@@ -160,186 +176,235 @@ function process_text(text, title) {
         associated.innerHTML = lst; // Putting the previously created list inside of it
     }
 
+    // Making sure to add the description element to the article only after the associated section has been
     article.appendChild(description);
     description_html = '';
 
-    let split = text.split('\n');
+    // Split the file into its lines
+    let split = trim_array(text.split('\n'));
 
     for (let i = 0; i < split.length; i++) {
         if (i >= 4) {
+            // If there is no more content after the title and tags, the article ends
             if (is_text_empty(text)) break;
+            // Otherwise, the line is analysed
             else check_and_add(split[i], i === split.length - 1);
         }
-        else if (i === 2) {
-            let tagsList = split[i].substring(1, find_next_index_of(split[i], 0, '}')).split(',');
-
-            article_tags.innerHTML += '<h3>Tags (' + tagsList.length + '):</h3>';
-
-            if (tagsList[0] !== '') {
-                for (let j = 0; j < tagsList.length; j++) {
-                    let is_tag_private = false;
-
-                    if (!is_wiki_private)
-                        for (let k = 0; k < private_tags.length; k++)
-                            if (tags[get_tag_index(private_tags[k]) + 1].includes(tagsList[j]) ||
-                                private_tags[k] === tagsList[j])
-                                is_tag_private = true;
-
-                    if (is_wiki_private || !is_tag_private)
-                        article_tags.innerHTML += '<button onclick="set_current_article(this)">' + tagsList[j] + '</button>';
-                }
-            }
-            else {
-                article_tags.remove();
-            }
-        }
+        // Getting the title of the article
         else if (i === 0) {
             let title = document.createElement('h1');
             title.innerHTML = split[i].substring(2);
 
             top_bar.insertBefore(title, top_bar.firstChild);
         }
+        // Getting the tags of the article
+        else if (i === 2) {
+            let tagsList = split[i]
+                .substring(1, find_next_index_of(split[i], 0, '}'))
+                .split(',');
+
+            // Checking through the tags, making sure they're not private
+            if (tagsList[0] !== '') {
+                article_tags.innerHTML += '<h3>Tags (' + tagsList.length + '):</h3>';
+
+                for (let j = 0; j < tagsList.length; j++)
+                    if (!is_tag_private(tagsList[j]))
+                        article_tags.innerHTML += '<button onclick="set_current_article(this)">' + tagsList[j] + '</button>';
+            }
+            // If there are no tags, the tags HTML element gets removed
+            else article_tags.remove();
+        }
     }
 
-    reset();
+    reset(); // resetting all the HTML closing tags and such
 
-    if (text.length >= 1000)
-        description.style.columnCount = '2';
+    // Making the article have 2 columns if it's too long
+    if (text.length >= 1000)  description.style.columnCount = '2';
 
-    description.innerHTML +=
-        '<div class="flexrow" id="character_count">' +
-        description.innerText.length + ' characters</div>';
+    // The number of non-invisible characters in the article description
+    let character_length = 0;
 
+    for (let character_index = 0; character_index < description.innerText.length; character_index++)
+        if (description.innerText[character_index] === ' ' || description.innerText[character_index] !== '')
+            character_length++;
+
+    // Appending a count of characters in the article
+    description.innerHTML += '<div class="flexrow" id="character_count">' + character_length + ' characters</div>';
+
+    // Adding scroll reminders after a few seconds to make sure images have loaded in properly
+    // (the main body won't ever scroll, but I've left the line commented out in case it becomes scrollable in the future)
     setTimeout(() => {
-        add_scroll_reminder(article, description);
+        //add_scroll_reminder(article, description);
         if (lst.length > 0) add_scroll_reminder(associated_parent, associated);
     }, 1000);
 }
 
+// The current indentation level of the current list
 let list_level = 0;
+
+// The sequence of nested lists going up
+// (0 for unordered, 1 for ordered)
 let list_order = '';
+
+// Whether the current line is part of a quote
 let is_quote = false;
 
+/// Checks each line of the article file as it comes in, and parses it into HTML for the description element
 function check_and_add(line, is_last) {
+    // Whether to add a line break at the end of this line
     let ignore_break = false;
 
+    // Resetting the temporary HTML text if the contents are not being preserved because of a list or quote
     if (list_level === 0 && !is_quote) description_html = '';
 
+    // Skipping the parsing if the line is empty
     if (line !== '') {
-        // Title
-        // Tags
-
-        // Horizontal Rule
-        // Quote
-        // List (manual) (ordered & unordered)
-        // Header
-        // Image
-        // List (automatic)
-        // Bold/Italic
-        // Strikethrough
-        // Button
-        // Link
-
+        // Checking for horizontal rules
         if (line === '---') {
             description_html += '<hr>';
             ignore_break = true;
         }
         else {
+            // The starting index for the loop that will check through the contents of the line
             let i = 0;
 
+            // If the line is part of a quote...
             if (line.substring(0, 2) === '> ') {
-                i = 2;
+                i = 2; // Skipping ahead
 
+                // Starting the quote tag
                 if (!is_quote) {
                     description_html += '<div class="quote">';
                     is_quote = true;
                 }
             }
-            else if (line[0] === '>' && is_quote)
-                i = 1;
+            // If the line is part of a quote, but has no content...
+            else if (line[0] === '>' && is_quote) {
+                i = 1; // Skipping ahead
+            }
+            // Otherwise, it stops being a quote
             else {
+                // Ending the quote tag
                 if (!is_last && is_quote) {
                     description_html += '</div>';
                     is_quote = false;
                 }
             }
 
+            // The list indentation level for this particular line (0 = not a list)
             let current_list_level = 0;
+
+            // Whether this line is an ordered list
             let is_current_ordered = false;
+
+            // The number of blank spaces before the list element
             let indent_count = 0;
 
             for (let j = 0; j < line.length; j++) {
-                if (line[j] === ' ') indent_count++;
+                if (line[j] === ' ') indent_count++; // Upping the count for each blank space
+                // As soon as something that isn't a blank space is found...
                 else {
+                    // The characters that mark the start of a list element
                     let indicator = line.substring(j, j+2);
+
+                    // Whether this list element is ordered
                     let is_ordered = (indicator[0] >= 0 && indicator[0] <= 9 && indicator[1] === '.');
 
                     is_current_ordered = is_ordered;
 
+                    // If this is a list, whether ordered or not...
                     if ((j === 0 || indent_count > 0) && (indicator === '- ' || is_ordered)) {
-                        current_list_level = (indent_count / 3) + 1;
-                        i = indent_count + 2;
+                        current_list_level = (indent_count / 3) + 1; // Setting the indentation level
+                        i = indent_count + 2; // Jumping ahead
                     }
 
-                    break;
+                    // TODO: above should check for ordered list elements that have numbers greater than 9
+
+                    break; // Breaking no matter what
                 }
             }
 
+            // If his line's list level is greater than the current...
             if (list_level < current_list_level) {
+                // Catching up if this list is starting at a high level for some reason
                 for (let k = 0; k < current_list_level - list_level - 1; k++) {
                     description_html += '<ul>';
                     list_order += '0';
                 }
 
+                // Adding a new list start tag
                 description_html += is_current_ordered ? '<ol>' : '<ul>';
                 list_order += is_current_ordered ? '1' : '0';
             }
+            // If his line's list level is less than the current...
             else if (list_level > current_list_level) {
+                // Closing all the list tags as they go down
                 for (let k = 0; k < list_level - current_list_level; k++) {
                     description_html += (list_order[list_order.length - 1] === '1') ? '</ol>' : '</ul>';
                     list_order = list_order.substring(0, list_order.length - 1);
                 }
             }
 
+            // Manually setting the list level now
             list_level = current_list_level;
 
-            if (list_level > 0) description_html += '<li>';
+            if (list_level > 0) description_html += '<li>'; // Don't forget to actually start the list element!
 
+            // The current header level (0 = plain text)
             let header_level = 0;
 
+            // If this line is a header...
             if (line[0] === '#') {
+                // Counting the number of pound signs
                 for (let header_index = 0; header_index < line.length; header_index++) {
                     if (line[header_index] === '#') header_level++;
                     else break;
                 }
 
-                description_html += '<h' + header_level + '>';
+                description_html += '<h' + header_level + '>'; // Starting the header tag
             }
 
-            if (is_special_item(line, '^'))
+            // If the line has the image syntax, insert an img tag
+            if (is_wrapped_in_character(line, '^'))
                 description_html += '<img src="' + line.substring(1, line.length - 1) + '">';
-            else if (is_special_item(line, '%')) {
+            // If the line has the automatic list syntax, insert one
+            else if (is_wrapped_in_character(line, '%')) {
                 description_html += get_list_from_tags(line.substring(1, line.length - 1).split('|'));
                 ignore_break = true;
             }
+            // Otherwise, it's probably formatted plaintext...
             else {
+                // The current level of bold and/or italic formatting (1 = italic, 2 = bold, 3 = bold-italic)
                 let bold_italic_level = 0;
+
+                // The highest bold/italic level reached before regular text started
                 let highest_level = 0;
+
+                // Whether the text is to be formatted for bold/italic
                 let is_bold_italic = false;
 
+                // Whether the text is struck through with a line
                 let is_strikethrough = false;
 
+                // Whether the text is a button to another article
                 let is_button = false;
+
+                // Whether the text is a web link
                 let is_link = false;
 
+                // Checking through each character of the line
                 while (i < line.length) {
-                    if (line.substring(i, i+2) === '""') { /* skip one quotation */ }
+                    // If there are two repeated quotations for some reason, skip one
+                    if (line.substring(i, i+2) === '""') { }
+                    // Checking for bold/italic...
                     else if (line[i] === '*') {
+                        // Increasing if we haven't reached the text yet, decreasing if we have
                         bold_italic_level += is_bold_italic ? -1 : 1;
 
                         if (bold_italic_level > highest_level)
                             highest_level = bold_italic_level;
 
+                        // Starting the appropriate tag(s)
                         if (bold_italic_level > 0 && line[i+1] !== '*') {
                             is_bold_italic = true;
 
@@ -350,12 +415,15 @@ function check_and_add(line, is_last) {
                                 case 2:
                                     description_html += '<b>';
                                     break;
-                                case 2:
+                                case 3:
                                     description_html += '<b><i>';
                                     break;
                             }
+
+                            // TODO: bold and italic only work together when they envelop the same text entirely...
                         }
 
+                        // Closing the appropriate tag(s)
                         if (bold_italic_level <= 0 && is_bold_italic) {
                             is_bold_italic = false;
 
@@ -366,7 +434,7 @@ function check_and_add(line, is_last) {
                                 case 2:
                                     description_html += '</b>';
                                     break;
-                                case 2:
+                                case 3:
                                     description_html += '</b></i>';
                                     break;
                             }
@@ -374,11 +442,12 @@ function check_and_add(line, is_last) {
                             highest_level = 0;
                         }
                     }
+                    // Checking for strikethrough...
                     else if (line.substring(i, i+2) === '~~') {
                         i++;
-
                         description_html += is_strikethrough ? '</s>' : '<s>';
                     }
+                    // Checking for openings of buttons or links' display text...
                     else if (line[i] === '[') {
                         let next_index = find_next_index_of(line, i, ']');
                         let inner = line.substring(i+1, next_index);
@@ -402,33 +471,38 @@ function check_and_add(line, is_last) {
                                 '" target="_blank" rel="noopener noreferrer">';
                         }
                     }
+                    // Checking for closings of buttons...
                     else if (line[i] === ']' && is_button) {
                         description_html += '</button>';
 
                         is_button = false;
                     }
-                    else if (line[i] === ']' && is_link) { }
+                    else if (line[i] === ']' && is_link) { } // Shipping the character if it's a link closing
+                    // Checking for openings of links' URLS...
                     else if (line[i] === '(' && is_link) {
                         i = find_next_index_of(line, i, ')') - 1;
                     }
+                    // Checking for closings of links' URLS...
                     else if (line[i] === ')' && is_link) {
                         description_html += '</a>';
 
                         is_link = false;
                     }
+                    // FINALLY, if it's just regular old plain text, it goes through
                     else {
                         if (i >= header_level && !is_button) description_html += line[i];
                     }
 
-                    i++;
+                    i++; // Increasing the index in the line
                 }
             }
 
-            if (header_level > 0) description_html += '</h' + header_level + '>';
-            if (header_level > 0) ignore_break = true;
+            if (header_level > 0) description_html += '</h' + header_level + '>'; // Closing the header
+            if (header_level > 0) ignore_break = true; // Making sure not to add line breaks after headers
 
-            if (list_level > 0) description_html += '</li>';
+            if (list_level > 0) description_html += '</li>'; // Closing the list element
 
+            // Closing the quote
             if (is_quote) {
                 if (is_last) {
                     description_html += '</div>';
@@ -440,14 +514,14 @@ function check_and_add(line, is_last) {
             }
         }
     }
-    else {
-        reset();
-    }
+    else reset(); // Making sure to reset the line endings if the line is empty
 
+    // Adding the text (and probably a linebreak) to the description element if it's not currently a list or a quote
     if ((list_level === 0 || is_last) && !is_quote)
         description.innerHTML += description_html + (ignore_break ? '' : '<br>');
 }
 
+/// Ending the multi-line checking variables and closing off the description div
 function reset() {
     list_level = 0;
     list_order = '';
@@ -456,10 +530,12 @@ function reset() {
     is_quote = false;
 }
 
-function is_special_item(line, character) {
-    return line[0] === character && find_next_index_of(line, 0, character) >= 0;
+/// Whether the given line both starts and ends with the given character
+function is_wrapped_in_character(line, character) {
+    return line[0] === character && line[line.length - 1] === character;
 }
 
+/// Function to check and see if an element has exceeded its scroll height, and adds a reminder if so
 function add_scroll_reminder(parent, checking) {
     if (checking.scrollHeight > checking.clientHeight) {
         let overflow_reminder = document.createElement('div');

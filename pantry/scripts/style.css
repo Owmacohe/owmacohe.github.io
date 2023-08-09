@@ -12,6 +12,14 @@
 ::selection {
     background: var(--tags);
 }
+li::selection, li b::selection, li i::selection {
+    background: var(--text);
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla-VariableFont_wght.ttf');
+}
 
 body {
     font-family: 'Karla', sans-serif;
@@ -21,7 +29,7 @@ body {
 }
 
 h1, h2, h3 {
-    margin: 10px;
+    margin: 10px 10px 10px 0;
 
     color: var(--title);
 }
@@ -29,13 +37,25 @@ h1, h2, h3 {
 h1 {
     justify-self: center;
     align-self: center;
+    text-align: right;
 
     min-width: 400px;
-    text-align: right;
+
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 23px;
 }
 
 h3 {
     margin: 5px;
+
+    font-size: 18px;
+}
+
+b {
+    font-weight: 750;
 }
 
 button {
@@ -50,14 +70,17 @@ button {
     border: none;
     border-radius: 3px;
 
-    font-size: 13px;
-
     color: var(--tags);
     background: var(--text);
 }
 button:hover {
     color: var(--text);
     background: var(--tags);
+}
+
+h2 button {
+    color: var(--title);
+    font-size: 23px;
 }
 
 a {
@@ -127,7 +150,7 @@ input {
     justify-content: start;
     align-items: start;
 
-    width: 85%;
+    width: 1000px;
     flex-shrink: 0;
 
     margin: 10px;
@@ -141,13 +164,13 @@ input {
 .description {
     overflow-x: hidden;
 
-    /*column-count: 2;*/
-
     width: 97%;
 
     padding: 10px;
 
+    font-weight: 375;
     white-space: normal;
+    line-height: 20px;
 }
 
 .topbar {
@@ -197,6 +220,8 @@ input {
     justify-content: end;
     align-items: center;
     flex-wrap: wrap;
+
+    min-width: 150px;
 
     margin: 10px;
     padding: 5px;

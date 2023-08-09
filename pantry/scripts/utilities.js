@@ -1,69 +1,28 @@
+/// Function to loop forward through a string, starting at some index, looking for the index of a given character
 function find_next_index_of(line, current_index, symbol) {
-    for (let i = current_index + 1; i < line.length; i++) {
+    for (let i = current_index + 1; i < line.length; i++)
         if (line[i] === symbol) return i;
-    }
 
     return -1;
 }
 
+/// Function to loop backward through a string, starting at some index, looking for the index of a given character
 function find_previous_index_of(line, current_index, symbol) {
-    for (let i = current_index - 1; i > -1; i--) {
+    for (let i = current_index - 1; i > -1; i--)
         if (line[i] === symbol) return i;
-    }
 
     return -1;
 }
 
-function download(filename, text) {
-    //Create the hidden anchor
-    var hiddenAnchor = document.createElement('a');
-    hiddenAnchor.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    hiddenAnchor.setAttribute('download', filename);
-    hiddenAnchor.style.display = 'none';
-    document.body.appendChild(hiddenAnchor);
-
-    //Click it, then remove it
-    hiddenAnchor.click();
-    document.body.removeChild(hiddenAnchor);
-}
-
+/// Clears the text of the search field
 function reset_search() {
     document.getElementById('search').children[1].value = '';
 }
 
-function get_search(name) {
-    let is_whitespace = true;
-
-    for (let whitespace_index = 0; whitespace_index < name.length; whitespace_index++) {
-        if (name[whitespace_index] !== ' ') {
-            is_whitespace = false;
-            break;
-        }
-    }
-
-    if (is_whitespace) return null;
-
-    for (let i = 0; i < file_list.length; i++) {
-        if (file_list[i].toLowerCase().includes(name.toLowerCase())) {
-            let is_tag_private = false;
-
-            if (!is_wiki_private)
-                for (let j = 0; j < private_tags.length; j++)
-                    if (tags[get_tag_index(private_tags[j]) + 1].includes(file_list[i]) ||
-                        private_tags[j] === file_list[i])
-                        is_tag_private = true;
-
-            if (is_wiki_private || !is_tag_private) {
-                return file_list[i];
-            }
-        }
-    }
-
-    return null;
-}
-
+/// Function called when searching for an article to display
 function search(event, input) {
     if (event.keyCode === 13 && loaded) {
+        // The name of the article that was found for the search
         let name = get_search(input.value);
 
         if (name !== null) {
@@ -73,6 +32,23 @@ function search(event, input) {
     }
 }
 
+/// Function to search through the list of articles and find one with the given name
+function get_search(name) {
+    name = name.trim();
+
+    if (name === '') return null; // Stopping the search if the value is just all whitespace
+
+    for (let i = 0; i < file_list.length; i++)
+        // Checking to see if any article names contain the search value
+        if (file_list[i].toLowerCase().includes(name.toLowerCase()))
+            // Making sure the found article isn't private
+            if (!is_tag_private(file_list[i]))
+                return file_list[i];
+
+    return null;
+}
+
+/// Checks whether an entire article is empty (after the title and tags)
 function is_text_empty(text) {
     let split = text.split('\n');
 
@@ -83,6 +59,7 @@ function is_text_empty(text) {
     return true;
 }
 
+/// Function to check and see if the given article is tagged with a private tag
 function is_tag_private(file_name) {
     if (!is_wiki_private)
         for (let i = 0; i < private_tags.length; i++)
@@ -90,4 +67,13 @@ function is_tag_private(file_name) {
                 return true;
 
     return false;
+}
+
+/// Quick function to make sure each element in an array is trimmed down to remove the whitespace
+function trim_array(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] = array[i].trim();
+    }
+
+    return array;
 }
