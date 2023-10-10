@@ -11,87 +11,87 @@ Average life span: [10,000,000 years|Passage Consideration] (4,000,000,000 days)
 ## **[🌱 Druxe] gods**
 
 ### **Children of Voquev Gulssum**
-<<list-links '[tag[Voquev Gulssum]tag[😇 gods]'>>
+%Voquev Gulssum,😇 gods%
 
 ### **Children of Voquev Tdohord**
-<<list-links '[tag[Voquev Tdohord]tag[😇 gods]'>>
+%Voquev Tdohord,😇 gods%
 
 ### **Children of Voquev Tyetir**
-<<list-links '[tag[Voquev Tyetir]tag[😇 gods]'>>
+%Voquev Tyetir,😇 gods%
 
 ---
 
 ## **[⚖️ Balx] gods**
 
 ### **Children of Voquev Aquidios**
-<<list-links '[tag[Voquev Aquidios]tag[😇 gods]'>>
+%Voquev Aquidios,😇 gods%
 
 ### **Children of Voquev Insvaernai**
-<<list-links '[tag[Voquev Insvaernai]tag[😇 gods]'>>
+%Voquev Insvaernai,😇 gods%
 
 ### **Children of Voquev Tieraal**
-<<list-links '[tag[Voquev Tieraal]tag[😇 gods]'>>
+%Voquev Tieraal,😇 gods%
 
 ### **Children of Voquev Zephyriah**
-<<list-links '[tag[Voquev Zephyriah]tag[😇 gods]'>>
+%Voquev Zephyriah,😇 gods%
 
 ---
 
 ## **[💀 Reht] gods**
 
 ### **Children of Voquev Eagur**
-<<list-links '[tag[Voquev Eagur]tag[😇 gods]'>>
+%Voquev Eagur,😇 gods%
 
 ### **Children of Voquev Ovrionne**
-<<list-links '[tag[Voquev Ovrionne]tag[😇 gods]'>>
+%Voquev Ovrionne,😇 gods%
 
 ---
 
 ## **[⛰️ Yadri] gods**
 
 ### **Children of Voquev Eppenwol**
-<<list-links '[tag[Voquev Eppenwol]tag[😇 gods]'>>
+%Voquev Eppenwol,😇 gods%
 
 ### **Children of Voquev Gol'iead**
 
 ### **Children of Voquev Okeannos**
-<<list-links '[tag[Voquev Okeannos]tag[😇 gods]'>>
+%Voquev Okeannos,😇 gods%
 
 ### **Children of Voquev Thikyat**
-<<list-links '[tag[Voquev Thikyat]tag[😇 gods]'>>
+%Voquev Thikyat,😇 gods%
 
 ---
 
 ## **[⏳ Krom] gods**
 
 ### **Children of Voquev Opeqte**
-<<list-links '[tag[Voquev Opeqte]tag[😇 gods]'>>
+%Voquev Opeqte,😇 gods%
 
 ### **Children of Voquev Thimdeit**
-<<list-links '[tag[Voquev Thimdeit]tag[😇 gods]'>>
+%Voquev Thimdeit,😇 gods%
 
 ### **Children of Voquev Yurahh**
-<<list-links '[tag[Voquev Yurahh]tag[😇 gods]'>>
+%Voquev Yurahh,😇 gods%
 
 ---
 
 ## **[🐐 Aaliat] gods**
 
 ### **Children of Voquev Vivanyr**
-<<list-links '[tag[Voquev Vivanyr]tag[😇 gods]'>>
+%Voquev Vivanyr,😇 gods%
 
 ### **Children of Voquev Yinsenvanyr**
-<<list-links '[tag[Voquev Yinsenvanyr]tag[😇 gods]'>>
+%Voquev Yinsenvanyr,😇 gods%
 
 ---
 
 ## **[☁️ Fomrh] gods**
 
 ### **Children of Voquev Densa**
-<<list-links '[tag[Voquev Densa]tag[😇 gods]'>>
+%Voquev Densa,😇 gods%
 
 ### **Children of Voquev Umino**
-<<list-links '[tag[Voquev Umino]tag[😇 gods]'>>
+%Voquev Umino,😇 gods%
 
 ### **Children of Voquev Vo'eg**
 
@@ -100,22 +100,22 @@ Average life span: [10,000,000 years|Passage Consideration] (4,000,000,000 days)
 ## **[❤️ Yeima] gods**
 
 ### **Children of Voquev Cstas**
-<<list-links '[tag[Voquev Cstas]tag[😇 gods]'>>
+%Voquev Cstas,😇 gods%
 
 ### **Children of Voquev Etharg**
-<<list-links '[tag[Voquev Etharg]tag[😇 gods]'>>
+%Voquev Etharg,😇 gods%
 
 ### **Children of Voquev Irrne**
-<<list-links '[tag[Voquev Irrne]tag[😇 gods]'>>
+%Voquev Irrne,😇 gods%
 
 ### **Children of Voquev N'tago**
 - [Yyenwid Truge]
 
 ### **Children of Voquev Ovetou**
-<<list-links '[tag[Voquev Ovetou]tag[😇 gods]'>>
+%Voquev Ovetou,😇 gods%
 
 ### **Children of Voquev Prehen**
-<<list-links '[tag[Voquev Prehen]tag[😇 gods]'>>
+%Voquev Prehen,😇 gods%
 
 ### **Children of Voquev Qizsit**
-<<list-links '[tag[Voquev Qizsit]tag[😇 gods]'>>
+%Voquev Qizsit,😇 gods%

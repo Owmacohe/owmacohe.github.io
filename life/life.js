@@ -17,7 +17,7 @@ function setup() {
     if (scale > 35) scale = 35;
     if (scale < 1) scale = 1;
 
-    let factor = 20 * (1.1 * scale);
+    let factor = 20 * (0.7 * scale);
 
     scale *= 0.7;
 
