@@ -1,0 +1,3 @@
+# Motels
+
+{buildings,todo}

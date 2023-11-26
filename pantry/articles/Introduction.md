@@ -11,4 +11,4 @@ Welcome to The Pantry, a mystic sci-fi fantasy universe of scattered worlds, fra
 
 ---
 
-My thanks to [Enric Llagostera](https://github.com/enricllagostera) for introducing me to [TiddlyWiki](https://tiddlywiki.com) and the [Teia](https://github.com/enricllagostera/teia-one-file) template. I originally used TiddkyWiki to house this project, but have since created my own version, and this is the site you browse today.
+*My thanks to [Enric Llagostera](https://github.com/enricllagostera) for introducing me to [TiddlyWiki](https://tiddlywiki.com) and the [Teia](https://github.com/enricllagostera/teia-one-file) template. I originally used TiddkyWiki to house this project, but have since created my own version, and this is the site you browse today.*

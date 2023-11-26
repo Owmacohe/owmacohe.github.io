@@ -1,107 +1,192 @@
+:root {
+    --header: #475769;
+    --text: #EFF9F0;
+    --link: #CBABA4;
+    --card: #533C44;
+    --background: #13070C;
+}
+
+
 /* Elements */
 
+html {
+    overflow-x: hidden;
+}
+
 body {
-    display: flex;
-    justify-content: center;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: var(--text);
+
+    background: var(--background);
+}
+
+h1, h2, h3 {
+    margin: 0;
+
+    color: var(--header);
+}
+h1 {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+
+    white-space: break-spaces;
 }
 
 a {
-    margin: 1vw;
-    font-size: 2.5vw;
+    font-size: 20px;
+    color: var(--link);
+
+    transition: 0.3s;
+}
+a:hover {
+    color: var(--text);
+
+    transition: 0.3s;
 }
 
-img { width: 10vw; } /* To help align the CSS for the nightnight plugin  */
 
+/* Flex classes */
 
+.flex {
+    display: flex;
+    justify-content: start;
+}
 
-/* General Classes and IDs */
-
-.flexrow {
-    width: 50vw;
-
+.column {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.social_media_a {
-    background: var(--gradient-hover);
-    -webkit-background-clip: text;
+.center {
+    align-items: center;
 }
-.social_media_a:hover {
-    background: var(--gradient-normal);
-    -webkit-background-clip: text;
+.start {
+    align-items: start;
 }
-
-#imgInner {
-    position: absolute;
-
-    width: 19vw;
-    height: 19vw;
-    top: 7.8vw;
-    left: 40.5vw;
-
-    border-radius: 20vw;
+.end {
+    align-items: end;
 }
 
-#imgOuter {
-    animation: fullRotation 1.5s reverse linear infinite;
 
-    width: 22vw;
-    height: 22vw;
+/* Classes */
 
-    border-radius: 20vw;
-
-    background: var(--gradient-hover);
+.link {
+    margin-right: 15px;
 }
 
-#circlePosition {
+.icon {
+    width: 35px;
+    margin: 5px;
+}
+
+.card, #expanded_card {
+    width: 100%;
+
+    margin: 20px;
+    margin-right: -300px;
+
+    border-radius: 30px;
+
+    background: var(--card);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+.card:hover {
+    margin-right: -160px;
+
+    border-radius: 0;
+
+    transition: 0.3s;
+}
+.card h1, .card h2, .card h3, #expanded_card h1, #expanded_card h2, #expanded_card h3 {
+    color: var(--text);
+}
+
+.card_header {
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    background: var(--header);
+}
+
+.card_link {
+    margin-right: 10px;
+}
+
+.card_text {
+    width: 60%;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.reminder {
+    margin-left: 10px;
+
+    font-size: 15px;
+    font-style: italic;
+    color: var(--link);
+
+    transition: 0.3s;
+}
+
+.reminder_hidden {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--link);
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.preview {
+    width: 40%;
+
+    background-size: 80%;
+}
+
+
+/* IDs */
+
+#sidebar {
     position: fixed;
-    left: 49.9vw;
-    top: 2.8vw;
 
-    text-decoration: none;
+    width: 30%;
+
+    margin: 20px;
 }
 
-#curvedText {
-    font-size: 1.75vw;
-    font-family: monospace;
+#profile {
+    width: 70%;
 
-    -webkit-text-fill-color: var(--body);
+    margin-bottom: 60px;
+
+    border-radius: 50%;
 }
 
+#expanded_card {
+    margin-right: -160px;
+    min-height: 400px;
 
+    border-radius: 0;
 
-/* Mobile Optimization */
-
-@media only screen and (max-width: 1000px) {
-    body { overflow-y: visible; }
-
-    img {
-        width: 36vw;
-        height: 36vw;
-    }
-
-    a {
-        font-size: 6vw;
-    }
-
-    .flexrow {
-        width: 90vw;
-
-        flex-direction: column;
-    }
-
-    #imgInner {
-        width: 32vw;
-        height: 32vw;
-
-        top: 10vw;
-        left: 34.5vw;
-    }
-
-    #imgOuter {
-        width: 38vw;
-        height: 38vw;
-    }
-
-    #curvedText { font-size: 2.6vw; }
+    transition: 0.2s;
 }

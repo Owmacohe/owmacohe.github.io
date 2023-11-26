@@ -1,0 +1,5 @@
+# Elves
+
+{races}
+
+Elves are the only known stationary [race] on [The Beltway]. They live in and manage all the [buildings] that jut out from the road. They are able to keep these buildings safe from [The Veering] by the creation and maintenance of magical [Wards], and are in fact the only race that has proven the ability to manifest magic of any kind. Their establishments are fundamentally-important landmarks for the life of all travellers, and they're very aware of it. They reserve the somber right to refuse service (in some cases considered a death sentence) to any they deem dangerous, and thus they are able to curate quasi-neutral places of meeting and [Trade]. This being said, they tend to be laid-back and slow to action, content to remain where they are lest they risk their lives on the road.

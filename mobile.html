@@ -9,6 +9,7 @@
 
     <!-- Stylesheets & Scripts -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&family=Vina+Sans&display=swap" rel="stylesheet">
     <script src="cards.js"></script>
@@ -29,52 +30,47 @@
 </head>
 
 <body>
-    <div class="flex column start" id="sidebar">
+    <div class="flex row center" style="justify-content: center; margin-top: 40px; margin-bottom: 40px">
         <!-- Header -->
         <img src="headshot.gif" alt="[A photo of Owen Hellum]" id="profile">
 
-        <div style="margin-bottom: 30px">
+        <div class="flex column left">
             <h1>Owen Hellum</h1>
             <h3>Game design, programming, and 3D</h3>
             <h2>Portfolio</h2>
-        </div>
 
-        <!-- Links -->
-        <div class="flex row start" style="width: 80%">
-            <div class="flex row center link">
-                <img src="logos/itch.svg" alt="[The Itch.io logo]" class="icon">
-                <a href="https://omch.itch.io">Itch</a>
-            </div>
+            <!-- Links -->
+            <div class="flex row start" style="width: 400px; line-height: 70px;">
+                <div class="flex row center link">
+                    <img src="logos/itch.svg" alt="[The Itch.io logo]" class="icon">
+                    <a href="https://omch.itch.io" style="font-size: 35px">Itch</a>
+                </div>
 
-            <div class="flex row center link">
-                <img src="logos/linkedin.png" alt="[The LinkedIn logo]" class="icon">
-                <a href="https://www.linkedin.com/in/owen-hellum">LinkedIn</a>
-            </div>
+                <div class="flex row center link">
+                    <img src="logos/linkedin.png" alt="[The LinkedIn logo]" class="icon">
+                    <a href="https://www.linkedin.com/in/owen-hellum" style="font-size: 35px">LinkedIn</a>
+                </div>
 
-            <div class="flex row center link">
-                <img src="logos/github.svg" alt="[The GitHub logo]" class="icon">
-                <a href="https://github.com/owmacohe">GitHub</a>
-            </div>
+                <div class="flex row center link">
+                    <img src="logos/github.svg" alt="[The GitHub logo]" class="icon">
+                    <a href="https://github.com/owmacohe" style="font-size: 35px">GitHub</a>
+                </div>
 
-            <div class="flex row center link">
-                <img src="logos/resume.png" alt="[An icon representing a page]" class="icon">
-                <a href="Owen_Hellum_Resume.pdf">Resume</a>
-            </div>
+                <div class="flex row center link">
+                    <img src="logos/resume.png" alt="[An icon representing a page]" class="icon">
+                    <a href="Owen_Hellum_Resume.pdf" style="font-size: 35px">Resume</a>
+                </div>
 
-            <div class="flex row center link">
-                <img src="logos/email.png" alt="[An icon representing an envelope]" class="icon">
-                <a rel="noreferrer noopener" target="_blank">omch [at] pm [dot] me</a>
+                <div class="flex row center link">
+                    <img src="logos/email.png" alt="[An icon representing an envelope]" class="icon">
+                    <a style="font-size: 35px">omch [at] pm [dot] me</a>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="flex column end">
-        <div class="flex column end split" style="width: 80%" id="cards"></div>
+        <div class="flex column end split" id="cards"></div>
     </div>
 </body>
-
-<script type="text/javascript">
-    if (screen.width <= 450) document.location = "mobile.html";
-</script>
-
 </html>

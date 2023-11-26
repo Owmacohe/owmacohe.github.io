@@ -1,0 +1,39 @@
+/* Elements */
+
+h1 {
+    font-size: 90px;
+}
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 30px;
+}
+
+a {
+    font-size: 30px;
+}
+
+/* Classes */
+
+.card {
+    margin-right: -100px;
+}
+
+.preview {
+    background-repeat: no-repeat;
+    background-size: 250%;
+}
+
+/* IDs */
+
+#profile {
+    width: 350px;
+
+    margin-right: 50px;
+}
+
+#expanded_card {
+    margin-right: -100px;
+}
