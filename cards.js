@@ -12,7 +12,7 @@ let cards = [
         'lead, and 3D modeller. I worked using the <a ' +
         'href="https://github.com/StephanieRct/NiEngine">NiEngine state engine</a> to implementa virtually all ' +
         'interactions within the game, from menu screens, to puzzles, and even for the credits. I also put the ' +
-        'game\'s <a href="https://myfriendaki.com">website</a> together.\n\n My Friend Aki released on ' +
+        'game\'s <a href="https://myfriendaki.com">website</a> together.\n\nMy Friend Aki released on ' +
         '<a href="https://store.steampowered.com/app/2584180/My_Friend_Aki">Steam</a> and ' +
         '<a href="https://duck-duck-juice.itch.io/my-friend-aki">Itch</a> on November 9th 2023, and has since ' +
         'surpassed 190 downloads and over 1,000 impressions. My team and I are overjoyed and are extremely thankful ' +
