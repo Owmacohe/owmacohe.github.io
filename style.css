@@ -38,6 +38,8 @@ h3 {
 }
 
 p {
+    margin: 0;
+
     font-size: 20px;
 
     white-space: break-spaces;
@@ -116,6 +118,9 @@ a:hover {
 }
 .card h1, .card h2, .card h3, #expanded_card h1, #expanded_card h2, #expanded_card h3 {
     color: var(--text);
+}
+.card p {
+    margin: 10px;
 }
 
 .card_header {

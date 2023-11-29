@@ -9,8 +9,8 @@ let cards = [
         'improvised tools to solve the environmental puzzles, discover the gloomy husk of an abandoned ' +
         'mall, and use the dynamic lighting system to bring areas of the game back to life.',
         'Over the game\'s 6 month development, I acted as production manager, programming and puzzle implementation ' +
-        'lead, and 3D modeller. I worked using the <a ' +
-        'href="https://github.com/StephanieRct/NiEngine">NiEngine state engine</a> to implementa virtually all ' +
+        'lead, and 3D modeller alongside my other team members. I worked using the <a ' +
+        'href="https://github.com/StephanieRct/NiEngine">NiEngine state engine</a> to implement virtually all ' +
         'interactions within the game, from menu screens, to puzzles, and even for the credits. I also put the ' +
         'game\'s <a href="https://myfriendaki.com">website</a> together.\n\nMy Friend Aki released on ' +
         '<a href="https://store.steampowered.com/app/2584180/My_Friend_Aki">Steam</a> and ' +
@@ -36,7 +36,8 @@ let cards = [
         'textured, and lit all characters, objects, and environments within the game. Furthermore, I also developed ' +
         'a rudimentary dialogue system to aid with the game\'s non-linear story gameplay, the act of which inspired ' +
         'me to begin development on <a href="https://github.com/owmacohe/descant">Descant</a>, my custom Unity ' +
-        'Dialogue System.',
+        'Dialogue System.\n\nUNDERSCORE was exhibited during the ' +
+        '<a href="https://milieux.concordia.ca/the-commons">Milieux "Commons" Expo</a> in September 2023.',
         'underscore.jpg'
     ],
     [
