@@ -1,7 +1,7 @@
 /* Elements */
 
 h1 {
-    font-size: 90px;
+    font-size: 100px;
 }
 h3 {
     font-size: 30px;
@@ -15,6 +15,7 @@ a {
     font-size: 30px;
 }
 
+
 /* Classes */
 
 .card {
@@ -22,9 +23,12 @@ a {
 }
 
 .preview {
+    margin-bottom: 60px;
+
     background-repeat: no-repeat;
     background-size: 250%;
 }
+
 
 /* IDs */
 
