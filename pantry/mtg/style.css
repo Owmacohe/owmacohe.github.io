@@ -1,0 +1,94 @@
+:root {
+    --dark: #212121;
+    --mid: #D5C7BC;
+    --highlight: #93B7BE;
+}
+
+body {
+    background: var(--dark);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+img {
+    width: 60%;
+
+    border-radius: 20px;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+input {
+    padding: 10px;
+
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+
+    color: var(--dark);
+
+    background: var(--highlight);
+}
+
+button {
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    color: var(--highlight);
+
+    background: var(--dark);
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+button:hover {
+    color: var(--dark);
+
+    background: var(--highlight);
+
+    transition: 0.1s;
+}
+
+.flex {
+    display: flex;
+}
+
+.column { flex-direction: column; }
+.row { flex-direction: row; }
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+.start {
+    align-items: start;
+    justify-content: start;
+}
+.end {
+    align-items: end;
+    justify-content: end;
+}
+
+#content {
+    margin-top: 20px;
+    padding: 40px;
+
+    width: 55%;
+
+    background: var(--mid);
+}
+
+#header {
+    margin-left: 20px;
+}
+
+#search {
+    margin-bottom: 20px;
+}
