@@ -97,6 +97,16 @@ a:hover {
     margin: 5px;
 }
 
+.section {
+    width: 50%;
+
+    cursor: pointer;
+}
+.section a {
+    font-size: 60px;
+    text-decoration: underline;
+}
+
 .card, #expanded_card {
     width: 100%;
 
@@ -188,6 +198,19 @@ a:hover {
     margin-bottom: 30px;
 
     border-radius: 50%;
+}
+
+#sections {
+    width: 60%;
+}
+
+#renders {
+    width: 80%;
+}
+#renders img, #renders video {
+    height: 330px;
+
+    margin: 10px;
 }
 
 #expanded_card {

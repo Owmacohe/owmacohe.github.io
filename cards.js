@@ -93,6 +93,9 @@ let cards = [
 
 window.onload = function() {
     let cards_element = document.getElementById('cards');
+    last_section = cards_element;
+
+    document.getElementById('renders').style.display = 'none';
 
     for (const i in cards) {
         let card_element = document.createElement('div');
@@ -164,22 +167,12 @@ function click_card(card) {
     }
 }
 
-const animateCSS = (element, animation, prefix = 'animate__') =>
-    // We create a Promise and return it
-    new Promise((resolve, reject) => {
-        const animationName = `${prefix}${animation}`;
-        const node = element;
+let last_section;
 
-        node.classList.add(`${prefix}animated`, animationName);
+function show_section(section) {
+    last_section.style.display = 'none';
 
-        console.log(node.classList);
-
-        // When the animation ends, we clean the classes and resolve the Promise
-        function handleAnimationEnd(event) {
-            event.stopPropagation();
-            node.classList.remove(`${prefix}animated`, animationName);
-            resolve('Animation ended');
-        }
-
-        node.addEventListener('animationend', handleAnimationEnd, {once: true});
-    });
+    let temp = document.getElementById(section);
+    temp.style.display = 'flex';
+    last_section = temp;
+}

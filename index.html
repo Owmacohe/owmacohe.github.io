@@ -9,7 +9,6 @@
 
     <!-- Stylesheets & Scripts -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&family=Vina+Sans&display=swap" rel="stylesheet">
     <script src="cards.js"></script>
 
@@ -75,7 +74,23 @@
     </div>
 
     <div class="flex column end">
+        <div class="flex row end" id="sections" style="justify-content: center">
+            <h2 class="flex row center section" style="justify-content: center"><a onclick="show_section('cards')">Games</a></h2>
+            <h2 class="flex row center section" style="justify-content: center"><a onclick="show_section('renders')">3D</a></h2>
+        </div>
+
         <div class="flex column end split" style="width: 80%" id="cards"></div>
+
+        <div class="flex row end" id="renders" style="justify-content: end">
+            <img src="previews/renders/Bike.jpg" alt="">
+            <img src="previews/renders/Computer.jpg" alt="">
+            <img src="previews/renders/Movie_Projector.jpg" alt="">
+            <video src="previews/renders/Head.mp4" controls></video>
+            <img src="previews/renders/Fountain.jpg" alt="">
+            <img src="previews/renders/Headphones.jpg" alt="">
+            <img src="previews/renders/Kiosk.jpg" alt="">
+            <img src="previews/renders/Minidisc_Player.jpg" alt="">
+        </div>
     </div>
 </body>
 

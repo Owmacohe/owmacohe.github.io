@@ -38,6 +38,14 @@ a {
     margin-right: 50px;
 }
 
+#renders {
+    width: 90%;
+}
+#renders img, #renders video {
+    height: auto;
+    width: 100%;
+}
+
 #expanded_card {
     margin-right: -100px;
 }
