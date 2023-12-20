@@ -29,6 +29,7 @@
     <div class="flex column center section">
       <h1>Descant</h1>
       <h2>Enhanced Unity Dialogue System</h2>
+      <p>by <a href="\">Owen Hellum</a></p>
     </div>
 
     <div class="flex column center section">
@@ -39,14 +40,14 @@
     </div>
 
     <div class="flex row center section">
-      <h2 style="margin-right: 80px"><a href="">Descant Unity Asset Store Page</a></h2>
+      <h2 style="margin-right: 80px"><a href="">Descant Unity Asset Store Page</a> (coming soon)</h2>
       <h2><a href="https://github.com/owmacohe/Descant">Descant GitHub page</a></h2>
     </div>
 
     <div class="flex column center section">
       <p>
         <strong>Descant</strong> is a <strong>Unity</strong> dialogue system plugin. The
-        <a href="https://assetstore.unity.com">Unity Asset Store</a> is
+        <strong><a href="https://assetstore.unity.com">Unity Asset Store</a></strong> is
         <a href="https://github.com/owmacohe/Descant/Documentation/system_review.xlsx">chock full</a> of many such
         types of plugins, ranging from <a href="https://assetstore.unity.com/packages/tools/behavior-ai/dialogue-system-for-unity-11672">feature-rich</a>,
         to <a href="https://assetstore.unity.com/packages/tools/visual-scripting/conversa-dialogue-system-192549">ultra-minimalist</a>,
@@ -56,10 +57,10 @@
         setup. Besides acting as a standard tool for creating, saving, and actualizing non-linear game dialogue, it
         also pushes the envelope by adding optional dialogue-enhancing node components that introduce features to break
         away from the overused and underwhelming trends seen in many interactive fiction games. These enhancements act
-        similar to <strong>Unity</strong>'s standard GameObject Component system, and can be applied at-will to nodes.
-        This modular approach is so-far not explored in the world of Unity dialogue systems. The project will be free
-        <em>(and collaborative open-source)</em> forever. Feel free to send me a message or submit a pull request if
-        you want to make any changes.
+        similar to <strong>Unity</strong>'s standard <strong>GameObject Component</strong> system, and can be applied
+        at-will to nodes. This modular approach is so-far not explored in the world of Unity dialogue systems. The
+        project will be free <em>(and collaborative open-source)</em> forever. Feel free to send me a message or submit
+        a pull request if you want to make any changes.
       </p>
     </div>
 
@@ -87,12 +88,14 @@
         </li>
         <li>
           Add a <strong>[NodeType(...)]</strong> attribute to the Component (replace the '...' with the
-          <strong>DescantNodeType</strong> indicating which nodes it can be added to).
+          <strong>DescantNodeType</strong> indicating which types of nodes it can be added to).
         </li>
         <li>
-          Add any number of public variables to the Component (these variables will show up in the
-          <strong>Descant Graph Editor</strong> when you add the Component to a node) (you may also create
-          private/protected variables, but they won't appear in the editor).
+          Add any number of public variables/properties to the Component (these properties will show up in
+          the <strong>Descant Graph Editor</strong> when you add the Component to a node) (you may also create
+          private/protected properties, but they won't appear in the editor). Properties may only be of type
+          <strong>int</strong>, <strong>float</strong>, <strong>string</strong>, <strong>bool</strong>, or
+          <strong>enum</strong>.
         </li>
         <li>
           For each public variable, add either an <strong>[Inline]</strong> attribute (indicating that it will be
@@ -101,20 +104,25 @@
           editor) (replace the '...' with the string name of the group to order it into).
         </li>
         <li>
+          <em>Optional: By default, all Component fields filter any out most special characters on input. You can
+          override this by giving any public variable a <strong>[NoFiltering]</strong> attribute, disabling filtering
+          for that variable's corresponding field in the <strong>Descant Graph Editor</strong>. This is useful for
+          long-form fields that may have sentence grammar and punctuation.</em>
+        </li>
+        <li>
           If this Component performs some action when it is reached during dialogue, give it the following method:
           <strong>public override DescantNodeInvokeResult Invoke(DescantNodeInvokeResult result)</strong>. The
           <strong>DescantNodeInvokeResult</strong> object being passed contains all the choice/response text for the
-          current node, the current actors, and info regarding the actor portraits) (see
+          current node, the current actors, and info regarding the actor portraits) (see the
           <a href="https://github.com/Owmacohe/Descant/blob/main/Components/DescantNodeComponent.cs">DescantNodeInvokeResult</a>
-          for more info). The <strong>Invoke</strong> method must return a <strong>DescantNodeInvokeResult</strong>
+          class for more info). The <strong>Invoke</strong> method must return a <strong>DescantNodeInvokeResult</strong>
           object (almost always just <strong>result</strong> itself, with its properties modified).
         </li>
         <li>
           <em>Optional: Many of the default Components require actor names to know which actors' properties to check.
           If your Component must also access a <strong>DescantActor</strong>, make sure that it has a <strong>public
-          string ActorName</strong> variable, then get access to the actor with <strong>DescantActor actor =
-          DescantComponentUtilities.GetActor(this, result.Actors, ActorName);</strong> in the body of the
-          <strong>Invoke</strong> method.</em>
+          string ActorName</strong> variable, then get access to the actor with
+          <strong>DescantComponentUtilities.GetActor(this, result.Actors, ActorName)</strong>.</em>
         </li>
         <li>
           <em>Optional: If you need the Component to do something continuously while it is active during dialogue, give
