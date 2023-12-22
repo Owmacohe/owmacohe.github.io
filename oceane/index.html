@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="statements.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>Océane statements</title>
+</head>
+
+<body>
+  <div class="flex column center">
+    <div class="flex row center">
+      <p>animations</p>
+
+      <label class="switch">
+        <input checked="" type="checkbox" class="toggle">
+        <span class="slider" onclick="animations = !animations"></span>
+        <span class="card-side"></span>
+      </label>
+    </div>
+
+    <div class="flex row center" id="content">
+      <button onclick="show_statement()">get statement</button>
+      <p id="statement"></p>
+    </div>
+  </div>
+</body>
+</html>
