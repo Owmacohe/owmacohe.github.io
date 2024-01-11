@@ -76,6 +76,7 @@ Armourer
 Armoury
 Aspect of Om'nd
 Atolondrar
+Auditors
 Autonomous Pilgrim Droids
 Balx pestle
 Barracuda
@@ -240,6 +241,7 @@ Photon arc
 Playable races
 Player house rules
 Portable pestles
+Prayer To Tdohord
 Pre-Oleald Eons
 Primordial names
 Primordials

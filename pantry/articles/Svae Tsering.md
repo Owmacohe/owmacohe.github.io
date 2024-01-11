@@ -1,6 +1,6 @@
 # Svae Tsering
 
-{Hinengaro Heist PCs,🔒 private,The Hinengaro Heist,Primordials}
+{Hinengaro Heist PCs,🔒 private,The Hinengaro Heist,Primordials,Auditors}
 
 > **Player:** Leo (AromaLeo)
 > **Race:** Primordial (Fire)
