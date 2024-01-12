@@ -170,6 +170,7 @@ window.onload = function () {
     for (let i in components) {
         let component = document.createElement('div');
         component.setAttribute('class', 'flex column start component');
+        component.id = components[i][0].toLowerCase();
         components_parent.appendChild(component);
 
         let variables = '';
