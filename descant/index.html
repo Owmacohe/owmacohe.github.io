@@ -78,9 +78,9 @@
     <div class="flex column center section">
       <h2>Component creation</h2>
       <ol>
-        <li>Create a new C# class in the <strong>Components/Nodes</strong> folder.</li>
+        <li>Create a new C# class in <strong>Descant/Components/Custom</strong>.</li>
         <li>Make sure that the Component is in the <strong>DescantComponents</strong> namespace.</li>
-        <li>Make sure that the Component inherits from the <strong>DescantNodeComponent</strong> abstract class.</li>
+        <li>Make sure that the Component inherits from the <strong>DescantComponent</strong> abstract class.</li>
         <li>Add a <strong>[Serializable]</strong> attribute to the Component.</li>
         <li>
           Add a <strong>[MaxQuantity(...)]</strong> attribute to the Component (replace the '...' with the maximum number
@@ -115,7 +115,7 @@
           <strong>public override DescantNodeInvokeResult Invoke(DescantNodeInvokeResult result)</strong>. The
           <strong>DescantNodeInvokeResult</strong> object being passed contains all the choice/response text for the
           current node, the current actors, and info regarding the actor portraits) (see the
-          <a href="https://github.com/Owmacohe/Descant/blob/main/Components/DescantNodeComponent.cs">DescantNodeInvokeResult</a>
+          <a href="https://github.com/Owmacohe/Descant/blob/main/Components/DescantNodeInvokeResult.cs">DescantNodeInvokeResult</a>
           class for more info). The <strong>Invoke</strong> method must return a <strong>DescantNodeInvokeResult</strong>
           object (almost always just <strong>result</strong> itself, with its properties modified).
         </li>
@@ -126,10 +126,17 @@
           <strong>DescantComponentUtilities.GetActor(this, result.Actors, ActorName)</strong>.</em>
         </li>
         <li>
+          <em>Optional: Many default Descant Components only do their effect if some comparison is made. Should your
+            Component also wish to do so, the <strong>CompareVariable</strong> method in
+            <a href="https://github.com/Owmacohe/Descant/blob/main/Components/DescantComponent.cs">DescantComponent</a>
+            may be of use.</em>
+        </li>
+        <li>
           <em>Optional: If you need the Component to do something continuously while it is active during dialogue, give
           it one of the following methods: <strong>public override bool FixedUpdate()</strong> or <strong>public
           override bool Update()</strong>. They function in exactly the same manner as the classic <strong>MonoBehaviour</strong>
-          methods of the same names.</em>
+          methods of the same names, save for the fact that if they ever return <strong>false</strong>, the dialogue
+          ends immediately (should the Component want to end the dialogue for some reason).</em>
         </li>
         <li>
           That's it! Your new Component will now show up as an option to add to a node in the <strong>Descant Graph
