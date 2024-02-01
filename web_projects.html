@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Primary Meta Tags -->
+  <meta charset="UTF-8">
+  <title>Owen Hellum - Personal Web Projects</title>
+  <meta name="title" content="Owen Hellum - Personal Web Projects" />
+  <meta name="description" content="Small experiments and web games" />
+
+  <!-- Stylesheets & Scripts -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&family=Vina+Sans&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://omch.tech/web_projects.html" />
+  <meta property="og:title" content="Owen Hellum - Personal Web Projects" />
+  <meta property="og:description" content="Small experiments and web games" />
+  <meta property="og:image" content="https://omch.tech/social_media.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://omch.tech/web_projects.html" />
+  <meta property="twitter:title" content="Owen Hellum - Personal Web Projects" />
+  <meta property="twitter:description" content="Small experiments and web games" />
+  <meta property="twitter:image" content="https://omch.tech/social_media.png" />
+</head>
+
+<body class="flex column center">
+  <a href="\" style="position: absolute; left: 0; margin: 20px;">Return to portfolio</a>
+
+  <div class="flex column center">
+    <h1>Owen Hellum</h1>
+    <h3>Small experiments and web games</h3>
+
+    <div class="flex row left" style="width: 50%; margin-top: 40px;">
+      <a href="amoeba">amoeba - web game</a>
+      <a href="fields">fields - web game</a>
+      <a href="life">Conway's Game of Life</a>
+      <a href="Text_Adventure">Arbitrium South - web game & style guide</a>
+      <a href="school/CART212">The New Normal - web game</a>
+      <a href="Other_Pages/succ.html">Succulents! - idle game</a>
+      <a href="transport">transport - idle game</a>
+      <a href="ciphers/rooms.html">ciphers</a>
+      <a href="deprecated">"Deprecated" - short story</a>
+      <a href="https://imagetoaudiogenerator.github.io/">ImageToAudio generator</a>
+      <a href="Other_Pages/finds.html">My favourite websites</a>
+      <a href="Other_Pages/batgen.html">Batman Punch Sound generator</a>
+      <a href="Other_Pages/C64.html">Commodore 64 Game Anthology</a>
+      <a href="toki_pona">Toki Pona dictionary</a>
+      <a href="walletto">Walletto - wallet-sized TTRPG</a>
+      <a href="Other_Pages/filegen.html">Random text file generator</a>
+      <a href="Other_Pages/traits.html">Unbalanced population simulator</a>
+    </div>
+  </div>
+</body>
+
+<style>
+  a {
+    margin: 5px;
+  }
+</style>
+
+<script>
+  window.onload = function() {
+    let anchors = document.querySelectorAll('a');
+
+    for (const j in anchors) {
+      try {
+        anchors[j].setAttribute('rel', 'noreferrer noopener');
+        anchors[j].setAttribute('target', '_blank');
+      }
+      catch { }
+    }
+  };
+</script>
+
+</html>

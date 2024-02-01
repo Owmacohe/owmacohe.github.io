@@ -4,12 +4,12 @@ window.onload = function() {
   input.value = "";
   //input.setAttribute("onkeyup", "translate()"); //automatic generation
 
-  document.getElementsByTagName("button")[0].setAttribute("onclick", "translate()"); //manual generation
+  document.getElementsByTagName("button")[0].setAttribute("onclick", "translate_text()"); //manual generation
 
   var target;
 }
 
-function translate() {
+function translate_text() {
   var output = document.getElementById("output");
 
   //removes all prexisting words/letters
