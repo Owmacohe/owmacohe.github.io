@@ -1,0 +1,64 @@
+:root {
+    --grass: rgba(173, 255, 47, 0.2);
+    --wall: rgba(173, 255, 47, 0.5);
+    --spike: rgba(205, 92, 92, 0.5);
+    --food: rgba(95, 158, 160, 0.5);
+    --portal: grey;
+    --exit: orangered;
+    --player: mediumpurple;
+}
+
+body {
+    background: black;
+
+    overflow: hidden;
+}
+
+p {
+    font-family: monospace;
+    font-size: 10px;
+    white-space: pre;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column { flex-direction: column; }
+.row { flex-direction: row; }
+
+.tile {
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+
+    color: var(--grass);
+    font-size: 20px;
+
+    user-select: none;
+}
+
+#log {
+    color: var(--wall);
+}
+
+#dirt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 1800px;
+
+    opacity: 5%;
+    z-index: -1;
+}
+
+#field {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
