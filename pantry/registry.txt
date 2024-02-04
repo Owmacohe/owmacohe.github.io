@@ -46,6 +46,7 @@
 🕰️ time periods
 🗓️ Crystal Ship Sessions
 🗓️ Hinengaro Heist Sessions
+🗓️ Unspooling Song Sessions
 🗣️ languages
 🗺️ provinces
 🤝 organizations
@@ -338,6 +339,8 @@ Uidi
 Ukuvula Period
 Uminæ
 Unspooling Song
+Unspooling Song NPCs
+Unspooling Song PCs
 VDC
 Ver
 Veyeimall In Thought
