@@ -1,94 +1,197 @@
 :root {
-    --dark: #212121;
-    --mid: #D5C7BC;
-    --highlight: #93B7BE;
+    --pinlines: black;
+    --bars: white;
+    --boxes: white;
 }
 
 body {
-    background: var(--dark);
-}
-
-h1, h2, h3 {
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 img {
-    width: 60%;
+    background: var(--boxes);
+}
+
+p {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 30px;
+
+    white-space: break-spaces;
+}
+
+p em {
+    font-family: MPlantin-Italic, serif;
+}
+
+p strong {
+    font-family: Beleren, serif;
+}
+
+.card {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 500px;
+    height: 700px;
 
     border-radius: 20px;
+
+    background: black;
 }
 
-body, input, button {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+.background {
+    position: absolute;
+
+    margin-top: 3%;
+
+    width: 92%;
+    height: 90%;
+
+    border-radius: 8px 8px 50px 50px;
+
+    z-index: 0;
 }
 
-input {
-    padding: 10px;
+.foreground {
+    position: absolute;
 
-    border: 2px solid var(--dark);
-    border-radius: 5px;
+    height: 100%;
 
-    color: var(--dark);
+    margin-top: 3%;
 
-    background: var(--highlight);
+    width: 95%;
+
+    z-index: 1;
 }
 
-button {
-    padding: 10px;
+.name {
+    margin-top: 1.5%;
 
-    border: none;
-    border-radius: 5px;
-
-    color: var(--highlight);
-
-    background: var(--dark);
-
-    cursor: pointer;
-
-    transition: 0.1s;
-}
-button:hover {
-    color: var(--dark);
-
-    background: var(--highlight);
-
-    transition: 0.1s;
+    font-size: 160%;
 }
 
-.flex {
+.typeline {
+    margin-top: -4px;
+
+    font-size: 140%;
+}
+
+.art {
+    height: 45%;
+}
+
+.name, .typeline {
+    width: 94%;
+    height: 6%;
+
+    border-radius: 20px;
+
+    font-family: Beleren, serif;
+
+    background: var(--bars);
+}
+
+.name p, .typeline p {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.textbox {
+    height: 31%;
+
+    font-size: 150%;
+
+    background: var(--boxes);
+}
+
+.art, .textbox {
+    width: 90%;
+
+    margin-top: -6px;
+}
+
+.name, .typeline, .textbox {
+    box-shadow: 0 0 3px black inset;
+}
+
+.collector_info {
+    width: 88%;
+
+    margin-top: 1%;
+
+    color: white;
+    font-size: 10px;
+}
+
+.textbox, .collector_info {
+    font-family: MPlantin, serif;
+}
+
+.collector_info p {
+    margin: 0;
+}
+
+.card, .foreground {
     display: flex;
-}
-
-.column { flex-direction: column; }
-.row { flex-direction: row; }
-
-.center {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
-.start {
+
+.name, .typeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collector_info {
+    display: flex;
+    flex-direction: column;
     align-items: start;
     justify-content: start;
 }
-.end {
-    align-items: end;
-    justify-content: end;
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
-#content {
-    margin-top: 20px;
-    padding: 40px;
-
-    width: 55%;
-
-    background: var(--mid);
+.name, .art, .typeline, .textbox {
+    border: 4px solid var(--pinlines);
 }
 
-#header {
-    margin-left: 20px;
+@font-face {
+    font-family: 'Beleren-Bold';
+    src: url('Beleren-Bold.woff2') format('woff2'),
+    url('Beleren-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-#search {
-    margin-bottom: 20px;
+@font-face {
+    font-family: 'MPlantin-Italic';
+    src: url('MPlantin-Italic.woff2') format('woff2'),
+    url('MPlantin-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MPlantin';
+    src: url('MPlantin.woff2') format('woff2'),
+    url('MPlantin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
