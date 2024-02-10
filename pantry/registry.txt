@@ -202,6 +202,7 @@ Laiag
 Lamprey
 Lapetana Packaged Foods LLC
 Leilland
+Leyaprac, Standing Tall, Holding Fast, Unshaken
 Librarian
 Life after death
 Life-support technician
@@ -341,6 +342,9 @@ Uminæ
 Unspooling Song
 Unspooling Song NPCs
 Unspooling Song PCs
+Unspooling Song Session 1
+Unspooling Song Session 2
+Unspooling Song Session 3
 VDC
 Ver
 Veyeimall In Thought
@@ -406,6 +410,7 @@ Yyenwid Haftash
 Yyenwid Hueyo
 Yyenwid Khuorr
 Yyenwid Kmoolg
+Yyenwid Leyaprac
 Yyenwid Leyvo
 Yyenwid Lumbe
 Yyenwid Luore

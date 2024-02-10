@@ -64,6 +64,8 @@
 
 **pc3,478:** [Theliel, Once That Was] renounces free will
 
+**~pc4,000-pc4,100:** [The Shell] gains consciousness
+
 **pc4,082:** Imprisonment of [Profane Gyamtso]
 
 **pc4,104:** [The Hyacinth House] is founded
@@ -76,4 +78,4 @@
 
 ## ***~pc4,201:** Start of the [Ukuvula Period]*
 
-**pc4,201:** [Unspooling Song]
+**pc4,201:** [The Unspooling|Unspooling Song] occurs

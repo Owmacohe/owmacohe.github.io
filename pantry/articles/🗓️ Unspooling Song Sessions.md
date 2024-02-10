@@ -2,7 +2,6 @@
 
 {🔒 private,Unspooling Song}
 
-## Timeline planning
 1. Arrive/start on Yeima
    - Crash-land?
    - Arrive in boxes?
@@ -21,5 +20,5 @@
    - [Voquev Vehirit] starts to appear
 4. Reaching the underside of [❤️ Yeima] (session 3)
    - Only the hardiest travellers remain
-   - Confronting the fisherman and [Claster Veyeimall]
-   - Freeing/killing/erasing/changing [Voquev Vehirit]
+   - Meeting with [Voquev Vehirit] and getting onto the ship below [Yeima]
+   - Confronting the fisherman and [Claster Veyeimall], and freeing/killing/erasing/changing [Voquev Vehirit]
