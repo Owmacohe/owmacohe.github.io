@@ -1,6 +1,6 @@
 # The Foretellers Enclave
 
-{⏳ Krom,The 214th Isotoxal Compact,Zopilote,🔒 private,⛪ religions,Taqadum Period,Hīkoi Period,👥 cultures}
+{⏳ Krom,The 214th Isotoxal Compact,Zopilote,🔒 private,Voquev Opeqte,⛪ religions,Taqadum Period,Hīkoi Period,👥 cultures}
 
 The longest-lasting public institution on [⏳ Krom], devoted to the worship of [Voquev Opeqte], the foretelling of disasters, and the caretaking of Kromacvin evolution.
 

@@ -231,6 +231,7 @@ On-plane
 On-ship
 Open Vantage
 Operator
+Operatus Captival
 Orca
 Pantry Standard Pace
 Papa
@@ -303,6 +304,7 @@ The Central Archive
 The Compiler
 The Crystal Ship
 The Far Wastes
+The Final Next
 The Foretellers Enclave
 The Fulcrum
 The Helm Interspace
@@ -315,6 +317,7 @@ The Lantern-Headed God
 The Linker
 The Monk on The Winding Road
 The Mortar
+The Mountains of Soil
 The Orkha
 The Planar Convoke
 The Plum Taxi Co.
@@ -392,6 +395,7 @@ Yeima pestle
 Ytin
 Yulfrid of the Sanctuaries
 Yyenwid
+Yyenwid Alpsid
 Yyenwid Anctu
 Yyenwid Ankno
 Yyenwid Appetan
@@ -429,6 +433,7 @@ Yyenwid Sundhei
 Yyenwid Terneh
 Yyenwid Timula
 Yyenwid Truge
+Yyenwid Unoccu
 Yyenwid Ureh
 Yyenwid Ventif
 Yyenwid Verhemente
