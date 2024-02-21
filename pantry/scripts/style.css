@@ -1,8 +1,8 @@
 :root {
     --background: #0B032D;
-    --article: #74546A;
-    --article-dark: #493543;
-    --text: #541a38;
+    --article: #735c6b;
+    --article-dark: #4a3b45;
+    --text: #401322;
     --title: #e15ea6;
     --tags: #F67E7D;
     --links: #FFB997;
@@ -251,7 +251,7 @@ input {
 }
 
 .quote {
-    width: 60%;
+    width: 80%;
 
     padding: 5px;
 
