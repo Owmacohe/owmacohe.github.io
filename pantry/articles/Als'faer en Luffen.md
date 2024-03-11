@@ -1,6 +1,6 @@
 # Als'faer en Luffen
 
-{Unspooling Song PCs,🔒 private,The Hinengaro Heist,Demons}
+{Unspooling Song PCs,🔒 private,Demons}
 
 > **Player:** Fran
 > **Race:** Demon (Love)
@@ -67,7 +67,7 @@
 
 ### Coming to Yeima
 - The Unspooling drew his attention
-- Didn't want to come back him
+- Didn't want to come back
 - Getting pings from the other demons
 
 ---
@@ -83,7 +83,7 @@
 > **Location:** ???
 
 > **Apathy Demon**
-> **Status:** Possessed by **Fear Demon**. Lives as a recluse neat the base of the plane
+> **Status:** Possessed by **Fear Demon**. Lives as a recluse near the base of the plane
 > **Location:** [❤️ Yeima]
 
 > **Jealousy Demon**
