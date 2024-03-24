@@ -5,6 +5,7 @@ let cards = [
         'https://myfriendaki.com',
         'https://store.steampowered.com/app/2584180/My_Friend_Aki',
         'https://duck-duck-juice.itch.io/my-friend-aki',
+        '',
         'A first-person 3D mall exploration and puzzle solving game with a good dose of story and horror. Use ' +
         'improvised tools to solve the environmental puzzles, discover the gloomy husk of an abandoned ' +
         'mall, and use the dynamic lighting system to bring areas of the game back to life.',
@@ -24,6 +25,7 @@ let cards = [
         'Unity 3D, C#, Blender',
         '', '',
         'https://omch.itch.io/underscore',
+        '',
         'An experimental narrative game project that utilises environmental exploration, advanced non-linear ' +
         'dialogue, and multimedia to reflect on ideas of both alienation and kinship. Through engagement with many ' +
         'entities across three different acts, the player has the chance to explore concepts of shared suffering, ' +
@@ -43,8 +45,9 @@ let cards = [
     [
         'Descant',
         'C#',
-        'https://github.com/owmacohe/descant',
+        'https://omch.tech/descant',
         '', '',
+        'https://assetstore.unity.com/packages/tools/visual-scripting/descant-273262',
         'Descant is a Unity dialogue system plugin. It aims to hit the sweet spot between quality UI, powerful ' +
         'features, and easy-to-lean functionality, while also adding optional \'dialogue enhancements\' that ' +
         'introduce features to break away from underwhelming trends seen in many interactive fiction games. These ' +
@@ -57,11 +60,12 @@ let cards = [
     [
         'Last Breath Of A New Empire',
         'Unity 2D, C#',
-        '', '',
+        '', '', '',
         'https://omch.itch.io/last-breath',
         'A short, narrative-focused resource-management game inspired by real-Time Strategy (RTS) classics such as ' +
         'Stellaris or Age of Empires. Traditional RTS games focus sp heavily on gameplay that story is often left ' +
-        'behind, and Last Breath Of A New Empire attempts to flip that script.',
+        'behind, and Last Breath Of A New Empire attempts to flip that script. I developed a custom dialogue manager ' +
+        'for the game, which would go on to inspire my work on above Descant Dialogue Manager.',
         '\n\n\n\n',
         'lboane.jpg'
     ],
@@ -69,7 +73,7 @@ let cards = [
         'Pantry',
         'Javascript',
         'https://github.com/owmacohe/pantry',
-        '', '',
+        '', '', '',
         'A tag-based wiki system is inspired by <a href="https://tiddlywiki.com">TiddlyWiki</a>. Operating purely ' +
         'through Javascript magic, it turns MarkDown files into hypertext articles, which can be tagged, linked to, ' +
         'and generated as dynamic lists. It requires no programming knowledge, save for some understanding of the ' +
@@ -81,7 +85,7 @@ let cards = [
     [
         'Cultus Dextra',
         'Unity 2D, C#',
-        '', '',
+        '', '', '',
         'https://omch.itch.io/cultus-dextra',
         'A resource-management game about culling the weak from your fanatical cult, with inspirations taken from ' +
         'roguelikes and rhythm games. Through story exposition, haunting graphics, and simple mechanics, the game ' +
@@ -107,10 +111,11 @@ window.onload = function() {
         if (cards[i][2] !== '') links += '<a href="' + cards[i][2] + '" class="card_link">Website</a>';
         if (cards[i][3] !== '') links += '<a href="' + cards[i][3] + '" class="card_link">Steam</a>';
         if (cards[i][4] !== '') links += '<a href="' + cards[i][4] + '" class="card_link">Itch</a>';
+        if (cards[i][5] !== '') links += '<a href="' + cards[i][5] + '" class="card_link">Unity Asset Store</a>';
 
         links += '</div>';
 
-        let reminder = cards[i][6] === '' ? '' : '<p class="reminder">Click to expand</p>';
+        let reminder = cards[i][7] === '' ? '' : '<p class="reminder">Click to expand</p>';
 
         card_element.innerHTML =
             '<div class="flex row center card_header">' +
@@ -120,11 +125,11 @@ window.onload = function() {
             '</div>' +
             '<div class="flex row left" style="flex-wrap: nowrap;">' +
                 '<div class="flex column left card_text">' +
-                    '<p>' + cards[i][5] + '</p>' +
-                    '<p class="expanded_text" style="display: none">' + cards[i][6] + '</p>' +
+                    '<p>' + cards[i][6] + '</p>' +
+                    '<p class="expanded_text" style="display: none">' + cards[i][7] + '</p>' +
                     reminder +
                 '</div>' +
-                '<div class="flex column preview" style="background-image: url(previews/' + cards[i][7] + ')"></div>' +
+                '<div class="flex column preview" style="background-image: url(previews/' + cards[i][8] + ')"></div>' +
             '</div>';
 
         cards_element.appendChild(card_element);
