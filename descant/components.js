@@ -17,7 +17,7 @@ let components = [
         'ChangedResponse', 'None', 'Response',
         'Changes the text of a ResponseNode\'s response if some condition is met.',
         [
-            'ActorName', 'The name the actor who\'s variable is being checking',
+            'ActorName', 'The name the actor who\'s variable is being checked',
             'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, ' +
                             '<strong>Topic</strong>, etc.)',
             'VariableName', 'The name of the variable being checked',
@@ -150,8 +150,8 @@ let components = [
         ],
         'If <strong>ObjectTag</strong> is empty, the first found script in the scene ' +
         'with the given name is called instead.<br><br>If the <strong>ScriptName</strong> is empty, no method is ' +
-        'called. If <strong>TimerMethodName</strong> is empty, it isn\'t called. If <strong>FinishedMethodName</strong> ' +
-        'is empty, it isn\'t called.<br><br>Currently, methods with more than one parameter cannot be called.'
+        'called. If <strong>TimerMethodName</strong> is empty, that method isn\'t called. If <strong>FinishedMethodName</strong> ' +
+        'is empty, that method isn\'t called.<br><br>Currently, methods with more than one parameter cannot be called.'
     ],
     [
         'TopicChange', 'None', 'Response',
@@ -167,7 +167,18 @@ let components = [
 window.onload = function () {
     let components_parent = document.getElementById('components');
 
+    let components_list = document.createElement('div');
+    components_list.setAttribute('class', 'flex row center');
+    components_list.style.width = '80%';
+    components_parent.appendChild(components_list);
+
     for (let i in components) {
+        let component_link = document.createElement('a');
+        component_link.setAttribute('href', '#' + components[i][0].toLowerCase());
+        component_link.innerHTML = components[i][0];
+        component_link.setAttribute('class', 'list_component');
+        components_list.appendChild(component_link);
+
         let component = document.createElement('div');
         component.setAttribute('class', 'flex column start component');
         component.id = components[i][0].toLowerCase();
@@ -192,8 +203,10 @@ window.onload = function () {
 
     for (const j in anchors) {
         try {
-            anchors[j].setAttribute('rel', 'noreferrer noopener');
-            anchors[j].setAttribute('target', '_blank');
+            if (anchors[j].getAttribute('href')[0] !== '#') {
+                anchors[j].setAttribute('rel', 'noreferrer noopener');
+                anchors[j].setAttribute('target', '_blank');
+            }
         }
         catch { }
     }

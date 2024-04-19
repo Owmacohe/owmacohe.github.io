@@ -39,22 +39,21 @@
 
     <div class="flex column center section">
       <p class="important">
-        <strong>Please view the Descant <a href="https://github.com/owmacohe/Descant">README</a> for
+        <strong>Please view the <a href="https://github.com/owmacohe/descant">README</a> for
           information regarding installation and usage!</strong>
       </p>
     </div>
 
     <div class="flex row center section">
-      <h2 style="margin-right: 80px"><a href="https://assetstore.unity.com/packages/slug/273262">Descant Unity Asset Store Page</a></h2>
-      <h2><a href="https://github.com/owmacohe/Descant">Descant GitHub page</a></h2>
+      <h2 style="margin-right: 80px"><a href="https://assetstore.unity.com/packages/slug/273262">Unity Asset Store</a></h2>
+      <h2><a href="https://github.com/owmacohe/descant">GitHub</a></h2>
     </div>
 
     <div class="flex column center section">
       <p>
         <strong>Descant</strong> is a <strong>Unity</strong> dialogue system plugin. The
-        <strong><a href="https://assetstore.unity.com">Unity Asset Store</a></strong> is
-        <a href="https://github.com/owmacohe/Descant/Documentation/system_review.xlsx">chock full</a> of many such
-        types of plugins, ranging from <a href="https://assetstore.unity.com/packages/tools/behavior-ai/dialogue-system-for-unity-11672">feature-rich</a>,
+        <strong><a href="https://assetstore.unity.com">Unity Asset Store</a></strong> is chock full of many such types
+        of plugins, ranging from <a href="https://assetstore.unity.com/packages/tools/behavior-ai/dialogue-system-for-unity-11672">feature-rich</a>,
         to <a href="https://assetstore.unity.com/packages/tools/visual-scripting/conversa-dialogue-system-192549">ultra-minimalist</a>,
         to <a href="https://assetstore.unity.com/packages/tools/c5-dialogue-system-14881">downright bad</a>.
         <strong>Descant</strong> aims to hit the sweet spot between quality UI, powerful features, and easy-to-lean
@@ -73,18 +72,18 @@
       <h2>Component documentation</h2>
       <p>
         A number of Descant Components come bundled with the system by default. They cover a wide range of
-        applications, and can be edited at-will. Please see the next section, <strong>Component creation</strong>, for
+        applications, and can be edited at-will. Please see the next section, <a href="#component_creation">Component creation</a>, for
         a guide on how to write your own Components in C#.
       </p>
 
       <div class="flex row center" id="components"></div>
     </div>
 
-    <div class="flex column center section">
+    <div class="flex column center section" id="component_creation">
       <h2>Component creation</h2>
       <ol>
         <li>Create a new C# class in <strong>Descant/Components/Custom</strong>.</li>
-        <li>Make sure that the Component is in the <strong>DescantComponents</strong> namespace.</li>
+        <li>Make sure that the Component is in the <strong>Descant.Components</strong> namespace.</li>
         <li>Make sure that the Component inherits from the <strong>DescantComponent</strong> abstract class.</li>
         <li>Add a <strong>[Serializable]</strong> attribute to the Component.</li>
         <li>

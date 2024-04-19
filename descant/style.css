@@ -21,6 +21,7 @@
 }
 
 
+
 /* Elements */
 
 body {
@@ -71,6 +72,7 @@ li {
 }
 
 
+
 /* Flex Classes */
 
 .flex { display: flex; }
@@ -85,6 +87,7 @@ li {
 .start, .justify_start { justify-content: start; }
 .center, .justify_center { justify-content: center; }
 .end, .justify_end { justify-content: end; }
+
 
 
 /* Classes */
@@ -103,6 +106,12 @@ li {
     background: black;
 }
 
+.list_component {
+    margin: 10px;
+
+    font-size: 20px;
+}
+
 .component {
     width: 100%;
 
@@ -116,6 +125,8 @@ li {
 .component p {
     margin: 8px;
 }
+
+
 
 /* IDs */
 
