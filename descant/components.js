@@ -83,12 +83,12 @@ let components = [
         'PortraitChange', 'None', 'Any',
         'Changes and actor\'s portrait.',
         [
-            'PlayerPortrait', 'Whether the portrait being changed is the player\'s or the NPC\'s.',
+            'ActorName', 'The name the actor who\'s portrait is being changed',
             'ChangeType', 'The change being made to the portrait (set, enabled, or disabled)',
-            'PortraitName', 'The name of the new portrait to be set (optional)',
+            'PortraitIndex', 'The index of the portrait to be set (from within the actor\'s Portraits',
         ],
-        'For a portrait to be set, a <strong>Sprite</strong> with the corresponding name must be passed into the ' +
-        '<strong>DescantDialogueTrigger</strong>\'s <strong>portrait</strong> property.'
+        'For a portrait to be set, a <strong>Sprite</strong> with the corresponding index must be in the ' +
+        '<strong>DescantActor</strong>\'s <strong>Portraits</strong> property.'
     ],
     [
         'RandomizedChoice', '1', 'Choice',
