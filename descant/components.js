@@ -3,10 +3,9 @@ let components = [
         'ChangedChoice', 'None', 'Choice',
         'Changes the text of one of a ChoiceNode\'s choices if some condition is met.',
         [
-            'ActorName', 'The name the actor who\'s variable is being checked',
+            'Actor', 'A reference to the actor who\'s variable is being checked',
             'ChoiceNumber', 'The index of the choice being changed (base 1)',
-            'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, ' +
-                            '<strong>Topic</strong>, etc.)',
+            'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, <strong>Topic</strong>, etc.)',
             'VariableName', 'The name of the variable being checked',
             'ComparisonType', 'The type of the comparison being performed against the variable',
             'Comparison', 'The value to compare the variable against',
@@ -17,9 +16,8 @@ let components = [
         'ChangedResponse', 'None', 'Response',
         'Changes the text of a ResponseNode\'s response if some condition is met.',
         [
-            'ActorName', 'The name the actor who\'s variable is being checked',
-            'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, ' +
-                            '<strong>Topic</strong>, etc.)',
+            'Actor', 'A reference to the actor who\'s variable is being checked',
+            'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, <strong>Topic</strong>, etc.)',
             'VariableName', 'The name of the variable being checked',
             'ComparisonType', 'The type of the comparison being performed against the variable',
             'Comparison', 'The value to compare the variable against',
@@ -35,11 +33,10 @@ let components = [
             'MethodName', 'The name of the method being called',
             'Parameter', 'The parameter to pass to the method (optional)',
         ],
-        'If <strong>ObjectTag</strong> is empty, the first found script in the scene ' +
-        'with the given name is called instead.<br><br>If the <strong>ScriptName</strong> or <strong>MethodName</strong> ' +
-        'are empty, no method is called.<br><br>While <strong>Parameter</strong> is technically of type ' +
-        '<strong>string</strong>, <strong>Integers</strong> and <strong>Floats</strong> can also be written, and ' +
-        'will be parsed accordingly.<br><br>Currently, methods with more than one parameter cannot be called.'
+        'If <strong>ObjectTag</strong> is empty, the first found script in the scene with the given name is called instead.<br><br>' +
+        'If the <strong>ScriptName</strong> or <strong>MethodName</strong> are empty, no method is called.<br><br>' +
+        'While <strong>Parameter</strong> is technically of type <strong>string</strong>, <strong>Integers</strong> and <strong>Floats</strong> can also be written, and will be parsed accordingly.<br><br>' +
+        'Currently, methods with more than one parameter cannot be called.'
     ],
     [
         'Interruptable', 'None', 'Response',
@@ -53,20 +50,18 @@ let components = [
             'MethodName', 'The name of the method being called (optional)',
             'Parameter', 'The parameter to pass to the method (optional)',
         ],
-        'If <strong>ObjectTag</strong> is empty, the first found script in the scene ' +
-        'with the given name is called instead.<br><br>If the <strong>ScriptName</strong> or <strong>MethodName</strong> ' +
-        'are empty, no method is called.<br><br>While <strong>Parameter</strong> is technically of type ' +
-        '<strong>string</strong>, <strong>Integers</strong> and <strong>Floats</strong> can also be written, and ' +
-        'will be parsed accordingly.<br><br>Currently, methods with more than one parameter cannot be called.'
+        'If <strong>ObjectTag</strong> is empty, the first found script in the scene with the given name is called instead.<br><br>' +
+        'If the <strong>ScriptName</strong> or <strong>MethodName</strong> are empty, no method is called.<br><br>' +
+        'While <strong>Parameter</strong> is technically of type <strong>string</strong>, <strong>Integers</strong> and <strong>Floats</strong> can also be written, and will be parsed accordingly.<br><br>' +
+        'Currently, methods with more than one parameter cannot be called.'
     ],
     [
         'LockedChoice', 'None', 'Choice',
         'Removes one of a ChoiceNode\'s choices if some condition is met.',
         [
-            'ActorName', 'The name the actor who\'s variable is being checked',
+            'Actor', 'A reference to the actor who\'s variable is being checked',
             'ChoiceNumber', 'The index of the choice being removed (base 1)',
-            'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, ' +
-                            '<strong>Topic</strong>, etc.)',
+            'VariableType', 'The type of the variable being checked (e.g. <strong>Statistic</strong>, <strong>Topic</strong>, etc.)',
             'VariableName', 'The name of the variable being checked',
             'ComparisonType', 'The type of the comparison being performed against the variable',
             'Comparison', 'The value to compare the variable against',
@@ -83,37 +78,34 @@ let components = [
         'PortraitChange', 'None', 'Any',
         'Changes and actor\'s portrait.',
         [
-            'ActorName', 'The name the actor who\'s portrait is being changed',
+            'Actor', 'A reference to the actor who\'s portrait is being changed',
             'ChangeType', 'The change being made to the portrait (set, enabled, or disabled)',
             'PortraitIndex', 'The index of the portrait to be set (from within the actor\'s Portraits',
         ],
-        'For a portrait to be set, a <strong>Sprite</strong> with the corresponding index must be in the ' +
-        '<strong>DescantActor</strong>\'s <strong>Portraits</strong> property.'
+        'For a portrait to be set, a <strong>Sprite</strong> with the corresponding index must be in the <strong>DescantActor</strong>\'s <strong>Portraits</strong> property.'
     ],
     [
         'RandomizedChoice', '1', 'Choice',
         'Randomizes/shuffles a ChoiceNode\'s choices.',
         [],
-        'As a best practice, always make sure you only add this Component to a node <em>after</em> all other ' +
-        'Components have been added to that node (especially after ones that affect a specific choice).'
+        'This Component will automatically always be set to be the last variable, to avoid unintended errors.'
     ],
     [
         'RelationshipChange', 'None', 'Any',
         'Changes one of an actor\'s relationships.',
         [
-            'FirstActorName', 'The name of the actor who\'s relationship is being changed',
-            'SecondActorName', 'The name of the actor that the relationship corresponds to',
+            'FirstActor', 'A reference to the actor who\'s relationship is being checked',
+            'SecondActor', 'A reference to the actor that the relationship corresponds to',
             'OperationType', 'The change being made to the relationship (increase, decrease, or set)',
             'OperationValue', 'The value to change the relationship by',
         ],
-        'Changing the first actor\'s relationship to the second will <em>not</em> change the second\'s relationship ' +
-        'to the first.'
+        'Changing the first actor\'s relationship to the second will <em>not</em> change the second\'s relationship to the first.'
     ],
     [
         'StatisticChange', 'None', 'Any',
         'Changes an one of actor\'s statistics.',
         [
-            'ActorName', 'The name the actor who\'s statistic is being changed',
+            'Actor', 'A reference to the actor who\'s statistic is being changed',
             'StatisticName', 'The name of the statistic being changed',
             'OperationType', 'The change being made to the statistic (increase, decrease, or set)',
             'OperationValue', 'The value to change the statistic by',
@@ -124,15 +116,15 @@ let components = [
         'Calls a method from a script, passing it an actor\'s statistic (e.g. to display how an NPC\'s mood might ' +
         'increase/decrease during a dialogue).',
         [
-            'ActorName', 'The name the actor who\'s variable is being revealed',
+            'Actor', 'A reference to the actor who\'s statistic is being revealed',
             'StatisticName', 'The name of the statistic being revealed',
             'ObjectTag', 'The tag of the <strong>GameObject</strong> on which the script is located (optional)',
             'ScriptName', 'The name of the script on the <strong>GameObject</strong>',
             'MethodName', 'The name of the method being called',
         ],
-        'If <strong>ObjectTag</strong> is empty, the first found script in the scene ' +
-        'with the given name is called instead.<br><br>If the <strong>ScriptName</strong> or <strong>MethodName</strong> ' +
-        'are empty, no method is called.<br><br>Currently, methods with more than one parameter cannot be called.'
+        'If <strong>ObjectTag</strong> is empty, the first found script in the scene with the given name is called instead.<br><br>' +
+        'If the <strong>ScriptName</strong> or <strong>MethodName</strong> are empty, no method is called.<br><br>' +
+        'Currently, methods with more than one parameter cannot be called.'
     ],
     [
         'TimedChoice', '1', 'Choice',
@@ -148,16 +140,15 @@ let components = [
             'TimerMethodName', 'The name of the method called while the timer is counting down (optional)',
             'FinishedMethodName', 'The name of the method called when the timer reaches 0 (optional)',
         ],
-        'If <strong>ObjectTag</strong> is empty, the first found script in the scene ' +
-        'with the given name is called instead.<br><br>If the <strong>ScriptName</strong> is empty, no method is ' +
-        'called. If <strong>TimerMethodName</strong> is empty, that method isn\'t called. If <strong>FinishedMethodName</strong> ' +
-        'is empty, that method isn\'t called.<br><br>Currently, methods with more than one parameter cannot be called.'
+        'If <strong>ObjectTag</strong> is empty, the first found script in the scene with the given name is called instead.<br><br>' +
+        'If the <strong>ScriptName</strong> is empty, no method is called. If <strong>TimerMethodName</strong> is empty, that method isn\'t called. If <strong>FinishedMethodName</strong> is empty, that method isn\'t called.<br><br>' +
+        'Currently, methods with more than one parameter cannot be called.'
     ],
     [
         'TopicChange', 'None', 'Response',
         'Changes one of an actor\'s topics.',
         [
-            'ActorName', 'The name the actor who\'s topic is being changed',
+            'Actor', 'A reference to the actor who\'s topic is being changed',
             'TopicName', 'The name of the topic being changed',
             'ChangeType', 'The change being made to the topic (add or remove)',
         ]
