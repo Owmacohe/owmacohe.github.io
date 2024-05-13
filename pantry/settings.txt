@@ -2,5 +2,5 @@ title:The Pantry - Worldbuilding wiki
 creator:Owen Hellum
 date:2021-2024
 default:Introduction
-private:true
+private:false
 private_tags:🔒 private,🚧 todo
