@@ -2,16 +2,30 @@
 
 {🔒 private,Unspooling Song}
 
-1. Arrive/start on Yeima (session 1)
-   - Discovering the surrounding encampment
-   - Seeing [Voquev Vehirit]
-   - Fighting to get to The Unspooling
-3. Entering into the area of effect (session 2)
-   - Discovering all the weird shit (death, creativity, other groups, the unknown)
-   - Emotionally-driven dream sequences
-   - [Voquev Vehirit] starts to appear
-4. Reaching the underside of [❤️ Yeima] (session 3)
-   - Only the hardiest travellers remain
-   - Meeting with [Voquev Vehirit] and getting onto the ship below [Yeima]
-   - Confronting the fisherman and [Claster Veyeimall] (his speaking unspools reality, and his actions sunder emotions)
-   - Freeing/killing/erasing/changing [Voquev Vehirit]
+## Players' expectations
+- Fran (she/her): Number go up
+- Arthur (he/they): Crunch and forcing your way through a campaign (in a good way)
+- Cirdan (she/her): Lore
+- Fiona (she/any): Close attachments to characters, unintentional character growth, stakes
+- Mahalia (she/her): Feeling in-tune with your character, local customs
+
+## Session composition
+1. Arrival on [❤️ Yeima]
+   - Getting the players familiar with playing
+   - Introducing stakes
+   - First meeting with [Voquev Vehirit] (being compelled)
+   - BIG cliffhanger at the end
+2. The [starship|🚀 starships] within [Claster Veyeimall]
+   - Calmer session focused on discovery
+   - Character moments and highlights
+   - Second meeting with Voquev Vehirit (she opens up)
+   - Big reveal: Claster Veyeimall is being awoken
+   - The ship is piloted beyond reality
+3. The Fisherman upon [The Beach]
+   - Rug-pull
+     - The Fisherman's innocence
+     - Stripping away certain character inhibitions/elements
+     - Dream logic
+   - Third meeting with Voquev Vehirit (begging)
+   - Decision: free Voquev Vehirit or subdue Claster Veyeimall?
+   - Big fight with The Fisherman
