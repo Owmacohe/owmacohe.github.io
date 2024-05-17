@@ -1,6 +1,6 @@
 # Yulfrid of the Sanctuaries
 
-{🔒 private,😇 gods,Oleald,Yyenwid Erda,Giants,Taqadum Period,Hīkoi Period,⛰️ Yadri}
+{😇 gods,Oleald,Yyenwid Erda,Giants,Aetivima Period,Taqadum Period,Hīkoi Period,⛰️ Yadri}
 
 An old, wisened [Giant|Giants] [Oleald], living near the more materialistic [⭕ outer ring] borders of [⛰️ Yadri]. Rarely seen by others of their kind, but a travel destination for biologists and historians alike.
 

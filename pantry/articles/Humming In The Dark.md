@@ -1,6 +1,6 @@
 # Humming In The Dark
 
-{⏳ Krom,🔒 private,Hīkoi Period,Portable pestles,📜 myths and stories}
+{⏳ Krom,Hīkoi Period,Portable pestles,📜 myths and stories}
 
 ***[Date: ~pc2,400|Passage Consideration]***
 

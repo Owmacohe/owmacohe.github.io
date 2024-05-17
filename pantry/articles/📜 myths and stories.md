@@ -1,6 +1,6 @@
 # 📜 myths and stories
 
-{🏺 history}
+{🏺 history,❗ featured articles}
 
 Tales and stories, mostly concerning [godly|😇 gods] feats and wisdoms. Each [plane|🌍 planes] has its own customs, culture, and thus mythologies, as well as newer ones originating in [⚫ The Sparce].
 

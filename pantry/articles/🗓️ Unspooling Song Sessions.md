@@ -9,6 +9,28 @@
 - Fiona (she/any): Close attachments to characters, unintentional character growth, stakes
 - Mahalia (she/her): Feeling in-tune with your character, local customs
 
+## Characters
+- **Arthur:**
+   - Uidi Primordial / Florafolk / Oleald Multiclass
+   - ReMat who came together wrong
+   - Coming to The Unspooling to find each other
+- **Fran:**
+   - Kromacvin Artificer
+   - Parasitized by a Proto-Florafolk Hag
+   - Drawn to The Unspooling for both freedom and the Hag jumping ship
+- **Cirdan:**
+   - Curiosity Demon Warlock
+   - Homeschooled in The Sparce by Demon-possessed Demon guardian
+   - Hired by Copra Almorr to investigate The Unspooling and propose a deal to get Voquev Vehirit out
+- **Fiona:**
+   - Celestial Paladin
+   - Infected by The Sodality of Miasma
+   - Coming to The Unspooling to infect Voquev Vehirit
+- **Mahalia:**
+   - Dwarf Humanoid Bard
+   - Frontline medic of the PCMAF
+   - Coming to The Unspooling to keep the peace???
+
 ## Session composition
 1. Arrival on [❤️ Yeima]
    - Getting the players familiar with playing

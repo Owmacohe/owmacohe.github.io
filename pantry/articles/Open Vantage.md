@@ -1,6 +1,6 @@
 # Open Vantage
 
-{⛰️ Yadri,🔒 private,Aetivima Period,📜 myths and stories}
+{⛰️ Yadri,Aetivima Period,📜 myths and stories}
 
 ***[Date: pc926|Passage Consideration]***
 

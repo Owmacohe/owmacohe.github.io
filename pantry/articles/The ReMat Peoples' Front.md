@@ -1,6 +1,6 @@
 # The ReMat Peoples' Front
 
-{🔒 private,🤝 organizations,Atolondrar,Hīkoi Period,The Sparcian Commonwealth,❗ featured articles}
+{🤝 organizations,Atolondrar,Hīkoi Period,The Sparcian Commonwealth,❗ featured articles}
 
 A loose collection of united [Re-materialized|Flow Re-materialization] workers and squadron leaders from [The Sparcian Commonwealth]. Acting essentially as a union for Re-materialized individuals *(aka ReMats)* within the Commonwealth, they broker compensation deals, fight for rights, and promote culture.
 

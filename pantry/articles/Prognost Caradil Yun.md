@@ -1,6 +1,6 @@
 # Prognost Caradil Yun
 
-{Sainthood,🧑‍🔬 figures,The Hinengaro Registry,Taqadum Period,Giants,The Keepers of Countenance}
+{Sainthood,🧑‍🔬 figures,The Hinengaro Registry,Taqadum Period,Giants,The Keepers of Countenance,😇 gods,Oleald,Yyenwid Modsiw}
 
 A [Giant|Giants] interim council member of [The Hinengaro Registry] during its formation in the [Taqadum Period]. Quickly rising from Magus to Sacrosanct, he was a symbol to many of the organizational power that would come to define the age.
 

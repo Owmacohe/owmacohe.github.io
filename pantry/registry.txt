@@ -67,7 +67,7 @@ A soul-spinning conversation
 Aaliat pestle
 Æo
 Aetivima Period
-Als'faer en Luffen
+Alhammarret Aum
 Anchovy
 Angelfish
 Angler
@@ -433,6 +433,7 @@ Yyenwid Reavem
 Yyenwid Smetki
 Yyenwid Sundhei
 Yyenwid Terneh
+Yyenwid Thokotch
 Yyenwid Timula
 Yyenwid Truge
 Yyenwid Unoccu
@@ -440,6 +441,7 @@ Yyenwid Ureh
 Yyenwid Ventif
 Yyenwid Verhemente
 Yyenwid Vrehma
+Yyenwid Watazhat
 Zoofolk
 Zoofolk names
 Zopilote
