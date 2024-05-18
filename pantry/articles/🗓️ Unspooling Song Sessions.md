@@ -27,9 +27,9 @@
    - Infected by The Sodality of Miasma
    - Coming to The Unspooling to infect Voquev Vehirit
 - **Mahalia:**
-   - Dwarf Humanoid Bard
-   - Frontline medic of the PCMAF
-   - Coming to The Unspooling to keep the peace???
+   - Dwarf Bard?
+   - Member of hearth and home god's neighbourhood watch group
+   - Coming to The Unspooling to ask Voquev Vehirit questions about religious permission
 
 ## Session composition
 1. Arrival on [❤️ Yeima]
