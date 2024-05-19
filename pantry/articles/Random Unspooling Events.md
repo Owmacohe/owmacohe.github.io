@@ -21,4 +21,7 @@
 ## Intangible effects
 1. Loss/gain of a day
 2. Loss of a word
-3. ...
+3. A historical figure stops existing or starts existing
+4. Random ubiquitous biological change
+5. Someone, somewhere, decides it's time to leave their home
+6. A friend starts or stops existing

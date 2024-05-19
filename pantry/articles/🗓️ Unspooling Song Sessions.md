@@ -22,12 +22,12 @@
    - Curiosity Demon Warlock
    - Homeschooled in The Sparce by Demon-possessed Demon guardian
    - Hired by Copra Almorr to investigate The Unspooling and propose a deal to get Voquev Vehirit out
-- **Fiona:**
+- **Fiona:** Nohr
    - Celestial Paladin
    - Infected by The Sodality of Miasma
    - Coming to The Unspooling to infect Voquev Vehirit
 - **Mahalia:**
-   - Dwarf Bard?
+   - Dwarf Bard
    - Member of hearth and home god's neighbourhood watch group
    - Coming to The Unspooling to ask Voquev Vehirit questions about religious permission
 
