@@ -3,11 +3,11 @@
 {🔒 private,🗓️ Unspooling Song Sessions}
 
 ## In the darkness of the starship
-- Arthur
+- Roven / Wyvil
    - A dream about leading an army of soldiers across a glowing [Pestle|🚪 pestles]
    - Far ahead, the 'catwalk' ends in darkness and soldier are falling off it in spades
    - Behind, other soldiers are whispering, murmuring, and pointing
-- Fran
+- Violet
    - Crumpled up on one side of the bay, strapped to a chair and sandwiched in between crates
    - A small glowing blue flower is slowly but visibly pushing itself up through the back of your hand
 - Mahalia
@@ -21,7 +21,7 @@
    - As you approach, it speaks to you, asking for you to help it grow its garden
    - Cutting off your limbs, you impale them into the ground, where they extend, unfurl, and bloom, filling the sky with pollen and humid mist
    - This is a good dream
-- Cirdan
+- Caius
    - Looking out the window
    - Starships passing by (Lapetana Packaged Foods LLC, harvest starships, [Oarfish] luxury liners)
    - Sees one of the harvest ships attempt to get close to the spire as they enter the atmosphere
@@ -69,9 +69,9 @@
 > (based on Passive Perception) You begin to make out something peculiar before you. A hand, no, hands floating disembodied in the air. New ones seem to sprout from behind the old, and grab each others' wrists. They form a simple ring. Then more unfurl out. A hole made of hands. They expand, covering the extremities of your vision and your hearing. Sensory perception fails. And what is left behind is a small figure. Frail, with long, LONG flowing black hair covering its eyes. And Voquev Vehirit stands up before you.
 
 - [Voquev Vehirit] commandeers their bodies
-   - Arthur: "It's me you've been looking for. It's always just been me."
-   - Fran: "You're going to die in a few days. Make it to me, and that won't happen."
-   - Cirdan: "I accept. I'm ready to deal."
+   - Roven / Wyvil: "It's me you've been looking for. It's always just been me."
+   - Violet: "You're going to die in a few days. Make it to me, and that won't happen."
+   - Caius: "I accept. I'm ready to deal."
    - Nohr: "I know what you want. Free me, and your word will be as truth."
    - Mahalia: "How do you know your family is real? If you want to make sure that they stay that way, you'll come aid me."
 
@@ -82,13 +82,13 @@
 
 ## Fighting [Leyaprac, Standing Tall, Holding Fast, Unshaken]
 
-> You're at the head of this rushing crowd, running at full speed towards a fearsome line of armoured guards and monks. Before you, the wall of soldiers cries out: "Leyaprac! Standing Tall! Holding Fast! Unshaken!". Your crowd collides with theirs, pushing, straining, reaching to get to the other side; to the Unspooling.
+> You're at the head of this rushing crowd, running at full speed towards a fearsome line of armoured guards and monks. Before you, the wall of soldiers cries out: "Leyaprac! Standing Tall! Holding Fast! Unshaken!". Your crowd collides with theirs, pushing, straining, reaching to get to the other side; to The Unspooling.
 
 [Initiative tracker](https://dm.tools/tracker)
 
 - Stats
    - 2x Gladiator (Leyaprac Shieldbearer)
-   - 5x Bandit (Leyaprac Warden)
+   - 4x Bandit (Leyaprac Warden)
    - 1x Cult Fanatic (Leyaprac Fortifier)
 - Leyaprac death
    - When Wardens die, they produce a 5ft wall of flesh and red crystal. All creatures within the wall take 2d8 piercing damage
@@ -106,16 +106,28 @@
 - At the start of each round, roll on the [Random Unspooling Events] table
 
 ## Within the 'Event Horizon' / the world starts to peel back
-- *Description of the world stripping away*
-- *Description of reality stripping away*
 
-### Individuals with truths (drop these every 10 minutes or so)
+> You step beyond the fallen bodies and crytaline towers of the Leyaprac soldiers and make your way forward.
+> 
+> Ahead, the curtains of The Unspooling seem to part for you, fluttering gently, even with no wind around to be felt. Stepping through them feels like stepping out of a sauna; into something fresher and more real than the muggy consciousness you left behind.
+> 
+> You've been walking for hours. Or has it been minutes? Has it been both? By now, all recognizable landmarks have been completely stripped away. Crumpling and floating away like paper caught on the breeze. In their place rise high, ominous mountains, and the landscape is covered with strange lichens, dead bushes, and above you sit stars that none of you recognize.
+> 
+> Ahead of you, through the haze, you begin to spot other figures.
+
+### Individuals with truths
 - Love-stricken person: they and [Voquev Vehirit] would be perfect romantic partners
 - Combatants: they are going to die tomorrow
 - Bloody person: they have a cancer in their stomach
 - Celestial: they can see now, and are completely overwhelmed by it
 - Nameless person: keep losing and regaining different names
 
+> Every one of these individuals, including yourselves, seem to be shuffling towards some destination. It is The Only Place To Go. You know this. And at the center of both physical and mental paths which you now take, lies a singularity. A place of infinite darkness, gravity, concept, and truth. The point of no return. The unstoppable force *and* the immovable object. As you fall into the pit alongside the other marchers, your bodies pile on top of each other, and your mind is squeezed, as sand through a seive, beyond some primitive reality.
+
+- Question for the whole party: "How does it feel to become unshackled from truth?"
+
 ## Getting to the 'Singularity' / final cliffhanger
-- *Description of falling through*
-- *Final cliffhanger*
+
+> THUNDER! YOU'RE FALLING A MILLION MILES A MINUTE! THE AIR RUSHES PAST AS THE VACUUM OF THE SPARCE PRESSES IN ALL AROUND YOU. ABOVE YOU THE HOLE FROM WHICH YOU JUST FELL PUCKERS AND BLOSSOMS INTO A THOUSAND TINY EYES THAT WEEP AS YOU LEAVE. YOU'RE UNDER YEIMA. LITERALLY UNDERNEATH IT. FLOATING AND FALLING AND TUMBLING OUT INTO THE VAST EMPTY VOID. THE UNSPOOLING'S CURTAINS DRAPE OFF THE GREAT PLANE LIKE INVASIVE VINES. HOW DID IT EVER GROW SO LARGE? YOU. LOOK. DOWN.
+> 
+> A GREAT FORM STRETCHES BELOW YOU, UNDER YEIMA. A DARK, ALL-ENCOMPASSING NAKED BODY THAT BLENDS IN AND OUT OF THE STARS. IN AND OUT OF YOUR PERCEPTION. IN AND OUT OF REALITY. IT'S SO BIG THAT TURNING YOUR HEAD TO SEE AND HEAR IT ONLY PROVIDES YOU WITH MORE GLIMPSES OF ITS GRANDEUR. AND IT HAS A FACE. AND IT'S LOOKING AT YOU. AND CLASTER VEYEIMALL, WAKENING GOD OF EMOTION, BORN AND DEAD UPON THE SHORE SPEAKS TO YOU. IT'S TERRIBLE, WHAT IT CONFIDES IN YOU. IT MAKES YOU WANT TO CRY AND SCREAM AND DIE AND LAUGH. AND YOU TUMBLE, BROKEN ALL THE WAY DOWN INTO ITS GASPING MOUTH.

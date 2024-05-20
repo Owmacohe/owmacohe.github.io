@@ -10,26 +10,38 @@
 - Mahalia (she/her): Feeling in-tune with your character, local customs
 
 ## Characters
-- **Arthur:**
-   - Uidi Primordial / Florafolk / Oleald Multiclass
+- **Arthur:** Roven Blum / Wyvil Tyr / [Alhammarret Aum]
+   - Uidi Primordial Cleric / Florafolk Fighter / Oleald Multiclass
    - ReMat who came together wrong
    - Coming to The Unspooling to find each other
-- **Fran:**
+   - 92 HP, 16 AC, 18 PP / 100 HP, 13 AC, 14 PP
+- **Fran:** Violet Siltmore
    - Kromacvin Artificer
    - Parasitized by a Proto-Florafolk Hag
    - Drawn to The Unspooling for both freedom and the Hag jumping ship
-- **Cirdan:**
+   - 84 HP, 14 AC, 13 PP
+- **Cirdan:** Caius Caroway
    - Curiosity Demon Warlock
    - Homeschooled in The Sparce by Demon-possessed Demon guardian
    - Hired by Copra Almorr to investigate The Unspooling and propose a deal to get Voquev Vehirit out
+   - 63 HP, 13 AC, 10 PP
 - **Fiona:** Nohr
    - Celestial Paladin
    - Infected by The Sodality of Miasma
    - Coming to The Unspooling to infect Voquev Vehirit
+   - 
 - **Mahalia:**
    - Dwarf Bard
    - Member of hearth and home god's neighbourhood watch group
    - Coming to The Unspooling to ask Voquev Vehirit questions about religious permission
+   - 
+
+## Character effect reminders
+- Roven / Wyvil Oleald trigger: When <= 1/2 health or in extremely paranoid situation
+- Caius: Has a jar containing a stolen sliver of [Voquev Yinsenvanyr]
+- Nohr: People who know about The Sodality may be fearful or antagonistic towards them
+- Violet: The hag will emerge when she is close to a god, dying, or when triggered by some outside force
+- Mahalia: Her god may show up if she's failing to adhere to household duties
 
 ## Session composition
 1. Arrival on [❤️ Yeima]
