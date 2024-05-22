@@ -78,6 +78,9 @@
           Add a <strong>[NodeType(...)]</strong> attribute to the Component (replace the '...' with the <strong>DescantNodeType</strong> indicating which types of nodes it can be added to).
         </li>
         <li>
+          <em>Optional: Add a <strong>[DontShowInEditor]</strong> attribute to the Component to bar it from being added in the <strong>Descant Graph Editor</strong>.</em>
+        </li>
+        <li>
           Add any number of public variables/properties to the Component (these properties will show up in the <strong>Descant Graph Editor</strong> when you add the Component to a node) (you may also create private/protected properties, but they won't appear in the editor). Properties may only be of type <strong>string</strong>, <strong>float</strong>, <strong>int</strong>, <strong>bool</strong>, <strong>Vector2</strong>, <strong>Vector3</strong>, <strong>Color</strong>, <strong>UnityEngine.Object</strong> (including but not limited to <strong>DescantActor</strong>), or <strong>Enum</strong>.
         </li>
         <li>
