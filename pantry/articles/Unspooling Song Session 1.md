@@ -10,7 +10,7 @@
 - Violet
    - Crumpled up on one side of the bay, strapped to a chair and sandwiched in between crates
    - A small glowing blue flower is slowly but visibly pushing itself up through the back of your hand
-- Mahalia
+- Enya
    - Walking the aisles, checking up and making sure everyone's okay
    - You see people from all over. Mostly tourists, but some researchers, some families, some loners
    - At the back of the starship is a multifaith shrine, including a small statue of Voquev Arwa
@@ -73,7 +73,7 @@
    - Violet: "You're going to die in a few days. Make it to me, and that won't happen."
    - Caius: "I accept. I'm ready to deal."
    - Nohr: "I know what you want. Free me, and your word will be as truth."
-   - Mahalia: "How do you know your family is real? If you want to make sure that they stay that way, you'll come aid me."
+   - Enya: "How do you know your family is real? If you want to make sure that they stay that way, you'll come aid me."
 
 - People begin darting towards The Unspooling
 - Some in groups, some individual

@@ -10,31 +10,31 @@
 - Mahalia (she/her): Feeling in-tune with your character, local customs
 
 ## Characters
-- **Arthur:** Roven Blum / Wyvil Tyr / [Alhammarret Aum]
-   - Uidi Primordial Cleric / Florafolk Fighter / Oleald Multiclass
+- **Arthur:** Blum / Wyvil Tyr / [Alhammarret Aum] (they/he)
+   - Florafolk Fighter / Uidi Primordial Cleric / Oleald Multiclass
    - ReMat who came together wrong
    - Coming to The Unspooling to find each other
    - 92 HP, 16 AC, 18 PP / 100 HP, 13 AC, 14 PP
-- **Fran:** Violet Siltmore
+- **Fran:** Violet Siltmore (she/her)
    - Kromacvin Artificer
    - Parasitized by a Proto-Florafolk Hag
    - Drawn to The Unspooling for both freedom and the Hag jumping ship
    - 84 HP, 14 AC, 13 PP
-- **Cirdan:** Caius Caroway
+- **Cirdan:** Caius Caroway (he/him)
    - Curiosity Demon Warlock
    - Homeschooled in The Sparce by Demon-possessed Demon guardian
    - Hired by Copra Almorr to investigate The Unspooling and propose a deal to get Voquev Vehirit out
    - 63 HP, 13 AC, 10 PP
-- **Fiona:** Nohr
+- **Fiona:** Nohr (she/they/it/any)
    - Celestial Paladin
    - Infected by The Sodality of Miasma
    - Coming to The Unspooling to infect Voquev Vehirit
-   - 
-- **Mahalia:**
+   - 102 HP, 19 AC, 9 PP
+- **Mahalia:** Enya (she/her)
    - Dwarf Bard
    - Member of hearth and home god's neighbourhood watch group
    - Coming to The Unspooling to ask Voquev Vehirit questions about religious permission
-   - 
+   - 71 HP, 15 AC, 20 PP
 
 ## Character effect reminders
 - Roven / Wyvil Oleald trigger: When <= 1/2 health or in extremely paranoid situation
