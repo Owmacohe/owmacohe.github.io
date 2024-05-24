@@ -131,3 +131,18 @@
 > THUNDER! YOU'RE FALLING A MILLION MILES A MINUTE! THE AIR RUSHES PAST AS THE VACUUM OF THE SPARCE PRESSES IN ALL AROUND YOU. ABOVE YOU THE HOLE FROM WHICH YOU JUST FELL PUCKERS AND BLOSSOMS INTO A THOUSAND TINY EYES THAT WEEP AS YOU LEAVE. YOU'RE UNDER YEIMA. LITERALLY UNDERNEATH IT. FLOATING AND FALLING AND TUMBLING OUT INTO THE VAST EMPTY VOID. THE UNSPOOLING'S CURTAINS DRAPE OFF THE GREAT PLANE LIKE INVASIVE VINES. HOW DID IT EVER GROW SO LARGE? YOU. LOOK. DOWN.
 > 
 > A GREAT FORM STRETCHES BELOW YOU, UNDER YEIMA. A DARK, ALL-ENCOMPASSING NAKED BODY THAT BLENDS IN AND OUT OF THE STARS. IN AND OUT OF YOUR PERCEPTION. IN AND OUT OF REALITY. IT'S SO BIG THAT TURNING YOUR HEAD TO SEE AND HEAR IT ONLY PROVIDES YOU WITH MORE GLIMPSES OF ITS GRANDEUR. AND IT HAS A FACE. AND IT'S LOOKING AT YOU. AND CLASTER VEYEIMALL, WAKENING GOD OF EMOTION, BORN AND DEAD UPON THE SHORE SPEAKS TO YOU. IT'S TERRIBLE, WHAT IT CONFIDES IN YOU. IT MAKES YOU WANT TO CRY AND SCREAM AND DIE AND LAUGH. AND YOU TUMBLE, BROKEN ALL THE WAY DOWN INTO ITS GASPING MOUTH.
+
+## Notes
+- Players watched a [Format Iera] procession go by, carrying [Profane Gyamtso]
+   - They were somewhat sympathetic, but couldn't do much
+- Players visited an axe-throwing carnival game. They won a few items:
+   - A bunch of original [Baratype]s (owned by Enya)
+   - The supposed collarbone of 'dead' god [Voquev Prehen] (owned by Nohr)
+   - They stole [Winding Road Eradication Report; Addendum XI] after leaving (currently carried by Violet)
+- When the sheaf of The Unspooling fell, Caius was the only one not under Enya's protective hut
+- Becoming unshackled from truth
+   - **Blum:** Feeling closer to what they're looking for
+   - **Violet:** At peace?
+   - **Caius:** Generally good?
+   - **Nohr:** Remembering an old dream
+   - **Enya:** Generally good?

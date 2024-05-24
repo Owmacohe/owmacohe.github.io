@@ -62,4 +62,4 @@
      - Dream logic
    - Third meeting with Voquev Vehirit (begging)
    - Decision: free Voquev Vehirit or subdue Claster Veyeimall?
-   - Big fight with The Fisherman
+   - Big fight with The Fisherman, who shifts between himself, Voquev Vehirit, and Claster Veyeimall
