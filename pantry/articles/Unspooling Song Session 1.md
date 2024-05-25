@@ -4,28 +4,28 @@
 
 ## In the darkness of the starship
 - Roven / Wyvil
-   - A dream about leading an army of soldiers across a glowing [Pestle|🚪 pestles]
-   - Far ahead, the 'catwalk' ends in darkness and soldier are falling off it in spades
-   - Behind, other soldiers are whispering, murmuring, and pointing
+  - A dream about leading an army of soldiers across a glowing [Pestle|🚪 pestles]
+  - Far ahead, the 'catwalk' ends in darkness and soldier are falling off it in spades
+  - Behind, other soldiers are whispering, murmuring, and pointing
 - Violet
-   - Crumpled up on one side of the bay, strapped to a chair and sandwiched in between crates
-   - A small glowing blue flower is slowly but visibly pushing itself up through the back of your hand
+  - Crumpled up on one side of the bay, strapped to a chair and sandwiched in between crates
+  - A small glowing blue flower is slowly but visibly pushing itself up through the back of your hand
 - Enya
-   - Walking the aisles, checking up and making sure everyone's okay
-   - You see people from all over. Mostly tourists, but some researchers, some families, some loners
-   - At the back of the starship is a multifaith shrine, including a small statue of Voquev Arwa
-   - How does the statue depict the god? Do you make a prayer or an offering?
+  - Walking the aisles, checking up and making sure everyone's okay
+  - You see people from all over. Mostly tourists, but some researchers, some families, some loners
+  - At the back of the starship is a multifaith shrine, including a small statue of Voquev Arwa
+  - How does the statue depict the god? Do you make a prayer or an offering?
 - Nohr
-   - Also dreaming, this time of a field of plants, heavy and drooping with large seed pods
-   - In the center sits a thousand-legged entity with flowers for eyes
-   - As you approach, it speaks to you, asking for you to help it grow its garden
-   - Cutting off your limbs, you impale them into the ground, where they extend, unfurl, and bloom, filling the sky with pollen and humid mist
-   - This is a good dream
+  - Also dreaming, this time of a field of plants, heavy and drooping with large seed pods
+  - In the center sits a thousand-legged entity with flowers for eyes
+  - As you approach, it speaks to you, asking for you to help it grow its garden
+  - Cutting off your limbs, you impale them into the ground, where they extend, unfurl, and bloom, filling the sky with pollen and humid mist
+  - This is a good dream
 - Caius
-   - Looking out the window
-   - Starships passing by (Lapetana Packaged Foods LLC, harvest starships, [Oarfish] luxury liners)
-   - Sees one of the harvest ships attempt to get close to the spire as they enter the atmosphere
-   - It gets pulled, and you can see it activiting its backup thrusters, just barely making it out of the gravitation pull of something beyond your vision
+  - Looking out the window
+  - Starships passing by (Lapetana Packaged Foods LLC, harvest starships, [Oarfish] luxury liners)
+  - Sees one of the harvest ships attempt to get close to the spire as they enter the atmosphere
+  - It gets pulled, and you can see it activiting its backup thrusters, just barely making it out of the gravitation pull of something beyond your vision
 
 > The great spire of Yeima rises high, pulling the rest of the land up with it. Draped over and around it, like the infinite layers of some shimmering onion, or insect wing are the curtains of The Unspooling. Massive jagged crystalline tendrils wrap around the spire, and these long sheets of translucent film cover the landscape, raining down from some source above like an explosion frozen in time, and fluttering in the breeze.
 
@@ -69,11 +69,11 @@
 > (based on Passive Perception) You begin to make out something peculiar before you. A hand, no, hands floating disembodied in the air. New ones seem to sprout from behind the old, and grab each others' wrists. They form a simple ring. Then more unfurl out. A hole made of hands. They expand, covering the extremities of your vision and your hearing. Sensory perception fails. And what is left behind is a small figure. Frail, with long, LONG flowing black hair covering its eyes. And Voquev Vehirit stands up before you.
 
 - [Voquev Vehirit] commandeers their bodies
-   - Roven / Wyvil: "It's me you've been looking for. It's always just been me."
-   - Violet: "You're going to die in a few days. Make it to me, and that won't happen."
-   - Caius: "I accept. I'm ready to deal."
-   - Nohr: "I know what you want. Free me, and your word will be as truth."
-   - Enya: "How do you know your family is real? If you want to make sure that they stay that way, you'll come aid me."
+  - Roven / Wyvil: "It's me you've been looking for. It's always just been me."
+  - Violet: "You're going to die in a few days. Make it to me, and that won't happen."
+  - Caius: "I accept. I'm ready to deal."
+  - Nohr: "I know what you want. Free me, and your word will be as truth."
+  - Enya: "How do you know your family is real? If you want to make sure that they stay that way, you'll come aid me."
 
 - People begin darting towards The Unspooling
 - Some in groups, some individual
@@ -87,13 +87,13 @@
 [Initiative tracker](https://dm.tools/tracker)
 
 - Stats
-   - 2x Gladiator (Leyaprac Shieldbearer)
-   - 4x Bandit (Leyaprac Warden)
-   - 1x Cult Fanatic (Leyaprac Fortifier)
+  - 2x Gladiator (Leyaprac Shieldbearer)
+  - 4x Bandit (Leyaprac Warden)
+  - 1x Cult Fanatic (Leyaprac Fortifier)
 - Leyaprac death
-   - When Wardens die, they produce a 5ft wall of flesh and red crystal. All creatures within the wall take 2d8 piercing damage
-   - When Shieldbearers die, they produce a 15ft wall of flesh and red crystal. All creatures within the wall take 2d12 piercing damage
-   - Either can choose to spend one action to wait and explode on the next turn. Doing so doubles the range and adds 1d6 to the damage
+  - When Wardens die, they produce a 5ft wall of flesh and red crystal. All creatures within the wall take 2d8 piercing damage
+  - When Shieldbearers die, they produce a 15ft wall of flesh and red crystal. All creatures within the wall take 2d12 piercing damage
+  - Either can choose to spend one action to wait and explode on the next turn. Doing so doubles the range and adds 1d6 to the damage
 
 ^images/unspooling/gladiator.png^
 ^images/unspooling/bandit.png^
@@ -134,15 +134,15 @@
 
 ## Notes
 - Players watched a [Format Iera] procession go by, carrying [Profane Gyamtso]
-   - They were somewhat sympathetic, but couldn't do much
+  - They were somewhat sympathetic, but couldn't do much
 - Players visited an axe-throwing carnival game. They won a few items:
-   - A bunch of original [Baratype]s (owned by Enya)
-   - The supposed collarbone of 'dead' god [Voquev Prehen] (owned by Nohr)
-   - They stole [Winding Road Eradication Report; Addendum XI] after leaving (currently carried by Violet)
+  - A bunch of original [Baratype]s (owned by Enya)
+  - The supposed collarbone of 'dead' god [Voquev Prehen] (owned by Nohr)
+  - They stole [Winding Road Eradication Report; Addendum XI] after leaving (currently carried by Violet)
 - When the sheaf of The Unspooling fell, Caius was the only one not under Enya's protective hut
 - Becoming unshackled from truth
-   - **Blum:** Feeling closer to what they're looking for
-   - **Violet:** At peace?
-   - **Caius:** Generally good?
-   - **Nohr:** Remembering an old dream
-   - **Enya:** Generally good?
+  - **Blum:** Feeling closer to what they're looking for
+  - **Violet:** At peace?
+  - **Caius:** Generally good?
+  - **Nohr:** Remembering an old dream
+  - **Enya:** Generally good?

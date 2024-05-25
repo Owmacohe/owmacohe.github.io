@@ -314,7 +314,7 @@ function check_and_add(line, is_last) {
 
                     // If this is a list, whether ordered or not...
                     if ((j === 0 || indent_count > 0) && (indicator === '- ' || is_ordered)) {
-                        current_list_level = (indent_count / 3) + 1; // Setting the indentation level
+                        current_list_level = Math.ceil(indent_count / 3) + 1; // Setting the indentation level
                         i = indent_count + 2; // Jumping ahead
                     }
 
