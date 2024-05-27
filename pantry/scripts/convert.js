@@ -219,7 +219,11 @@ function process_text(text, title) {
     reset(); // resetting all the HTML closing tags and such
 
     // Making the article have 2 columns if it's too long
-    if (text.length >= 1000)  description.style.columnCount = '2';
+    if (text.length >= 3000)  {
+        article.style.width = '1500px';
+        description.style.columnCount = '3';
+    }
+    else if (text.length >= 1500)  description.style.columnCount = '2';
 
     // The number of non-invisible characters in the article description
     let character_length = 0;

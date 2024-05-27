@@ -1,18 +1,24 @@
 :root {
-    --background: #0B032D;
-    --article: #735c6b;
-    --article-dark: #4a3b45;
-    --text: #401322;
-    --title: #e15ea6;
-    --tags: #F67E7D;
-    --links: #FFB997;
+    --background: #1a1111;
+
+    --article: #665b52;
+    --article-header: #403932;
+
+    --tag-text: #eafcd7;
+
+    --title: #93c493;
+    --text: #1a1111;
+    --links: #C8AD55;
 }
 
 ::selection {
-    background: var(--tags);
+    background: var(--tag-text);
 }
 li::selection, li b::selection, li i::selection {
     background: var(--text);
+}
+.quote::selection {
+    color: var(--text);
 }
 
 @font-face {
@@ -69,12 +75,12 @@ button {
     border: none;
     border-radius: 3px;
 
-    color: var(--tags);
+    color: var(--tag-text);
     background: var(--text);
 }
 button:hover {
     color: var(--text);
-    background: var(--tags);
+    background: var(--tag-text);
 }
 
 h2 button {
@@ -86,14 +92,14 @@ a {
     color: var(--links);
 }
 a:hover {
-    color: var(--tags);
+    color: var(--tag-text);
 }
 
 ul, ol {
     margin: 5px;
     padding-left: 20px;
 
-    color: var(--tags);
+    color: var(--tag-text);
 }
 
 .associated_list li {
@@ -135,7 +141,7 @@ input {
 
     color: var(--links);
 
-    background: var(--article-dark);
+    background: var(--article-header);
 }
 
 .flexrow, .flexcolumn {
@@ -158,6 +164,8 @@ input {
 
     border-radius: 5px;
 
+    font-size: 18px;
+
     background: var(--article);
 }
 
@@ -170,7 +178,7 @@ input {
 
     font-weight: 375;
     white-space: normal;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 .topbar {
@@ -181,7 +189,7 @@ input {
 
     border-radius: 5px;
 
-    background: var(--article-dark);
+    background: var(--article-header);
 }
 
 .associated_parent {
@@ -199,7 +207,7 @@ input {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    background: var(--article-dark);
+    background: var(--article-header);
 }
 
 .associated {
@@ -257,7 +265,7 @@ input {
 
     border-radius: 4px;
 
-    color: var(--tags);
+    color: var(--tag-text);
 
     background: var(--text);
 }
@@ -305,5 +313,5 @@ input {
 
     margin-top: 20px;
 
-    color: var(--article-dark);
+    color: var(--article-header);
 }

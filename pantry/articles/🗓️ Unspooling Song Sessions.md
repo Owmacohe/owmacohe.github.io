@@ -63,3 +63,4 @@
   - Third meeting with Voquev Vehirit (begging)
   - Decision: free Voquev Vehirit or subdue Claster Veyeimall?
   - Big fight with The Fisher King, who shifts between himself, Voquev Vehirit, and Claster Veyeimall
+  - Tell the story of [Veyeimall In Thought]
