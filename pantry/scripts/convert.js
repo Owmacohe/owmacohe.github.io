@@ -220,7 +220,7 @@ function process_text(text, title) {
 
     // Making the article have 2 columns if it's too long
     if (text.length >= 3000)  {
-        article.style.width = '1500px';
+        article.style.width = '1300px';
         description.style.columnCount = '3';
     }
     else if (text.length >= 1500)  description.style.columnCount = '2';

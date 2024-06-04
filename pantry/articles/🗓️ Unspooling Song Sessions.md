@@ -56,11 +56,15 @@
   - Big reveal: Claster Veyeimall is being awoken
   - The ship is piloted beyond reality
 3. The Fisher King upon [The Beach]
-  - Rug-pull
-    - The Fisher King's innocence
-    - Stripping away certain character inhibitions/elements
-    - Dream logic
-  - Third meeting with Voquev Vehirit (begging)
+  - Strange realities
+    - **Alhammarret**: Back in time, set on the coast of Yeima. All of the other characters are foot soldiers. At some point, The Flow comes through, giving Arthur the choice to retire Alhammarret and bring both Blum and Wyvil back. Vehirit aids with this in some way.
+    - **Violet**: The Hag within Violet is about to jump ship. Its magic is trong and primal, and letting it exit would have a high chance of being fatal. Vehirit can draw it out, but it would be easier to make it at home. Re-write the reality of Proto-races to blend them back into modern day.
+    - **Caius**: On one of the mid-Yeiman spires. Each character is a high-ranking city official. On the council are two unnamed characters that need to be reformed to be Caius's parents again. Vehirit aids with this, in exchange for the sliver of Yinsenvanyr.
+    - **Nohr**: The party is a set of proteins, pollens, or fungus spores, building a chain of disease-resistant, hyper infectious DNA, controllable by Nohr. Vehirit helps with this, but is naturally also immune. Nohr infests Truth in this way.
+    - **Enya**: The [214th Isotoxal Comapact] was originally founded on Fomhr. But the reality can be changed with Vehirit's help so that it's re-founded on Yeima, with explicit rules for the worship of Voquev Arwa. What's more, the religion can be baked into the very fabric of The Pantry, bringing new forms of life and magic into reality.
+    - Each of these realities grants some combat-relevant ability
   - Decision: free Voquev Vehirit or subdue Claster Veyeimall?
-  - Big fight with The Fisher King, who shifts between himself, Voquev Vehirit, and Claster Veyeimall
+    - This is done first as starship combat, then makes its way into traditional combat
+    - The result of which determines whether they fight The Fisher King fused with Vehirit or with Veyeimall
+    - The other of which aids them in combat as their 'starship'
   - Tell the story of [Veyeimall In Thought]

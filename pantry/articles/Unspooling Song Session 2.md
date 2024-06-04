@@ -92,6 +92,9 @@
 
 > The world melts away from your eyes and ears like melting glass or streaking rain. Some of you who have flown in starships may be familiar with this sensation. For others, it's an extremely disorienting moment, before the world reasserts itself again. You're standing in what seems to be a large, empty amphitheatre. All the seats have been removed, and the whole of the room is draped in concealing white fabric. Like snow stuck to every surface, the landscape is strange and alien.
 
+^images/unspooling/andro.png^
+^images/unspooling/gyno.png^
+
 - Enemies
   - Voquev Vehirit (Gynosphinx)
   - Claster Veyeimall (Androsphinx)
