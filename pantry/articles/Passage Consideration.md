@@ -21,6 +21,21 @@ The full Consideration timeline can be viewed [here|Full Consideration Timeline]
 
 ---
 
+The following are the 10 months of a Consideration year:
+
+1. Pathway's Month
+2. Chronicle's Month
+3. Flight's Month
+4. Weighting's Month
+5. Distance's Month
+6. Birthing's Month
+7. Abundance's Month
+8. Savagery's Month
+9. Density's Month
+10. Response's Month
+
+---
+
 The following dates are major dates along the Consideration:
 
 **pc-∞:** [The Awakening of the Gods]

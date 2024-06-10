@@ -101,6 +101,8 @@ function set_current_article(button, is_button = true) {
     // Getting the name of the article to set
     let file_name = is_button ? (button.id === '' ? button.innerHTML : button.id) : button;
 
+    file_name = get_search(file_name);
+
     if (!is_tag_private(file_name)) {
         // Clearing the current article
         let temp = document.getElementById('current_article').children;
@@ -225,15 +227,8 @@ function process_text(text, title) {
     }
     else if (text.length >= 1500)  description.style.columnCount = '2';
 
-    // The number of non-invisible characters in the article description
-    let character_length = 0;
-
-    for (let character_index = 0; character_index < description.innerText.length; character_index++)
-        if (description.innerText[character_index] === ' ' || description.innerText[character_index] !== '')
-            character_length++;
-
     // Appending a count of characters in the article
-    description.innerHTML += '<div class="flexrow" id="character_count">' + character_length + ' characters</div>';
+    description.innerHTML += '<div class="flexrow" id="character_count">~' + description.innerText.length + ' characters, ~' + description.innerText.split(' ').length + ' words</div>';
 
     // Adding scroll reminders after a few seconds to make sure images have loaded in properly
     // (the main body won't ever scroll, but I've left the line commented out in case it becomes scrollable in the future)
@@ -309,20 +304,21 @@ function check_and_add(line, is_last) {
                 // As soon as something that isn't a blank space is found...
                 else {
                     // The characters that mark the start of a list element
-                    let indicator = line.substring(j, j+2);
+                    let indicator_size_2 = line.substring(j, j+2);
+                    let indicator_size_3 = line.substring(j, j+3);
 
                     // Whether this list element is ordered
-                    let is_ordered = (indicator[0] >= 0 && indicator[0] <= 9 && indicator[1] === '.');
+                    let is_ordered_2 = indicator_size_2[1] === '.';
+                    let is_ordered_3 = indicator_size_3[2] === '.';
+                    let is_ordered = is_ordered_2 || is_ordered_3;
 
                     is_current_ordered = is_ordered;
 
                     // If this is a list, whether ordered or not...
-                    if ((j === 0 || indent_count > 0) && (indicator === '- ' || is_ordered)) {
+                    if ((j === 0 || indent_count > 0) && (is_ordered || indicator_size_2 === '- ')) {
                         current_list_level = Math.ceil(indent_count / 3) + 1; // Setting the indentation level
-                        i = indent_count + 2; // Jumping ahead
+                        i = indent_count + (is_ordered ? (is_ordered_2 ? 2 : 3) : 2); // Jumping ahead
                     }
-
-                    // TODO: above should check for ordered list elements that have numbers greater than 9
 
                     break; // Breaking no matter what
                 }

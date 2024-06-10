@@ -6,7 +6,7 @@
 
     --tag-text: #add9ad;
 
-    --title: #8fb38f;
+    --title: #86b386;
     --text: #1a1111;
     --links: #C8AD55;
 }
@@ -86,6 +86,12 @@ button:hover {
 h2 button {
     color: var(--title);
     font-size: 23px;
+}
+
+.quote button {
+    margin-left: 2px;
+
+    border: 1px solid var(--tag-text);
 }
 
 a {
