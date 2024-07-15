@@ -58,7 +58,10 @@
 
 - Arthur has the choice to retire Alhammarret and bring both Blum and Wyvil back
 - To do so, Veyeimall can reverse the flow of [The Flow] so that rather than reconstituting matter, it removes and stores it
-- **Combat relevance**: Can now switch between Blum and Wyvil twice per combat
+- **Combat relevance**: Two forms
+  - Blum: Bonus action to pull all enemies within 5ft in (1 / long rest)
+  - Wyvil: Bonus action to expel all enemies within 5ft out to 60ft (1 / long rest)
+  - Action Every time an enemy collides with you or with the terrain, it takes 2d12
 
 ## Enya's reality break
 - The [214th Isotoxal Comapact] can be re-written, going from mortal-written to being baked into the very fabric of reality itself
@@ -128,7 +131,7 @@
   - [Veyeimall]-empowered [Fisher King]: **Hydra**
     - 7 heads
     - 300 HP
-    - For every 40 HP lost, a random head (1d8, reroll 8) is lost and it becomes a **Giant Crocodile** with 20 HP
+    - For every 40 HP lost, a random head (1d8, reroll 8) is lost and it becomes a **Giant Crocodile** with 25 HP
     - Legendary action to grant a head advantage to hit (2x / round)
 
 ^images/unspooling/hydra.png^

@@ -1,6 +1,6 @@
 # Emmaryn
 
-{Hinengaro Heist PCs,🔒 private,The Hinengaro Heist,Kromacvin Florafolk}
+{Hinengaro Heist PCs,🔒 private,The Hinengaro Heist,Kromacvin,Florafolk}
 
 > **Player:** Leo (LeoMorV)
 > **Race:** Kromacvin/Florafolk

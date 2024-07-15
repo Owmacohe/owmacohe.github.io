@@ -1,6 +1,6 @@
 # Cardamom
 
-{Crystal Ship NPCs,The Soetanto Trading Outpost,Zoofolk Sainthood,🔒 private}
+{Crystal Ship NPCs,The Soetanto Trading Outpost,Zoofolk,Sainthood,🔒 private}
 
 ## **Physical description**
 - **Stat block:** 

@@ -6,28 +6,28 @@
 
 ### **Characters**
 - [Mule]
-   - Found the [Giant|Giants] in the hold
-   - Handily defeated the [Regiment 7] guards
-   - Protected the interns
-   - Got familiar with the ship
+ - Found the [Giant|Giants] in the hold
+ - Handily defeated the [Regiment 7] guards
+ - Protected the interns
+ - Got familiar with the ship
 - [Penellaphe (Pen) Astaseul]
-   - Made friends with LIV
-   - Fixed the Orca's navigation
-   - Interfaced and customized [The Crystal Ship] (set to one of her dads, kind and intelligent, if a bit neurotic)
+ - Made friends with LIV
+ - Fixed the Orca's navigation
+ - Interfaced and customized [The Crystal Ship] (set to one of her dads, kind and intelligent, if a bit neurotic)
 - [Brahmiel (Brahm)]
-   - Helped the doctors with a patient
-   - Cooked dinner
-   - Set up greenery in the ship
+ - Helped the doctors with a patient
+ - Cooked dinner
+ - Set up greenery in the ship
 
 ### **Party**
 - The party met with [Bran Hegan], [Ver], and [Dure] and were given their ship
 - The party was introduced to [Reffiq] and [Twis]
-   - They learned of their death in a firefight after a protest on [💀 Reht]
+ - They learned of their death in a firefight after a protest on [💀 Reht]
 - The ship was stocked, and they headed on their way
 
 ### **To plan**
 - Flesh out [Reffiq] and [Twis]'s backstories
-   - Make ship personalities for them
+ - Make ship personalities for them
 - Add more gods/godly influence
 - Make name lists
 - Plan the colony encounter
@@ -59,43 +59,43 @@ For [Penellaphe (Pen) Astaseul]: Sharp shale ridge, with a flat valley down belo
 All awaken with small circular tattoos around the base of their necks. This is a by-product of the re-materialization.
 
 1. In the medbay, surrounded by bodies
-   - All on cots
-   - Doctors don't notice at first, and are unarmed
+ - All on cots
+ - Doctors don't notice at first, and are unarmed
 2. In the hold, tucked away between boxes
-   - Inside a flimsy box, must break to exit
-   - Various weapons, medicines, archives, and [🪨 Remora]
-   - Sedated and sleeping [Giant|Giants] tucked away in the very back. Covered in a tarp and well hidden
-   - Sounds of footfalls up above
+ - Inside a flimsy box, must break to exit
+ - Various weapons, medicines, archives, and [🪨 Remora]
+ - Sedated and sleeping [Giant|Giants] tucked away in the very back. Covered in a tarp and well hidden
+ - Sounds of footfalls up above
 3. In a detached escape pod
-   - Coming out of a stasis tube
-   - Glass is cracked, but holding
-   - First aid kit (open), rations, emergency manuals, etc. lying around
+ - Coming out of a stasis tube
+ - Glass is cracked, but holding
+ - First aid kit (open), rations, emergency manuals, etc. lying around
 
 ### **They each have to survive for a little while in separate ways**
 
 1. Attended to by doctors upon awakening, and asked to help with a critical patient
-   - Given stimulants and water
-   - Other patient (Vhenjel, Human) starts to convulse, and a vein must be found to inject serum (Medicine DC 10 to stabilize)
+ - Given stimulants and water
+ - Other patient (Vhenjel, Human) starts to convulse, and a vein must be found to inject serum (Medicine DC 10 to stabilize)
 2. Very small (and easy) combat encounter in an empty corridor. 2 [Regiment 7] boarding soldiers (Cultist, p. 345)
-   - Just coming out of a room after searching it
-   - Will give chase if ran from
+ - Just coming out of a room after searching it
+ - Will give chase if ran from
 3. [Flowstone|Flowstones] hidden in the cabin (Investigation DC 7 to find). Must float back to the main ship or activate an emergency beacon
-   - With the Flowstone, they can kick off and bounce along through the debris towards a hole in the hull
-   - If they activate a beacon, the ship's engineer shoots out a grappling hook to pull them in
+ - With the Flowstone, they can kick off and bounce along through the debris towards a hole in the hull
+ - If they activate a beacon, the ship's engineer shoots out a grappling hook to pull them in
 
 ### **Eventually, the cavalry arrives. They are separately brought brought to the breach**
 
 1. Escorted by doctors
-   - They were told to bring any that survived to the bridge
-   - They're still very nervous, and keep a distance (dangerous procedure)
+ - They were told to bring any that survived to the bridge
+ - They're still very nervous, and keep a distance (dangerous procedure)
 2. Meet up with Commonweath soldiers
-   - [Barracuda] and [Cuttlefish] ships fly by
-   - Explosions far out in space
-   - Door at the end of the corridor opens, and [Dure] and soldier come through
+ - [Barracuda] and [Cuttlefish] ships fly by
+ - Explosions far out in space
+ - Door at the end of the corridor opens, and [Dure] and soldier come through
 3. Float or towed to the [Engine room] by the ship's Engineer
-   - Back of ship is blown off, exposed to [⚫ The Sparce]
-   - Must deploy the emergency shield (INT DC 12 to activate)
-   - Comms are down, so they have to go to the bridge to report the change
+ - Back of ship is blown off, exposed to [⚫ The Sparce]
+ - Must deploy the emergency shield (INT DC 12 to activate)
+ - Comms are down, so they have to go to the bridge to report the change
 
 ### **They are commended for their effort by Captain [Bran Hegan]**
 
@@ -113,16 +113,16 @@ I know this is probably all a lot to handle right now, but, I have one more matt
 - Given a crew: Engineers to fill out the ranks. They had also been dead, but were re-materialized shortly before the battle
 - Given a [ship|The Crystal Ship]: Most of their ships were out fighting, or were being repaired. However, they had this experimental model in the hangar that they were willing to spare
 - Ship tour
-   - Bridge with [Median helm]
-   - Grappling interface
-   - Common area & private rooms
-   - Engine room
-   - Medbay
-   - Kitchen
+ - Bridge with [Median helm]
+ - Grappling interface
+ - Common area & private rooms
+ - Engine room
+ - Medbay
+ - Kitchen
 - Ship personality is met with and customized
-   - Must be set up through the helm first
-   - Given a name and other identity elements
-   - Encourages others to try the helm as well
+ - Must be set up through the helm first
+ - Given a name and other identity elements
+ - Encourages others to try the helm as well
 
 Captain Hegan allows you to stay aboard his ship for as long as you want, to recuperate and get a feel for your new environment. In time, you all settle into your various nooks and crannies, and get ready for your first voyage aboard The Crystal Ship. (Anything they want to do before leaving). When the time comes, the support structs and scaffolding holding the ship in place are removed, the Orca's bay doors are opened, and your ship slowly begins to lift. It edges out of the doors, and hangs for a moment freely suspended in [⚫ The Sparce], before slowly picking up speed. You glide out and away from the main ship arcing around to head a course. With your reforged hearts, a destination charted, and minds on the future, you head out into the unknown.
 
@@ -131,28 +131,28 @@ Captain Hegan allows you to stay aboard his ship for as long as you want, to rec
 ## **NPCs**
 
 - [Commonwealth|The Sparcian Commonwealth] soldiers
-   - Captain [Bran Hegan]
-   - [Ver]
-   - [Dure]
-   - Kolb, Anger Demon (Scout, p. 347)
+ - Captain [Bran Hegan]
+ - [Ver]
+ - [Dure]
+ - Kolb, Anger Demon (Scout, p. 347)
 - Ship doctors
-   - Kaed, Halfling (Acolyte, p. 342)
-   - Talira, Kromacvin (Commoner, p. 345)
+ - Kaed, Halfling (Acolyte, p. 342)
+ - Talira, Kromacvin (Commoner, p. 345)
 - Ship engineer
-   - LIV, Construct (Guard, p. 347)
+ - LIV, Construct (Guard, p. 347)
 - New crew
-   - [Twis]
-   - [Reffiq]
+ - [Twis]
+ - [Reffiq]
 
 ---
 
 ## **Nearby happenings**
 - A firefight happening between a [Barracuda] Conclave ship and a modified [Cuttlefish] Commonwealth ship
-   - Cuttlefish is losing
-   - Gets swept away into [🌌 The Flow]
+ - Cuttlefish is losing
+ - Gets swept away into [🌌 The Flow]
 - 3 [Fear Demon|Demons] lab interns are hiding, huddled inside a storage closet
-   - Cling to whoever saves them
+ - Cling to whoever saves them
 - 5-6 communications and logistics officers have found a cache of guns and are fighting back
-   - They lose a couple before being aided by soldiers
+ - They lose a couple before being aided by soldiers
 - Warehouse workers are pushing large covered barrels of [🪨 Remora] down the hallway
-   - They mumble incantations and warding spells as they pass
+ - They mumble incantations and warding spells as they pass

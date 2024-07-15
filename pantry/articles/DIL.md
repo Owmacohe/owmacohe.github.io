@@ -1,6 +1,6 @@
 # DIL
 
-{Crystal Ship NPCs,Constructs Zopilote,🔒 private}
+{Crystal Ship NPCs,Constructs,Zopilote,🔒 private}
 
 ## **Physical description**
 - **Stat block:** 
