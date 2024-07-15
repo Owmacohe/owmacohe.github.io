@@ -1,6 +1,6 @@
 title:The Pantry - Worldbuilding wiki
 creator:Owen Hellum
 date:2021-2024
-default:Unspooling Song Session 3
-private:true
+default:Introduction
+private:false
 private_tags:🔒 private,🚧 todo
