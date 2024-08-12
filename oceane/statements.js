@@ -26,7 +26,7 @@ let statements = [
     "When fire meets gasoline, ooh ooh",
     "It's been the grandpa of universe",
     "Je t'envoie plein d'urine :)",
-    "<i>points to herself</i> This old thing?",
+    "<i>*points to herself*</i> This old thing?",
     "I'm… a drama movie!",
     "Crumpling tension",
     "Did you get your wise teeth removed?",
@@ -46,6 +46,47 @@ let statements = [
     "Excuse the fuck of me?",
     "The tartelette coffin",
     "I hate you for what you just did! Turning up the oil lamp again?!",
+    "I love this guy. He’s a weirdo.",
+    "Calm down, Shakira",
+    "I love smelling things at Walmart",
+    "The good ol’ ass",
+    "I will sing the fuck out of… myself",
+    "Ho! He’s so like oh!",
+    "You still exist to receive my hate",
+    "Coming out the oven. The baking… bread",
+    "I don’t like people. I mean, I do, like… conceptually",
+    "You’re the fish I never thought I was gonna have on my boat",
+    "You know, I fuck like a Camembert, they say",
+    "Now who’s the turkey? Huh?!",
+    "Oh! I just made a chicken!",
+    "Ooh, I’ve got a wild horse over here!",
+    "Drive meeeeee… out?",
+    "Hey! Je suis pas un potato bag!",
+    "Hey, what’s your #porn these days?",
+    "It’s like a fruit salad of porn. Are you more into mango or kiwi tonight?",
+    "Oh, look at that good ham!",
+    "What am I, your sunscreen?",
+    "Mes préférées sont les crackheads du Village",
+    "Because bla bla blee bla bla bla",
+    "<i>*holding my face*</i> Look at this beautiful pumpkin! Ready for the fall",
+    "Things are going fancy",
+    "Oh you know. I’m your big dust you know",
+    "I love weird people. I’m pretty weird myself",
+    "It’s not a body, it’s <i>*the*</i> body",
+    "You motherfucker from another mother",
+    "And everything goes to numb",
+    "Oppa Canman Style",
+    "Someone is breaking into us",
+    "I’m like, not a good character you know? I’m like, very very bad you know?",
+    "<i>*killing someone with an axe in Skyrim*</i> Oh! You feel good bro?!",
+    "Tu peux jeter du fromage sur un enfant",
+    "Hi hi, I’m a funny cookie!",
+    "T’es… t’es… j’ai pas de mots en Anglais pour ça",
+    "Get the door… and don’t come back with the keys",
+    "J’ai le fucking raclette booty",
+    "You’re like the mantis and I’m like the big leaf",
+    "I want to make people less less, and a bit more",
+    "I have a weird steak",
 ];
 
 let statement_element;
@@ -53,13 +94,21 @@ let statement_element;
 let animations;
 
 window.onload = function() {
+    document.getElementById('count').innerHTML = 'now featuring ' + statements.length + ' statements!';
+
     statement_element = document.getElementById('statement');
 
     animations = true;
 };
 
 function show_statement() {
-    statement_element.innerHTML = '"' + statements[Math.floor(Math.random() * statements.length)] + '"';
+    if (statements.length === 0) location.reload();
+
+    var index = Math.floor(Math.random() * statements.length);
+    var statement = statements[index];
+    statements.splice(index, 1);
+
+    statement_element.innerHTML = '"' + statement + '"';
 
     if (animations) animateCSS('#statement', 'tada');
 }
