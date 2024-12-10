@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <title>BRINE</title>
+    <meta name="title" content="BRINE" />
+    <meta name="description" content="You are SAILORS / The sea is TREACHEROUS / Each session is a CATCH / Each catch is MONSTROUS" />
+
+    <!-- Stylesheets & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="brine_generator.js"></script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://omch.tech/brine" />
+    <meta property="og:title" content="BRINE" />
+    <meta property="og:description" content="You are SAILORS / The sea is TREACHEROUS / Each session is a CATCH / Each catch is MONSTROUS" />
+    <meta property="og:image" content="https://omch.tech/brine/social_media.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://omch.tech/brine" />
+    <meta property="twitter:title" content="BRINE" />
+    <meta property="twitter:description" content="You are SAILORS / The sea is TREACHEROUS / Each session is a CATCH / Each catch is MONSTROUS" />
+    <meta property="twitter:image" content="https://omch.tech/brine/social_media.png" />
+</head>
+<body class="flex column center">
+    <div class="flex column center" style="width: 60%">
+        <h1>BRINE</h1>
+
+        <p class="section"><strong>BRINE</strong> is a fantasy role-playing game for 3-6 players (+ a Game Master) about seafaring, catching dangerous monsters, and keeping your crew together. Players act as <strong>Officers</strong>, controlling not only themselves, but 2-3 subordinate sailors below them. Reeling in and fighting monstrous <strong>Catches</strong> is no easy task, but the natural resources gleaned fetch a hefty price when sold at port. Between butchering mind-bending aquatic horrors, satiating ship-devils with <strong>Meat</strong> and <strong>Oil</strong>, and braving the natural elements of the perpetual storm, set sail for a gruelling yet rewarding experience on the high seas.</p>
+
+        <p class="section">Download v0.1 <a href="BRINE_v0.1.pdf">here</a> or from the Itch page below:</p>
+
+        <iframe class="section" frameborder="0" src="https://itch.io/embed/2900716?linkback=true&amp;border_width=5&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=ff9100&amp;border_color=ff9100" width="560" height="175"><a href="https://omch.itch.io/brine">BRINE by OMCH</a></iframe>
+
+        <div class="flex column center box section" style="width:60%;">
+            <h2>Character generator</h2>
+
+            <div class="flex row center section">
+                <div class="flex column center row_element">
+                    <strong><p class="box" id="seafaring">?</p></strong>
+                    <p>Seafaring</p>
+                </div>
+
+                <div class="flex column center row_element">
+                    <strong><p class="box" id="deadeye">?</p></strong>
+                    <p>Deadeye</p>
+                </div>
+
+                <div class="flex column center row_element">
+                    <strong><p class="box" id="grit">?</p></strong>
+                    <p>Grit</p>
+                </div>
+
+                <div class="flex column center row_element">
+                    <strong><p class="box" id="leeway">?</p></strong>
+                    <p>Leeway</p>
+                </div>
+            </div>
+
+            <p class="section">Officer: <strong id="officer">?</strong></p>
+
+            <button onclick="generate()"><strong>GENERATE</strong></button>
+        </div>
+    </div>
+</body>
+</html>
