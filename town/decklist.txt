@@ -1,0 +1,70 @@
+1 Hazduhr the Abbot
+1 Abbey Matron
+1 Alabaster Wall
+1 Alaborn Musketeer
+1 Alaborn Zealot
+1 Alms
+1 Archery Training
+1 Ardent Militia
+1 Armistice
+1 Auspicious Ancestor
+1 Aysen Bureaucrats
+1 Blood of the Martyr
+1 Caravan Escort
+1 Caribou Range
+1 Carrier Pigeons
+1 Commander's Authority
+1 Credit Voucher
+1 Devout Harpist
+1 Droning Bureaucrats
+1 Eager Cadet
+1 Elder Cathar
+1 False Prophet
+1 Farmstead
+1 Favorable Destiny
+1 Festival of Trokin
+1 Flowering Field
+1 Gather the Townsfolk
+1 Gavony Ironwright
+1 Heavy Mattock
+1 Holy Day
+1 Honor the Fallen
+1 Icatian Moneychanger
+1 Icatian Store
+1 Icatian Town
+1 Inheritance
+1 Ironwright's Cleansing
+1 Kjeldoran Home Guard
+1 Light of Day
+1 Midnight Guard
+1 Moment of Silence
+1 Monk Realist
+1 Noble Steeds
+1 Palace Jailer
+1 Path of Peace
+31 Plains
+1 Radiant Fountain
+1 Recruit the Worthy
+1 Remote Farm
+1 Renewing Dawn
+1 Revered Elder
+1 Righteousness
+1 Sanctimony
+1 Scars of the Veteran
+1 Seasoned Tactician
+1 Secluded Steppe
+1 Seller of Songbirds
+1 Show of Valor
+1 Story Circle
+1 Task Force
+1 Temple Elder
+1 Town Sentry
+1 Tragic Poet
+1 Treasure Hunter
+1 Unruly Mob
+1 Vengeance
+1 Veteran Bodyguard
+1 Village Bell-Ringer
+1 Volunteer Militia
+1 Volunteer Reserves
+1 Youthful Knight
