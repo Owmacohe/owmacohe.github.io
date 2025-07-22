@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: black;
+}
+
+p {
+    margin: 0;
+
+    font-family: "hightower-text", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 30px;
+}
+
+img {
+    pointer-events: none;
+}
+
+h1,
+h2 {
+    margin: 0;
+
+    font-family: 'Staatliches', cursive;
+
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-weight: 300;
+
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: 200;
+
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.flex_column,
+.flex_row {
+    display: flex;
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+.flex_row {
+    flex-direction: row;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    align-items: end;
+    justify-content: end;
+}
+
+.left {
+    align-items: start;
+    justify-content: start;
+}
+
+.spread_out {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.light_text {
+    color: white;
+}
+
+.dark_text {
+    color: black;
+}
+
+.feature {
+    width: 800px;
+
+    margin: 50px 100px;
+}
+
+.banner {
+    z-index: 1;
+
+    width: 120%;
+    margin-top: -15px;
+    margin-bottom: -60px;
+}
+
+#glow:hover {
+    filter: drop-shadow(0px 0px 10px grey);
+}
+
+.logo_link:hover {
+    filter: opacity(50%);
+}
+
+.logo_link img {
+    height: 90%;
+}
+
+#nav_bar {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+
+    height: 100px;
+    width: 100%;
+
+    padding: 10px;
+
+    background: black;
+}
+
+#hero {
+    width: 110%;
+
+    background-image: url("images/hero/hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 97%;
+
+    margin-top: 90px;
+}
+
+#trailer {
+    width: 110%;
+    margin-top: -200px;
+
+    background-image: url("images/trailer/page-rip-texture.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+#features {
+    width: 110%;
+    padding-bottom: 150px;
+
+    background-image: url("images/features/game-features-tiles-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#footer {
+    width: 103%;
+
+    background-image: url("images/footer/footer-bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+@keyframes bob_small {
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 20px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes bob_big {
+    0% {
+        margin-top: 0;
+        rotate: 2deg;
+    }
+
+    50% {
+        margin-top: 80px;
+        rotate: -2deg;
+    }
+
+    100% {
+        margin-top: 0;
+        rotate: 2deg;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 7deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+.bob_small {
+    animation: bob_small 2s infinite;
+}
+
+.bob_big {
+    animation: bob_big 3s infinite;
+}
+
+.rotate {
+    animation: rotate 2s infinite;
+}
