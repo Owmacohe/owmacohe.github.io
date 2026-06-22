@@ -1,0 +1,151 @@
+{
+  "queueCards": [
+    {
+      "name": "Please",
+      "description": [ "" ],
+      "answer": [ "Se faz favor" ]
+    },
+    {
+      "name": "Sorry",
+      "description": [ "" ],
+      "answer": [ "Desculpe/a" ]
+    },
+    {
+      "name": "Colours",
+      "description": [
+        "Red", "Pink", "Orange",
+        "Yellow", "Green", "Blue",
+        "Violet", "Lilac", "White",
+        "Black", "Grey", "Brown"
+      ],
+      "answer": [
+        "Vermelho", "Rosa", "Laranja",
+        "Amarelo", "Verde", "Azul",
+        "Roxo", "Lilás", "Branco",
+        "Preto", "Cinza", "Marrom"
+      ]
+    },
+    {
+      "name": "Introduce yourself",
+      "description": [ "" ],
+      "answer": [
+        "Olá!",
+        "Chamo-me Owen",
+        "Eu seu Canadiano e eu vivo em Montréal",
+        "Eu tens vinte e quatro anos"
+      ]
+    },
+    {
+      "name": "Numbers",
+      "description":  [ "0-10" ],
+      "answer": [
+        "zero",
+        "um", "dois", "três", "quatro", "cinco",
+        "seis", "sete", "oito", "nove", "dez"
+      ]
+    },
+    {
+      "name": "Seasons",
+      "description": [ "" ],
+      "answer": [ "Inverno", "Primavera", "Verão", "Outono" ]
+    },
+    {
+      "name": "Positionality",
+      "description": [
+        "in front of", "behind", "beside",
+        "between", "above", "under", "inside" ],
+      "answer": [
+        "em frente de", "atrás de", "ao lado de",
+        "entre", "em cima de", "debaixo de", "dentro da"
+      ]
+    },
+    {
+      "name": "Tell the current time",
+      "description": [ "" ],
+      "answer": [
+        "[#] (e [meia/quarto/#]) da [manhã/tarde/noite]",
+        "[quarto/#] pras [#]",
+        "meio-[dia/noite]"
+      ]
+    },
+    {
+      "name": "Meals of the day",
+      "description": [ "breakfast", "lunch", "dinner" ],
+      "answer": [ "pequeno-almoço", "almoço", "jantar" ]
+    },
+    {
+      "name": "Goodbye",
+      "description": [ "" ],
+      "answer": [ "Ate ja" ]
+    },
+    {
+      "name": "Marital status",
+      "description": [
+        "Single", "Partnered (Boyfriend/Girlfriend)",
+        "Engaged (Fiancé/Fiancée)", "Married (Husband/Wife)",
+        "Divorced (Ex-huband/Ex-wife)", "Widower/Widow (dead Husband/Wife)" ],
+      "answer": [
+        "Soltero/a", "Casado/a (Namorado/a)",
+        "Casado/a (Noivo/a)", "Casado/a (Marido/Esposa)",
+        "Divorciado/a (Ex-Marido/Ex-Esposa)", "Viuvo/a (Falceido/a)"
+      ]
+    },
+    {
+      "name": "here / there / there (far)",
+      "description": [ "" ],
+      "answer": [ "aqui", "ali", "lá" ]
+    },
+    {
+      "name": "Days of the week",
+      "description": [ "" ],
+      "answer": [
+        "segunda-feira", "terça-feira", "quarta-feira",
+        "quinta-feira", "sexta-feira",
+        "sábado", "domingo", "fim-da-semana"
+      ]
+    },
+    {
+      "name": "Thank you / You're welcome",
+      "description": [ "" ],
+      "answer": [ "Obrigado/a", "De nada" ]
+    },
+    {
+      "name": "Months",
+      "description": [ "" ],
+      "answer": [
+        "janeiro", "fevereiro", "março",
+        "abril", "maio", "junho",
+        "julho", "agosto", "setembro",
+        "outubro", "novembro", "dezembro"
+      ]
+    },
+    {
+      "name": "Numbers",
+      "description": [ "11-20" ],
+      "answer": [
+        "onze", "doze", "treze", "quatorze", "quinze",
+        "dezesseis", "dezessete", "dezoito", "dezenove", "vinte"
+      ]
+    },
+    {
+      "name": "Family",
+      "description": [
+        "Father", "Mother",
+        "Brother", "Sister", "Siblings",
+        "Uncle", "Aunt",
+        "Grandfather", "Grandmother", "Grandparents"
+      ],
+      "answer": [
+        "o pai", "a mãe",
+        "o irmão", "a irmã", "os irmãos", "as irmãs",
+        "o tio", "a tia",
+        "o avô", "a avó", "o avós"
+      ]
+    },
+    {
+      "name": "Days",
+      "description": [ "today", "yesterday", "day before yesterday", "tomorrow" ],
+      "answer": [ "hoje", "ontem", "anteontem", "amanhã" ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+/* Elements */
+
+h1, h2, h3, p { margin: 0; white-space: pre; }
+
+
+
+/* Queue cards */
+
+.queueCard {
+    margin: 4vw;
+}
+
+#queueCardDescription {
+    width: 20vw;
+}
+
+#queueCardAnswer {
+    width: 20vw;
+}
+
+
+
+/* Flex */
+
+.column, .row { display: flex; flex-wrap: wrap; gap: 1vw; }
+.column { flex-direction: column; }
+.row { flex-direction: row; }
+
+.start {
+    justify-content: start;
+    align-items: start;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.end {
+    justify-content: end;
+    align-items: end;
+}
