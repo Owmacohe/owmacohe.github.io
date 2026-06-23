@@ -7,19 +7,28 @@
     <title>Português</title>
 </head>
 <body>
-    <div class="column center">
+    <div class="column center" style="padding: 2vw">
         <h1>Portugês</h1>
 
         <div class="row center">
-            <button onclick="reload()">Queue card</button>
-            <button onclick="answer()">Answer</button>
+            <button>Queue cards</button>
+            <button>Useful phrases</button>
+            <button>Verbs</button>
+            <button>Dictionary</button>
         </div>
 
-        <div class="column center queueCard">
-            <h2 id="queueCardTitle">...</h2>
-            <p id="queueCardDescription">...</p>
-            <h3 style="margin-top: 4vw">Answer</h3>
-            <p id="queueCardAnswer">...</p>
+        <div class="column center" id="info" style="margin-top: 2vw">
+            <div class="row center">
+                <button onclick="reload()" id="reload">Queue card</button>
+                <button onclick="answer()" id="answer">Answer</button>
+            </div>
+
+            <div class="column center" id="queueCard" style="margin-top: 4vw">
+                <h2 id="queueCardTitle">...</h2>
+                <p id="queueCardDescription">...</p>
+                <h3 style="margin-top: 4vw">Answer</h3>
+                <p id="queueCardAnswer">...</p>
+            </div>
         </div>
     </div>
 </body>

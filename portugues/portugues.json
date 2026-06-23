@@ -19,9 +19,9 @@
         "Black", "Grey", "Brown"
       ],
       "answer": [
-        "Vermelho", "Rosa", "Laranja",
+        "Vermelho", "Cor de rosa", "Cor de laranja",
         "Amarelo", "Verde", "Azul",
-        "Roxo", "Lilás", "Branco",
+        "Violeta", "Lilás", "Branco",
         "Preto", "Cinza", "Marrom"
       ]
     },
@@ -53,7 +53,8 @@
       "name": "Positionality",
       "description": [
         "in front of", "behind", "beside",
-        "between", "above", "under", "inside" ],
+        "between", "above", "under", "inside"
+      ],
       "answer": [
         "em frente de", "atrás de", "ao lado de",
         "entre", "em cima de", "debaixo de", "dentro da"
@@ -83,7 +84,8 @@
       "description": [
         "Single", "Partnered (Boyfriend/Girlfriend)",
         "Engaged (Fiancé/Fiancée)", "Married (Husband/Wife)",
-        "Divorced (Ex-huband/Ex-wife)", "Widower/Widow (dead Husband/Wife)" ],
+        "Divorced (Ex-huband/Ex-wife)", "Widower/Widow (dead Husband/Wife)"
+      ],
       "answer": [
         "Soltero/a", "Casado/a (Namorado/a)",
         "Casado/a (Noivo/a)", "Casado/a (Marido/Esposa)",
@@ -97,7 +99,7 @@
     },
     {
       "name": "Days of the week",
-      "description": [ "" ],
+      "description": [ "Starting with Monday" ],
       "answer": [
         "segunda-feira", "terça-feira", "quarta-feira",
         "quinta-feira", "sexta-feira",
@@ -146,6 +148,505 @@
       "name": "Days",
       "description": [ "today", "yesterday", "day before yesterday", "tomorrow" ],
       "answer": [ "hoje", "ontem", "anteontem", "amanhã" ]
+    },
+    {
+      "name": "Fruit",
+      "description": [
+        "Orange", "Guava", "Grape", "Avocado", "Plum",
+        "Pineapple", "Mango", "Papaya", "Lemon", "Strawberry",
+        "Coconut", "Pear", "Watermelon", "Melon", "Peach",
+        "Passion Fruit", "Apple"
+      ],
+      "answer": [
+        "Laranja", "Goiaba", "Uva", "Abacate", "Ameixa",
+        "Abacaxi", "Manga", "Mamão", "Limão", "Marango",
+        "Coco", "Pera", "Melancia", "Malão", "Pêssego",
+        "Maracujà", "Maçã"
+      ]
+    },
+    {
+      "name": "Important verbs",
+      "description": [
+        "ser", "ter", "chamar", "falar", "morar",
+        "trabalhar", "jogar", "gostar", "estudar", "comprar",
+        "tomar", "tocar", "pagar", "comer", "beber"
+      ],
+      "answer": [
+        "be", "have", "name / be named", "speak", "reside",
+        "work", "play", "like", "study", "buy",
+        "take", "touch", "pay", "eat", "drink"
+      ]
+    },
+    {
+      "name": "Body parts",
+      "description": [
+        "head", "hair", "eye", "ear", "nose",
+        "mouth", "neck", "shoulder", "arm", "elbow",
+        "stomach", "waist", "hand", "fingers", "thigh",
+        "hip", "leg", "knee", "foot", "toes",
+        "ankle"
+      ],
+      "answer": [
+        "a cabeça", "o cabelo", "o olho", "a orelha", "o nariz",
+        "a boca", "o pescoço", "o ombro", "o braço", "o cotovelo",
+        "a barriga", "a cintura", "a mão", "os dedos", "a coxa",
+        "o quadril", "a perna", "o joelho", "o pé", "os dedos do pé",
+        "o tornozelo"
+      ]
     }
-  ]
+  ],
+  "usefulPhrases": [],
+  "verbs": [
+      {
+        "name": "ser",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "sou",
+          "2nd": "és",
+          "3rd": "é",
+          "4th": "somos",
+          "5th": "sois",
+          "6th": "são"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "ter",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "tenho",
+          "2nd": "tens",
+          "3rd": "tem",
+          "4th": "temos",
+          "5th": "tendes",
+          "6th": "têm"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "chamar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "chamo",
+          "2nd": "chamas",
+          "3rd": "chama",
+          "4th": "chamamos",
+          "5th": "chamais",
+          "6th": "chamam"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "falar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "falo",
+          "2nd": "falas",
+          "3rd": "fala",
+          "4th": "falamos",
+          "5th": "falais",
+          "6th": "falem"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "morar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "moro",
+          "2nd": "moras",
+          "3rd": "mora",
+          "4th": "moramos",
+          "5th": "morais",
+          "6th": "moram"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "trabalhar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "trabalho",
+          "2nd": "trabalhas",
+          "3rd": "trabalha",
+          "4th": "trabalhamos",
+          "5th": "trabalhais",
+          "6th": "trabalham"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "jogar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "jogo",
+          "2nd": "jogas",
+          "3rd": "joga",
+          "4th": "jogamos",
+          "5th": "jogais",
+          "6th": "jogam"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "gostar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "gosto",
+          "2nd": "gostas",
+          "3rd": "gosta",
+          "4th": "gostamos",
+          "5th": "gostais",
+          "6th": "gostam"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "estudar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "estudo",
+          "2nd": "estudas",
+          "3rd": "estuda",
+          "4th": "estudamos",
+          "5th": "estudais",
+          "6th": "estudam"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "comprar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "compro",
+          "2nd": "compras",
+          "3rd": "compra",
+          "4th": "compramos",
+          "5th": "comprais",
+          "6th": "compram"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "tomar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "tocar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "toco",
+          "2nd": "tocas",
+          "3rd": "toca",
+          "4th": "tocamos",
+          "5th": "tocais",
+          "6th": "tocam"
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "pagar",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "comer",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      },
+      {
+        "name": "beber",
+        "past":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "present":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        },
+        "future":
+        {
+          "1st": "",
+          "2nd": "",
+          "3rd": "",
+          "4th": "",
+          "5th": "",
+          "6th": ""
+        }
+      }
+  ],
+  "dictionary": []
 }

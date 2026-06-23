@@ -6,8 +6,10 @@ h1, h2, h3, p { margin: 0; white-space: pre; }
 
 /* Queue cards */
 
-.queueCard {
-    margin: 4vw;
+#info {
+    padding: 2vw;
+
+    background: grey;
 }
 
 #queueCardDescription {
