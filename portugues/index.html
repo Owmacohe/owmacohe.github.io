@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="utilities.js"></script>
     <script src="portugues.js"></script>
     <title>Português</title>
 </head>
@@ -11,23 +12,23 @@
         <h1>Portugês</h1>
 
         <div class="row center">
-            <button>Queue cards</button>
-            <button>Useful phrases</button>
-            <button>Verbs</button>
-            <button>Dictionary</button>
+            <button onclick="reload(0)">Queue cards</button>
+            <button onclick="reload(1)">Useful phrases</button>
+            <button onclick="reload(2)">Verbs</button>
+            <button onclick="reload(3)">Dictionary</button>
         </div>
 
         <div class="column center" id="info" style="margin-top: 2vw">
             <div class="row center">
-                <button onclick="reload()" id="reload">Queue card</button>
-                <button onclick="answer()" id="answer">Answer</button>
+                <button onclick="reload()" id="reloadButton">Next</button>
+                <button onclick="showAnswer()" id="answerButton">Answer</button>
             </div>
 
-            <div class="column center" id="queueCard" style="margin-top: 4vw">
-                <h2 id="queueCardTitle">...</h2>
-                <p id="queueCardDescription">...</p>
+            <div class="column center" style="margin-top: 4vw">
+                <h2 id="title">...</h2>
+                <p id="description">...</p>
                 <h3 style="margin-top: 4vw">Answer</h3>
-                <p id="queueCardAnswer">...</p>
+                <p id="answer">...</p>
             </div>
         </div>
     </div>

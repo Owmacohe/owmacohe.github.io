@@ -12,12 +12,9 @@ h1, h2, h3, p { margin: 0; white-space: pre; }
     background: grey;
 }
 
-#queueCardDescription {
-    width: 20vw;
-}
-
-#queueCardAnswer {
-    width: 20vw;
+#description, #answer {
+    column-count: 3;
+    text-align: center;
 }
 
 
