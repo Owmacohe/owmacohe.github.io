@@ -193,6 +193,11 @@
         "o quadril", "a perna", "o joelho", "o pé", "os dedos do pé",
         "o tornozelo"
       ]
+    },
+    {
+      "name": "Direction",
+      "description": [ "Left", "Right" ],
+      "answer": [ "Esquerda", "Direta" ]
     }
   ],
   "usefulPhrases": [
@@ -657,6 +662,1114 @@
     {
       "word": "Olá!",
       "answer": "Hello!"
+    },
+    {
+      "word": "Como",
+      "answer": "How"
+    },
+    {
+      "word": "Sim",
+      "answer": "Yes"
+    },
+    {
+      "word": "Não",
+      "answer": "No"
+    },
+    {
+      "word": "Videogamesh",
+      "answer": "Videogames"
+    },
+    {
+      "word": "Programmadora",
+      "answer": "Programmer"
+    },
+    {
+      "word": "Informatica",
+      "answer": "Computer industry"
+    },
+    {
+      "word": "Muito/a",
+      "answer": "Much"
+    },
+    {
+      "word": "Manhã",
+      "answer": "Morning"
+    },
+    {
+      "word": "Dia",
+      "answer": "Day"
+    },
+    {
+      "word": "Tarde",
+      "answer": "Late"
+    },
+    {
+      "word": "Noite",
+      "answer": "Night"
+    },
+    {
+      "word": "Bem",
+      "answer": "Good"
+    },
+    {
+      "word": "Obrigado/a",
+      "answer": "Thank you"
+    },
+    {
+      "word": "De nada",
+      "answer": "You're welcome"
+    },
+    {
+      "word": "Desculpe/a",
+      "answer": "Sorry"
+    },
+    {
+      "word": "Ate",
+      "answer": "Until"
+    },
+    {
+      "word": "Meia",
+      "answer": "Half"
+    },
+    {
+      "word": "Hora",
+      "answer": "Hour"
+    },
+    {
+      "word": "Quarto",
+      "answer": "Quarter"
+    },
+    {
+      "word": "Da",
+      "answer": "Of"
+    },
+    {
+      "word": "Trabalhar",
+      "answer": "Work"
+    },
+    {
+      "word": "Às",
+      "answer": "At"
+    },
+    {
+      "word": "Ginásio",
+      "answer": "Gym"
+    },
+    {
+      "word": "Pequeno-almoço",
+      "answer": "Breakfast"
+    },
+    {
+      "word": "Almoço",
+      "answer": "Lunch"
+    },
+    {
+      "word": "Jantar",
+      "answer": "Dinner"
+    },
+    {
+      "word": "Relógio",
+      "answer": "Watch"
+    },
+    {
+      "word": "Livro",
+      "answer": "Book"
+    },
+    {
+      "word": "Nacionidade",
+      "answer": "Nationality"
+    },
+    {
+      "word": "Casa",
+      "answer": "House/Home"
+    },
+    {
+      "word": "Posso",
+      "answer": "Able"
+    },
+    {
+      "word": "Antes",
+      "answer": "Before"
+    },
+    {
+      "word": "Depois",
+      "answer": "After"
+    },
+    {
+      "word": "Morada",
+      "answer": "Address"
+    },
+    {
+      "word": "Rua",
+      "answer": "Road"
+    },
+    {
+      "word": "Número",
+      "answer": "Number"
+    },
+    {
+      "word": "Austríaco/a",
+      "answer": "Austrian"
+    },
+    {
+      "word": "Húngaro/a",
+      "answer": "Hungarian"
+    },
+    {
+      "word": "Portugueses",
+      "answer": "Portuguese"
+    },
+    {
+      "word": "Brasileiro/a",
+      "answer": "Brazilian"
+    },
+    {
+      "word": "Polaco/a",
+      "answer": "Polish"
+    },
+    {
+      "word": "Espanhol",
+      "answer": "Spanish"
+    },
+    {
+      "word": "Italianos",
+      "answer": "Italian"
+    },
+    {
+      "word": "Japonesa",
+      "answer": "Japanese"
+    },
+    {
+      "word": "Holandês",
+      "answer": "Dutch"
+    },
+    {
+      "word": "Belga",
+      "answer": "Belgian"
+    },
+    {
+      "word": "Irlandês",
+      "answer": "Irish"
+    },
+    {
+      "word": "Alemã",
+      "answer": "German"
+    },
+    {
+      "word": "Suíças",
+      "answer": "Swiss"
+    },
+    {
+      "word": "Finlandeses",
+      "answer": "Finnish"
+    },
+    {
+      "word": "Dinamarquês",
+      "answer": "Danish"
+    },
+    {
+      "word": "Inglesa",
+      "answer": "British"
+    },
+    {
+      "word": "Norueguesa",
+      "answer": "Norwegian"
+    },
+    {
+      "word": "Grega",
+      "answer": "Greek"
+    },
+    {
+      "word": "Solteiro/a",
+      "answer": "Single"
+    },
+    {
+      "word": "Casado/a",
+      "answer": "Married"
+    },
+    {
+      "word": "Divorciado/a",
+      "answer": "Divorced"
+    },
+    {
+      "word": "Viúvo/a",
+      "answer": "Widower/Widow"
+    },
+    {
+      "word": "Namorado/a",
+      "answer": "Boyfriend/Girlfriend"
+    },
+    {
+      "word": "Marido",
+      "answer": "Husband"
+    },
+    {
+      "word": "Esposa",
+      "answer": "Wife"
+    },
+    {
+      "word": "Ex-Marido",
+      "answer": "Ex-Husband"
+    },
+    {
+      "word": "Ex-Esposa",
+      "answer": "Ex-Wife"
+    },
+    {
+      "word": "Noivo/a",
+      "answer": "Fiancé/Fiancée"
+    },
+    {
+      "word": "Hoje",
+      "answer": "Today"
+    },
+    {
+      "word": "Ontem",
+      "answer": "Yesterday"
+    },
+    {
+      "word": "Anteontem",
+      "answer": "Day before yesterday"
+    },
+    {
+      "word": "Amanhã",
+      "answer": "Tomorrow"
+    },
+    {
+      "word": "Segunda-feira",
+      "answer": "Monday"
+    },
+    {
+      "word": "Terça-feira",
+      "answer": "Tuesday"
+    },
+    {
+      "word": "Quarta-feira",
+      "answer": "Wednesday"
+    },
+    {
+      "word": "Quinta-feira",
+      "answer": "Thursday"
+    },
+    {
+      "word": "Sexta-feira",
+      "answer": "Friday"
+    },
+    {
+      "word": "Sábado",
+      "answer": "Saturday"
+    },
+    {
+      "word": "Domingo",
+      "answer": "Sunday"
+    },
+    {
+      "word": "Fim-da-semana",
+      "answer": "Weekend"
+    },
+    {
+      "word": "Festa d'anos",
+      "answer": "Birthday"
+    },
+    {
+      "word": "Restaurante",
+      "answer": "Restaurant"
+    },
+    {
+      "word": "Caminar/Caminhada",
+      "answer": "A walk"
+    },
+    {
+      "word": "Carte",
+      "answer": "Card"
+    },
+    {
+      "word": "Familia",
+      "answer": "Family"
+    },
+    {
+      "word": "Igreja",
+      "answer": "Church"
+    },
+    {
+      "word": "Parque",
+      "answer": "Park"
+    },
+    {
+      "word": "Cães",
+      "answer": "Ducks"
+    },
+    {
+      "word": "História",
+      "answer": "Story"
+    },
+    {
+      "word": "Neste",
+      "answer": "Next"
+    },
+    {
+      "word": "Passado",
+      "answer": "Previous"
+    },
+    {
+      "word": "Janeiro",
+      "answer": "January"
+    },
+    {
+      "word": "Fevereiro",
+      "answer": "February"
+    },
+    {
+      "word": "Março",
+      "answer": "March"
+    },
+    {
+      "word": "Abril",
+      "answer": "April"
+    },
+    {
+      "word": "Maio",
+      "answer": "May"
+    },
+    {
+      "word": "Junho",
+      "answer": "June"
+    },
+    {
+      "word": "Julho",
+      "answer": "July"
+    },
+    {
+      "word": "Agosto",
+      "answer": "August"
+    },
+    {
+      "word": "Setembro",
+      "answer": "September"
+    },
+    {
+      "word": "Outubro",
+      "answer": "October"
+    },
+    {
+      "word": "Novembro",
+      "answer": "November"
+    },
+    {
+      "word": "Dezembro",
+      "answer": "December"
+    },
+    {
+      "word": "Água",
+      "answer": "Water"
+    },
+    {
+      "word": "Copo/Chávena",
+      "answer": "Cup"
+    },
+    {
+      "word": "Inverno",
+      "answer": "Winter"
+    },
+    {
+      "word": "Primavera",
+      "answer": "Spring"
+    },
+    {
+      "word": "Verão",
+      "answer": "Summer"
+    },
+    {
+      "word": "Outono",
+      "answer": "Autumn"
+    },
+    {
+      "word": "Meses",
+      "answer": "Months"
+    },
+    {
+      "word": "Minho/a",
+      "answer": "My"
+    },
+    {
+      "word": "A Mãe",
+      "answer": "Mother"
+    },
+    {
+      "word": "O Pai",
+      "answer": "Father"
+    },
+    {
+      "word": "A Irmã",
+      "answer": "Sister"
+    },
+    {
+      "word": "O Irmão",
+      "answer": "Brother"
+    },
+    {
+      "word": "A Avó",
+      "answer": "Grandmother"
+    },
+    {
+      "word": "O Avô",
+      "answer": "Grandfather"
+    },
+    {
+      "word": "Tio",
+      "answer": "Uncle"
+    },
+    {
+      "word": "Tia",
+      "answer": "Aunt"
+    },
+    {
+      "word": "Em",
+      "answer": "In"
+    },
+    {
+      "word": "Nome",
+      "answer": "Name"
+    },
+    {
+      "word": "Durante",
+      "answer": "During"
+    },
+    {
+      "word": "Neve",
+      "answer": "Snow"
+    },
+    {
+      "word": "Gelo",
+      "answer": "Ice"
+    },
+    {
+      "word": "Também",
+      "answer": "Also"
+    },
+    {
+      "word": "Churrasco",
+      "answer": "Barbequeue"
+    },
+    {
+      "word": "Legumes",
+      "answer": "Vegetables"
+    },
+    {
+      "word": "Cogumelos",
+      "answer": "Mushrooms"
+    },
+    {
+      "word": "Estepo",
+      "answer": "Skewer"
+    },
+    {
+      "word": "Cebola",
+      "answer": "Onion"
+    },
+    {
+      "word": "Pimentos",
+      "answer": "Peppers"
+    },
+    {
+      "word": "Queijo",
+      "answer": "Cheese"
+    },
+    {
+      "word": "Na/Nos",
+      "answer": "At"
+    },
+    {
+      "word": "Aulas",
+      "answer": "Classes"
+    },
+    {
+      "word": "Bolos",
+      "answer": "Cakes"
+    },
+    {
+      "word": "Haver",
+      "answer": "Is/Are"
+    },
+    {
+      "word": "Dinhero",
+      "answer": "Money"
+    },
+    {
+      "word": "Aqui",
+      "answer": "Here"
+    },
+    {
+      "word": "Ali",
+      "answer": "There"
+    },
+    {
+      "word": "Lá",
+      "answer": "There (far)"
+    },
+    {
+      "word": "Quadro",
+      "answer": "Painting"
+    },
+    {
+      "word": "Bocadinho",
+      "answer": "A little bit"
+    },
+    {
+      "word": "Em frente de",
+      "answer": "In front of"
+    },
+    {
+      "word": "Ao lado de",
+      "answer": "Beside"
+    },
+    {
+      "word": "Entre",
+      "answer": "Between"
+    },
+    {
+      "word": "Atrás de",
+      "answer": "Behind"
+    },
+    {
+      "word": "Debaixo de",
+      "answer": "Under"
+    },
+    {
+      "word": "Em cima de",
+      "answer": "Above"
+    },
+    {
+      "word": "Dentro da",
+      "answer": "Inside"
+    },
+    {
+      "word": "Restaurante",
+      "answer": "Restaurant"
+    },
+    {
+      "word": "Supermercado",
+      "answer": "Supermarket"
+    },
+    {
+      "word": "Farmácia",
+      "answer": "Pharmacy"
+    },
+    {
+      "word": "Estaçao",
+      "answer": "Train/bus station"
+    },
+    {
+      "word": "Correios",
+      "answer": "Post office"
+    },
+    {
+      "word": "Escola",
+      "answer": "School"
+    },
+    {
+      "word": "Cinema",
+      "answer": "Cinema"
+    },
+    {
+      "word": "Pedras",
+      "answer": "Stones"
+    },
+    {
+      "word": "Ventilador",
+      "answer": "Fan"
+    },
+    {
+      "word": "Vermelho",
+      "answer": "Red"
+    },
+    {
+      "word": "Cor de rosa",
+      "answer": "Pink"
+    },
+    {
+      "word": "Cor de laranja",
+      "answer": "Orange"
+    },
+    {
+      "word": "Amarelo",
+      "answer": "Yellow"
+    },
+    {
+      "word": "Verde",
+      "answer": "Green"
+    },
+    {
+      "word": "Azul",
+      "answer": "Blue"
+    },
+    {
+      "word": "Violeta",
+      "answer": "Purple"
+    },
+    {
+      "word": "Lilás",
+      "answer": "Lilac"
+    },
+    {
+      "word": "Branco",
+      "answer": "White"
+    },
+    {
+      "word": "Preto",
+      "answer": "Black"
+    },
+    {
+      "word": "Cinza",
+      "answer": "Grey"
+    },
+    {
+      "word": "Marrom",
+      "answer": "Brown"
+    },
+    {
+      "word": "Laranja",
+      "answer": "Orange"
+    },
+    {
+      "word": "Goiaba",
+      "answer": "Guava"
+    },
+    {
+      "word": "Uva",
+      "answer": "Grape"
+    },
+    {
+      "word": "Abacate",
+      "answer": "Avocado"
+    },
+    {
+      "word": "Ameixa",
+      "answer": "Plum"
+    },
+    {
+      "word": "Abacaxi",
+      "answer": "Pineapple"
+    },
+    {
+      "word": "Manga",
+      "answer": "Mango"
+    },
+    {
+      "word": "Mamão",
+      "answer": "Papaya"
+    },
+    {
+      "word": "Limão",
+      "answer": "Lemon"
+    },
+    {
+      "word": "Marango",
+      "answer": "Strawberry"
+    },
+    {
+      "word": "Coco",
+      "answer": "Coconut"
+    },
+    {
+      "word": "Pera",
+      "answer": "Pear"
+    },
+    {
+      "word": "Melancia",
+      "answer": "Watermelon"
+    },
+    {
+      "word": "Melão",
+      "answer": "Melon"
+    },
+    {
+      "word": "Pêssego",
+      "answer": "Peach"
+    },
+    {
+      "word": "Maracujá",
+      "answer": "Passionfruit"
+    },
+    {
+      "word": "Maçá",
+      "answer": "Apple"
+    },
+    {
+      "word": "Sumo",
+      "answer": "Juice"
+    },
+    {
+      "word": "Favorito",
+      "answer": "Favourite"
+    },
+    {
+      "word": "Esquerda",
+      "answer": "Left"
+    },
+    {
+      "word": "Direta",
+      "answer": "Right"
+    },
+    {
+      "word": "Caro",
+      "answer": "Expensive"
+    },
+    {
+      "word": "Barato",
+      "answer": "Cheap"
+    },
+    {
+      "word": "Fácil",
+      "answer": "Easy"
+    },
+    {
+      "word": "Difícil",
+      "answer": "Difficult"
+    },
+    {
+      "word": "Sujo",
+      "answer": "Dirty"
+    },
+    {
+      "word": "Limpo",
+      "answer": "Clean"
+    },
+    {
+      "word": "Baixo",
+      "answer": "Low"
+    },
+    {
+      "word": "Alto",
+      "answer": "High"
+    },
+    {
+      "word": "Frio",
+      "answer": "Cold"
+    },
+    {
+      "word": "Quente",
+      "answer": "Hot"
+    },
+    {
+      "word": "Grande",
+      "answer": "Large"
+    },
+    {
+      "word": "Pequeno",
+      "answer": "Small"
+    },
+    {
+      "word": "Velho",
+      "answer": "Old"
+    },
+    {
+      "word": "Novo",
+      "answer": "New"
+    },
+    {
+      "word": "Correcto",
+      "answer": "Correct"
+    },
+    {
+      "word": "Errado",
+      "answer": "Incorrect"
+    },
+    {
+      "word": "Largo",
+      "answer": "Wide"
+    },
+    {
+      "word": "Estreito",
+      "answer": "Narrow"
+    },
+    {
+      "word": "Longe",
+      "answer": "Far"
+    },
+    {
+      "word": "Perto",
+      "answer": "Close"
+    },
+    {
+      "word": "Tranquila",
+      "answer": "Quiet"
+    },
+    {
+      "word": "Agitada",
+      "answer": "Noisy"
+    },
+    {
+      "word": "Aposto",
+      "answer": "Opposite"
+    },
+    {
+      "word": "Quiexar",
+      "answer": "Complain"
+    },
+    {
+      "word": "A Cabeça",
+      "answer": "Head"
+    },
+    {
+      "word": "O Cabelo",
+      "answer": "Hair"
+    },
+    {
+      "word": "O Olho",
+      "answer": "Eye"
+    },
+    {
+      "word": "A Orelha",
+      "answer": "Ear"
+    },
+    {
+      "word": "O Nariz",
+      "answer": "Nose"
+    },
+    {
+      "word": "A Boca",
+      "answer": "Mouth"
+    },
+    {
+      "word": "O Pescoço",
+      "answer": "Throat"
+    },
+    {
+      "word": "O Ombro",
+      "answer": "Shoulder"
+    },
+    {
+      "word": "O Braço",
+      "answer": "Arm"
+    },
+    {
+      "word": "O Cotovelo",
+      "answer": "Elbow"
+    },
+    {
+      "word": "A Barriga",
+      "answer": "Stomach"
+    },
+    {
+      "word": "A Cintura",
+      "answer": "Waist"
+    },
+    {
+      "word": "A Mão",
+      "answer": "Hand"
+    },
+    {
+      "word": "Os Dedos",
+      "answer": "Fingers"
+    },
+    {
+      "word": "A Coxa",
+      "answer": "Thigh"
+    },
+    {
+      "word": "O Quadril",
+      "answer": "Hip"
+    },
+    {
+      "word": "A Perna",
+      "answer": "Leg"
+    },
+    {
+      "word": "O Joelho",
+      "answer": "Knee"
+    },
+    {
+      "word": "O Pé",
+      "answer": "Foot"
+    },
+    {
+      "word": "Os Dedos do Pé",
+      "answer": "Toes"
+    },
+    {
+      "word": "O Tornozelo",
+      "answer": "Ankle"
+    },
+    {
+      "word": "Aleijar",
+      "answer": "Hurt"
+    },
+    {
+      "word": "Quinta",
+      "answer": "Country house"
+    },
+    {
+      "word": "Rapariga",
+      "answer": "Girl"
+    },
+    {
+      "word": "Gajo",
+      "answer": "Boy"
+    },
+    {
+      "word": "Torci/Torciolo",
+      "answer": "Twisted"
+    },
+    {
+      "word": "Dor",
+      "answer": "Pain"
+    },
+    {
+      "word": "Doenças",
+      "answer": "Diseases"
+    },
+    {
+      "word": "Vomitar",
+      "answer": "Vomit"
+    },
+    {
+      "word": "Mal",
+      "answer": "Unwell"
+    },
+    {
+      "word": "Pastilhas",
+      "answer": "Pills"
+    },
+    {
+      "word": "Pomada",
+      "answer": "Ointment"
+    },
+    {
+      "word": "Gotas",
+      "answer": "Drops"
+    },
+    {
+      "word": "Teste",
+      "answer": "Test (school)"
+    },
+    {
+      "word": "Exame",
+      "answer": "Test (medical)"
+    },
+    {
+      "word": "Agora",
+      "answer": "Now"
+    },
+    {
+      "word": "Sangue",
+      "answer": "Blood"
+    },
+    {
+      "word": "Onde",
+      "answer": "Where"
+    },
+    {
+      "word": "Usar",
+      "answer": "Use"
+    },
+    {
+      "word": "Todo",
+      "answer": "Everyone"
+    },
+    {
+      "word": "Acordar",
+      "answer": "Wake up"
+    },
+    {
+      "word": "Pois",
+      "answer": "Can (ability)"
+    },
+    {
+      "word": "Levantar",
+      "answer": "Get up / raise"
+    },
+    {
+      "word": "Desilgada",
+      "answer": "Turned off"
+    },
+    {
+      "word": "Acesa",
+      "answer": "Turned on"
+    },
+    {
+      "word": "Luz",
+      "answer": "Lights"
+    },
+    {
+      "word": "Janela",
+      "answer": "Window"
+    },
+    {
+      "word": "Cama",
+      "answer": "Bed"
+    },
+    {
+      "word": "Sofá",
+      "answer": "Couch"
+    },
+    {
+      "word": "Prateleira",
+      "answer": "Shelf"
+    },
+    {
+      "word": "Quarto",
+      "answer": "Room"
+    },
+    {
+      "word": "Casa de Banho",
+      "answer": "Bathroom"
+    },
+    {
+      "word": "Frigorifico",
+      "answer": "Fridge"
+    },
+    {
+      "word": "Televisão",
+      "answer": "Television"
+    },
+    {
+      "word": "Computador",
+      "answer": "Computer"
+    },
+    {
+      "word": "Escritorio",
+      "answer": "Desk"
+    },
+    {
+      "word": "Corredor",
+      "answer": "Hallway"
+    },
+    {
+      "word": "Espelho",
+      "answer": "Mirror"
+    },
+    {
+      "word": "Comencei",
+      "answer": "Start"
+    },
+    {
+      "word": "Terminei",
+      "answer": "Stop"
+    },
+    {
+      "word": "Cansada",
+      "answer": "Tired"
+    },
+    {
+      "word": "Isto",
+      "answer": "This (close)"
+    },
+    {
+      "word": "Isso",
+      "answer": "This (far)"
+    },
+    {
+      "word": "Aquilo",
+      "answer": "That"
+    },
+    {
+      "word": "Mundo",
+      "answer": "World"
+    },
+    {
+      "word": "Cidade",
+      "answer": "City"
     }
   ]
 }
