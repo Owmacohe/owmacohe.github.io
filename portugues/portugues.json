@@ -139,7 +139,7 @@
       ],
       "answer": [
         "o pai", "a mãe",
-        "o irmão", "a irmã", "os irmãos", "as irmãs",
+        "o irmão", "a irmã", "os irmãos / as irmãs",
         "o tio", "a tia",
         "o avô", "a avó", "o avós"
       ]
@@ -204,6 +204,82 @@
     {
       "phrase": "Olá!",
       "answer": "Hello!"
+    },
+    {
+      "phrase": "Dom dia",
+      "answer": "Good day"
+    },
+    {
+      "phrase": "Tudo bem?",
+      "answer": "Are you doing well?"
+    },
+    {
+      "phrase": "Tu tens horas?",
+      "answer": "Do you have the time?"
+    },
+    {
+      "phrase": "Qual e ...?",
+      "answer": "What is ...?"
+    },
+    {
+      "phrase": "Não percebo",
+      "answer": "I don't understand"
+    },
+    {
+      "phrase": "Gostave de ...",
+      "answer": "I would like ..."
+    },
+    {
+      "phrase": "Estou a ...",
+      "answer": "I am currently ..."
+    },
+    {
+      "phrase": "Estou com dor de ...",
+      "answer": "I have pain in my ..."
+    },
+    {
+      "phrase": "O que é tu achas?",
+      "answer": "What do you think?"
+    },
+    {
+      "phrase": "Achas",
+      "answer": "Oh, you think so? (dismissively)"
+    },
+    {
+      "phrase": "Tenho que ...",
+      "answer": "I have to ..."
+    },
+    {
+      "phrase": "Algo mais?",
+      "answer": "Anything else?"
+    },
+    {
+      "phrase": "Despache-te",
+      "answer": "Hurry up"
+    },
+    {
+      "phrase": "Queria ...",
+      "answer": "I would like ..."
+    },
+    {
+      "phrase": "Quanto é ...?",
+      "answer": "How much is ...?"
+    },
+    {
+      "phrase": "Bué",
+      "answer": "A lot"
+    },
+    {
+      "phrase": "Fixe/Superfixe",
+      "answer": "Cool / Very cool"
+    },
+    {
+      "phrase": "Lido/a",
+      "answer": "Beautiful"
+    },
+    {
+      "phrase": "Giro/a",
+      "answer": "Cute"
     }
   ],
   "verbs": [
