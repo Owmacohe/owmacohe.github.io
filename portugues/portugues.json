@@ -93,13 +93,17 @@
       ]
     },
     {
-      "name": "here / there / there (far)",
-      "description": [ "" ],
+      "name": "Distance",
+      "description": [ "here", "there", "there (far)" ],
       "answer": [ "aqui", "ali", "lá" ]
     },
     {
       "name": "Days of the week",
-      "description": [ "Starting with Monday" ],
+      "description": [
+        "Monday", "Tuesday", "Wednesday",
+        "Thursday", "Friday",
+        "Saturday", "Sunday", "Weekend"
+      ],
       "answer": [
         "segunda-feira", "terça-feira", "quarta-feira",
         "quinta-feira", "sexta-feira",
@@ -107,8 +111,8 @@
       ]
     },
     {
-      "name": "Thank you / You're welcome",
-      "description": [ "" ],
+      "name": "Thankfulness",
+      "description": [ "Thank you", "You're welcome" ],
       "answer": [ "Obrigado/a", "De nada" ]
     },
     {
@@ -206,7 +210,7 @@
       "answer": "Hello!"
     },
     {
-      "phrase": "Dom dia",
+      "phrase": "Bom dia",
       "answer": "Good day"
     },
     {

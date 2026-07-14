@@ -18,19 +18,26 @@
             <button onclick="reload(3)">Dictionary</button>
         </div>
 
+        <h2 style="margin-top: 1vw" id="sectionTitle">Queue cards</h2>
+
         <input id="search">
 
-        <div class="column center" id="info" style="margin-top: 2vw">
+        <div class="column center" id="info">
             <div class="row center">
                 <button onclick="reload()" id="reloadButton">Next</button>
                 <button onclick="showAnswer()" id="answerButton">Answer</button>
             </div>
 
-            <div class="column center" style="margin-top: 4vw">
-                <h2 id="title">...</h2>
-                <p id="description">...</p>
-                <h3 style="margin-top: 4vw">Answer</h3>
-                <p id="answer">...</p>
+            <div class="row center" style="margin-top: 1vw">
+                <div class="column center">
+                    <h3 id="title">...</h3>
+                    <p id="description">...</p>
+                </div>
+
+                <div class="column center">
+                    <h3 id="answerTitle">Answer</h3>
+                    <p id="answer">...</p>
+                </div>
             </div>
         </div>
     </div>
