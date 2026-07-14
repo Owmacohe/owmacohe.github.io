@@ -1,6 +1,11 @@
 {
   "queueCards": [
     {
+      "name": "This/that",
+      "description": [ "This (close)", "This (far)", "That" ],
+      "answer": [ "Isto", "Isso", "Aquilo" ]
+    },
+    {
       "name": "Please",
       "description": [ "" ],
       "answer": [ "Se faz favor" ]
@@ -206,6 +211,38 @@
   ],
   "usefulPhrases": [
     {
+      "phrase": "Ne faz mal",
+      "answer": "It's fine"
+    },
+    {
+      "phrase": "Tanto faz",
+      "answer": "Whatever"
+    },
+    {
+      "phrase": "Será que ...",
+      "answer": "I wonder if ..."
+    },
+    {
+      "phrase": "Não consigo",
+      "answer": "I can't"
+    },
+    {
+      "phrase": "Posso te fazer uma pergunta?",
+      "answer": "Can I ask you a question?"
+    },
+    {
+      "phrase": "Parabéns",
+      "answer": "Congratulations"
+    },
+    {
+      "phrase": "Podes repetir?",
+      "answer": "Can you repeat?"
+    },
+    {
+      "phrase": "Percebi",
+      "answer": "Got it"
+    },
+    {
       "phrase": "Olá!",
       "answer": "Hello!"
     },
@@ -226,7 +263,7 @@
       "answer": "What is ...?"
     },
     {
-      "phrase": "Não percebo",
+      "phrase": "Não percebi",
       "answer": "I don't understand"
     },
     {
@@ -284,6 +321,10 @@
     {
       "phrase": "Giro/a",
       "answer": "Cute"
+    },
+    {
+      "phrase": "Onde?",
+      "answer": "Where?"
     }
   ],
   "verbs": [
@@ -740,8 +781,108 @@
   ],
   "dictionary": [
     {
-      "word": "Olá!",
-      "answer": "Hello!"
+      "word": "Eles/elas/vocês",
+      "answer": "Them (plural)"
+    },
+    {
+      "word": "Vos",
+      "answer": "You (plural)"
+    },
+    {
+      "word": "Nos",
+      "answer": "Us"
+    },
+    {
+      "word": "Ela/ela/você",
+      "answer": "Them (singular)"
+    },
+    {
+      "word": "Tu",
+      "answer": "You (singular)"
+    },
+    {
+      "word": "Me",
+      "answer": "Me"
+    },
+    {
+      "word": "Monumentos",
+      "answer": "Monuments"
+    },
+    {
+      "word": "Fotografias",
+      "answer": "Photographs"
+    },
+    {
+      "word": "Cassete",
+      "answer": "Cassette"
+    },
+    {
+      "word": "Texto",
+      "answer": "Text"
+    },
+    {
+      "word": "Exercícios",
+      "answer": "Exercises"
+    },
+    {
+      "word": "Devem",
+      "answer": "Must"
+    },
+    {
+      "word": "Concerto",
+      "answer": "Concert"
+    },
+    {
+      "word": "Semelhante",
+      "answer": "Similar"
+    },
+    {
+      "word": "Vai ser",
+      "answer": "Will be"
+    },
+    {
+      "word": "Mulher",
+      "answer": "Woman"
+    },
+    {
+      "word": "Empregado de mesa",
+      "answer": "Waiter"
+    },
+    {
+      "word": "Posso",
+      "answer": "Possible"
+    },
+    {
+      "word": "Pergunta",
+      "answer": "Question"
+    },
+    {
+      "word": "Provaste",
+      "answer": "Prove/Try"
+    },
+    {
+      "word": "Repetir",
+      "answer": "Repeat"
+    },
+    {
+      "word": "Amigo/a",
+      "answer": "Friend"
+    },
+    {
+      "word": "Meio-termo",
+      "answer": "Compromise"
+    },
+    {
+      "word": "Aldeia",
+      "answer": "Village/Hamlet"
+    },
+    {
+      "word": "Ville",
+      "answer": "Town"
+    },
+    {
+      "word": "Olá",
+      "answer": "Hello"
     },
     {
       "word": "Como",
@@ -1850,6 +1991,10 @@
     {
       "word": "Cidade",
       "answer": "City"
+    },
+    {
+      "word": "Onde",
+      "answer": "Where"
     }
   ]
 }

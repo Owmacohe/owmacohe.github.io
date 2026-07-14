@@ -98,9 +98,9 @@ function getSelectedData(selected, swap = false) {
             "title": "Conjugate",
             "description": selected.name,
             "answer":
-                "Past\n\n" + verbToText(selected.past) +
-                "\nPresent\n\n" + verbToText(selected.present) +
-                "\nFuture\n\n" + verbToText(selected.future)
+                "<i>Past</i>\n\n" + verbToText(selected.past) +
+                "\n<i>Present</i>\n\n" + verbToText(selected.present) +
+                "\n<i>Future</i>\n\n" + verbToText(selected.future)
         };
 
         case 3: return {
