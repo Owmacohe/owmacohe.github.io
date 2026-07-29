@@ -7,11 +7,16 @@ let search;
 
 let reloadButton;
 let answerButton;
+let allButton;
 
 let lists = [];
 let data;
 
 let section = 0;
+let answerIndex = 0;
+
+let pt = ' <i class="lang">(PT)</i>';
+let en = ' <i class="lang">(EN)</i>';
 
 window.onload = () => {
     readJsonFile('portugues.json').then(data => {
@@ -29,6 +34,7 @@ window.onload = () => {
 
         reloadButton = document.getElementById('reloadButton');
         answerButton = document.getElementById('answerButton');
+        allButton = document.getElementById('allButton');
 
         search.addEventListener('input', searchDictionary);
 
@@ -40,6 +46,7 @@ function reload(newSection = -1) {
     if (newSection >= 0) section = newSection;
 
     let list = lists[section][1];
+    answerIndex = 0;
 
     if (list === undefined) return null;
 
@@ -74,6 +81,7 @@ function setData(data) {
     answer.style.columnCount = section === 2 ? '3' : 'auto';
 
     answerButton.style.display = 'flex';
+    allButton.style.display = data.answer.includes('\n') ? 'flex' : 'none';
 
     search.style.display = section === 3 ? "flex" : "none";
 }
@@ -89,9 +97,9 @@ function getSelectedData(selected, swap = false) {
         };
 
         case 1: return {
-            "title": swap ? selected.answer : selected.phrase,
+            "title": swap ? selected.answer + en : selected.phrase + pt,
             "description": "",
-            "answer": swap ? selected.phrase : selected.answer
+            "answer": swap ? selected.phrase + pt : selected.answer + en
         };
 
         case 2: return {
@@ -104,18 +112,43 @@ function getSelectedData(selected, swap = false) {
         };
 
         case 3: return {
-            "title": swap ? selected.word : selected.answer,
+            "title": swap ? selected.word.toLowerCase() + pt : selected.answer.toLowerCase() + en ,
             "description": "",
-            "answer": swap ? selected.answer : selected.word
+            "answer": swap ? selected.answer.toLowerCase() + en : selected.word.toLowerCase() + pt
         };
 
         default: return null;
     }
 }
 
-function showAnswer() {
-    answer.innerHTML = this.data.answer;
-    answerButton.style.display = 'none';
+function showAnswer(all) {
+    if (all) {
+        answer.innerHTML = this.data.answer;
+        answerButton.style.display = 'none';
+        allButton.style.display = 'none';
+
+        answerIndex = 99;
+    }
+    else {
+        let answerList = this.data.answer.split('\n');
+        let answerText = '';
+
+        for (let i = 0; i < answerList.length; i++) {
+            if (i <= answerIndex) answerText += answerList[i];
+            else answerText += '...';
+
+            answerText += '\n';
+        }
+
+        answer.innerHTML = answerText;
+
+        answerIndex++;
+
+        if (answerIndex >= answerList.length) {
+            answerButton.style.display = 'none';
+            allButton.style.display = 'none';
+        }
+    }
 }
 
 function searchDictionary(event) {
@@ -130,12 +163,12 @@ function searchDictionary(event) {
     for (let i = 0; i < dictionary.length; i++) {
         if (dictionary[i].word.toLowerCase().includes(name) || dictionary[i].answer.toLowerCase().includes(name)) {
             setData({
-                "title": dictionary[i].word,
+                "title": dictionary[i].word + pt,
                 "description": "",
-                "answer": dictionary[i].answer
+                "answer": dictionary[i].answer + en
             });
 
-            answer.innerHTML = dictionary[i].answer;
+            answer.innerHTML = dictionary[i].answer + en;
             break;
         }
     }

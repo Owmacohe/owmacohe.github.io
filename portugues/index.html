@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="column center" style="padding: 2vw">
-        <h1>Portugês</h1>
+        <h1 onclick="window.location.reload()" style="cursor: pointer">Portugês</h1>
 
         <div class="row center">
             <button onclick="reload(0)">Queue cards</button>
             <button onclick="reload(1)">Useful phrases</button>
-            <button onclick="reload(2)">Verbs</button>
+<!--            <button onclick="reload(2)">Verbs</button>-->
             <button onclick="reload(3)">Dictionary</button>
         </div>
 
@@ -26,7 +26,8 @@
         <div class="column center" id="info">
             <div class="row center">
                 <button onclick="reload()" id="reloadButton">Next</button>
-                <button onclick="showAnswer()" id="answerButton">Answer</button>
+                <button onclick="showAnswer(false)" id="answerButton">Answer</button>
+                <button onclick="showAnswer(true)" id="allButton">All</button>
             </div>
 
             <div class="row center" style="margin-top: 1vw">

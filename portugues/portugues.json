@@ -211,6 +211,34 @@
   ],
   "usefulPhrases": [
     {
+      "phrase": "O que é que andas a fazer?",
+      "answer": "What have you been up to?"
+    },
+    {
+      "phrase": "Contino a ...",
+      "answer": "I am continuing to ..."
+    },
+    {
+      "phrase": "Andaca",
+      "answer": "Come"
+    },
+    {
+      "phrase": "Mais ou menos",
+      "answer": "More or less"
+    },
+    {
+      "phrase": "Isso sabe muito bem",
+      "answer": "This tastes very good"
+    },
+    {
+      "phrase": "Queres ...",
+      "answer": "Can you ..."
+    },
+    {
+      "phrase": "Esta ...",
+      "answer": "It is ..."
+    },
+    {
       "phrase": "Ne faz mal",
       "answer": "It's fine"
     },
@@ -777,9 +805,449 @@
           "fifth": "",
           "sixth": ""
         }
+      },
+      {
+        "name": "ouvir",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "escutar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "mastigar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "provar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "sentir",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "respirar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "engolir",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "cheirar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "andar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
+      },
+      {
+        "name": "viagar",
+        "past":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "present":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        },
+        "future":
+        {
+          "first": "",
+          "second": "",
+          "third": "",
+          "fourth": "",
+          "fifth": "",
+          "sixth": ""
+        }
       }
   ],
   "dictionary": [
+    {
+      "word": "Chuva",
+      "answer": "Rain"
+    },
+    {
+      "word": "Guarda-chuva",
+      "answer": "Umbrella"
+    },
+    {
+      "word": "Autoclismo",
+      "answer": "Flush handle (toilet)"
+    },
+    {
+      "word": "Frequentemente",
+      "answer": "Frequently"
+    },
+    {
+      "word": "Empresa",
+      "answer": "Company"
+    },
+    {
+      "word": "Comboio",
+      "answer": "Train"
+    },
+    {
+      "word": "Avion",
+      "answer": "Plane"
+    },
+    {
+      "word": "Cavalho",
+      "answer": "Horse"
+    },
+    {
+      "word": "Corrida",
+      "answer": "Running"
+    },
+    {
+      "word": "Naturesa",
+      "answer": "Nature"
+    },
+    {
+      "word": "Trilhas",
+      "answer": "Trails"
+    },
+    {
+      "word": "Bicicleta",
+      "answer": "Bicycle"
+    },
+    {
+      "word": "Ciclismo",
+      "answer": "Biking"
+    },
+    {
+      "word": "Futebol",
+      "answer": "Football"
+    },
+    {
+      "word": "Rei",
+      "answer": "King"
+    },
+    {
+      "word": "Desporto",
+      "answer": "Sport (competitive)"
+    },
+    {
+      "word": "Caralho",
+      "answer": "Damn it"
+    },
+    {
+      "word": "Autocarro",
+      "answer": "Bus"
+    },
+    {
+      "word": "Team",
+      "answer": "Time"
+    },
+    {
+      "word": "Campeão",
+      "answer": "Champion"
+    },
+    {
+      "word": "Campeonato",
+      "answer": "Championship"
+    },
+    {
+      "word": "Jogo",
+      "answer": "Game"
+    },
+    {
+      "word": "Jogador",
+      "answer": "Player"
+    },
+    {
+      "word": "Mundo",
+      "answer": "World"
+    },
+    {
+      "word": "Lagosta",
+      "answer": "Lobster"
+    },
+    {
+      "word": "Gosto",
+      "answer": "Taste"
+    },
+    {
+      "word": "Sabor",
+      "answer": "Flavour"
+    },
+    {
+      "word": "Garganta",
+      "answer": "Throat"
+    },
+    {
+      "word": "Barulho",
+      "answer": "Noise"
+    },
+    {
+      "word": "Música",
+      "answer": "Music"
+    },
+    {
+      "word": "Então",
+      "answer": "So/therefore"
+    },
+    {
+      "word": "Rato",
+      "answer": "Rat"
+    },
+    {
+      "word": "Pedaço",
+      "answer": "Piece"
+    },
+    {
+      "word": "Cadela",
+      "answer": "Dog (female)"
+    },
+    {
+      "word": "Cão",
+      "answer": "Dog (male)"
+    },
     {
       "word": "Eles/elas/vocês",
       "answer": "Them (plural)"
@@ -1754,7 +2222,7 @@
     },
     {
       "word": "O Pescoço",
-      "answer": "Throat"
+      "answer": "Neck"
     },
     {
       "word": "O Ombro",
