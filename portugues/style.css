@@ -56,6 +56,8 @@ button:hover {
     transition: 0.1s;
 }
 
+a { color: var(--red-dark); }
+
 input {
     padding: 0.25vw;
 

@@ -24,22 +24,3 @@ function listToText(list) {
 
     return text;
 }
-
-function verbToText(verb) {
-    let text = '';
-
-    for (let i = 0; i < 6; i++) {
-        if (i > 0) text += '\n';
-
-        switch (i) {
-            case 0: text += verb.first;  break;
-            case 1: text += verb.second; break;
-            case 2: text += verb.third;  break;
-            case 3: text += verb.fourth; break;
-            case 4: text += verb.fifth;  break;
-            case 5: text += verb.sixth;  break;
-        }
-    }
-
-    return text;
-}

@@ -1,8 +1,10 @@
 let sectionTitle;
 let title;
 let description;
+let arrow;
 let answerTitle;
 let answer;
+let answerColumn;
 let search;
 
 let reloadButton;
@@ -28,8 +30,10 @@ window.onload = () => {
         sectionTitle = document.getElementById('sectionTitle');
         title = document.getElementById('title');
         description = document.getElementById('description');
+        arrow = document.getElementById('arrow');
         answerTitle = document.getElementById('answerTitle');
         answer = document.getElementById('answer');
+        answerColumn = document.getElementById('answerColumn');
         search = document.getElementById('search');
 
         reloadButton = document.getElementById('reloadButton');
@@ -69,16 +73,24 @@ function setData(data) {
     title.innerHTML = data === null ? "..." : data.title;
     description.innerHTML = data === null ? "..." : data.description;
 
+    answerTitle.style.display = section === 0 ? 'flex' : 'none';
+    description.style.display = section === 0 || section === 2 ? 'flex' : 'none';
+
+    arrow.style.display = section === 2 ? 'none' : 'flex';
+    answerColumn.style.display = section === 2 ? 'none' : 'flex';
+
+    if (section === 2) {
+        answerButton.style.display = 'none';
+        allButton.style.display = 'none';
+        return;
+    }
+
     var answerHidden = '';
 
     for (let i in data.answer.split('\n'))
         answerHidden += '...\n';
 
-    answerTitle.style.display = section === 0 || section === 2 ? 'flex' : 'none';
-    description.style.display = section === 0 || section === 2 ? 'flex' : 'none';
-
     answer.innerHTML = answerHidden;
-    answer.style.columnCount = section === 2 ? '3' : 'auto';
 
     answerButton.style.display = 'flex';
     allButton.style.display = data.answer.includes('\n') ? 'flex' : 'none';
@@ -103,12 +115,8 @@ function getSelectedData(selected, swap = false) {
         };
 
         case 2: return {
-            "title": "Conjugate",
-            "description": selected.name,
-            "answer":
-                "<i>Past</i>\n\n" + verbToText(selected.past) +
-                "\n<i>Present</i>\n\n" + verbToText(selected.present) +
-                "\n<i>Future</i>\n\n" + verbToText(selected.future)
+            "title": "Conjugate\n(presente, pretérito, futuro)",
+            "description": "<a href='https://conjugator.reverso.net/conjugation-portuguese-verb-"+selected+".html' target='_blank' rel='noopener noreferrer'>"+selected+"</a>"
         };
 
         case 3: return {
