@@ -1,6 +1,11 @@
 {
   "queueCards": [
     {
+      "name": "Years",
+      "description": [ "" ],
+      "answer": [ "(dois) mil [#]centos e [#](enta) e [#]" ]
+    },
+    {
       "name": "This/that",
       "description": [ "This (close)", "This (far)", "That" ],
       "answer": [ "Isto", "Isso", "Aquilo" ]
@@ -76,8 +81,8 @@
     },
     {
       "name": "Meals of the day",
-      "description": [ "breakfast", "lunch", "dinner" ],
-      "answer": [ "pequeno-almoço", "almoço", "jantar" ]
+      "description": [ "breakfast", "lunch", "dinner", "desert" ],
+      "answer": [ "pequeno-almoço", "almoço", "jantar", "sobremesa" ]
     },
     {
       "name": "Goodbye",
@@ -142,12 +147,14 @@
       "name": "Family",
       "description": [
         "Father", "Mother",
+        "Step-father", "Step-mother",
         "Brother", "Sister", "Siblings",
         "Uncle", "Aunt",
         "Grandfather", "Grandmother", "Grandparents"
       ],
       "answer": [
         "o pai", "a mãe",
+        "o padrasto", "a madrasta",
         "o irmão", "a irmã", "os irmãos / as irmãs",
         "o tio", "a tia",
         "o avô", "a avó", "o avós"
@@ -210,6 +217,50 @@
     }
   ],
   "usefulPhrases": [
+    {
+      "phrase": "Lembra-me que ...",
+      "answer": "Reminds me that ..."
+    },
+    {
+      "phrase": "Fomos a ...",
+      "answer": "We went to ..."
+    },
+    {
+      "phrase": "Sera que ...",
+      "answer": "I wonder ..."
+    },
+    {
+      "phrase": "Da pra perceber ...",
+      "answer": "You can see ..."
+    },
+    {
+      "phrase": "Muito prazer",
+      "answer": "Nice to meet you"
+    },
+    {
+      "phrase": "Está bem?",
+      "answer": "Are you okay?"
+    },
+    {
+      "phrase": "Quer ajuda?",
+      "answer": "Do you need help?"
+    },
+    {
+      "phrase": "O achado não é roubado",
+      "answer": "What is found is not stolen (finders keepers)"
+    },
+    {
+      "phrase": "Deixa estar",
+      "answer": "Leave it"
+    },
+    {
+      "phrase": "PHRASE",
+      "answer": "ANSWER"
+    },
+    {
+      "phrase": "Mal posso esperar",
+      "answer": "I can't wait"
+    },
     {
       "phrase": "O que é que andas a fazer?",
       "answer": "What have you been up to?"
@@ -356,33 +407,277 @@
     }
   ],
   "verbs": [
-      "ser",
-      "ter",
-      "chamar",
-      "falar",
-      "morar",
-      "trabalhar",
-      "jogar",
-      "gostar",
-      "estudar",
-      "comprar",
-      "tomar",
-      "tocar",
-      "pagar",
-      "comer",
-      "beber",
-      "ouvir",
-      "escutar",
-      "mastigar",
-      "provar",
-      "sentir",
-      "respirar",
-      "engolir",
-      "cheirar",
-      "andar",
-      "viagar"
+    "ser",
+    "ter",
+    "chamar",
+    "falar",
+    "morar",
+    "trabalhar",
+    "jogar",
+    "gostar",
+    "estudar",
+    "comprar",
+    "tomar",
+    "tocar",
+    "pagar",
+    "comer",
+    "beber",
+    "ouvir",
+    "escutar",
+    "mastigar",
+    "provar",
+    "sentir",
+    "respirar",
+    "engolir",
+    "cheirar",
+    "andar",
+    "viagar",
+    "calibrar",
+    "trazer",
+    "preencher",
+    "ajudar",
+    "deixar",
+    "carregar",
+    "buscar",
+    "pretender"
   ],
   "dictionary": [
+    {
+      "word": "Porte médio",
+      "answer": "Medium sized"
+    },
+    {
+      "word": "Se calhar",
+      "answer": "Maybe"
+    },
+    {
+      "word": "Carteira",
+      "answer": "Wallet"
+    },
+    {
+      "word": "Estável",
+      "answer": "Stable"
+    },
+    {
+      "word": "Impostos",
+      "answer": "Taxes"
+    },
+    {
+      "word": "Ideal",
+      "answer": "Ideal"
+    },
+    {
+      "word": "Picle",
+      "answer": "Pickle"
+    },
+    {
+      "word": "Favorito",
+      "answer": "Favourite"
+    },
+    {
+      "word": "Local",
+      "answer": "Place"
+    },
+    {
+      "word": "Sobremesa",
+      "answer": "Desert"
+    },
+    {
+      "word": "Primeira",
+      "answer": "First"
+    },
+    {
+      "word": "Coisas",
+      "answer": "Things"
+    },
+    {
+      "word": "Cansativa",
+      "answer": "Tiring"
+    },
+    {
+      "word": "Idosos",
+      "answer": "Elderly"
+    },
+    {
+      "word": "Intenso",
+      "answer": "Intense"
+    },
+    {
+      "word": "Madrasta",
+      "answer": "Step-mother"
+    },
+    {
+      "word": "Padrasto",
+      "answer": "Step-father"
+    },
+    {
+      "word": "Somente",
+      "answer": "Only"
+    },
+    {
+      "word": "Miúdos",
+      "answer": "Children"
+    },
+    {
+      "word": "Achado",
+      "answer": "Found"
+    },
+    {
+      "word": "Perdido",
+      "answer": "Lost"
+    },
+    {
+      "word": "Pontual",
+      "answer": "On time"
+    },
+    {
+      "word": "Feia",
+      "answer": "Ugly"
+    },
+    {
+      "word": "Vazio/a",
+      "answer": "Empty"
+    },
+    {
+      "word": "Cheio/a",
+      "answer": "Full"
+    },
+    {
+      "word": "Se calhar",
+      "answer": "Maybe"
+    },
+    {
+      "word": "Gajo",
+      "answer": "Guy"
+    },
+    {
+      "word": "Pesado/a",
+      "answer": "Heavy"
+    },
+    {
+      "word": "Fechada",
+      "answer": "Closed"
+    },
+    {
+      "word": "Aberta",
+      "answer": "Open"
+    },
+    {
+      "word": "Loje",
+      "answer": "Shop"
+    },
+    {
+      "word": "Cancelado/a",
+      "answer": "Cancelled"
+    },
+    {
+      "word": "Atrasado",
+      "answer": "Delayed"
+    },
+    {
+      "word": "Informações",
+      "answer": "Information"
+    },
+    {
+      "word": "Abalcão",
+      "answer": "Desk"
+    },
+    {
+      "word": "Abalcão de informações",
+      "answer": "Help desk"
+    },
+    {
+      "word": "As partidas",
+      "answer": "Departures (airport)"
+    },
+    {
+      "word": "As chegas",
+      "answer": "Arrivals (airport)"
+    },
+    {
+      "word": "Saída",
+      "answer": "Exit"
+    },
+    {
+      "word": "Formulário",
+      "answer": "Form"
+    },
+    {
+      "word": "Roteiro",
+      "answer": "Plan"
+    },
+    {
+      "word": "Ajude",
+      "answer": "Help"
+    },
+    {
+      "word": "Garrafa d'água",
+      "answer": "Water bottle"
+    },
+    {
+      "word": "Prendas",
+      "answer": "Presents"
+    },
+    {
+      "word": "Bilhete",
+      "answer": "Ticket"
+    },
+    {
+      "word": "Baggagem",
+      "answer": "Baggage"
+    },
+    {
+      "word": "Asmalas",
+      "answer": "Suitcases"
+    },
+    {
+      "word": "Passeporta",
+      "answer": "Passport"
+    },
+    {
+      "word": "Car tire",
+      "answer": "Pneu"
+    },
+    {
+      "word": "Nó",
+      "answer": "Knot"
+    },
+    {
+      "word": "No",
+      "answer": "In"
+    },
+    {
+      "word": "Contente",
+      "answer": "Happy"
+    },
+    {
+      "word": "Emocionado/a",
+      "answer": "Touched (emotionally)"
+    },
+    {
+      "word": "Sufocado",
+      "answer": "Overwhelmed"
+    },
+    {
+      "word": "Telemovil",
+      "answer": "Telephone"
+    },
+    {
+      "word": "Imigracão",
+      "answer": "Immigration"
+    },
+    {
+      "word": "Control de imigracão",
+      "answer": "Border control"
+    },
+    {
+      "word": "Animada",
+      "answer": "Excited"
+    },
+    {
+      "word": "Nervoso",
+      "answer": "Nervous"
+    },
     {
       "word": "Chuva",
       "answer": "Rain"
